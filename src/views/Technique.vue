@@ -100,27 +100,41 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link href="/about" class="el_menu_link">О нас</router-link>
+              <router-link href="/about" class="el_menu_link"
+                >О нас</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link">Методика и формат</router-link>
+              <router-link to="/technique" class="el_menu_link"
+                >Методика и формат</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/services" class="el_menu_link">Наши Услуги</router-link>
+              <router-link to="/services" class="el_menu_link"
+                >Наши Услуги</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link">Расписание</router-link>
+              <router-link to="/timetable" class="el_menu_link"
+                >Расписание</router-link
+              >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link">Группы и Стоимость</router-link>
+              <router-link to="/technique" class="el_menu_link"
+                >Группы и Стоимость</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link">Фотогалерея</router-link>
+              <router-link to="/technique" class="el_menu_link"
+                >Фотогалерея</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link">Контакты</router-link>
+              <router-link to="/technique" class="el_menu_link"
+                >Контакты</router-link
+              >
             </div>
           </div>
         </div>
