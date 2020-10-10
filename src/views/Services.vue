@@ -1,21 +1,20 @@
 <template>
   <div class="main_wrapper">
+    <!--header-->
     <header>
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <router-link to="/"
-              ><img
-                src="../assets/img/logo/logo_tablet.png"
-                alt="logo"
-                class="logo_tablet"
-            /></router-link>
-            <router-link to="/"
-              ><img
-                src="../assets/img/logo/logo_phone.png"
-                alt="logo"
-                class="logo_phone"
-            /></router-link>
+            <img
+              src="../assets/img/logo/logo_tablet.png"
+              alt="logo"
+              class="logo_tablet"
+            />
+            <img
+              src="../assets/img/logo/logo_phone.png"
+              alt="logo"
+              class="logo_phone"
+            />
           </div>
 
           <div class="btn_lang_wrapper">
@@ -41,14 +40,14 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link to="/" class="link_logo">
+            <a href="index.html" class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
               />
-            </router-link>
+            </a>
           </div>
 
           <div class="adress">
@@ -57,7 +56,7 @@
             </div>
             <div class=" text_700_12">
               <a href="#" class="header_text_map_link "
-                >г.Одессф, просп. Шевченко 27</a
+                >г.Одессa, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -100,22 +99,18 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/about" class="el_menu_link">О нас</router-link>
+              <a href="about.html" class="el_menu_link">О нас</a>
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
-                >Методика и формат</router-link
+              <a href="technique.html" class="el_menu_link"
+                >Методика и формат</a
               >
             </div>
             <div class="el_menu">
-              <router-link to="/services" class="el_menu_link"
-                >Наши Услуги</router-link
-              >
+              <a href="#" class="el_menu_link">Наши Услуги</a>
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link"
-                >Расписание</router-link
-              >
+              <a href="#" class="el_menu_link">Расписание</a>
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
@@ -132,91 +127,110 @@
         </div>
       </div>
     </header>
-
+    <!--Main-->
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="box_line_heading text_Bold">
+        <div class="box_line_heading text_bold">
           <!--box-line-->
           <div class="heading_text">
-            <h3>о нас</h3>
+            <h3>наши услуги</h3>
           </div>
         </div>
 
-        <div class="upper_content_info_main_wrapper">
-          <div class="upper_content_info_wrapper">
-            <div
-              class="about_content_image_wrapper about_img_content_school"
-            ></div>
+        <div class="services_content_wrapper">
+          <div>
+            <!-- class="preparing_school_wrapper"-->
 
-            <div class="about_content_text_wrapper text_400_12">
-              <p class="about_content_info_text_school">
-                <span class="about_content_text_decoration text_Bold"
-                  >Добро пожаловать, уважаемые родители любознательных и
-                  активных детей!</span
-                >
-                Мы очень рады, что Вы попали на наш сайт, потому что Вас ждет
-                много интересных минут и творческих открытий.
-              </p>
+            <div class="preparing_school_img">
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../assets/img/services/boy_on_horse.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../assets/img/services/children_with_teacher.png"
+                  alt=""
+                />
+              </div>
+            </div>
 
-              <p>
-                Вы хотите, чтобы ваш малыш рос крепким, веселым, общительным и
-                талантливым? Тогда вам стоит приготовиться к тому, что его
-                воспитание потребует от вас много сил, профессиональных знаний и
-                времени.
-              </p>
+            <div class="preparing_school_text_wrapper">
+              <div class="preparing_school_text_header text_bold">
+                <p>Подготовка к школе (3-6 лет)</p>
+              </div>
+
+              <div class="preparing_school_sub_text text_400_12">
+                <p>
+                  Занятия проводятся на трёх языках в игровой форме.
+                  <span class="preparing_school_sub_sub_text_320px"
+                    >Основой являются настольные и подвижные игры,игры на
+                    развитие навыков конкурирования и достижения поставленных
+                    целей. <br />
+                    Путём чтения художественной и научно-познавательной
+                    литературы,происходит работа над формированием
+                    речи,грамотного и последовательного изложения своих
+                    мыслей.</span
+                  >
+                  <br />
+                  Помощь в обучении чтению и счету. Обучение финансовой
+                  грамотности и навыкам формирования семейного бюджета.
+                </p>
+              </div>
+
+              <div class="services_btn_wrapper text_bold">
+                <button class="services_submit_btn ">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
             </div>
           </div>
 
-          <div class="down_content_info_wrapper">
-            <div
-              class="about_content_image_wrapper about_img_content_children img_decoration"
-            ></div>
+          <div>
+            <div class="leisure_img">
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../assets/img/services/children_on_road.png"
+                  alt=""
+                />
+              </div>
+            </div>
 
-            <div
-              class="about_content_text_wrapper text_400_12 down_content_text"
-            >
-              <p class="about_content_info_text_children">
-                Ведь воспитание малыша — это сложный процесс с массой тонких
-                нюансов, которые зачастую известны только настоящим мастерам.
-                Все родители знают, что самое главное — любить своего малыша и
-                заботиться о нем. Однако далеко не все мамы и папы знают, как
-                правильно воспитывать ребенка, чтобы он сумел максимально
-                развить свой творческий потенциал. Если у вас нет специальных
-                знаний, и вы не можете уделять своему малышу дни и ночи
-                напролёт, то детский сад сао, расположенный в живописной
-                парковой зоне «Дубки», готов предложить вам свои услуги.
-              </p>
-            </div>
-          </div>
+            <div class="leisure_text_wrapper">
+              <div class="leisure_text_header text_bold">
+                <p>Досуг первоклассника (7-8лет)</p>
+              </div>
 
-          <div class="about_head_footer_text_wrapper">
-            <div class="about_head_footer_text text_Bold">
-              <p>Наши цели</p>
-            </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Создавать такую среду вокруг ребенка, где он сможет проявлять и
-                выражать себя, раскрывать свой потенциал.
-              </p>
-            </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Побуждать и стимулировать самостоятельность, ответственность и
-                умение проявлять свои индивидуальные особенности и таланты, быть
-                активным.
-              </p>
-            </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Формировать положительное отношение к себе и окружающему миру, а
-                также умение взаимодействовать с другими людьми.
-              </p>
+              <div class="leisure_sub_text text_400_12">
+                <p>
+                  Занятия проводятся на трёх языках в игровой форме. Основой
+                  являются настольные и подвижные игры,игры на развитие навыков
+                  конкурирования и достижения поставленных целей. <br />
+                  Путём чтения художественной и научно-познавательной
+                  литературы,происходит работа над формированием речи,грамотного
+                  и последовательного изложения своих мыслей. <br />
+                  Помощь в обучении чтению и счету. Обучение финансовой
+                  грамотности и навыкам формирования семейного бюджета.
+                </p>
+              </div>
+
+              <div class="services_btn_wrapper text_700_12">
+                <button class="services_submit_btn ">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-
+    <!--footer-->
     <footer class="footer_main_wrapper">
       <div class="footer_form_wrapper">
         <div class="pseudo_img_block">
@@ -303,7 +317,7 @@
               >
             </div>
             <div class="modal_email ">
-              <a class="modal_email_link" href="mailto:umnazia.ua@gmail.com "
+              <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
                 >umnazia.ua@gmail.com</a
               >
             </div>
@@ -311,7 +325,7 @@
 
           <div class="modal_social_icons_links ">
             <div class="modal_social_icon_item ">
-              <a href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 ">
+              <a href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9">
                 <img
                   src="../assets/img/img_png/instagram.png"
                   alt="instagram "
@@ -323,15 +337,15 @@
                 <img src="../assets/img/img_png/facebook.png" alt="facebook " />
               </a>
             </div>
-            <div class="modal_social_icon_item ">
-              <a href="# ">
-                <img src="../assets/img/img_png/youtube.png" alt="youtube " />
+            <div class="modal_social_icon_item">
+              <a href="#">
+                <img src="../assets/img/img_png/youtube.png" alt="youtube" />
               </a>
             </div>
           </div>
 
-          <div class="modal_btn_wrapper text_Bold ">
-            <button class="modal_submit_btn ">
+          <div class="modal_btn_wrapper text_Bold">
+            <button class="modal_submit_btn">
               Записаться в<br />
               группу
             </button>
@@ -341,11 +355,7 @@
 
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <button
-            class="btn_anchor"
-            @click="scrollToTop"
-            style="cursor: pointer"
-          ></button>
+          <a class="btn_anchor " href="#anchorHeader"></a>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -355,13 +365,8 @@
 
 <script>
 export default {
-  name: "About",
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  }
+  name: "Services"
 };
 </script>
 
-<style src="../assets/styles/about_style.css" lang="css"></style>
+<style src="../assets/styles/services_style.css" lang="css"></style>

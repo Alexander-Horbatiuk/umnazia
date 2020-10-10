@@ -19,9 +19,9 @@
           </div>
 
           <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
+            <router-link to="/technique" class="btn_lang text_700_12">
               ru
-            </a>
+            </router-link>
           </div>
         </div>
         <div class="second_block">
@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link to="/" class="link_logo">
+            <router-link href="/" class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
@@ -56,8 +56,8 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <a href="#" class="header_text_map_link "
-                >г.Одессф, просп. Шевченко 27</a
+              <router-link to="/technique" class="header_text_map_link "
+                >г.Одессф, просп. Шевченко 27</router-link
               >
             </div>
           </div>
@@ -88,7 +88,7 @@
               </div>
               <div class="social_icon_item">
                 <a href="" class="icon_item_link">
-                  <img src="../assets/img/img_png//youtube.png" alt="youtube" />
+                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
                 </a>
               </div>
             </div>
@@ -100,33 +100,27 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/about" class="el_menu_link">О нас</router-link>
+              <router-link href="/about" class="el_menu_link">О нас</router-link>
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
-                >Методика и формат</router-link
-              >
+              <router-link to="/technique" class="el_menu_link">Методика и формат</router-link>
             </div>
             <div class="el_menu">
-              <router-link to="/services" class="el_menu_link"
-                >Наши Услуги</router-link
-              >
+              <router-link to="/services" class="el_menu_link">Наши Услуги</router-link>
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link"
-                >Расписание</router-link
-              >
+              <router-link to="/timetable" class="el_menu_link">Расписание</router-link>
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Группы и Стоимость</a>
+              <router-link to="/technique" class="el_menu_link">Группы и Стоимость</router-link>
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Фотогалерея</a>
+              <router-link to="/technique" class="el_menu_link">Фотогалерея</router-link>
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Контакты</a>
+              <router-link to="/technique" class="el_menu_link">Контакты</router-link>
             </div>
           </div>
         </div>
@@ -135,82 +129,145 @@
 
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="box_line_heading text_Bold">
-          <!--box-line-->
-          <div class="heading_text">
-            <h3>о нас</h3>
+        <div class="tech_wrapper">
+          <div class="box_line_heading text_Bold">
+            <!--box-line-->
+            <div class="heading_text">
+              <h3>Методика</h3>
+            </div>
+          </div>
+
+          <div class="main_content_header_sub_text text_400_12">
+            <p>
+              Каждый день
+              <span class="sub_text_bold text_700_12">новая</span> языковая
+              среда
+            </p>
+          </div>
+
+          <div
+            class="main_content_header_sub_text text_400_12 main_content_header_sub_psevdo"
+          >
+            <p>
+              Обучение на
+              <span class="sub_text_bold text_700_12">трех</span> языках
+            </p>
+          </div>
+
+          <div class="lessons_wrapper">
+            <div class="building_lessons_text_wrapper text_Bold">
+              <p>
+                Наши занятия строятся по принципу погружения в языковое
+                пространство, что создаёт условия для комфортного и быстрого
+                изучения языка и развития речи малышей.
+              </p>
+            </div>
+
+            <div class="building_lessons_text_wrapper_768px text_400_12">
+              <p>
+                Занятия проходят по эксклюзивной методике языкового погружения
+                на трех языках - русском, украинском и английском и разделены на
+                блоки- дискусионный, гуманитарный, математический и научный.
+                Каждый блок включает в себя развитие творческих способностей
+                ребенка - лепка, рисование, развитие мелкой и крупной моторики,
+                сюжетно-ролевые игры, игры на развитие воображения.
+              </p>
+            </div>
+
+            <div class="books_wrapper">
+              <div>
+                <img
+                  src="../assets/img/technique/english_book.png"
+                  alt="english book"
+                />
+              </div>
+              <div>
+                <img
+                  src="../assets/img/technique/ukraine_book.png"
+                  alt="ukraine book"
+                />
+              </div>
+              <div>
+                <img
+                  src="../assets/img/technique/russian_book.png"
+                  alt="russian book"
+                />
+              </div>
+            </div>
+
+            <div class="small_books_wrapper">
+              <div>
+                <img
+                  src="../assets/img/technique/small_english_book.png"
+                  alt="english book"
+                />
+              </div>
+              <div>
+                <img
+                  src="../assets/img/technique/small_ukraine_book.png"
+                  alt="ukraine book"
+                />
+              </div>
+              <div>
+                <img
+                  src="../assets/img/technique/small_russian_book.png"
+                  alt="russian book"
+                />
+              </div>
+            </div>
+
+            <div class="languages_text_wrapper text_400_12">
+              <p>
+                Принцип «одна ситуация-один язык» позволяет разделить языки по
+                месту их применения.<br />
+                В группе языкового погружения, дети, переступая порог нашей
+                Академии знаний, попадают в среду иного языка,как правило, даже
+                с подителями педагоги и администратор, говорят на изучаемом в
+                этот день языке. Атмосфера в группе языкового погружения
+                максимально насыщена играми, чтением,развитием речи, письма и
+                счета на «языке дня»
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="upper_content_info_main_wrapper">
-          <div class="upper_content_info_wrapper">
-            <div
-              class="about_content_image_wrapper about_img_content_school"
-            ></div>
-
-            <div class="about_content_text_wrapper text_400_12">
-              <p class="about_content_info_text_school">
-                <span class="about_content_text_decoration text_Bold"
-                  >Добро пожаловать, уважаемые родители любознательных и
-                  активных детей!</span
-                >
-                Мы очень рады, что Вы попали на наш сайт, потому что Вас ждет
-                много интересных минут и творческих открытий.
-              </p>
-
-              <p>
-                Вы хотите, чтобы ваш малыш рос крепким, веселым, общительным и
-                талантливым? Тогда вам стоит приготовиться к тому, что его
-                воспитание потребует от вас много сил, профессиональных знаний и
-                времени.
-              </p>
-            </div>
+        <div class="training_format_wrapper">
+          <div class="training_format_header_text text_Bold">
+            <p>Формат занятий</p>
           </div>
 
-          <div class="down_content_info_wrapper">
-            <div
-              class="about_content_image_wrapper about_img_content_children img_decoration"
-            ></div>
-
-            <div
-              class="about_content_text_wrapper text_400_12 down_content_text"
-            >
-              <p class="about_content_info_text_children">
-                Ведь воспитание малыша — это сложный процесс с массой тонких
-                нюансов, которые зачастую известны только настоящим мастерам.
-                Все родители знают, что самое главное — любить своего малыша и
-                заботиться о нем. Однако далеко не все мамы и папы знают, как
-                правильно воспитывать ребенка, чтобы он сумел максимально
-                развить свой творческий потенциал. Если у вас нет специальных
-                знаний, и вы не можете уделять своему малышу дни и ночи
-                напролёт, то детский сад сао, расположенный в живописной
-                парковой зоне «Дубки», готов предложить вам свои услуги.
-              </p>
-            </div>
+          <div class="training_format_header_subtext text_Bold">
+            <p>
+              Работаем <span class="text_Bold">6 дней</span> в неделю (формат -
+              полудневки)
+            </p>
           </div>
 
-          <div class="about_head_footer_text_wrapper">
-            <div class="about_head_footer_text text_Bold">
-              <p>Наши цели</p>
+          <div class="clocks_wrapper">
+            <div class="class_hours class_hours_9am">
+              <div class="time_text_9am text_Bold">
+                <p>С 9:00 до 13:00</p>
+              </div>
+
+              <div class="text_Bold">
+                <button class="training_format_submit_btn ">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
             </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Создавать такую среду вокруг ребенка, где он сможет проявлять и
-                выражать себя, раскрывать свой потенциал.
-              </p>
-            </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Побуждать и стимулировать самостоятельность, ответственность и
-                умение проявлять свои индивидуальные особенности и таланты, быть
-                активным.
-              </p>
-            </div>
-            <div class="about_footer_text text_400_12">
-              <p>
-                Формировать положительное отношение к себе и окружающему миру, а
-                также умение взаимодействовать с другими людьми.
-              </p>
+
+            <div class="class_hours class_hours_14pm">
+              <div class="time_text_14pm text_Bold">
+                <p>С 14:00 до 18:00</p>
+              </div>
+
+              <div class="text_Bold">
+                <button class="training_format_submit_orange_btn ">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -274,7 +331,8 @@
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
-        ></iframe>
+        >
+        </iframe>
 
         <div class="modal_window">
           <div class="modal_logo_wrapper">
@@ -303,7 +361,7 @@
               >
             </div>
             <div class="modal_email ">
-              <a class="modal_email_link" href="mailto:umnazia.ua@gmail.com "
+              <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
                 >umnazia.ua@gmail.com</a
               >
             </div>
@@ -355,13 +413,8 @@
 
 <script>
 export default {
-  name: "About",
-  methods: {
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    }
-  }
+  name: "Technique"
 };
 </script>
 
-<style src="../assets/styles/about_style.css" lang="css"></style>
+<style src="../assets/styles/technique_style.css" lang="css"></style>
