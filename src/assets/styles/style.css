@@ -630,9 +630,14 @@
         padding: 20px 0 0 0;
     }
 
+
     .backgraund_visor::before {
-        display: none;
+        max-width: 450px;
+        width: 100%;
+        min-height: 400px;
+        left: 3%;
     }
+
 
     .box_age_one,
     .box_age_two {
@@ -651,6 +656,13 @@
         font-size: 15px;
     }
 }
+
+
+@media screen and (max-width: 1224px) {
+    .backgraund_visor::before {
+        display: none;
+    }
+}
 /* _________________________768_____________ */
 @media screen and (max-width: 1024px) {
     .backgraund_visor {
@@ -664,6 +676,7 @@
         line-height: 25px;
         text-align: center;
     }
+    
 }
 
 /* ______________________________320_____________ */
@@ -671,7 +684,7 @@
     .backgraund_visor {
         max-width: 700px;
         background: url(../img//background/background_visor_phone.png) no-repeat top center;
-        background-size: 120%;
+        background-size: 110%;
         padding: 0;
         height: 454px;
         margin: 0 0 50px 0;
@@ -2716,7 +2729,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 347px 0 100px 0;
+    padding: 347px 0 0 0;
 }
 
 .bg_wrap_gallery {
@@ -2729,6 +2742,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 0 50px 0;
 }
 
 .sub_wrap_gallery::after {
@@ -2848,9 +2862,6 @@
         position: relative;
         background-image: url(../img//background/bg_vectot_pattern_tablet.png);
         background-size: cover;
-    }
-
-    .wrap_gallery {
         position: static;
         padding: 147px 0 0 0;
         justify-content: center;
