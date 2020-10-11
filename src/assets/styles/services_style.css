@@ -941,6 +941,13 @@
 
 /* media_tablet_1260px (no layout)*/
 
+@media screen and (max-width: 1620px) {
+    .modal_window {
+        top: 40px;
+        right: 20px;
+    }
+}
+
 @media screen and (max-width: 1260px) {
     .navigation_list_wrapper {
         display: none;
