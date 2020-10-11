@@ -675,9 +675,10 @@
         font-size: 15px;
         line-height: 25px;
         text-align: center;
-    }
-    
+    } 
 }
+
+
 
 /* ______________________________320_____________ */
 @media screen and (max-width: 700px) {
@@ -708,12 +709,8 @@
         margin: 0;
         padding: 0;
     }
-    /* .box_age_one, .box_age_two {
-        width: 320px;
-        font-size: 15px;
-        line-height: 25px;
-        text-align: center;
-    }  */
+   
+
     .content_box_age_text {
         max-width: 290px;
         text-align: center;
@@ -1113,6 +1110,7 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .btn_read_text::after {
@@ -1953,6 +1951,16 @@
     top: 0px;
     left: -230px;
 }
+
+
+
+/* ______________________________________CIRCLE__________768______________ */
+@media screen and (max-width: 1600px) {
+    .wrap_center_circle {
+        background-size: 130%;
+       
+    }
+}
 /* ______________________________________CIRCLE__________768______________ */
 @media screen and (max-width: 1224px) {
     .wrap_center_circle::after,
@@ -2364,10 +2372,11 @@
         background: url(../img/background/bg_center_circle_phone.png);
         max-width: 320px;
         width: 100%;
+        background-color: #E8F6F7;
         height: 776px;
         background-position: center;
         flex-direction: column;
-        /* background-size: 100%; */
+        background-size: 100%;
         padding: 50px 0 0 0;
     }
     .heading_text::after {
@@ -2528,6 +2537,7 @@
 }
 .num_card_three {
     background-image: url(../img//img_png/card_group_three.png);
+    background-size: 60%;
 }
 .num_card_four {
     background-image: url(../img//img_png/card_group_four.png);
@@ -3307,9 +3317,22 @@
 }
 /* _______________________________________1700__________ */
 @media screen and (max-width: 1700px) {
+    
+
     .sub_wrap_footer::after {
-        display: none;
+        /* content: " "; */
+        max-width: 1127px;
+        top: 40px;
+        
+        /* width: 100%;
+        min-height: 300px;
+        background: url(../img//img_png/bg_elems_footer.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        
+        left: 150px; */
     }
+
 }
 
 /* ________________________________________1600_________ */
@@ -3319,11 +3342,12 @@
         width: 100%;
         min-height: 215px;
         right: 20px;
+        z-index: 1;
     }
 
-    .bg_teacher::before {
+    /* .bg_teacher::before {
         display: none;
-    }
+    } */
 
     .modal_window {
         top: 40px;
@@ -3338,7 +3362,12 @@
         bottom: 0px;
         left: 20px;
     }
-
+    .sub_wrap_footer::after {
+        display: none;
+    }
+    .bg_teacher::before {
+        display: none;
+    }
     .sticker_footer_text {
         max-width: 452px;
         width: 100%;
