@@ -1319,12 +1319,16 @@
 
 /*1585px (no layout)*/
 
-@media screen and (max-width: 1585px) {
+@media screen and (max-width: 1620px) {
     .timetable_calendar_wrapper::after {
         display: none;
     }
     .training_format_wrapper::after {
         display: none;
+    }
+    .modal_window {
+        top: 400px;
+        right: 20px;
     }
 }
 
@@ -1779,5 +1783,9 @@
     .btn_anchor {
         right: 0;
         left: 38%;
+    }
+    .modal_window {
+        left: 50%;
+        transform: translate(-50%);
     }
 }

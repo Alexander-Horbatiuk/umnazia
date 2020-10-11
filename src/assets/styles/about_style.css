@@ -979,13 +979,17 @@
 
 /* media_tablet_1478px (no layout)*/
 
-@media screen and (max-width: 1478px) {
+@media screen and (max-width: 1620px) {
     .main_content_wrapper::after {
         display: none;
     }
 
     .main_content_wrapper::before {
         display: none;
+    }
+    .modal_window {
+        top: 40px;
+        right: 20px;
     }
 }
 
@@ -1172,11 +1176,6 @@
         left: 14px;
     }
     /*footer-inputs*/
-
-    .modal_window {
-        top: 7%;
-        right: 2.4%;
-    }
 }
 
 /* media_tablet_768px*/
@@ -1745,5 +1744,9 @@
 
     .header_text_map_link {
         font-size: 10px;
+    }
+    .modal_window {
+        left: 50%;
+        transform: translate(-50%);
     }
 }

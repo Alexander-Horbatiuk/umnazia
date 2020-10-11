@@ -1412,4 +1412,8 @@
         right: 0;
         left: 38%;
     }
+    .modal_window {
+        left: 50%;
+        transform: translate(-50%);
+    }
 }

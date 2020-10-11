@@ -1045,13 +1045,17 @@
 /*modal-end*/
 
 /*1420px*/
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1620px) {
     .main_content_wrapper::after {
         display: none;
     }
 
     .lessons_wrapper::before {
         display: none;
+    }
+    .modal_window {
+        top: 40px;
+        right: 20px;
     }
 }
 
@@ -1609,8 +1613,8 @@
     }
 
     .modal_window {
-        top: -1%;
-        right: 4.4%;
+        top: 40px;
+        right: 20px;
         width: 290px;
     }
 
@@ -1634,5 +1638,9 @@
     .btn_anchor {
         right: 0;
         left: 38%;
+    }
+    .modal_window {
+        left: 50%;
+        transform: translate(-50%);
     }
 }
