@@ -413,7 +413,7 @@
                   <p>С 9:00 до 13:00</p>
                 </div>
 
-                <div class="text_700_35">
+                <div @click="showModal" class="text_700_35">
                   <button class="training_format_submit_btn ">
                     Записаться в<br />
                     группу
@@ -426,7 +426,7 @@
                   <p>С 14:00 до 18:00</p>
                 </div>
 
-                <div class="text_Bold">
+                <div @click="showModal" class="text_Bold">
                   <button class="training_format_submit_orange_btn ">
                     Записаться в<br />
                     группу
