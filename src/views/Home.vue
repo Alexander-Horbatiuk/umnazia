@@ -45,14 +45,14 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link href="/" class="link_logo">
+            <a class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
               />
-            </router-link>
+            </a>
           </div>
 
           <!--_____________________adress________________________ -->
@@ -168,7 +168,7 @@
                 Занятия проходят по эксклюзивной методике языкового погружения
                 на трех языках - русском, украинском, английском
               </div>
-              <div class="content_box_age_btn text_700_16">
+              <div @click="showModal" class="content_box_age_btn text_700_16">
                 <img
                   src="../assets/img/img_png/btn_yellow.png"
                   alt="button"
@@ -189,9 +189,7 @@
 
           <!-- _______________________bg_ander_header________________________ -->
 
-          <div class="bg_ander_header">
-           
-          </div>
+          <div class="bg_ander_header"></div>
         </div>
 
         <!-- _______________________contant________________________ -->
@@ -1138,7 +1136,7 @@
               </div>
             </div>
 
-            <div class="modal_btn_wrapper text_Bold ">
+            <div @click="showModal" class="modal_btn_wrapper text_Bold ">
               <button class="modal_submit_btn ">
                 Записаться в<br />
                 группу
@@ -1158,17 +1156,63 @@
           Академия знаний “Умназія” 2020 © Все права защищены
         </p>
       </footer>
+
+      <div v-if="isModal" class="wraper_modal_form">
+        <form @submit.prevent="preSend">
+          <div class="wrap_form">
+            <div @click="hideModal" class="bt_close">+</div>
+            <p class="head_form">Записаться в группу</p>
+            <input
+              v-model="name"
+              type="text"
+              placeholder="Ваше имя"
+              class="name_form"
+            />
+            <input
+              v-model="tel"
+              type="tel"
+              placeholder="Ваше номер телефона"
+              class="number_form"
+            />
+            <button class="bt_modal_form">Отправить</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Home",
+  data() {
+    return {
+      isModal: false,
+      name: "",
+      tel: ""
+    };
+  },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
-    }
+    },
+    showModal() {
+      this.isModal = true;
+    },
+    hideModal() {
+      this.isModal = false;
+    },
+    preSend() {
+      this.sendTel({
+        name: this.name,
+        tel: this.tel
+      });
+      this.name = "";
+      this.tel = "";
+      this.isModal = false;
+    },
+    ...mapActions(["sendTel"])
   }
 };
 </script>

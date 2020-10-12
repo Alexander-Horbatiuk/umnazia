@@ -40,14 +40,14 @@
             </div>
           </div>
           <div class="big_logo">
-            <a href="index.html" class="link_logo">
+            <router-link to="/" class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
               />
-            </a>
+            </router-link>
           </div>
 
           <div class="adress">
@@ -99,29 +99,34 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <a href="about.html" class="el_menu_link">О нас</a>
+              <router-link to="/about" class="el_menu_link">О нас</router-link>
             </div>
             <div class="el_menu">
-              <a href="technique.html" class="el_menu_link"
-                >Методика и формат</a
+              <router-link to="/technique" class="el_menu_link"
+                >Методика и формат</router-link
               >
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Наши Услуги</a>
-            </div>
-            <div class="el_menu">
-              <a href="#" class="el_menu_link">Расписание</a>
+              <router-link to="/timetable" class="el_menu_link"
+                >Расписание</router-link
+              >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Группы и Стоимость</a>
+              <router-link to="/groups" class="el_menu_link"
+                >Группы и Стоимость</router-link
+              >
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Фотогалерея</a>
+              <router-link to="/services" class="el_menu_link"
+                >Фотогалерея</router-link
+              >
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Контакты</a>
+              <router-link to="/services" class="el_menu_link"
+                >Контакты</router-link
+              >
             </div>
           </div>
         </div>
@@ -181,7 +186,7 @@
                 </p>
               </div>
 
-              <div class="services_btn_wrapper text_bold">
+              <div @click="showModal" class="services_btn_wrapper text_bold">
                 <button class="services_submit_btn ">
                   Записаться в<br />
                   группу
@@ -219,7 +224,7 @@
                 </p>
               </div>
 
-              <div class="services_btn_wrapper text_700_12">
+              <div @click="showModal" class="services_btn_wrapper text_700_12">
                 <button class="services_submit_btn ">
                   Записаться в<br />
                   группу
@@ -250,6 +255,7 @@
         </div>
 
         <form
+          @submit.prevent="prePresentationSend"
           class="footer_user_form_wrapper"
           name="registration_form"
           method="post"
@@ -257,6 +263,7 @@
         >
           <div class="input_user_wrapper">
             <input
+              v-model="presentationName"
               class="input_user_name text_400_12"
               type="text"
               placeholder="Ваше имя"
@@ -265,6 +272,7 @@
 
           <div class="input_user_wrapper">
             <input
+              v-model="presentationTel"
               class="input_user_phone text_400_12"
               type="tel"
               placeholder="Ваш номер телефона"
@@ -344,7 +352,7 @@
             </div>
           </div>
 
-          <div class="modal_btn_wrapper text_Bold">
+          <div @click="showModal" class="modal_btn_wrapper text_Bold">
             <button class="modal_submit_btn">
               Записаться в<br />
               группу
@@ -355,17 +363,86 @@
 
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <a class="btn_anchor " href="#anchorHeader"></a>
+          <button
+            class="btn_anchor"
+            @click="scrollToTop"
+            style="cursor: pointer"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
     </footer>
+
+    <div v-if="isModal" class="wraper_modal_form">
+      <form @submit.prevent="preSend">
+        <div class="wrap_form">
+          <div @click="hideModal" class="bt_close">+</div>
+          <p class="head_form">Записаться в группу</p>
+          <input
+            v-model="name"
+            type="text"
+            placeholder="Ваше имя"
+            class="name_form"
+          />
+          <input
+            v-model="tel"
+            type="tel"
+            placeholder="Ваше номер телефона"
+            class="number_form"
+          />
+          <button class="bt_modal_form">Отправить</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  name: "Services"
+  name: "Services",
+  data() {
+    return {
+      isModal: false,
+      name: "",
+      tel: "",
+      presentationName: "",
+      presentationTel: ""
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    showModal() {
+      this.isModal = true;
+    },
+    hideModal() {
+      this.isModal = false;
+    },
+    preSend() {
+      this.sendTel({
+        name: this.name,
+        tel: this.tel
+      });
+      this.name = "";
+      this.tel = "";
+      this.presentationName = "";
+      this.presentationTel = "";
+      this.isModal = false;
+    },
+    prePresentationSend() {
+      this.sendTel({
+        name: this.presentationName,
+        tel: this.presentationTel
+      });
+      this.name = "";
+      this.tel = "";
+      this.presentationName = "";
+      this.presentationTel = "";
+    },
+    ...mapActions(["sendTel"])
+  }
 };
 </script>
 

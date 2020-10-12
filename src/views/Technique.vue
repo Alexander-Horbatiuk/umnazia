@@ -41,7 +41,7 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link href="/" class="link_logo">
+            <router-link to="/" class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
@@ -100,14 +100,7 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link href="/about" class="el_menu_link"
-                >О нас</router-link
-              >
-            </div>
-            <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
-                >Методика и формат</router-link
-              >
+              <router-link to="/about" class="el_menu_link">О нас</router-link>
             </div>
             <div class="el_menu">
               <router-link to="/services" class="el_menu_link"
@@ -122,7 +115,7 @@
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
+              <router-link to="/groups" class="el_menu_link"
                 >Группы и Стоимость</router-link
               >
             </div>
@@ -263,7 +256,7 @@
                 <p>С 9:00 до 13:00</p>
               </div>
 
-              <div class="text_Bold">
+              <div @click="showModal" class="text_Bold">
                 <button class="training_format_submit_btn ">
                   Записаться в<br />
                   группу
@@ -276,7 +269,7 @@
                 <p>С 14:00 до 18:00</p>
               </div>
 
-              <div class="text_Bold">
+              <div @click="showModal" class="text_Bold">
                 <button class="training_format_submit_orange_btn ">
                   Записаться в<br />
                   группу
@@ -307,6 +300,7 @@
         </div>
 
         <form
+          @submit.prevent="prePresentationSend"
           class="footer_user_form_wrapper"
           name="registration_form"
           method="post"
@@ -314,6 +308,7 @@
         >
           <div class="input_user_wrapper">
             <input
+              v-model="presentationName"
               class="input_user_name text_400_12"
               type="text"
               placeholder="Ваше имя"
@@ -322,6 +317,7 @@
 
           <div class="input_user_wrapper">
             <input
+              v-model="presentationTel"
               class="input_user_phone text_400_12"
               type="tel"
               placeholder="Ваш номер телефона"
@@ -402,7 +398,7 @@
             </div>
           </div>
 
-          <div class="modal_btn_wrapper text_Bold ">
+          <div @click="showModal" class="modal_btn_wrapper text_Bold ">
             <button class="modal_submit_btn ">
               Записаться в<br />
               группу
@@ -422,12 +418,77 @@
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
     </footer>
+
+    <div v-if="isModal" class="wraper_modal_form">
+      <form @submit.prevent="preSend">
+        <div class="wrap_form">
+          <div @click="hideModal" class="bt_close">+</div>
+          <p class="head_form">Записаться в группу</p>
+          <input
+            v-model="name"
+            type="text"
+            placeholder="Ваше имя"
+            class="name_form"
+          />
+          <input
+            v-model="tel"
+            type="tel"
+            placeholder="Ваше номер телефона"
+            class="number_form"
+          />
+          <button class="bt_modal_form">Отправить</button>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  name: "Technique"
+  name: "Technique",
+  data() {
+    return {
+      isModal: false,
+      name: "",
+      tel: "",
+      presentationName: "",
+      presentationTel: ""
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    showModal() {
+      this.isModal = true;
+    },
+    hideModal() {
+      this.isModal = false;
+    },
+    preSend() {
+      this.sendTel({
+        name: this.name,
+        tel: this.tel
+      });
+      this.name = "";
+      this.tel = "";
+      this.presentationName = "";
+      this.presentationTel = "";
+      this.isModal = false;
+    },
+    prePresentationSend() {
+      this.sendTel({
+        name: this.presentationName,
+        tel: this.presentationTel
+      });
+      this.name = "";
+      this.tel = "";
+      this.presentationName = "";
+      this.presentationTel = "";
+    },
+    ...mapActions(["sendTel"])
+  }
 };
 </script>
 

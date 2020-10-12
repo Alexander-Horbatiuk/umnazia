@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: "EuropeC_400";
-    src: url(fonts/EuropeC_400.otf);
+    src: url(../fonts/EuropeC_400.otf);
 }
 
 @font-face {
     font-family: "EuropeC_700";
-    src: url(fonts/EuropeC_700.otf);
+    src: url(../fonts/EuropeC_700.otf);
 }
 
 @font-face {
     font-family: "EuropeC_Bold";
-    src: url(fonts/EuropeC_Bold.otf);
+    src: url(../fonts/EuropeC_Bold.otf);
 }
 
 .reset_lunk {
@@ -100,7 +100,7 @@
 
 .btn_lang::after {
     content: " ";
-    background-image: url(img/img_png/arrow_button.png);
+    background-image: url(../img/img_png/arrow_button.png);
     width: 9px;
     height: 9px;
     background-repeat: no-repeat;
@@ -124,7 +124,7 @@
 
 .tel_position::before {
     content: " ";
-    background-image: url(img/img_png/telephone_header.png);
+    background-image: url(../img/img_png/telephone_header.png);
     width: 23px;
     height: 23px;
     background-repeat: no-repeat;
@@ -180,7 +180,7 @@
 
 .adress::before {
     content: " ";
-    background-image: url(img/img_png/mark_header.png);
+    background-image: url(../img/img_png/mark_header.png);
     width: 20px;
     height: 23px;
     background-repeat: no-repeat;
@@ -302,7 +302,7 @@
 
 .main_content_wrapper {
     position: relative;
-    background-image: url(img/img_jpg/main_bg_white.jpg);
+    background-image: url(../img/background/main_bg_white.jpg);
     background-repeat: no-repeat;
 }
 
@@ -402,7 +402,7 @@
     content: " ";
     width: 148px;
     height: 98px;
-    background-image: url(img/groups/3_4_years_img.png);
+    background-image: url(../img/groups/3_4_years_img.png);
     background-repeat: no-repeat;
     position: absolute;
     top: -59px;
@@ -411,7 +411,7 @@
 
 .groups_block_info_4_5_years::after {
     content: " ";
-    background-image: url(img/groups/4_5_years_img.png);
+    background-image: url(../img/groups/4_5_years_img.png);
     width: 161px;
     height: 91px;
     background-repeat: no-repeat;
@@ -422,7 +422,7 @@
 
 .groups_block_info_5_6_years::after {
     content: " ";
-    background-image: url(img/groups/5_6_years_img.png);
+    background-image: url(../img/groups/5_6_years_img.png);
     width: 120px;
     height: 106px;
     background-repeat: no-repeat;
@@ -433,7 +433,7 @@
 
 .groups_block_info_6_7_years::after {
     content: " ";
-    background-image: url(img/groups/6_7_years_img.png);
+    background-image: url(../img/groups/6_7_years_img.png);
     width: 146px;
     height: 88px;
     background-repeat: no-repeat;
@@ -539,7 +539,7 @@
 
 .pseudo_element_line::after {
     content: " ";
-    background-image: url(img/img_png/left_line_psevdo.png);
+    background-image: url(../img/img_png/left_line_psevdo.png);
     width: 25px;
     height: 25px;
     background-repeat: no-repeat;
@@ -550,7 +550,7 @@
 
 .pseudo_element_line::before {
     content: " ";
-    background-image: url(img/img_png/right_line_psevdo.png);
+    background-image: url(../img/img_png/right_line_psevdo.png);
     width: 25px;
     height: 25px;
     background-repeat: no-repeat;
@@ -561,7 +561,7 @@
 
 .pseudo_element_wave::after {
     content: " ";
-    background-image: url(img/img_png/wave_right_psevdo.png);
+    background-image: url(../img/img_png/wave_right_psevdo.png);
     width: 57px;
     height: 57px;
     background-repeat: no-repeat;
@@ -573,7 +573,7 @@
 
 .pseudo_element_wave::before {
     content: " ";
-    background-image: url(img/img_png/wave_left_psevdo.png);
+    background-image: url(../img/img_png/wave_left_psevdo.png);
     width: 57px;
     height: 57px;
     background-repeat: no-repeat;
@@ -585,7 +585,7 @@
 
 .pseudo_element_dotted::after {
     content: " ";
-    background-image: url(img/img_png/dotted_psevdo.png);
+    background-image: url(../img/img_png/dotted_psevdo.png);
     width: 57px;
     height: 57px;
     background-repeat: no-repeat;
@@ -596,7 +596,7 @@
 
 .pseudo_element_dotted::before {
     content: " ";
-    background-image: url(img/img_png/dotted_psevdo.png);
+    background-image: url(../img/img_png/dotted_psevdo.png);
     width: 57px;
     height: 57px;
     background-repeat: no-repeat;
@@ -700,7 +700,7 @@
 }
 
 .submit_form_btn {
-    background: url(img/img_png/btn.png) no-repeat top right;
+    background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
     width: 227px;
     height: 70.17px;
@@ -711,7 +711,7 @@
 }
 
 .btn_anchor {
-    background: url(img/img_png/btn_anchor.png) no-repeat;
+    background: url(../img/img_png/btn_anchor.png) no-repeat;
     background-size: 100%;
     width: 78.19px;
     height: 40.35px;
@@ -804,7 +804,7 @@
 
 .modal_adress::after {
     content: " ";
-    background-image: url(img/modal_window/map_mark.png);
+    background-image: url(../img/modal_window/map_mark.png);
     width: 23px;
     height: 23px;
     background-repeat: no-repeat;
@@ -838,7 +838,7 @@
 
 .modal_email::after {
     content: " ";
-    background-image: url(img/modal_window/email.png);
+    background-image: url(../img/modal_window/email.png);
     width: 18px;
     height: 18px;
     background-repeat: no-repeat;
@@ -849,7 +849,7 @@
 
 .modal_phone_icon::after {
     content: " ";
-    background-image: url(img/modal_window/phone.png);
+    background-image: url(../img/modal_window/phone.png);
     width: 23px;
     height: 23px;
     background-repeat: no-repeat;
@@ -906,7 +906,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 5px 0 0 0;
-    background: url(img/img_png/btn.png) no-repeat top right;
+    background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
     width: 227px;
     height: 70.17px;
@@ -938,7 +938,7 @@
 
     .contacts_wrapper::after {
         content: " ";
-        background-image: url(img/logo/menu_tablet.png);
+        background-image: url(../img/logo/menu_tablet.png);
         width: 80px;
         height: 67px;
         background-repeat: no-repeat;

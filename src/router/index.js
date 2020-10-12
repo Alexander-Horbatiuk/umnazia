@@ -37,6 +37,13 @@ const routes = [
     component: function() {
       return import("../views/Timetable.vue");
     }
+  },
+  {
+    path: "/groups",
+    name: "Groups",
+    component: function() {
+      return import("../views/Groups.vue");
+    }
   }
 ];
 
