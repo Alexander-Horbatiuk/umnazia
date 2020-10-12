@@ -132,7 +132,7 @@
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/" class="el_menu_link"
+              <router-link to="/groups" class="el_menu_link"
                 >Группы и Стоимость</router-link
               >
             </div>
