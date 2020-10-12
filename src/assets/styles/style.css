@@ -735,8 +735,11 @@
 .bg_ander_header {
     max-width: 1920px;
     width: 100%;
+    min-height: 1200px;
+    background: url(../img/background/bg_ander_header.jpg);
+    background-size: 100%;
     position: absolute;
-    top: 255px;
+    top: 215px;
     left: 0;
     z-index: -1;
 }
@@ -1973,7 +1976,7 @@
         background-position: center;
         background-size: 100%;
         max-width: 1024px;
-        min-height: 851px;
+        min-height: 900px;
         background-position: center;
         padding: 100px 0 0 0;
     }

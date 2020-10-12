@@ -189,12 +189,8 @@
 
           <!-- _______________________bg_ander_header________________________ -->
 
-          <div class="sub_background">
-            <img
-              src="../assets/img/background/bg_ander_header.jpg"
-              alt="background ander"
-              class="bg_ander_header"
-            />
+          <div class="bg_ander_header">
+           
           </div>
         </div>
 
