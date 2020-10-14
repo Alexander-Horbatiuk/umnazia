@@ -125,7 +125,7 @@
               >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
+              <router-link to="/contacts" class="el_menu_link"
                 >Контакты</router-link
               >
             </div>
@@ -492,4 +492,4 @@ export default {
 };
 </script>
 
-<style src="../assets/styles/technique_style.css" lang="css"></style>
+<style scoped src="../assets/styles/technique_style.css" lang="css"></style>

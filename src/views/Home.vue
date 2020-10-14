@@ -140,7 +140,9 @@
               <router-link to="/" class="el_menu_link">Фотогалерея</router-link>
             </div>
             <div class="el_menu">
-              <router-link to="/" class="el_menu_link">Контакты</router-link>
+              <router-link to="/contacts" class="el_menu_link"
+                >Контакты</router-link
+              >
             </div>
           </div>
         </div>
@@ -1217,4 +1219,4 @@ export default {
 };
 </script>
 
-<style src="../assets/styles/style.css" lang="css"></style>
+<style scoped src="../assets/styles/style.css" lang="css"></style>

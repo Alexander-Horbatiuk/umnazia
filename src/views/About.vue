@@ -122,10 +122,14 @@
               >
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Фотогалерея</a>
+              <router-link to="/about" class="el_menu_link"
+                >Фотогалерея</router-link
+              >
             </div>
             <div class="el_menu">
-              <a href="#" class="el_menu_link">Контакты</a>
+              <router-link to="/contacts" class="el_menu_link"
+                >Контакты</router-link
+              >
             </div>
           </div>
         </div>
@@ -426,4 +430,4 @@ export default {
 };
 </script>
 
-<style src="../assets/styles/about_style.css" lang="css"></style>
+<style scoped src="../assets/styles/about_style.css" lang="css"></style>

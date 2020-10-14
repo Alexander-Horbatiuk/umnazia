@@ -44,6 +44,13 @@ const routes = [
     component: function() {
       return import("../views/Groups.vue");
     }
+  },
+  {
+    path: "/contacts",
+    name: "Contacts",
+    component: function() {
+      return import("../views/Contacts.vue");
+    }
   }
 ];
 
