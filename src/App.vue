@@ -1,8 +1,15 @@
 <template>
   <div id="app">
     <router-view />
+
+
+
+
+    
   </div>
+
 </template>
+
 
 <script>
 export default {
@@ -47,6 +54,8 @@ export default {
 
 .name_form,
 .number_form {
+  padding: 0 0 0 30px;
+  font-size: 18px;
   width: 282px;
   min-height: 60px;
   display: flex;

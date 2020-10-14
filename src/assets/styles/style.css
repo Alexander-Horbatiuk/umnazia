@@ -687,7 +687,7 @@
         background: url(../img//background/background_visor_phone.png) no-repeat top center;
         background-size: 110%;
         padding: 0;
-        height: 454px;
+        min-height: 654px;
         margin: 0 0 50px 0;
     }
 
@@ -907,8 +907,6 @@
     }
 }
 
-@media screen and (max-width: 700px) {
-}
 
 /* _________________________________________320_______ */
 
@@ -921,7 +919,7 @@
     /* _____________________ */
 
     .wrapper_contant {
-        max-width: 375px;
+        max-width: 700px;
         width: 100%;
     }
     .wrapper_for_methodology {
@@ -1924,8 +1922,7 @@
 }
 .header_circles_six {
     top: 75px;
-    left: 50%;
-    transform: translate(-50%);
+    left: -50px;
 }
 .header_circles_seven {
     top: 75px;
@@ -2489,8 +2486,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin: 0 0 215px 0; */
-    /* background: chartreuse; */
+    position: relative;
+}
+.wrap_our_rules::after {
+    content: " ";
+    position: absolute;
+    bottom: -16.11%;
+    width: 100%;
+    min-height: 583px;
+    background: url(../img/background/bg_vectot_tablet.png) no-repeat bottom;
+    background-size: 100%;
 }
 
 .center_circle_header_rules::after {
@@ -2635,6 +2640,7 @@
     padding: 15px 25px 25px 35px;
     /* overflow-x: hidden; */
     position: relative;
+    background: #fff;
     z-index: 2;
 }
 
@@ -2689,7 +2695,25 @@
     }
 }
 
+@media screen and (max-width: 1600px) {
+    .wrap_our_rules::after {
+        /* content: " "; */
+        /* position: absolute; */
+        bottom: -152px;
+        /* width: 100%; */
+        min-height: 386px;
+        /* background: url(../img/background/bg_vectot_tablet.png) no-repeat bottom; */
+        /* background-size: 100%; */
+
+    }
+}
 @media screen and (max-width: 1024px) {
+    .wrap_our_rules::after {
+        bottom: -107px;
+        min-height: 244px;
+
+    }
+
     .wrapper_cards_our_rules {
         max-width: 740px;
     }
@@ -2702,9 +2726,16 @@
     .center_circle_header_rules::after {
         width: 400px;
     }
+    .wrap_our_rules::after {
+        bottom: -60px;
+    }
 }
 /* _______________________________320_______________ */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {    
+    .wrap_our_rules::after {
+        display: none;
+    }
+
     .center_circle_header_rules::after {
         width: 290px;
         border: 4px solid #efe134;
@@ -2736,18 +2767,17 @@
 .wrap_gallery {
     box-sizing: border-box;
     max-width: 1920px;
-    min-height: 1030px;
     width: 100%;
+
+    min-height: 1030px;
+    background: #E8F6F7;
     background-image: url(../img//background/bg_vectot_pattern.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 347px 0 0 0;
+    padding: 270px 0 0 0;
 }
 
-.bg_wrap_gallery {
-    display: none;
-}
 
 .sub_wrap_gallery {
     position: relative;
@@ -2772,65 +2802,6 @@
     left: 0;
 }
 
-.gallery_box {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 1110px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-/* __________________________BTN__GALLERY__SLIDE__________ */
-.box_for_click {
-    position: relative;
-}
-
-.gallery_arrow_left {
-    position: absolute;
-    left: -70px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    fill: #fff;
-}
-
-.gallery_arrow_right {
-    position: absolute;
-    right: -70px;
-    top: 50%;
-    transform: translateY(-50%);
-    transform: rotate(-60deg);
-    cursor: pointer;
-    fill: #fff;
-}
-
-.gallery_arrow_left:hover,
-.gallery_arrow_right:hover {
-    fill: #1ba6b2;
-}
-
-.gallery_content_small {
-    margin: 0 0 30px 0;
-}
-.gallery_content_small:last-child {
-    margin: 0;
-}
-/* ____________________________размеры картинок_________ */
-.gallery_content_small {
-    background-image: url(../img//gallery/kindergarten-students-learning-shape-with-colorful.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 255px;
-    height: 250px;
-    overflow: hidden;
-}
-.gallery_content_long {
-    width: 255px;
-    height: 530px;
-}
 
 /* ___________________________________________________________________ */
 @media all and (min-width: 800px) and (max-width: 1500px) {
@@ -2844,9 +2815,7 @@
     }
 
     .wrap_gallery {
-        padding: 447px 0 0 0;
-        bottom: -900px;
-        background-size: cover;
+        padding: 247px 0 0 0;
     }
 
     .sub_wrap_gallery::after {
@@ -2871,34 +2840,13 @@
         display: none;
     }
 
-    .wrap_gallery {
-        position: relative;
-        background-image: url(../img//background/bg_vectot_pattern_tablet.png);
-        background-size: cover;
-        position: static;
+    .wrap_gallery {      
+        background-position: top ;
+        background-repeat: repeat;
+        min-height: 1395px;
         padding: 147px 0 0 0;
         justify-content: center;
-        background-size: cover;
-    }
-
-    .gallery_box {
-        display: flex;
-        align-items: center;
-        max-width: 740px;
-        justify-content: space-around;
-    }
-
-    .gallery_sub_box {
-        margin: 0 0 20px 0;
-    }
-
-    .gallery_content_small {
-        margin: 0 0 30px 0;
-    }
-
-    .gallery_img_small {
-        max-height: 100%;
-        max-width: 100%;
+    
     }
 }
 /* ___________________________________________________________________ */
@@ -2907,43 +2855,28 @@
         margin: 0;
         display: none;
     }
-    .sub_wrap_gallery::after {
-        display: none;
-    }
+
     .center_circle_gallery {
         margin: 0 0 20px 0;
         padding: 0;
     }
 
     .wrap_gallery {
-        min-height: 651px;
-        background-size: cover;
-        padding: 30px 0 0 0;
-        background-position: inherit;
-        margin: 0;
-    }
-    .gallery_sub_box {
-        margin: 0 0px 10px 0;
-    }
-    .gallery_box {
-        max-width: 310px;
-        border-radius: 0;
-    }
-    .gallery_content_small {
-        max-width: 150px;
-        height: 109px;
-        width: 100%;
-        margin: 0 10px 10px 0;
-    }
-
-    .gallery_content_long {
-        max-width: 150px;
-        height: 228px;
-        width: 100%;
+        background-size: 100%;
+        padding: 70px 0 0 0;
         margin: 0;
     }
 }
 
+@media screen and (max-width: 375px) {
+    .wrap_gallery {
+        background-size: 100%;
+        padding: 70px 0 0 0;
+        margin: 0;
+        min-height: 651px;
+        background-repeat: repeat;
+    }
+}
 /* ___________________FOOTER______________________ */
 
 .wrap_footer {

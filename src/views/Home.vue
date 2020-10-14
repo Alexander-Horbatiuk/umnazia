@@ -554,7 +554,19 @@
                 </div>
                 <div class="central_circle_content_seven   cllass_for_children">
                   <p class="center_circ_bg_heading">Триз</p>
-                  <span class="center_cercle_text"></span>
+                  <span class="center_cercle_text">
+                    Теория решения изобретательных задач-в 
+                    процессе обучениЯ происходит развитие 
+                    творческого мышления(вариативности,диалектичности,
+                    системности);развитие творческого воображения
+                    (оригинальности,гибкости,продуктивности),развитие творческой речи(
+                      умении придумывать сравнения,загадки,истории)
+                      ,развитие творческой личности(стремление к 
+                      новизне,поисковой активности,любознательности)
+                    Благодаря занятиям по методике Триз -дети 
+                    становятся другими:
+                    любознательными,находчивыми,разговорчивыми,
+                    веселыми и энергичными.</span>
                 </div>
 
                 <div class="central_circle_content_eight   cllass_for_children">
@@ -703,7 +715,7 @@
                       class="img_five_circles"
                     />
                     <p class="header_circles_five    text_near_circles">
-                      Реджио педагогика (о нас)
+                      Реджио педагогика
                     </p>
                   </div>
                 </div>
@@ -716,7 +728,7 @@
                       class="img_six_circles"
                     />
                     <p class="header_circles_six    text_near_circles">
-                      Видеонаблюдение (текст)
+                      Видеонаблюдение
                     </p>
                   </div>
                 </div>
@@ -927,126 +939,32 @@
                   <h3>фото и видео нашего садика</h3>
                 </div>
               </div>
-              <div class="box_for_click">
-                <svg
-                  width="40"
-                  height="39"
-                  viewBox="0 0 40 39"
-                  class="gallery_arrow_left"
-                >
-                  <path
-                    d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-                    stroke="#1BA6B2"
-                  />
-                </svg>
-                <div class="gallery_box">
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small">
-                      <img
-                        src="../assets/img/gallery/funny-clown-play-with-boys.jpg"
-                        width="255"
-                        height="250"
-                        alt=""
-                        class="gallery_img_small"
-                      />
-                    </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small">
-                      <video
-                        width="255"
-                        height="250"
-                        controls="controls"
-                        poster="#"
-                        class="gallery_img_small"
-                      >
-                        <source src="video.mp4" type="video/mp4" />
-                        <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
-                        <source src="video.webm" type="video/webm" />
-                        <!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
-                        <source src="video.ogv" type="video/ogg" />
-                        <!-- Ogg/Vorbis для старых версий браузеров Firefox и Opera -->
-                        <object
-                          data="video.swf"
-                          type="application/x-shockwave-flash"
-                          ><!-- добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video -->
-                          <param name="movie" value="video.swf" />
-                        </object>
-                      </video>
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long">
-                      <img
-                        src="../assets/img/gallery/funny-clown-with-children-long.jpg"
-                        width="255"
-                        height="530"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small">
-                      <img
-                        src="../assets/img/gallery/scandi-kindergarten-with-easel.jpg"
-                        width="255"
-                        height="250"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small">
-                      <video
-                        width="255"
-                        height="250"
-                        controls="controls"
-                        poster="#"
-                        class="gallery_img_small"
-                      >
-                        <source src="video.mp4" type="video/mp4" />
-                        <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
-                        <source src="video.webm" type="video/webm" />
-                        <!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
-                        <source src="video.ogv" type="video/ogg" />
-                        <!-- Ogg/Vorbis для старых версий браузеров Firefox и Opera -->
-                        <object
-                          data="video.swf"
-                          type="application/x-shockwave-flash"
-                          ><!-- добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video -->
-                          <param name="movie" value="video.swf" />
-                        </object>
-                      </video>
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long">
-                      <img
-                        src="../assets/img/gallery/leisure-in-kindergarten.jpg"
-                        width="255"
-                        height="530"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <svg
-                  width="40"
-                  height="39"
-                  viewBox="0 0 40 39"
-                  class="gallery_arrow_right"
-                >
-                  <path
-                    d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-                    stroke="#1BA6B2"
-                  />
-                </svg>
-              </div>
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+<!-- _________________________________GALLERY_______________ -->
+              
             </div>
           </div>
           <!-- ________________________________________________ -->
@@ -1169,17 +1087,21 @@
               type="text"
               placeholder="Ваше имя"
               class="name_form"
+              required
             />
             <input
               v-model="tel"
               type="tel"
-              placeholder="Ваше номер телефона"
+              placeholder="Ваш номер телефона"
               class="number_form"
+              required
+              minlength="9"
             />
             <button class="bt_modal_form">Отправить</button>
           </div>
         </form>
       </div>
+
     </div>
   </div>
 </template>

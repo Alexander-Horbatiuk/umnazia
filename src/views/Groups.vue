@@ -165,7 +165,7 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2450</span> грн.
+                      <span class="sub_orange_text text_bold">2800</span> грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
@@ -200,7 +200,7 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2450</span> грн.
+                      <span class="sub_orange_text text_bold">2800</span> грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
@@ -237,7 +237,7 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2450</span> грн.
+                      <span class="sub_orange_text text_bold">2800</span> грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
@@ -271,7 +271,7 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2450</span> грн.
+                      <span class="sub_orange_text text_bold">2800</span> грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
