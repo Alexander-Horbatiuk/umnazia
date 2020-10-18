@@ -5,7 +5,10 @@ import axios from "axios";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    home_header_title: "",
+    home_header_subtext: ""
+  },
   mutations: {},
   actions: {
     async sendTel(context, data) {

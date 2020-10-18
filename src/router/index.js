@@ -51,6 +51,13 @@ const routes = [
     component: function() {
       return import("../views/Contacts.vue");
     }
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: function() {
+      return import("../views/Admin.vue");
+    }
   }
 ];
 
