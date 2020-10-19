@@ -67,6 +67,8 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
@@ -77,7 +79,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                  class="icon_item_link"
+                >
                   <img
                     src="../assets/img/img_png/facebook.png"
                     alt="facebook"
@@ -85,7 +92,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com/"
+                  class="icon_item_link"
+                >
                   <img src="../assets/img/img_png//youtube.png" alt="youtube" />
                 </a>
               </div>
@@ -189,6 +201,8 @@
             <div class="modal_social_icons_links ">
               <div class="modal_social_icon_item ">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
                 >
                   <img
@@ -198,7 +212,11 @@
                 </a>
               </div>
               <div class="modal_social_icon_item ">
-                <a href="# ">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                >
                   <img
                     src="../assets/img/modal_window/facebook.png"
                     alt="facebook "
@@ -206,7 +224,11 @@
                 </a>
               </div>
               <div class="modal_social_icon_item ">
-                <a href="# ">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com/"
+                >
                   <img
                     src="../assets/img/modal_window/youtube.png"
                     alt="youtube "

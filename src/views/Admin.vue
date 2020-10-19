@@ -12,14 +12,14 @@
     </header>
     <main>
       <div class="main_content">
-        <form class="main_form">
+        <form @submit.prevent="fieldsSetter" class="main_form">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel
-                cupiditate accusamus atque excepturi quidem reiciendis, dolor
-                possimus amet ipsum ipsam, totam maxime molestiae veniam aliquam
-                ad dolore non beatae.
+                Верхняя часть заголовка в начале страницы. Желательно не
+                затрагивать странные конструкции выделенные знаками "больше"
+                "меньше" ибо от них зависит цвет возраста детей принимаемых в
+                группы
               </div>
               <img
                 class="screenshot"
@@ -27,6 +27,8 @@
               />
             </div>
             <input
+              required
+              v-model="home_header_title_first_part"
               placeholder="Введите текст"
               class="admin_input"
               type="text"
@@ -35,10 +37,9 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel
-                cupiditate accusamus atque excepturi quidem reiciendis, dolor
-                possimus amet ipsum ipsam, totam maxime molestiae veniam aliquam
-                ad dolore non beatae.
+                Нижняя часть заголовка в начале страницы. Опять таки желательно
+                не затрагивать конструкции выделенные знаками "больше" "меньше",
+                от них зависит цвет возраста детей принимаемых в группы
               </div>
               <img
                 class="screenshot"
@@ -46,6 +47,8 @@
               />
             </div>
             <input
+              required
+              v-model="home_header_title_second_part"
               placeholder="Введите текст"
               class="admin_input"
               type="text"
@@ -54,10 +57,10 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. A vel
-                cupiditate accusamus atque excepturi quidem reiciendis, dolor
-                possimus amet ipsum ipsam, totam maxime molestiae veniam aliquam
-                ad dolore non beatae.
+                Текст который находится в начале страницы под заголовком, можно
+                менять как угодно, но желательно чтобы текст был не слишком
+                длинный так как при слишком длинном тексте сайт может не верно
+                его отобразить
               </div>
               <img
                 class="screenshot"
@@ -65,6 +68,592 @@
               />
             </div>
             <input
+              required
+              v-model="home_header_text"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок первой карточки раздела "Группы" который встречается
+                на главной странице и на странице "Группы и Стоимость". Лучше не
+                использовать слишком длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_first_block_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_first_block_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст первой карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_first_block_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_first_block_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок второй карточки раздела "Группы" который встречается
+                на главной странице и на странице "Группы и Стоимость". Лучше не
+                использовать слишком длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_second_block_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст второй карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_second_block_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок третей карточки раздела "Группы" который встречается
+                на главной странице и на странице "Группы и Стоимость". Лучше не
+                использовать слишком длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_third_block_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_third_block_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст третей карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_third_block_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_third_block_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок четвертой карточки раздела "Группы" который
+                встречается на главной странице и на странице "Группы и
+                Стоимость". Лучше не использовать слишком длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_fourth_block_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_fourth_block_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст четвертой карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_fourth_block_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_fourth_block_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 12 занятий указанная в первой карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_first_block_12_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 12 занятий указанная во второй карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_second_block_12_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 12 занятий указанная в третей карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_third_block_12_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 12 занятий указанная в четвертой карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_fourth_block_12_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 24 занятия указанная в первой карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_first_block_24_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 24 занятия указанная во второй карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_second_block_24_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 24 занятия указанная в третей карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_third_block_24_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Цена за 24 занятия указанная в четвертой карточке раздела с
+                группами на странице "Группы и Стоимость"
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
+              />
+            </div>
+            <input
+              required
+              v-model="groups_description_fourth_block_24_price"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Часы которые появляются на главной странице и в разделе
+                "Расписание". Обозначают группу которая идет в утреннее время.
+                Использовать текст покороче, а в идеале просто менять время при
+                необходимости
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/timetable_clock_morning.png"
+              />
+            </div>
+            <input
+              required
+              v-model="timetable_clock_morning"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Часы которые появляются на главной странице и в разделе
+                "Расписание". Обозначают группу которая идет в вечернее время.
+                Использовать текст покороче, а в идеале просто менять время при
+                необходимости
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/timetable_clock_evening.png"
+              />
+            </div>
+            <input
+              required
+              v-model="timetable_clock_evening"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок первой карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/first_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="first_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст первой карточки, раздела на главной странице описывающего
+                правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/first_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="first_home_techniques_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок второй карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/second_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="second_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст второй карточки, раздела на главной странице описывающего
+                правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/second_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="second_home_techniques_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок третей карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/third_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="third_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст третей карточки, раздела на главной странице описывающего
+                правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/third_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="third_home_techniques_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок четвертой карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fourth_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="fourth_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст четвертой карточки, раздела на главной странице
+                описывающего правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fourth_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="fourth_home_techniques_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок пятой карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fifth_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="fifth_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст пятой карточки, раздела на главной странице описывающего
+                правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fifth_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="fifth_home_techniques_content"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Заголовок шестой карточки, раздела на главной странице
+                описывающего правила академии, тут лучше не использовать слишком
+                длинный текст
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/sixth_home_techniques_title.png"
+              />
+            </div>
+            <input
+              required
+              v-model="sixth_home_techniques_title"
+              placeholder="Введите текст"
+              class="admin_input"
+              type="text"
+            />
+          </div>
+          <div class="input_wrapper">
+            <div class="admin_description">
+              <div class="admin_text">
+                Текст шестой карточки, раздела на главной странице описывающего
+                правила академии
+              </div>
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/sixth_home_techniques_content.png"
+              />
+            </div>
+            <input
+              required
+              v-model="sixth_home_techniques_content"
               placeholder="Введите текст"
               class="admin_input"
               type="text"
@@ -82,12 +671,197 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Admin",
+  data() {
+    return {
+      home_header_title_first_part: "",
+      home_header_title_second_part: "",
+      home_header_text: "",
+      groups_description_first_block_title: "",
+      groups_description_second_block_title: "",
+      groups_description_third_block_title: "",
+      groups_description_fourth_block_title: "",
+      groups_description_first_block_content: "",
+      groups_description_second_block_content: "",
+      groups_description_third_block_content: "",
+      groups_description_fourth_block_content: "",
+      groups_description_first_block_12_price: "",
+      groups_description_second_block_12_price: "",
+      groups_description_third_block_12_price: "",
+      groups_description_fourth_block_12_price: "",
+      groups_description_first_block_24_price: "",
+      groups_description_second_block_24_price: "",
+      groups_description_third_block_24_price: "",
+      groups_description_fourth_block_24_price: "",
+      timetable_clock_morning: "",
+      timetable_clock_evening: "",
+      first_home_techniques_title: "",
+      second_home_techniques_title: "",
+      third_home_techniques_title: "",
+      fourth_home_techniques_title: "",
+      fifth_home_techniques_title: "",
+      sixth_home_techniques_title: "",
+      first_home_techniques_content: "",
+      second_home_techniques_content: "",
+      third_home_techniques_content: "",
+      fourth_home_techniques_content: "",
+      fifth_home_techniques_content: "",
+      sixth_home_techniques_content: ""
+    };
+  },
   methods: {
     toMainPage() {
       this.$router.push({ name: "Home" });
-    }
+    },
+    fieldsSetter() {
+      this.setFields([
+        {
+          fieldName: "home_header_title_first_part",
+          fieldText: this.home_header_title_first_part
+        },
+        {
+          fieldName: "home_header_title_second_part",
+          fieldText: this.home_header_title_second_part
+        },
+        {
+          fieldName: "home_header_text",
+          fieldText: this.home_header_text
+        },
+        {
+          fieldName: "timetable_clock_morning",
+          fieldText: this.timetable_clock_morning
+        },
+        {
+          fieldName: "timetable_clock_evening",
+          fieldText: this.timetable_clock_evening
+        },
+        {
+          fieldName: "first_home_techniques_title",
+          fieldText: this.first_home_techniques_title
+        },
+        {
+          fieldName: "second_home_techniques_title",
+          fieldText: this.second_home_techniques_title
+        },
+        {
+          fieldName: "third_home_techniques_title",
+          fieldText: this.third_home_techniques_title
+        },
+        {
+          fieldName: "fourth_home_techniques_title",
+          fieldText: this.fourth_home_techniques_title
+        },
+        {
+          fieldName: "fifth_home_techniques_title",
+          fieldText: this.fifth_home_techniques_title
+        },
+        {
+          fieldName: "sixth_home_techniques_title",
+          fieldText: this.sixth_home_techniques_title
+        },
+        {
+          fieldName: "first_home_techniques_content",
+          fieldText: this.first_home_techniques_content
+        },
+        {
+          fieldName: "second_home_techniques_content",
+          fieldText: this.second_home_techniques_content
+        },
+        {
+          fieldName: "third_home_techniques_content",
+          fieldText: this.third_home_techniques_content
+        },
+        {
+          fieldName: "fourth_home_techniques_content",
+          fieldText: this.fourth_home_techniques_content
+        },
+        {
+          fieldName: "fifth_home_techniques_content",
+          fieldText: this.fifth_home_techniques_content
+        },
+        {
+          fieldName: "sixth_home_techniques_content",
+          fieldText: this.sixth_home_techniques_content
+        },
+        {
+          fieldName: "groups_description_first_block_title",
+          fieldText: this.groups_description_first_block_title
+        },
+        {
+          fieldName: "groups_description_second_block_title",
+          fieldText: this.groups_description_second_block_title
+        },
+        {
+          fieldName: "groups_description_third_block_title",
+          fieldText: this.groups_description_third_block_title
+        },
+        {
+          fieldName: "groups_description_fourth_block_title",
+          fieldText: this.groups_description_fourth_block_title
+        },
+        {
+          fieldName: "groups_description_first_block_content",
+          fieldText: this.groups_description_first_block_content
+        },
+        {
+          fieldName: "groups_description_second_block_content",
+          fieldText: this.groups_description_second_block_content
+        },
+        {
+          fieldName: "groups_description_third_block_content",
+          fieldText: this.groups_description_third_block_content
+        },
+        {
+          fieldName: "groups_description_fourth_block_content",
+          fieldText: this.groups_description_fourth_block_content
+        },
+        {
+          fieldName: "groups_description_first_block_12_price",
+          fieldText: this.groups_description_first_block_12_price
+        },
+        {
+          fieldName: "groups_description_second_block_12_price",
+          fieldText: this.groups_description_second_block_12_price
+        },
+        {
+          fieldName: "groups_description_third_block_12_price",
+          fieldText: this.groups_description_third_block_12_price
+        },
+        {
+          fieldName: "groups_description_fourth_block_12_price",
+          fieldText: this.groups_description_fourth_block_12_price
+        },
+        {
+          fieldName: "groups_description_first_block_24_price",
+          fieldText: this.groups_description_first_block_24_price
+        },
+        {
+          fieldName: "groups_description_second_block_24_price",
+          fieldText: this.groups_description_second_block_24_price
+        },
+        {
+          fieldName: "groups_description_third_block_24_price",
+          fieldText: this.groups_description_third_block_24_price
+        },
+        {
+          fieldName: "groups_description_fourth_block_24_price",
+          fieldText: this.groups_description_fourth_block_24_price
+        }
+      ]);
+    },
+    ...mapActions(["getFields", "setFields"])
+  },
+  computed: mapState({
+    fields: state => state.fields
+  }),
+  async created() {
+    await this.getFields();
+    const keys = Object.keys(this.fields);
+    keys.forEach(key => {
+      this[key] = this.fields[key];
+    });
   }
 };
 </script>

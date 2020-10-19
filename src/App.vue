@@ -12,6 +12,11 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
+.sub_age_one,
+.sub_age_two {
+  color: #efe134;
+}
+
 .wraper_modal_form {
   width: 100%;
   height: 100%;

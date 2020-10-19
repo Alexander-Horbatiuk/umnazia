@@ -75,6 +75,8 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
@@ -86,6 +88,8 @@
               </div>
               <div class="social_icon_item">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://www.facebook.com/profile.php?id=100054250201674"
                   class="icon_item_link"
                 >
@@ -96,7 +100,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="https://www.youtube.com" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com"
+                  class="icon_item_link"
+                >
                   <img src="../assets/img/img_png//youtube.png" alt="youtube" />
                 </a>
               </div>
@@ -160,16 +169,18 @@
               class="frame_on_visor"
             />
             <div class="sub_content_box_age">
-              <div class="box_age_one text_700_24">
-                набор дошкольников <span class="sub_age_one"> 3-6 лет</span>
-              </div>
-              <div class="box_age_two text_700_24">
-                и первокласников <span class="sub_age_two"> 6-7 лет</span>
-              </div>
-              <div class="content_box_age_text text_400_18">
-                Занятия проходят по эксклюзивной методике языкового погружения
-                на трех языках - русском, украинском, английском
-              </div>
+              <div
+                class="box_age_one text_700_24"
+                v-html="home_header_title_first_part"
+              ></div>
+              <div
+                class="box_age_two text_700_24"
+                v-html="home_header_title_second_part"
+              ></div>
+              <div
+                class="content_box_age_text text_400_18"
+                v-html="home_header_text"
+              ></div>
               <div @click="showModal" class="content_box_age_btn text_700_16">
                 <img
                   src="../assets/img/img_png/btn_yellow.png"
@@ -317,12 +328,11 @@
                   />
                 </div>
                 <div class="content_header_text">
-                  <p class="header_groups">3-4 года</p>
+                  <p class="header_groups">
+                    {{ groups_description_first_block_title }}
+                  </p>
                   <span class="text_group">
-                    В этом возрасте активно формируются многие
-                    навыки,развиваются психические процессы ,такие как
-                    память,мышление,речь,внимание, воображение,формируется
-                    самооценка. Этот возраст ещё называют возрастом «почемучек».
+                    {{ groups_description_first_block_content }}
                   </span>
                 </div>
                 <!--кнопка дла развертыванья-->
@@ -338,12 +348,11 @@
                   />
                 </div>
                 <div class="content_header_text">
-                  <p class="header_groups">4-5 года</p>
+                  <p class="header_groups">
+                    {{ groups_description_second_block_title }}
+                  </p>
                   <span class="text_group"
-                    >В поведении детей пятого Года жизни увеличивается
-                    потребность в двигательной активности, формируется
-                    интеллектуальное и социально-эмоциональное развитие.
-                    Дошкольники испытывают острую потребность в движении.
+                    >{{ groups_description_second_block_content }}
                   </span>
                 </div>
                 <!--кнопка дла развертыванья-->
@@ -361,12 +370,11 @@
                   />
                 </div>
                 <div class="content_header_text">
-                  <p class="header_groups">5-6 года</p>
+                  <p class="header_groups">
+                    {{ groups_description_third_block_title }}
+                  </p>
                   <span class="text_group"
-                    >Возраст социально-эмоционального развития, ребёнок 5-6 лет
-                    стремиться познать себя и другого человека во взаимодействии
-                    с друг другом и обществом в целом,осваивает навыки
-                    коммуникации и взаимоотношений между людьми.
+                    >{{ groups_description_third_block_content }}
                   </span>
                 </div>
                 <!--кнопка дла развертыванья-->
@@ -381,12 +389,12 @@
                   />
                 </div>
                 <div class="content_header_text">
-                  <p class="header_groups">6-7 года</p>
-                  <span class="text_group"
-                    >Сюжетно - ролевые игры становятся более сложными. Игровое
-                    пространство должно быть обеспечено различного рода
-                    оборудованием для сюжетно - ролевой игры.</span
-                  >
+                  <p class="header_groups">
+                    {{ groups_description_fourth_block_title }}
+                  </p>
+                  <span class="text_group">{{
+                    groups_description_fourth_block_content
+                  }}</span>
                 </div>
                 <!--кнопка дла развертыванья-->
                 <div class="btn_read_text">читать полностью</div>
@@ -412,7 +420,7 @@
             <div class="clocks_wrapper">
               <div class="class_hours class_hours_9am">
                 <div class="time_text_9am text_700_35">
-                  <p>С 9:00 до 13:00</p>
+                  <p>{{ timetable_clock_morning }}</p>
                 </div>
 
                 <div @click="showModal" class="text_700_35">
@@ -425,7 +433,7 @@
 
               <div class="class_hours class_hours_14pm">
                 <div class="time_text_14pm text_700_35">
-                  <p>С 14:00 до 18:00</p>
+                  <p>{{ timetable_clock_evening }}</p>
                 </div>
 
                 <div @click="showModal" class="text_Bold">
@@ -834,13 +842,10 @@
 
                 <div class="footer_card">
                   <p class="head_card_text">
-                    Уважать ребенка и смотреть ему в глаза
+                    {{ first_home_techniques_title }}
                   </p>
                   <span class="text_card">
-                    Мы говорим : надо не опуститься до ребёнка,а подняться до
-                    него! Сидеть с ним на детском стуле или на
-                    полу,разговаривать ,глядя ему в глаза,есть с ним -и когда мы
-                    едим,наша цель находиться на одном уровне.
+                    {{ first_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -852,13 +857,10 @@
 
                 <div class="footer_card">
                   <p class="head_card_text">
-                    Объяснить правила и задать вопрос
+                    {{ second_home_techniques_title }}
                   </p>
                   <span class="text_card">
-                    Ребёнку необходимо объяснить, что существуют правила. Наша
-                    задача,и педагогов,и родителей,как можно больше задавать
-                    открытых вопросов и почти не задавать закрытых,на которые
-                    можно ответить «Да» или «Нет»
+                    {{ second_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -869,15 +871,11 @@
                 <div class="head_card num_card_three"></div>
 
                 <div class="footer_card">
-                  <p class="head_card_text">Задавать открытые вопросы</p>
+                  <p class="head_card_text">
+                    {{ third_home_techniques_title }}
+                  </p>
                   <span class="text_card">
-                    Реджио-педагогика взяла многое у Льва Выготского. Он
-                    говорил: мы должны понять, где, в какой точке по тому или
-                    иному вопросу ребенок находиться сейчас, и мы узнаем зону
-                    его ближайшего развития. Основной задачей для нас является
-                    не давать ребенку готовых знаний, правил и понятий, а путем
-                    размышлений дать возможность ребенку самостоятельно найти
-                    ответы на вопросы
+                    {{ third_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -888,10 +886,11 @@
                 <div class="head_card num_card_four"></div>
 
                 <div class="footer_card">
-                  <p class="head_card_text">Не “неправильно”, а “по-другому”</p>
+                  <p class="head_card_text">
+                    {{ fourth_home_techniques_title }}
+                  </p>
                   <span class="text_card">
-                    Часто,неправильный ответ может стать толчком к какому-то
-                    исследованию,к расширению знаний.
+                    {{ fourth_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -902,11 +901,11 @@
                 <div class="head_card num_card_five"></div>
 
                 <div class="footer_card">
-                  <p class="head_card_text">Предлагать выбор и не торопить</p>
+                  <p class="head_card_text">
+                    {{ fifth_home_techniques_title }}
+                  </p>
                   <span class="text_card">
-                    Наши педагоги всегда дают ребенку выбор, объясняя
-                    последствия. Ребенок научится понимать: нет безвыходных
-                    ситуаций, есть решение проблемы.
+                    {{ fifth_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -917,10 +916,11 @@
                 <div class="head_card num_card_six"></div>
 
                 <div class="footer_card">
-                  <p class="head_card_text">Учиться через дискуссию</p>
+                  <p class="head_card_text">
+                    {{ sixth_home_techniques_title }}
+                  </p>
                   <span class="text_card">
-                    Мы уважаем мнение любого ребенка и учим его грамотно
-                    выражать свои мысли в устнои и письменном виде.
+                    {{ sixth_home_techniques_content }}
                   </span>
                   <!--кнопка дла развертыванья-->
                   <div class="btn_read_text">читать полностью</div>
@@ -1032,6 +1032,8 @@
             <div class="modal_social_icons_links ">
               <div class="modal_social_icon_item ">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
                 >
                   <img
@@ -1041,7 +1043,11 @@
                 </a>
               </div>
               <div class="modal_social_icon_item ">
-                <a href="# ">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                >
                   <img
                     src="../assets/img/img_png/facebook.png"
                     alt="facebook "
@@ -1049,7 +1055,11 @@
                 </a>
               </div>
               <div class="modal_social_icon_item ">
-                <a href="# ">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com/"
+                >
                   <img src="../assets/img/img_png/youtube.png" alt="youtube " />
                 </a>
               </div>
@@ -1105,14 +1115,39 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Home",
   data() {
     return {
       isModal: false,
       name: "",
-      tel: ""
+      tel: "",
+      home_header_title_first_part: "",
+      home_header_title_second_part: "",
+      home_header_text: "",
+      groups_description_first_block_title: "",
+      groups_description_second_block_title: "",
+      groups_description_third_block_title: "",
+      groups_description_fourth_block_title: "",
+      groups_description_first_block_content: "",
+      groups_description_second_block_content: "",
+      groups_description_third_block_content: "",
+      groups_description_fourth_block_content: "",
+      timetable_clock_morning: "",
+      timetable_clock_evening: "",
+      first_home_techniques_title: "",
+      second_home_techniques_title: "",
+      third_home_techniques_title: "",
+      fourth_home_techniques_title: "",
+      fifth_home_techniques_title: "",
+      sixth_home_techniques_title: "",
+      first_home_techniques_content: "",
+      second_home_techniques_content: "",
+      third_home_techniques_content: "",
+      fourth_home_techniques_content: "",
+      fifth_home_techniques_content: "",
+      sixth_home_techniques_content: ""
     };
   },
   methods: {
@@ -1134,7 +1169,17 @@ export default {
       this.tel = "";
       this.isModal = false;
     },
-    ...mapActions(["sendTel"])
+    ...mapActions(["sendTel", "getFields"])
+  },
+  computed: mapState({
+    fields: state => state.fields
+  }),
+  async created() {
+    await this.getFields();
+    const keys = Object.keys(this.fields);
+    keys.forEach(key => {
+      this[key] = this.fields[key];
+    });
   }
 };
 </script>

@@ -69,6 +69,8 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
@@ -79,7 +81,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                  class="icon_item_link"
+                >
                   <img
                     src="../assets/img/img_png/facebook.png"
                     alt="facebook"
@@ -87,7 +94,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com/"
+                  class="icon_item_link"
+                >
                   <img src="../assets/img/img_png//youtube.png" alt="youtube" />
                 </a>
               </div>
@@ -363,7 +375,7 @@
           <div class="clocks_wrapper">
             <div class="class_hours class_hours_9am">
               <div class="time_text_9am text_bold">
-                <p>С 9:00 до 13:00</p>
+                <p>{{ timetable_clock_morning }}</p>
               </div>
 
               <div @click="showModal" class="text_bold">
@@ -376,7 +388,7 @@
 
             <div class="class_hours class_hours_14pm">
               <div class="time_text_14pm text_bold">
-                <p>С 14:00 до 18:00</p>
+                <p>{{ timetable_clock_evening }}</p>
               </div>
 
               <div @click="showModal" class="text_bold">
@@ -489,20 +501,32 @@
 
           <div class="modal_social_icons_links ">
             <div class="modal_social_icon_item ">
-              <a href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
+              >
                 <img
                   src="../assets/img/img_png/instagram.png"
                   alt="instagram "
                 />
               </a>
             </div>
-            <div class="modal_social_icon_item ">
-              <a href="# ">
+            <div class="modal_social_icon_item">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.facebook.com/profile.php?id=100054250201674"
+              >
                 <img src="../assets/img/img_png/facebook.png" alt="facebook " />
               </a>
             </div>
             <div class="modal_social_icon_item ">
-              <a href="# ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.youtube.com/"
+              >
                 <img src="../assets/img/img_png/youtube.png" alt="youtube " />
               </a>
             </div>
@@ -550,7 +574,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Timetable",
   data() {
@@ -559,7 +583,9 @@ export default {
       name: "",
       tel: "",
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "",
+      timetable_clock_morning: "",
+      timetable_clock_evening: ""
     };
   },
   methods: {
@@ -593,7 +619,17 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
     },
-    ...mapActions(["sendTel"])
+    ...mapActions(["sendTel", "getFields"])
+  },
+  computed: mapState({
+    fields: state => state.fields
+  }),
+  async created() {
+    await this.getFields();
+    const keys = Object.keys(this.fields);
+    keys.forEach(key => {
+      this[key] = this.fields[key];
+    });
   }
 };
 </script>

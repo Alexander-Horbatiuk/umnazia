@@ -6,10 +6,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    home_header_title: "",
-    home_header_subtext: ""
+    fields: {}
   },
-  mutations: {},
+  mutations: {
+    setFields(state, data) {
+      data.forEach(field => {
+        state.fields[field.fieldName] = field.fieldText;
+      });
+    }
+  },
   actions: {
     async sendTel(context, data) {
       await axios({
@@ -18,6 +23,22 @@ export default new Vuex.Store({
         headers: { "content-type": "application/json" },
         data
       });
+    },
+    async getFields({ commit }) {
+      const fields = await axios({
+        method: "get",
+        url: process.env.VUE_APP_API + "/fields"
+      });
+      commit("setFields", fields.data);
+    },
+    async setFields({ dispatch }, data) {
+      await axios({
+        method: "post",
+        url: process.env.VUE_APP_API + "/fields",
+        headers: { "content-type": "application/json" },
+        data
+      });
+      dispatch("getFields");
     }
   },
   modules: {}

@@ -67,6 +67,8 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
+                  target="_blank"
+                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
@@ -77,7 +79,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                  class="icon_item_link"
+                >
                   <img
                     src="../assets/img/img_png/facebook.png"
                     alt="facebook"
@@ -85,7 +92,12 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a href="" class="icon_item_link">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com/"
+                  class="icon_item_link"
+                >
                   <img src="../assets/img/img_png//youtube.png" alt="youtube" />
                 </a>
               </div>
@@ -148,15 +160,12 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>3-4 года</p>
+                  <p>{{ groups_description_first_block_title }}</p>
                 </div>
 
                 <div class="groups_sub_info_3_4 text_400_12">
                   <p>
-                    В этом возрасте активно формируются многие
-                    навыки,развиваются психические процессы, такие как память,
-                    мышление, речь, внимание, воображение, формируется
-                    самооценка. Этот возраст ещё называют возрастом «почемучек».
+                    {{ groups_description_first_block_content }}
                   </p>
                 </div>
 
@@ -165,14 +174,20 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2800</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_first_block_12_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
-                      <span class="sub_orange_text text_bold">4900</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_first_block_24_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                 </div>
@@ -182,16 +197,14 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>4-5 года</p>
+                  <p>{{ groups_description_second_block_title }}</p>
                 </div>
 
                 <div class="groups_sub_info_4_5 text_400_12">
                   <p>
-                    В поведении детей пятого Года жизни увеличивается
-                    потребность в двигательной активности,формируется
-                    интеллектуальное и <br />
-                    социально-эмоциональное развитие. <br />
-                    Дошкольники испытывают острую потребность в движении.
+                    {{ groups_description_second_block_content }}
+                    <br />
+                    <br />
                   </p>
                 </div>
 
@@ -200,14 +213,20 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2800</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_second_block_12_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
-                      <span class="sub_orange_text text_bold">4900</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_second_block_24_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                 </div>
@@ -219,16 +238,14 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>5-6 лет</p>
+                  <p>{{ groups_description_third_block_title }}</p>
                 </div>
 
                 <div class="groups_sub_info_5_6 text_400_12">
                   <p>
-                    Возраст <br />
-                    социально-эмоционального развития,ребёнок 5-6 лет стремиться
-                    познать себя и другого человека во взаимодействии с друг
-                    другом и обществом в целом,осваивает навыки коммуникации и
-                    взаимоотношений между людьми.
+                    {{ groups_description_third_block_content }}
+                    <br />
+                    <br />
                   </p>
                 </div>
 
@@ -237,14 +254,20 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2800</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_third_block_12_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
-                      <span class="sub_orange_text text_bold">4900</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_third_block_24_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                 </div>
@@ -254,15 +277,16 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>6-7 лет</p>
+                  <p>{{ groups_description_fourth_block_title }}</p>
                 </div>
 
                 <div class="groups_sub_info_6_7 text_400_12">
                   <p>
-                    Сюжетно -ролевые игры становятся более сложными. Игровое
-                    пространство должно быть обеспечено различного рода
-                    оборудованием для сюжетно -ролевой игры. <br />
-                    Работаем над развитием образного мышления,воображения.
+                    {{ groups_description_fourth_block_content }}
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
 
@@ -271,14 +295,20 @@
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
-                      <span class="sub_orange_text text_bold">2800</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_fourth_block_12_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                   <div class="groups_prices text_400_12">
                     <p>
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
-                      <span class="sub_orange_text text_bold">4900</span> грн.
+                      <span class="sub_orange_text text_bold">{{
+                        groups_description_fourth_block_24_price
+                      }}</span>
+                      грн.
                     </p>
                   </div>
                 </div>
@@ -386,7 +416,11 @@
 
           <div class="modal_social_icons_links ">
             <div class="modal_social_icon_item ">
-              <a href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
+              >
                 <img
                   src="../assets/img/img_png/instagram.png"
                   alt="instagram "
@@ -394,12 +428,20 @@
               </a>
             </div>
             <div class="modal_social_icon_item ">
-              <a href="# ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.facebook.com/profile.php?id=100054250201674"
+              >
                 <img src="../assets/img/img_png/facebook.png" alt="facebook " />
               </a>
             </div>
             <div class="modal_social_icon_item ">
-              <a href="# ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.youtube.com/"
+              >
                 <img src="../assets/img/img_png/youtube.png" alt="youtube " />
               </a>
             </div>
@@ -451,7 +493,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Groups",
   data() {
@@ -460,7 +502,23 @@ export default {
       name: "",
       tel: "",
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "",
+      groups_description_first_block_title: "",
+      groups_description_second_block_title: "",
+      groups_description_third_block_title: "",
+      groups_description_fourth_block_title: "",
+      groups_description_first_block_content: "",
+      groups_description_second_block_content: "",
+      groups_description_third_block_content: "",
+      groups_description_fourth_block_content: "",
+      groups_description_first_block_12_price: "",
+      groups_description_second_block_12_price: "",
+      groups_description_third_block_12_price: "",
+      groups_description_fourth_block_12_price: "",
+      groups_description_first_block_24_price: "",
+      groups_description_second_block_24_price: "",
+      groups_description_third_block_24_price: "",
+      groups_description_fourth_block_24_price: ""
     };
   },
   methods: {
@@ -494,7 +552,17 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
     },
-    ...mapActions(["sendTel"])
+    ...mapActions(["sendTel", "getFields"])
+  },
+  computed: mapState({
+    fields: state => state.fields
+  }),
+  async created() {
+    await this.getFields();
+    const keys = Object.keys(this.fields);
+    keys.forEach(key => {
+      this[key] = this.fields[key];
+    });
   }
 };
 </script>
