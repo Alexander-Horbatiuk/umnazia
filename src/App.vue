@@ -12,6 +12,14 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
+html {
+  min-height: 100%;
+  background-image: url(./assets/img/background/main_bg_white.jpg);
+  background-repeat: repeat-y;
+  position: relative;
+  z-index: 0;
+}
+
 .sub_age_one,
 .sub_age_two {
   color: #efe134;
