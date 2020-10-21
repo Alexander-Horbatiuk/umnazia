@@ -704,14 +704,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст 5 карточки, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/fifth_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст 5 карточки, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
