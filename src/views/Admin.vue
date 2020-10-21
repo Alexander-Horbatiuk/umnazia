@@ -17,16 +17,17 @@
                 <div class="head_contebt_block">
                   <div class="input_wrapper sub_head_contebt_block">
                     <div class="admin_description">
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_title_first_part.png"
+                      />
                       <div class="admin_text">
                         Верхняя часть заголовка в начале страницы. <span class="admin_red_text">Не
                         затрагивать странные конструкции выделенные знаками "больше"
                         "меньше"</span>  от них зависит цвет возраста
                         <span span class="admin_gold_text"> 3-6 лет</span>
                       </div>
-                      <img
-                        class="screenshot"
-                        src="../assets/img/admin/screenshots/home_header_title_first_part.png"
-                      />
+                      
                     </div>
                     <input
                       required
@@ -38,6 +39,10 @@
                   </div>
                   <div class="input_wrapper sub_head_contebt_block">
                     <div class="admin_description">
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_title_second_part.png"
+                      />
                       <div class="admin_text">
                         Нижняя часть заголовка в начале страницы. <span class="admin_red_text">Не
                         затрагивать странные конструкции выделенные знаками "больше"
@@ -45,10 +50,7 @@
                         от них зависит цвет возраста
                         <span span class="admin_gold_text"> 6-7 лет</span>
                       </div>
-                      <img
-                        class="screenshot"
-                        src="../assets/img/admin/screenshots/home_header_title_second_part.png"
-                      />
+                      
                     </div>
                     <input
                       required
@@ -60,6 +62,10 @@
                   </div>
                   <div class="input_wrapper sub_head_contebt_block">
                     <div class="admin_description">
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_text.png"
+                      />
                       <div class="admin_text">
                         Текст который находится в начале страницы под заголовком, 
                         <span class="admin_description_small_text">можно
@@ -68,10 +74,7 @@
                         его отобразить
                           </span> 
                       </div>
-                      <img
-                        class="screenshot"
-                        src="../assets/img/admin/screenshots/home_header_text.png"
-                      />
+                      
                     </div>
                     <input
                       required
@@ -91,15 +94,16 @@
 <div class="sub_card_title"> 
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot sub_screenshot"
+                src="../assets/img/admin/screenshots/groups_description_first_block_title.png"
+              />
               <div class="admin_text">
                 Заголовок первой карточки раздела "Группы" который встречается
                 на главной странице и на странице "Группы и Стоимость". Лучше не
                 использовать слишком длинный текст
               </div>
-              <img
-                class="screenshot sub_screenshot"
-                src="../assets/img/admin/screenshots/groups_description_first_block_title.png"
-              />
+              
             </div>
             <input
               required
@@ -111,14 +115,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст первой карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
-              </div>
               <img
                 class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_first_block_content.png"
               />
+              <div class="admin_text">
+                Текст первой карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              
             </div>
             <input
               required
@@ -132,15 +137,16 @@
           <div class="sub_card_title">
             <div class="input_wrapper">
               <div class="admin_description">
+                <img
+                  class="screenshot sub_screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
+                />
                 <div class="admin_text">
                   Заголовок второй карточки раздела "Группы" который встречается
                   на главной странице и на странице "Группы и Стоимость". Лучше не
                   использовать слишком длинный текст
                 </div>
-                <img
-                  class="screenshot sub_screenshot"
-                  src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
-                />
+                
               </div>
               <input
                 required
@@ -152,14 +158,15 @@
             </div>
             <div class="input_wrapper">
               <div class="admin_description">
-                <div class="admin_text">
-                  Текст второй карточки раздела "Группы" который встречается на
-                  главной странице и на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot sub_screenshot"
                   src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
                 />
+                <div class="admin_text">
+                  Текст второй карточки раздела "Группы" который встречается на
+                  главной странице и на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -175,15 +182,16 @@
           <div class="sub_card_title">
             <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot sub_screenshot"
+                src="../assets/img/admin/screenshots/groups_description_third_block_title.png"
+              />
               <div class="admin_text">
                 Заголовок третей карточки раздела "Группы" который встречается
                 на главной странице и на странице "Группы и Стоимость". Лучше не
                 использовать слишком длинный текст
               </div>
-              <img
-                class="screenshot sub_screenshot"
-                src="../assets/img/admin/screenshots/groups_description_third_block_title.png"
-              />
+              
             </div>
             <input
               required
@@ -195,14 +203,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст третей карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
-              </div>
               <img
                 class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_third_block_content.png"
               />
+              <div class="admin_text">
+                Текст третей карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              
             </div>
             <input
               required
@@ -219,15 +228,16 @@
           <div class="sub_card_title">
             <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot sub_screenshot"
+                src="../assets/img/admin/screenshots/groups_description_fourth_block_title.png"
+              />
               <div class="admin_text">
                 Заголовок четвертой карточки раздела "Группы" который
                 встречается на главной странице и на странице "Группы и
                 Стоимость". Лучше не использовать слишком длинный текст
               </div>
-              <img
-                class="screenshot sub_screenshot"
-                src="../assets/img/admin/screenshots/groups_description_fourth_block_title.png"
-              />
+              
             </div>
             <input
               required
@@ -239,14 +249,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст четвертой карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
-              </div>
               <img
                 class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_fourth_block_content.png"
               />
+              <div class="admin_text">
+                Текст четвертой карточки раздела "Группы" который встречается на
+                главной странице и на странице "Группы и Стоимость"
+              </div>
+              
             </div>
             <input
               required
@@ -265,14 +276,15 @@
           <div class="price_block">
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 12 занятий  карточка<span class="admin_red_text">1</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">1</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -284,14 +296,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 12 занятий  карточка<span class="admin_red_text">2</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">2</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -303,14 +316,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -322,14 +336,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 12 занятий  карточка<span class="admin_red_text">4</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">4</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -341,14 +356,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -360,14 +376,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -379,14 +396,15 @@
             </div>
             <div class="input_wrapper  sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 24 занятий  карточка<span class="admin_red_text">3</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">3</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -398,14 +416,15 @@
             </div>
             <div class="input_wrapper sub_price_block">
               <div class="admin_description">
-                <div class="admin_text">
-                  Цена за 24 занятий  карточка<span class="admin_red_text">4</span>
-                  на странице "Группы и Стоимость"
-                </div>
                 <img
                   class="screenshot"
                   src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
                 />
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">4</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                
               </div>
               <input
                 required
@@ -477,6 +496,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/first_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 1, на главной странице описывающего правила
                 академии,
@@ -484,10 +507,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/first_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -499,14 +519,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст карточки 1, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/first_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст карточки 1, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
@@ -520,6 +541,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/second_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 2, на главной странице описывающего правила
                 академии,
@@ -527,10 +552,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/second_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -542,14 +564,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст карточки 2, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/second_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст карточки 2, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
@@ -564,6 +587,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/third_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 3, на главной странице описывающего правила
                 академии,
@@ -571,10 +598,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/third_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -586,14 +610,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст карточки 3, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/third_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст карточки 3, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
@@ -610,6 +635,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fourth_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 4, на главной странице описывающего правила
                 академии,
@@ -617,10 +646,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/fourth_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -632,14 +658,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст карточки 4, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/fourth_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст карточки 4, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
@@ -654,6 +681,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/fifth_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 5, на главной странице описывающего правила
                 академии,
@@ -661,10 +692,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/fifth_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -698,6 +726,10 @@
         <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
+              <img
+                class="screenshot"
+                src="../assets/img/admin/screenshots/sixth_home_techniques_title.png"
+              />
               <div class="admin_text">
                 Заголовок карточки 6, на главной странице описывающего правила
                 академии,
@@ -705,10 +737,7 @@
                   (не использовать слишком длинный текст)
                 </p>
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/sixth_home_techniques_title.png"
-              />
+              
             </div>
             <input
               required
@@ -720,14 +749,15 @@
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
-              <div class="admin_text">
-                Текст карточки 6, на главной странице описывающего правила
-                академии
-              </div>
               <img
                 class="screenshot"
                 src="../assets/img/admin/screenshots/sixth_home_techniques_content.png"
               />
+              <div class="admin_text">
+                Текст карточки 6, на главной странице описывающего правила
+                академии
+              </div>
+              
             </div>
             <input
               required
@@ -960,13 +990,14 @@ img {
 
 .screenshot {
   width: 50%;
+  padding: 0 0 10px 0;
 }
 .sub_screenshot {
    width: 90%;
 }
 .small_screenshot {
   width: 30%;
-  padding: 0 0 10px 0;
+  
 }
 
 .admin_text {
@@ -1017,7 +1048,7 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding-bottom: 5%;
+  padding: 0 0 20px 0;
 }
 
 .admin_title {
