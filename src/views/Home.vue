@@ -181,7 +181,7 @@
                 class="content_box_age_text text_400_18"
                 v-html="home_header_text"
               ></div>
-              <div @click="showModal" class="content_box_age_btn text_700_16">
+              <div @click="showModal" class="content_box_age_btn text_700_16 btn_rtans">
                 <img
                   src="../assets/img/img_png/btn_yellow.png"
                   alt="button"
@@ -424,7 +424,7 @@
                 </div>
 
                 <div @click="showModal" class="text_700_35">
-                  <button class="training_format_submit_btn ">
+                  <button class="training_format_submit_btn btn_rtans">
                     Записаться в<br />
                     группу
                   </button>
@@ -437,7 +437,7 @@
                 </div>
 
                 <div @click="showModal" class="text_Bold">
-                  <button class="training_format_submit_orange_btn ">
+                  <button class="training_format_submit_orange_btn btn_rtans">
                     Записаться в<br />
                     группу
                   </button>
@@ -1066,7 +1066,7 @@
             </div>
 
             <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-              <button class="modal_submit_btn ">
+              <button class="modal_submit_btn btn_rtans">
                 Записаться в<br />
                 группу
               </button>

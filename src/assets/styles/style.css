@@ -2693,6 +2693,8 @@
 /* _________________________________footer_card */
 .footer_card {
     box-sizing: border-box;
+    max-width: 350px;
+    width: 100%;
     height: 253px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 20px 20px;
@@ -3687,4 +3689,14 @@
     .el_menu_modal {
         font-size: 15px;
     }
+}
+
+
+
+.btn_rtans {
+    transition: 0.9s;
+}
+
+.btn_rtans:hover { 
+    transform:  scale(1.1);
 }
