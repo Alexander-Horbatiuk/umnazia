@@ -2,8 +2,8 @@
   <div class="main_wrapper">
     <header>
       <div class="navigation_list_wrapper admin_header">
-        <div class="open_site" @click="toMainPage"> перейти на сайт</div>
-       
+        <div class="open_site" @click="toMainPage">перейти на сайт</div>
+
         <router-link to="/logout" class="logout">Выйти</router-link>
       </div>
     </header>
@@ -425,9 +425,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок карточки 1, на главной странице
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 1, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -445,8 +447,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст карточки 1, на главной странице описывающего
-                правила академии
+                Текст карточки 1, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -464,9 +466,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок карточки 2, на главной странице
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 2, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -484,8 +488,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст карточки 2, на главной странице описывающего
-                правила академии
+                Текст карточки 2, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -503,9 +507,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок карточки 3, на главной странице
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 3, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -523,8 +529,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст карточки 3, на главной странице описывающего
-                правила академии
+                Текст карточки 3, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -542,9 +548,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок карточки 4, на главной странице
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 4, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -562,8 +570,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст карточки 4,  на главной странице
-                описывающего правила академии
+                Текст карточки 4, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -581,9 +589,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок карточки 5, на главной странице
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 5, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -601,8 +611,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст 5 карточки,  на главной странице описывающего
-                правила академии
+                Текст 5 карточки, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -620,10 +630,11 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Заголовок  карточки 6, на главной странице
-                
-                описывающего правила академии, <p class="admin_red_text">(не использовать слишком
-                длинный текст)</p>
+                Заголовок карточки 6, на главной странице описывающего правила
+                академии,
+                <p class="admin_red_text">
+                  (не использовать слишком длинный текст)
+                </p>
               </div>
               <img
                 class="screenshot"
@@ -641,8 +652,8 @@
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
-                Текст карточки 6, на главной странице описывающего
-                правила академии
+                Текст карточки 6, на главной странице описывающего правила
+                академии
               </div>
               <img
                 class="screenshot"
@@ -988,7 +999,8 @@ img {
   background-repeat: repeat-y;
 }
 
-.logout, .open_site {
+.logout,
+.open_site {
   font-family: "EuropeC_700", sans-serif;
   font-size: 1.5vw;
   padding-right: 2%;
@@ -996,6 +1008,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   text-transform: uppercase;
+<<<<<<< HEAD
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
@@ -1018,6 +1031,19 @@ img {
   background: #1ba6b2 ;
   display: -webkit-box;
   display: -ms-flexbox;
+=======
+  transition: 0.9s;
+}
+
+.logout:hover,
+.open_site:hover {
+  color: #361f4d;
+  transform: scale(1.1);
+}
+
+.admin_header {
+  background: #1ba6b2;
+>>>>>>> 000601f8f18795f24526b88320938161278ffccf
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
