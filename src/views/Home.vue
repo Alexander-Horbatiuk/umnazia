@@ -34,12 +34,13 @@
 
           <div class="phones text_700_12">
             <div class="phone_number_wrap tel_position">
-              <a href="tel:+380669552793" class="num_link_header"
+              <a href="tel:+380970115588" class="num_link_header"
                 >+ 38 (097) 011 55 88</a
               >
             </div>
+            
             <div>
-              <a href="tel:+380669552793" class="num_link_header "
+              <a href="tel:+380931936267" class="num_link_header "
                 >+ 38 (093) 193 62 67</a
               >
             </div>
@@ -61,8 +62,10 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <router-link to="/" class="header_text_map_link " target="blank"
-                >г.Одесса, просп. Шевченко 27</router-link
+              <a href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank" 
+                class="header_text_map_link"
+                >г.Одесса, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -1012,6 +1015,7 @@
                 <a
                   class="modal_adress_link"
                   href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                  target="_blank"
                   >г. Одесса, просп. Шевченко 27</a
                 >
               </div>

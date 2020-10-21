@@ -1155,6 +1155,7 @@
 /*modal window*/
 
 .modal_window {
+    font-family: "EuropeC_700", sans-serif;
     width: 350px;
     height: 384px;
     display: -webkit-box;

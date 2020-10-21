@@ -8,70 +8,87 @@
       </div>
     </header>
     <main>
+
+
       <div class="main_content">
         <form @submit.prevent="fieldsSetter" class="main_form">
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Верхняя часть заголовка в начале страницы. Желательно не
-                затрагивать странные конструкции выделенные знаками "больше"
-                "меньше" ибо от них зависит цвет возраста детей принимаемых в
-                группы
-              </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/home_header_title_first_part.png"
-              />
-            </div>
-            <input
-              required
-              v-model="home_header_title_first_part"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Нижняя часть заголовка в начале страницы. Опять таки желательно
-                не затрагивать конструкции выделенные знаками "больше" "меньше",
-                от них зависит цвет возраста детей принимаемых в группы
-              </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/home_header_title_second_part.png"
-              />
-            </div>
-            <input
-              required
-              v-model="home_header_title_second_part"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Текст который находится в начале страницы под заголовком, можно
-                менять как угодно, но желательно чтобы текст был не слишком
-                длинный так как при слишком длинном тексте сайт может не верно
-                его отобразить
-              </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/home_header_text.png"
-              />
-            </div>
-            <input
-              required
-              v-model="home_header_text"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
+
+<!-- ____________________________________ -->
+                <div class="head_contebt_block">
+                  <div class="input_wrapper sub_head_contebt_block">
+                    <div class="admin_description">
+                      <div class="admin_text">
+                        Верхняя часть заголовка в начале страницы. <span class="admin_red_text">Не
+                        затрагивать странные конструкции выделенные знаками "больше"
+                        "меньше"</span>  от них зависит цвет возраста
+                        <span span class="admin_gold_text"> 3-6 лет</span>
+                      </div>
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_title_first_part.png"
+                      />
+                    </div>
+                    <input
+                      required
+                      v-model="home_header_title_first_part"
+                      placeholder="Введите текст"
+                      class="admin_input"
+                      type="text"
+                    />
+                  </div>
+                  <div class="input_wrapper sub_head_contebt_block">
+                    <div class="admin_description">
+                      <div class="admin_text">
+                        Нижняя часть заголовка в начале страницы. <span class="admin_red_text">Не
+                        затрагивать странные конструкции выделенные знаками "больше"
+                        "меньше"</span>
+                        от них зависит цвет возраста
+                        <span span class="admin_gold_text"> 6-7 лет</span>
+                      </div>
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_title_second_part.png"
+                      />
+                    </div>
+                    <input
+                      required
+                      v-model="home_header_title_second_part"
+                      placeholder="Введите текст"
+                      class="admin_input"
+                      type="text"
+                    />
+                  </div>
+                  <div class="input_wrapper sub_head_contebt_block">
+                    <div class="admin_description">
+                      <div class="admin_text">
+                        Текст который находится в начале страницы под заголовком, 
+                        <span class="admin_description_small_text">можно
+                        менять как угодно, но желательно чтобы текст был не слишком
+                        длинный так как при слишком длинном тексте сайт может не верно
+                        его отобразить
+                          </span> 
+                      </div>
+                      <img
+                        class="screenshot"
+                        src="../assets/img/admin/screenshots/home_header_text.png"
+                      />
+                    </div>
+                    <input
+                      required
+                      v-model="home_header_text"
+                      placeholder="Введите текст"
+                      class="admin_input"
+                      type="text"
+                    />
+                  </div>
+                </div>
+<!-- ____________________________________ -->     
+
+
+<!-- ____________________________________ -->
+
+<div class="card_title">
+<div class="sub_card_title"> 
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -80,7 +97,7 @@
                 использовать слишком длинный текст
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_first_block_title.png"
               />
             </div>
@@ -99,7 +116,7 @@
                 главной странице и на странице "Группы и Стоимость"
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_first_block_content.png"
               />
             </div>
@@ -111,46 +128,52 @@
               type="text"
             />
           </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Заголовок второй карточки раздела "Группы" который встречается
-                на главной странице и на странице "Группы и Стоимость". Лучше не
-                использовать слишком длинный текст
+      </div>
+          <div class="sub_card_title">
+            <div class="input_wrapper">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Заголовок второй карточки раздела "Группы" который встречается
+                  на главной странице и на странице "Группы и Стоимость". Лучше не
+                  использовать слишком длинный текст
+                </div>
+                <img
+                  class="screenshot sub_screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
+              <input
+                required
+                v-model="groups_description_second_block_title"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_second_block_title"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Текст второй карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
+            <div class="input_wrapper">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Текст второй карточки раздела "Группы" который встречается на
+                  главной странице и на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot sub_screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
+              <input
+                required
+                v-model="groups_description_second_block_content"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_second_block_content"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
           </div>
-          <div class="input_wrapper">
+          <!-- ___________ -->
+
+          <div class="sub_card_title">
+            <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
                 Заголовок третей карточки раздела "Группы" который встречается
@@ -158,7 +181,7 @@
                 использовать слишком длинный текст
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_third_block_title.png"
               />
             </div>
@@ -177,7 +200,7 @@
                 главной странице и на странице "Группы и Стоимость"
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_third_block_content.png"
               />
             </div>
@@ -189,7 +212,12 @@
               type="text"
             />
           </div>
-          <div class="input_wrapper">
+          </div>
+          <!--_________________ -->
+
+
+          <div class="sub_card_title">
+            <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
                 Заголовок четвертой карточки раздела "Группы" который
@@ -197,7 +225,7 @@
                 Стоимость". Лучше не использовать слишком длинный текст
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_fourth_block_title.png"
               />
             </div>
@@ -216,7 +244,7 @@
                 главной странице и на странице "Группы и Стоимость"
               </div>
               <img
-                class="screenshot"
+                class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_fourth_block_content.png"
               />
             </div>
@@ -228,200 +256,225 @@
               type="text"
             />
           </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в первой карточке раздела с
-                группами на странице "Группы и Стоимость"
+          </div>
+</div>
+
+      
+          
+<!-- ____________________________________ -->
+          <div class="price_block">
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">1</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
+              <input
+                required
+                v-model="groups_description_first_block_12_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_first_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная во второй карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">2</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
+              <input
+                required
+                v-model="groups_description_second_block_12_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_second_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в третей карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
+              <input
+                required
+                v-model="groups_description_third_block_12_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_third_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в четвертой карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 12 занятий  карточка<span class="admin_red_text">4</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
+              <input
+                required
+                v-model="groups_description_fourth_block_12_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_fourth_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная в первой карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
+              <input
+                required
+                v-model="groups_description_first_block_24_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_first_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная во второй карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
+              <input
+                required
+                v-model="groups_description_second_block_24_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_second_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная в третей карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper  sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">3</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
+              <input
+                required
+                v-model="groups_description_third_block_24_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_third_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная в четвертой карточке раздела с
-                группами на странице "Группы и Стоимость"
+            <div class="input_wrapper sub_price_block">
+              <div class="admin_description">
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">4</span>
+                  на странице "Группы и Стоимость"
+                </div>
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
+              <input
+                required
+                v-model="groups_description_fourth_block_24_price"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="groups_description_fourth_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
           </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Часы которые появляются на главной странице и в разделе
-                "Расписание". Обозначают группу которая идет в утреннее время.
-                Использовать текст покороче, а в идеале просто менять время при
-                необходимости
+<!-- ____________________________________ -->
+
+
+<!-- __________________clock_block__________________ -->
+
+          <div class="clock_block">
+            <div class="input_wrapper sub_clock_block">
+              <div class="admin_description">
+                <img
+                  class="screenshot small_screenshot"
+                  src="../assets/img/admin/screenshots/timetable_clock_morning.png"
+                />
+                <div class="admin_text">
+                  Часы которые встречаются на главной странице и в разделе
+                  "Расписание". Обозначают группу которая идет в утреннее время.
+                  
+                </div>
+                
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/timetable_clock_morning.png"
+              <input
+                required
+                v-model="timetable_clock_morning"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="timetable_clock_morning"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Часы которые появляются на главной странице и в разделе
-                "Расписание". Обозначают группу которая идет в вечернее время.
-                Использовать текст покороче, а в идеале просто менять время при
-                необходимости
+            <div class="input_wrapper sub_clock_block">
+              <div class="admin_description">
+                <img
+                  class="screenshot small_screenshot"
+                  src="../assets/img/admin/screenshots/timetable_clock_evening.png"
+                />
+                <div class="admin_text">
+                  Часы которые встречаются на главной странице и в разделе
+                  "Расписание". Обозначают группу которая идет в вечернее время.
+                  
+                </div>
+                
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/timetable_clock_evening.png"
+              <input
+                required
+                v-model="timetable_clock_evening"
+                placeholder="Введите текст"
+                class="admin_input"
+                type="text"
               />
             </div>
-            <input
-              required
-              v-model="timetable_clock_evening"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
           </div>
+<!-- ____________________________________ -->
+
+<!-- _______________________card_title___________________ -->
+<div class="card_title">
+
+
+<!-- __________________________________________ -->
+
+<!-- ________________ -->
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -462,7 +515,9 @@
               class="admin_input"
               type="text"
             />
-          </div>
+          </div></div>
+<!-- ________________ -->
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -504,6 +559,9 @@
               type="text"
             />
           </div>
+        </div>
+<!-- ________________ -->
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -545,6 +603,11 @@
               type="text"
             />
           </div>
+        </div>
+      </div>
+<!-- ________________ -->
+<div class="card_title">
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -586,6 +649,9 @@
               type="text"
             />
           </div>
+        </div>
+<!-- ________________ -->
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -627,6 +693,9 @@
               type="text"
             />
           </div>
+        </div>
+<!-- ________________ -->
+        <div class="sub_sub_card_title">
           <div class="input_wrapper">
             <div class="admin_description">
               <div class="admin_text">
@@ -668,6 +737,14 @@
               type="text"
             />
           </div>
+        </div>
+<!-- ________________ -->
+ </div>       
+          
+          
+          
+          
+          
           <input
             type="submit"
             class="bt_modal_form"
@@ -882,7 +959,14 @@ img {
 }
 
 .screenshot {
+  width: 50%;
+}
+.sub_screenshot {
+   width: 90%;
+}
+.small_screenshot {
   width: 30%;
+  padding: 0 0 10px 0;
 }
 
 .admin_text {
@@ -899,18 +983,27 @@ img {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 18px;
   text-align: center;
+}
+
+.admin_description_small_text {
+  font-family: "EuropeC_400", sans-serif;
+  font-size: 14px;
+  color: #142142 ;
+}
+
+.admin_gold_text {
+  color: #EFE134;
 }
 .admin_red_text {
   color: crimson;
   padding: 0;
 }
 .input_wrapper {
-  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,8 +1058,8 @@ img {
   align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
@@ -1043,5 +1136,26 @@ img {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 30px;
+}
+.price_block, .clock_block, .head_contebt_block, .card_title {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  padding: 20px 0 0 0 ;
+  margin: 0 0 40px 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 34px -7px rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+}
+.sub_head_contebt_block, .sub_sub_card_title {
+  width: 30%;
+}
+.sub_price_block, .sub_card_title {
+  width: 25%;
+}
+.sub_clock_block {
+  width: 50%;
 }
 </style>

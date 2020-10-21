@@ -812,6 +812,7 @@
 }
 
 .modal_text_wrapper {
+    font-family: "EuropeC_700";
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
