@@ -91,17 +91,19 @@
 <!-- ____________________________________ -->
 
 <div class="card_title">
-<div class="sub_card_title"> 
+  <span>Группы</span>
+    <div class="sub_card_title"> 
+  
           <div class="input_wrapper">
+            
             <div class="admin_description">
               <img
                 class="screenshot sub_screenshot"
                 src="../assets/img/admin/screenshots/groups_description_first_block_title.png"
               />
               <div class="admin_text">
-                Заголовок первой карточки раздела "Группы" который встречается
-                на главной странице и на странице "Группы и Стоимость". Лучше не
-                использовать слишком длинный текст
+                Заголовок  карточки 1  "Группы"            
+                <span class="admin_red_text">Лучше не использовать слишком длинный текст</span> 
               </div>
               
             </div>
@@ -120,8 +122,7 @@
                 src="../assets/img/admin/screenshots/groups_description_first_block_content.png"
               />
               <div class="admin_text">
-                Текст первой карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
+                Текст карточки 1
               </div>
               
             </div>
@@ -142,9 +143,8 @@
                   src="../assets/img/admin/screenshots/groups_description_second_block_title.png"
                 />
                 <div class="admin_text">
-                  Заголовок второй карточки раздела "Группы" который встречается
-                  на главной странице и на странице "Группы и Стоимость". Лучше не
-                  использовать слишком длинный текст
+                  Заголовок  карточки  2 "Группы"            
+                <span class="admin_red_text">Лучше не использовать слишком длинный текст</span> 
                 </div>
                 
               </div>
@@ -163,8 +163,7 @@
                   src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
                 />
                 <div class="admin_text">
-                  Текст второй карточки раздела "Группы" который встречается на
-                  главной странице и на странице "Группы и Стоимость"
+                  Текст карточки 2
                 </div>
                 
               </div>
@@ -187,9 +186,8 @@
                 src="../assets/img/admin/screenshots/groups_description_third_block_title.png"
               />
               <div class="admin_text">
-                Заголовок третей карточки раздела "Группы" который встречается
-                на главной странице и на странице "Группы и Стоимость". Лучше не
-                использовать слишком длинный текст
+                Заголовок  карточки  3  "Группы"            
+                <span class="admin_red_text">Лучше не использовать слишком длинный текст</span> 
               </div>
               
             </div>
@@ -208,8 +206,7 @@
                 src="../assets/img/admin/screenshots/groups_description_third_block_content.png"
               />
               <div class="admin_text">
-                Текст третей карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
+                Текст карточки 3
               </div>
               
             </div>
@@ -233,9 +230,8 @@
                 src="../assets/img/admin/screenshots/groups_description_fourth_block_title.png"
               />
               <div class="admin_text">
-                Заголовок четвертой карточки раздела "Группы" который
-                встречается на главной странице и на странице "Группы и
-                Стоимость". Лучше не использовать слишком длинный текст
+                Заголовок карточки 4  "Группы" 
+                <span class="admin_red_text">Лучше не использовать слишком длинный текст</span> 
               </div>
               
             </div>
@@ -254,8 +250,7 @@
                 src="../assets/img/admin/screenshots/groups_description_fourth_block_content.png"
               />
               <div class="admin_text">
-                Текст четвертой карточки раздела "Группы" который встречается на
-                главной странице и на странице "Группы и Стоимость"
+                Текст карточки 4 
               </div>
               
             </div>
@@ -501,8 +496,7 @@
                 src="../assets/img/admin/screenshots/first_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 1, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 1
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -524,8 +518,7 @@
                 src="../assets/img/admin/screenshots/first_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст карточки 1, на главной странице описывающего правила
-                академии
+                Текст карточки 1
               </div>
               
             </div>
@@ -546,8 +539,7 @@
                 src="../assets/img/admin/screenshots/second_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 2, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 2
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -569,8 +561,7 @@
                 src="../assets/img/admin/screenshots/second_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст карточки 2, на главной странице описывающего правила
-                академии
+                Текст карточки 2
               </div>
               
             </div>
@@ -592,8 +583,7 @@
                 src="../assets/img/admin/screenshots/third_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 3, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 3
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -615,8 +605,7 @@
                 src="../assets/img/admin/screenshots/third_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст карточки 3, на главной странице описывающего правила
-                академии
+                Текст карточки 3
               </div>
               
             </div>
@@ -640,8 +629,7 @@
                 src="../assets/img/admin/screenshots/fourth_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 4, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 4
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -663,8 +651,7 @@
                 src="../assets/img/admin/screenshots/fourth_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст карточки 4, на главной странице описывающего правила
-                академии
+                Текст карточки 4
               </div>
               
             </div>
@@ -686,8 +673,7 @@
                 src="../assets/img/admin/screenshots/fifth_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 5, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 5
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -709,8 +695,7 @@
                 src="../assets/img/admin/screenshots/fifth_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст 5 карточки, на главной странице описывающего правила
-                академии
+                Текст карточки 5
               </div>
               
             </div>
@@ -732,8 +717,7 @@
                 src="../assets/img/admin/screenshots/sixth_home_techniques_title.png"
               />
               <div class="admin_text">
-                Заголовок карточки 6, на главной странице описывающего правила
-                академии,
+                Заголовок карточки 6
                 <p class="admin_red_text">
                   (не использовать слишком длинный текст)
                 </p>
@@ -755,8 +739,7 @@
                 src="../assets/img/admin/screenshots/sixth_home_techniques_content.png"
               />
               <div class="admin_text">
-                Текст карточки 6, на главной странице описывающего правила
-                академии
+                Текст карточки 6
               </div>
               
             </div>
@@ -1034,6 +1017,7 @@ img {
 .admin_red_text {
   color: crimson;
   padding: 0;
+  font-size: 12px;
 }
 .input_wrapper {
   display: -webkit-box;
@@ -1173,20 +1157,32 @@ img {
   display: flex;
   width: 90%;
   flex-wrap: wrap;
-  padding: 20px 0 0 0 ;
+  padding: 20px;
   margin: 0 0 40px 0;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0px 0px 34px -7px rgba(0, 0, 0, 0.75);
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .sub_head_contebt_block, .sub_sub_card_title {
   width: 30%;
 }
 .sub_price_block, .sub_card_title {
-  width: 25%;
+  width: 24%;
 }
+.sub_price_block, 
+.sub_card_title, 
+.sub_head_contebt_block, 
+.sub_sub_card_title,
+.sub_head_contebt_block, 
+.sub_sub_card_title {
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 .sub_clock_block {
   width: 50%;
 }
