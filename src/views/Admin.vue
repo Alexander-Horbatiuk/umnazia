@@ -91,7 +91,6 @@
 <!-- ____________________________________ -->
 
 <div class="card_title">
-  <span>Группы</span>
     <div class="sub_card_title"> 
   
           <div class="input_wrapper">
