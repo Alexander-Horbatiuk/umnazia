@@ -226,12 +226,6 @@
               type="text"
             />
           </div>
-          </div>
-</div>
-
-      
-          
-<!-- ____________________________________ -->
           <div class="price_block">
             <div class="sub_price_block">
               <div class="input_wrapper">
@@ -241,10 +235,11 @@
                     src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 12 занятий  карточка<span class="admin_red_text">1</span>
+                    Цена за 12 занятий карточка<span class="admin_red_text"
+                      >1</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -261,10 +256,11 @@
                     src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
+                    Цена за 24 занятий карточка<span class="admin_red_text"
+                      >1</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -275,8 +271,6 @@
                 />
               </div>
             </div>
- <!-- __________________ -->            
-
             <div class="sub_price_block">
               <div class="input_wrapper">
                 <div class="admin_description">
@@ -285,10 +279,11 @@
                     src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 12 занятий  карточка<span class="admin_red_text">2</span>
+                    Цена за 12 занятий карточка<span class="admin_red_text"
+                      >2</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -305,10 +300,11 @@
                     src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
+                    Цена за 24 занятий карточка<span class="admin_red_text"
+                      >2</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -319,8 +315,6 @@
                 />
               </div>
             </div>
- <!-- __________________ -->
-
             <div class="sub_price_block">
               <div class="input_wrapper">
                 <div class="admin_description">
@@ -329,10 +323,11 @@
                     src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
+                    Цена за 12 занятий карточка<span class="admin_red_text"
+                      >3</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -349,10 +344,11 @@
                     src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">3</span>
+                    Цена за 24 занятий карточка<span class="admin_red_text"
+                      >3</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -363,8 +359,6 @@
                 />
               </div>
             </div>
- <!-- __________________ -->
-
             <div class="sub_price_block">
               <div class="input_wrapper">
                 <div class="admin_description">
@@ -373,10 +367,11 @@
                     src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 12 занятий  карточка<span class="admin_red_text">4</span>
+                    Цена за 12 занятий карточка<span class="admin_red_text"
+                      >4</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -393,10 +388,11 @@
                     src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">4</span>
+                    Цена за 24 занятий карточка<span class="admin_red_text"
+                      >4</span
+                    >
                     на странице "Группы и Стоимость"
                   </div>
-                  
                 </div>
                 <input
                   required
@@ -407,7 +403,6 @@
                 />
               </div>
             </div>
-<!-- __________________ -->
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
@@ -1092,7 +1087,10 @@ img {
   justify-content: space-between;
   padding: 30px;
 }
-.price_block, .clock_block, .head_contebt_block, .card_title {
+.price_block,
+.clock_block,
+.head_contebt_block,
+.card_title {
   display: flex;
   width: 90%;
   flex-wrap: wrap;
@@ -1105,25 +1103,26 @@ img {
   align-items: center;
 }
 
-.sub_price_block, .sub_card_title {
+.sub_price_block,
+.sub_card_title {
   width: 22%;
-  
 }
-.sub_head_contebt_block, .sub_sub_card_title {
+.sub_head_contebt_block,
+.sub_sub_card_title {
   width: 28%;
 }
 .sub_card_title:hover,
 .sub_price_block:hover,
 .sub_head_contebt_block:hover,
-.sub_sub_card_title:hover{
-/* color: #361f4d; */
+.sub_sub_card_title:hover {
+  /* color: #361f4d; */
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.04);
 }
-.sub_price_block, 
-.sub_card_title, 
-.sub_head_contebt_block, 
+.sub_price_block,
+.sub_card_title,
+.sub_head_contebt_block,
 .sub_sub_card_title {
   transition: 0.8s;
   border-radius: 10px;
