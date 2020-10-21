@@ -190,7 +190,7 @@
                   alt="button"
                   class="btn_yellow"
                 />
-                
+
                 <!-- есть display: none;  -->
                 <img
                   src="../assets/img/img_png/btn_orange.png"
