@@ -3,8 +3,6 @@
     <header>
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
-
-        <router-link to="/logout" class="logout">Выйти</router-link>
       </div>
     </header>
     <main>
