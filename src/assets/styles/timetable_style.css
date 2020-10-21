@@ -1,3 +1,5 @@
+
+
 /*fonts*/
 
 @font-face {
@@ -224,8 +226,7 @@
     );
     background: -webkit-gradient(
         linear,
-        left top,
-        right top,
+        left top, right top,
         from(rgba(242, 105, 20, 1)),
         color-stop(1%, rgba(242, 105, 20, 1)),
         to(rgba(242, 105, 20, 1))
@@ -273,8 +274,7 @@
     );
     background: -webkit-gradient(
         linear,
-        left top,
-        right top,
+        left top, right top,
         from(rgba(98, 229, 208, 1)),
         color-stop(51%, rgba(98, 229, 208, 1)),
         color-stop(51%, rgba(22, 181, 173, 1)),
@@ -349,19 +349,26 @@
 
 .main_content_wrapper {
     position: relative;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0 0 48px 0;
     background-image: url(../img/background/main_bg_white.jpg);
     background-repeat: no-repeat;
 }
 
 .sub_content_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 1110px;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 52px 0 0 0;
 }
 
@@ -391,7 +398,9 @@
     position: absolute;
     bottom: -20px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 /*Box-line_finish*/
@@ -415,14 +424,20 @@
 }
 
 .timetable_content_info_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1110px;
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0 0 30px 0;
 }
 
 .timetable_content_info_sub_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 30px 0 0;
 }
@@ -435,9 +450,11 @@
     max-width: 255px;
     width: 100%;
     background: #ffffff;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 79px 4px 18px 24px;
     position: relative;
     margin: 0 30px 0 0;
@@ -506,7 +523,8 @@
     position: absolute;
     top: -8.1em;
     left: 23.5%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .info_random_header {
@@ -534,11 +552,15 @@
 .timetable_calendar_wrapper {
     max-width: 1110px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background: #ffffff;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 34px 0 34px 0;
     margin: 0 0 30px 0;
     position: relative;
@@ -558,8 +580,11 @@
 .timetable_calendar_sub_wrapper {
     max-width: 586px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 13px 80px 12px 95px;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -571,8 +596,13 @@
 .timetable_calendar_friday,
 .timetable_calendar_saturday,
 .timetable_calendar_sunday {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-right: 44px;
 }
 
@@ -629,13 +659,16 @@
 .learning_days_wrapper {
     max-width: 523px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 77px 0 0 107px;
 }
 
 .russian_day_wrapper,
 .ukrainian_day_wrapper,
 .english_day_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 0 26px 0;
 }
@@ -694,9 +727,16 @@
 
 .training_format_wrapper {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
 }
 
@@ -727,7 +767,9 @@
     position: absolute;
     bottom: -25px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 .training_format_header_subtext {
@@ -740,8 +782,12 @@
 .clocks_wrapper {
     max-width: 1110px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: relative;
 }
 
@@ -758,12 +804,20 @@
 }
 
 .class_hours {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 515px;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 252px 0 67px 0;
 }
 
@@ -772,7 +826,8 @@
     background-image: url(../img/img_png/bg_clocks_9.png);
     background-repeat: no-repeat;
     border-radius: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .class_hours_14pm {
@@ -780,7 +835,8 @@
     background-image: url(../img/img_png/bg_clocks_14.png);
     background-repeat: no-repeat;
     border-radius: 20px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .time_text_9am {
@@ -824,7 +880,8 @@
 }
 
 .training_format_submit_btn {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 5px 0 0 0;
     background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
@@ -840,7 +897,8 @@
 }
 
 .training_format_submit_orange_btn {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 5px 0 0 0;
     background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
@@ -976,7 +1034,9 @@
     position: absolute;
     bottom: -22px;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 /*footer-Box-line*/
@@ -1231,8 +1291,7 @@
     );
     background: -webkit-gradient(
         linear,
-        left top,
-        right top,
+        left top, right top,
         from(rgba(242, 105, 20, 1)),
         color-stop(1%, rgba(242, 105, 20, 1)),
         to(rgba(242, 105, 20, 1))
@@ -1280,8 +1339,7 @@
     );
     background: -webkit-gradient(
         linear,
-        left top,
-        right top,
+        left top, right top,
         from(rgba(98, 229, 208, 1)),
         color-stop(51%, rgba(98, 229, 208, 1)),
         color-stop(51%, rgba(22, 181, 173, 1)),
@@ -1413,11 +1471,18 @@
 
 @media screen and (max-width: 1056px) {
     .sub_content_wrapper {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .timetable_content_info_wrapper {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         margin: 0 0 55px 0;
         position: relative;
     }
@@ -1464,7 +1529,8 @@
     }
     /*clocks*/
     .training_format_wrapper {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 0 20px 0 20px;
     }
     .class_hours {
@@ -1535,15 +1601,23 @@
 @media screen and (max-width: 766px) {
     /*header-320*/
     .contacts_wrapper {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 13px 0 12px 10px;
     }
     .first_block {
         max-width: 220px;
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin: 0 0 30px 0;
-        flex-direction: row-reverse;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
         padding: 0;
     }
     .logo_tablet {
@@ -1570,8 +1644,11 @@
         right: 5px;
     }
     .second_block {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 0 0 0 26px;
     }
     .tel_position::before {
@@ -1579,7 +1656,8 @@
         left: -27px;
     }
     .phones {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         margin: 0 12px 0 0;
         padding: 0px 12px 0px 0px;
         max-width: 120px;
@@ -1594,7 +1672,8 @@
         font-size: 10px;
     }
     .adress {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         position: relative;
         padding: 0 0 0 24px;
         margin-right: 0;
@@ -1615,14 +1694,20 @@
     }
     .main_content_header_sub_text {
         font-size: 17px;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 0 5px 0 5px;
     }
     .sub_content_wrapper {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .timetable_content_info_sub_wrapper {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .timetable_content_info_wrapper {
         margin: 0 0 31px 0;
@@ -1635,7 +1720,10 @@
     }
     .timetable_calendar_wrapper {
         max-width: 290px;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         padding: 28px 10px 30px 15px;
     }
     .timetable_calendar_sub_wrapper {
@@ -1671,8 +1759,12 @@
         display: none;
     }
     .small_books_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
     }
     .tech_wrapper {
         margin: 0 0 40px 0;
@@ -1685,8 +1777,13 @@
         margin: 0;
     }
     .clocks_wrapper {
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .clocks_wrapper::before {
         display: none;
@@ -1715,9 +1812,16 @@
         line-height: 30px;
     }
     .footer_user_form_wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 0 15px 0px 15px;
     }
     .footer_copyright {
@@ -1753,7 +1857,8 @@
     }
     /*footer-inputs-320px-end*/
     .google_map_wrapper {
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         padding: 350px 0 0 0;
         background-color: #fff;
     }
@@ -1787,6 +1892,8 @@
     }
     .modal_window {
         left: 50%;
-        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+            -ms-transform: translate(-50%);
+                transform: translate(-50%);
     }
 }

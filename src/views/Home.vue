@@ -187,7 +187,7 @@
                   alt="button"
                   class="btn_yellow"
                 />
-
+                
                 <!-- есть display: none;  -->
                 <img
                   src="../assets/img/img_png/btn_orange.png"
@@ -1074,7 +1074,7 @@
           </div>
           <div class="btn_anchor_wrapper">
             <button
-              class="btn_anchor"
+              class="btn_anchor btn_rtans"
               @click="scrollToTop"
               style="cursor: pointer"
             ></button>
