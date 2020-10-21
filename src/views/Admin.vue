@@ -226,138 +226,188 @@
               type="text"
             />
           </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в первой карточке раздела с
-                группами на странице "Группы и Стоимость"
-              </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
-              />
-            </div>
-            <input
-              required
-              v-model="groups_description_first_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
           </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная во второй карточке раздела с
-                группами на странице "Группы и Стоимость"
+</div>
+
+      
+          
+<!-- ____________________________________ -->
+          <div class="price_block">
+            <div class="sub_price_block">
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_first_block_12_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 12 занятий  карточка<span class="admin_red_text">1</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_first_block_12_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
-              />
-            </div>
-            <input
-              required
-              v-model="groups_description_second_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в третей карточке раздела с
-                группами на странице "Группы и Стоимость"
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_first_block_24_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
-              />
             </div>
-            <input
-              required
-              v-model="groups_description_third_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 12 занятий указанная в четвертой карточке раздела с
-                группами на странице "Группы и Стоимость"
+ <!-- __________________ -->            
+
+            <div class="sub_price_block">
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_second_block_12_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 12 занятий  карточка<span class="admin_red_text">2</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_second_block_12_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
-              />
-            </div>
-            <input
-              required
-              v-model="groups_description_fourth_block_12_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная в первой карточке раздела с
-                группами на странице "Группы и Стоимость"
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_second_block_24_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
-              />
             </div>
-            <input
-              required
-              v-model="groups_description_first_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная во второй карточке раздела с
-                группами на странице "Группы и Стоимость"
+ <!-- __________________ -->
+
+            <div class="sub_price_block">
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_third_block_12_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_third_block_12_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
-              />
-            </div>
-            <input
-              required
-              v-model="groups_description_second_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
-          </div>
-          <div class="input_wrapper">
-            <div class="admin_description">
-              <div class="admin_text">
-                Цена за 24 занятия указанная в третей карточке раздела с
-                группами на странице "Группы и Стоимость"
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 24 занятий  карточка<span class="admin_red_text">3</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_third_block_24_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
               </div>
-              <img
-                class="screenshot"
-                src="../assets/img/admin/screenshots/groups_description_third_block_24_price.png"
-              />
             </div>
-            <input
-              required
-              v-model="groups_description_third_block_24_price"
-              placeholder="Введите текст"
-              class="admin_input"
-              type="text"
-            />
+ <!-- __________________ -->
+
+            <div class="sub_price_block">
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_fourth_block_12_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 12 занятий  карточка<span class="admin_red_text">4</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_fourth_block_12_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
+              </div>
+              <div class="input_wrapper">
+                <div class="admin_description">
+                  <img
+                    class="screenshot"
+                    src="../assets/img/admin/screenshots/groups_description_fourth_block_24_price.png"
+                  />
+                  <div class="admin_text">
+                    Цена за 24 занятий  карточка<span class="admin_red_text">4</span>
+                    на странице "Группы и Стоимость"
+                  </div>
+                  
+                </div>
+                <input
+                  required
+                  v-model="groups_description_fourth_block_24_price"
+                  placeholder="Введите текст"
+                  class="admin_input"
+                  type="text"
+                />
+              </div>
+            </div>
+<!-- __________________ -->
           </div>
           <div class="input_wrapper">
             <div class="admin_description">
@@ -1042,7 +1092,6 @@ img {
   justify-content: space-between;
   padding: 30px;
 }
-<<<<<<< HEAD
 .price_block, .clock_block, .head_contebt_block, .card_title {
   display: flex;
   width: 90%;
@@ -1086,6 +1135,4 @@ img {
 .sub_clock_block {
   width: 50%;
 }
-=======
->>>>>>> d3306487ee89aa6f1393ad3ba37453c075c5273f
 </style>
