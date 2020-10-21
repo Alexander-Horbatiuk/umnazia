@@ -181,7 +181,10 @@
                 class="content_box_age_text text_400_18"
                 v-html="home_header_text"
               ></div>
-              <div @click="showModal" class="content_box_age_btn text_700_16 btn_rtans">
+              <div
+                @click="showModal"
+                class="content_box_age_btn text_700_16 btn_rtans"
+              >
                 <img
                   src="../assets/img/img_png/btn_yellow.png"
                   alt="button"
