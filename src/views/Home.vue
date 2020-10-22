@@ -38,7 +38,7 @@
                 >+ 38 (097) 011 55 88</a
               >
             </div>
-
+            
             <div>
               <a href="tel:+380931936267" class="num_link_header "
                 >+ 38 (093) 193 62 67</a
@@ -62,9 +62,8 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <a
-                href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                target="_blank"
+              <a href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank" 
                 class="header_text_map_link"
                 >г.Одесса, просп. Шевченко 27</a
               >
@@ -951,100 +950,31 @@
                   <h3>фото и видео нашего садика</h3>
                 </div>
               </div>
-              <div class="box_for_click">
-                <svg
-                  width="40"
-                  height="39"
-                  viewBox="0 0 40 39"
-                  class="gallery_arrow_left"
-                >
-                  <path
-                    d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-                    stroke="#1BA6B2"
-                  />
-                </svg>
-                <div class="gallery_box">
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small">
-                      <img
-                        :src="first_file"
-                        width="255"
-                        height="250"
-                        alt=""
-                        class="gallery_img_small"
-                      />
-                    </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small">
-                      <img
-                        :src="second_file"
-                        width="255"
-                        height="250"
-                        alt=""
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long">
-                      <img
-                        :src="third_file"
-                        width="255"
-                        height="530"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small">
-                      <img
-                        :src="fourth_file"
-                        width="255"
-                        height="250"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small">
-                      <img
-                        :src="fifth_file"
-                        width="255"
-                        height="250"
-                        alt=""
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long">
-                      <img
-                        :src="sixth_file"
-                        width="255"
-                        height="530"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <svg
-                  width="40"
-                  height="39"
-                  viewBox="0 0 40 39"
-                  class="gallery_arrow_right"
-                >
-                  <path
-                    d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-                    stroke="#1BA6B2"
-                  />
-                </svg>
-              </div>
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
+              <!-- _________________________________GALLERY_______________ -->
             </div>
           </div>
           <!-- ________________________________________________ -->
@@ -1273,7 +1203,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { mapActions, mapState } from "vuex";
 export default {
   name: "Home",
@@ -1307,13 +1236,7 @@ export default {
       third_home_techniques_content: "",
       fourth_home_techniques_content: "",
       fifth_home_techniques_content: "",
-      sixth_home_techniques_content: "",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: ""
+      sixth_home_techniques_content: ""
     };
   },
   methods: {
@@ -1352,22 +1275,6 @@ export default {
     keys.forEach(key => {
       this[key] = this.fields[key];
     });
-
-    const ids = (
-      await axios({
-        method: "get",
-        url: process.env.VUE_APP_API + "/files"
-      })
-    ).data;
-
-    console.log(ids);
-
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
   }
 };
 </script>

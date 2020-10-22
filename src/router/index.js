@@ -58,13 +58,6 @@ const routes = [
     component: function() {
       return import("../views/Admin.vue");
     }
-  },
-  {
-    path: "/admin/files",
-    name: "AdminFiles",
-    component: function() {
-      return import("../views/AdminFiles.vue");
-    }
   }
 ];
 

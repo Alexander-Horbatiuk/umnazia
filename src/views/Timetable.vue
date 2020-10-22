@@ -56,10 +56,9 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <a
-                href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                class="header_text_map_link"
-                target="_blank"
+              <a href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+               class="header_text_map_link"
+               target="_blank"
                 >г.Одессф, просп. Шевченко 27</a
               >
             </div>
@@ -488,6 +487,7 @@
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
+                
                 >г. Одесса, просп. Шевченко 27</a
               >
             </div>
