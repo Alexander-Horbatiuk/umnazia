@@ -807,6 +807,9 @@ export default {
     toMainPage() {
       this.$router.push({ name: "Home" });
     },
+    toFilesPage() {
+      this.$router.push({ name: "AdminFiles" });
+    },
     fieldsSetter() {
       this.setFields([
         {

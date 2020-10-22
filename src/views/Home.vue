@@ -707,6 +707,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(1)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(1) }"
                   class="external_small_circles one_circles"
                 >
                   <div class="content_small_circle sub_one_circles">
@@ -723,6 +724,7 @@
 
                 <div
                   @click="setCurrentSlide(2)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(2) }"
                   class="external_small_circles two_circles"
                 >
                   <div class="content_small_circle sub_two_circles">
@@ -741,6 +743,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(3)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(3) }"
                   class="external_small_circles three_circles"
                 >
                   <div class="content_small_circle sub_three_circles">
@@ -757,6 +760,7 @@
 
                 <div
                   @click="setCurrentSlide(4)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(4) }"
                   class="external_small_circles four_circles"
                 >
                   <div class="content_small_circle sub_four_circles">
@@ -775,6 +779,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(5)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(5) }"
                   class="external_small_circles five_circles"
                 >
                   <div class="content_small_circle sub_five_circles">
@@ -791,6 +796,7 @@
 
                 <div
                   @click="setCurrentSlide(6)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(6) }"
                   class="external_small_circles six_circles"
                 >
                   <div class="content_small_circle sub_six_circles">
@@ -809,6 +815,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(7)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(7) }"
                   class="external_small_circles seven_circles"
                 >
                   <div class="content_small_circle sub_seven_circles">
@@ -825,6 +832,7 @@
 
                 <div
                   @click="setCurrentSlide(8)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(8) }"
                   class="external_small_circles eight_circles"
                 >
                   <div class="content_small_circle sub_eight_circles">
@@ -843,6 +851,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(9)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(9) }"
                   class="external_small_circles nine_circles"
                 >
                   <div class="content_small_circle sub_nine_circles">
@@ -859,6 +868,7 @@
 
                 <div
                   @click="setCurrentSlide(10)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(10) }"
                   class="external_small_circles ten_circles"
                 >
                   <div class="content_small_circle sub_ten_circles">
@@ -875,6 +885,7 @@
               <div class="small_circ_phome">
                 <div
                   @click="setCurrentSlide(11)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(11) }"
                   class="external_small_circles eleven_circles"
                 >
                   <div class="content_small_circle sub_eleven_circles">
@@ -891,6 +902,7 @@
 
                 <div
                   @click="setCurrentSlide(12)"
+                  :class="{ 'selected_small_circle': isCurrentSlide(12) }"
                   class="external_small_circles twelve_circles"
                 >
                   <div class="content_small_circle sub_twelve_circles">
@@ -1471,3 +1483,8 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/style.css" lang="css"></style>
+<style scoped>
+.selected_small_circle {
+  background: #62e5db;
+}
+</style>
