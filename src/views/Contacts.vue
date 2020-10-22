@@ -41,14 +41,14 @@
             </div>
           </div>
           <div class="big_logo">
-            <a href="#" class="link_logo">
+            <router-link to="/" class="link_logo">
               <img
                 src="../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
               />
-            </a>
+            </router-link>
           </div>
 
           <div class="adress">
