@@ -4,7 +4,9 @@
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
 
-        <router-link to="/logout" class="logout">Выйти</router-link>
+        <div class="open_site" @click="toMainPage">добавить фото</div>
+
+        <router-link to="/logout" class="logout">закончить сеанс</router-link>
       </div>
     </header>
     <main>
@@ -266,10 +268,11 @@
 
       
           
-<!-- ____________________________________ -->
+<!-- _________________________price_block___________ -->
           <div class="price_block">
+
             <div class="sub_price_block">
-              <div class="input_wrapper">
+              <div class="input_wrapper ">
                 <div class="admin_description">
                   <img
                     class="screenshot"
@@ -289,28 +292,29 @@
                   type="text"
                 />
               </div>
+
               <div class="input_wrapper">
                 <div class="admin_description">
                   <img
-                    class="screenshot"
-                    src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
+                      class="screenshot"
+                      src="../assets/img/admin/screenshots/groups_description_first_block_24_price.png"
                   />
                   <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
-                    на странице "Группы и Стоимость"
+                      Цена за 24 занятий  карточка<span class="admin_red_text">1</span>
+                      на странице "Группы и Стоимость"
                   </div>
-                  
-                </div>
-                <input
-                  required
-                  v-model="groups_description_first_block_24_price"
-                  placeholder="Введите текст"
-                  class="admin_input"
-                  type="text"
-                />
+                    
+                  </div>
+                  <input
+                    required
+                    v-model="groups_description_first_block_24_price"
+                    placeholder="Введите текст"
+                    class="admin_input"
+                    type="text"
+                  />
               </div>
             </div>
- <!-- __________________ -->            
+            
 
             <div class="sub_price_block">
               <div class="input_wrapper">
@@ -332,17 +336,18 @@
                   class="admin_input"
                   type="text"
                 />
-              </div>
-              <div class="input_wrapper">
-                <div class="admin_description">
-                  <img
-                    class="screenshot"
-                    src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
-                  />
-                  <div class="admin_text">
-                    Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
-                    на странице "Группы и Стоимость"
-                  </div>
+            </div>
+
+            <div class="input_wrapper">
+              <div class="admin_description">
+                <img
+                  class="screenshot"
+                  src="../assets/img/admin/screenshots/groups_description_second_block_24_price.png"
+                />
+                <div class="admin_text">
+                  Цена за 24 занятий  карточка<span class="admin_red_text">2</span>
+                  на странице "Группы и Стоимость"
+                </div>
                   
                 </div>
                 <input
@@ -354,7 +359,8 @@
                 />
               </div>
             </div>
- <!-- __________________ -->
+            
+
 
             <div class="sub_price_block">
               <div class="input_wrapper">
@@ -366,8 +372,7 @@
                   <div class="admin_text">
                     Цена за 12 занятий  карточка<span class="admin_red_text">3</span>
                     на странице "Группы и Стоимость"
-                  </div>
-                  
+                  </div> 
                 </div>
                 <input
                   required
@@ -398,7 +403,7 @@
                 />
               </div>
             </div>
- <!-- __________________ -->
+
 
             <div class="sub_price_block">
               <div class="input_wrapper">
@@ -442,10 +447,9 @@
                 />
               </div>
             </div>
-<!-- __________________ -->
-          </div>
-<!-- ____________________________________ -->
 
+            
+          </div>
 
 <!-- __________________clock_block__________________ -->
 
@@ -1126,7 +1130,6 @@ img {
 .open_site {
   font-family: "EuropeC_700", sans-serif;
   font-size: 1.5vw;
-  padding-right: 2%;
   color: white;
   text-decoration: none;
   cursor: pointer;
@@ -1179,32 +1182,32 @@ img {
   justify-content: space-around;
   align-items: center;
 }
-
-.sub_price_block, .sub_card_title {
-  width: 22%;
-  
-}
 .sub_head_contebt_block, .sub_sub_card_title {
-  width: 28%;
+  width: 30%;
 }
-.sub_card_title:hover,
-.sub_price_block:hover,
-.sub_head_contebt_block:hover,
-.sub_sub_card_title:hover{
-/* color: #361f4d; */
+.sub_price_block, .sub_card_title {
+  width: 24%;
+}
+
+.sub_price_block:hover, 
+.sub_card_title:hover, 
+.sub_head_contebt_block:hover, 
+.sub_sub_card_title:hover {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
-  transform: scale(1.04);
-}
+  transform: scale(1.03);
+} 
+
+
 .sub_price_block, 
 .sub_card_title, 
 .sub_head_contebt_block, 
 .sub_sub_card_title {
-  transition: 0.8s;
+    transition: 0.8s;
   border-radius: 10px;
   padding: 15px;
   box-sizing: border-box;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .sub_clock_block {
