@@ -4,7 +4,7 @@
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
 
-        <div class="open_site" @click="toMainPage">добавить фото</div>
+        <div class="open_site" @click="toFilesPage">добавить фото</div>
 
         <router-link to="/logout" class="logout">закончить сеанс</router-link>
       </div>
