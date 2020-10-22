@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       dropzoneOptions: {
-        url: "http://127.0.0.1:3000/files",
+        url: process.env.VUE_APP_API + "/files",
         addRemoveLinks: true
       },
       fileName: "porosa.mp4"
@@ -52,36 +52,28 @@ export default {
       this.$router.push({ name: "Home" });
     },
     uploadSuccess(file, response) {
-      console.log(
-        "File Successfully Uploaded with file name: " + response.file
-      );
       this.fileName = response.file;
-    },
-    uploadError() {
-      console.log("An Error Occurred");
     },
     async fileRemoved(file) {
       await axios({
         method: "get",
-        url: `http://127.0.0.1:3000/files/delete/${file.id}`
+        url: process.env.VUE_APP_API + `/files/delete/${file.id}`
       });
     }
   },
   async mounted() {
     const ids = await axios({
       method: "get",
-      url: "http://127.0.0.1:3000/files"
+      url: process.env.VUE_APP_API + "/files"
     });
 
     ids.data.forEach(async id => {
       let rawMock = (
         await axios({
           method: "get",
-          url: `http://127.0.0.1:3000/files/info/${id}`
+          url: process.env.VUE_APP_API + `/files/info/${id}`
         })
       ).data.file;
-
-      console.log(rawMock);
 
       let mockFile = {
         id,
@@ -90,10 +82,7 @@ export default {
         type: rawMock.contentType
       };
 
-      let imageUrl = `http://127.0.0.1:3000/files/${id}/x.jpg`;
-
-      console.log(imageUrl);
-      console.log(mockFile);
+      let imageUrl = process.env.VUE_APP_API + `/files/${id}/x.jpg`;
 
       this.$refs.myDropzone.manuallyAddFile(mockFile, imageUrl);
       this.$refs.myDropzone.dropzone.options.addRemoveLinks = true;
