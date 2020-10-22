@@ -4,18 +4,18 @@
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <a href="index.html"
+            <router-link to="/"
               ><img
                 src="../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
-            /></a>
-            <a href="index.html"
+            /></router-link>
+            <router-link to="/"
               ><img
                 src="../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
-            /></a>
+            /></router-link>
           </div>
 
           <div class="btn_lang_wrapper">

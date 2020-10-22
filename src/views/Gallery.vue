@@ -5,16 +5,18 @@
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <img
-              src="../assets/img/logo/logo_tablet.png"
-              alt="logo"
-              class="logo_tablet"
-            />
-            <img
-              src="../assets/img/logo/logo_phone.png"
-              alt="logo"
-              class="logo_phone"
-            />
+            <router-link to="/"
+              ><img
+                src="../assets/img/logo/logo_tablet.png"
+                alt="logo"
+                class="logo_tablet"
+            /></router-link>
+            <router-link to="/"
+              ><img
+                src="../assets/img/logo/logo_phone.png"
+                alt="logo"
+                class="logo_phone"
+            /></router-link>
           </div>
 
           <div class="btn_lang_wrapper">
@@ -562,7 +564,7 @@ export default {
       })
     ).data;
 
-    console
+    console;
 
     this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
     this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
