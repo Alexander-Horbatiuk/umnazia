@@ -574,6 +574,8 @@ export default {
     ...mapActions(["sendTel"])
   },
   async created() {
+    document.body.style.overflowY = "scroll";
+
     const ids = (
       await axios({
         method: "get",

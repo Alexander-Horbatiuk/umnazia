@@ -475,6 +475,9 @@ export default {
       this.presentationTel = "";
     },
     ...mapActions(["sendTel"])
+  },
+  created() {
+    document.body.style.overflowY = "scroll";
   }
 };
 </script>

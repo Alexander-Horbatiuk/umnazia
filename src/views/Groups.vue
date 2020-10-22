@@ -655,6 +655,7 @@ export default {
     fields: state => state.fields
   }),
   async created() {
+    document.body.style.overflowY = "scroll";
     await this.getFields();
     const keys = Object.keys(this.fields);
     keys.forEach(key => {
