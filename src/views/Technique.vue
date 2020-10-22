@@ -57,7 +57,7 @@
             </div>
             <div class=" text_700_12">
               <router-link to="/technique" class="header_text_map_link "
-                >г.Одессф, просп. Шевченко 27</router-link
+                >г.Одесса, просп. Шевченко 27</router-link
               >
             </div>
           </div>

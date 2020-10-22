@@ -342,6 +342,7 @@
               <a
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank"
                 >г. Одесса, просп. Шевченко 27</a
               >
             </div>
@@ -368,7 +369,6 @@
                 target="_blank"
                 style="cursor: pointer"
                 href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
-                class="icon_item_link"
               >
                 <img
                   src="../assets/img/img_png/instagram.png"
@@ -376,12 +376,11 @@
                 />
               </a>
             </div>
-            <div class="modal_social_icon_item ">
+            <div class="modal_social_icon_item">
               <a
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.facebook.com/profile.php?id=100054250201674"
-                class="icon_item_link"
               >
                 <img src="../assets/img/img_png/facebook.png" alt="facebook " />
               </a>
@@ -391,7 +390,6 @@
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.youtube.com/"
-                class="icon_item_link"
               >
                 <img src="../assets/img/img_png/youtube.png" alt="youtube " />
               </a>

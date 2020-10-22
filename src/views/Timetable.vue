@@ -60,7 +60,7 @@
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 class="header_text_map_link"
                 target="_blank"
-                >г.Одессф, просп. Шевченко 27</a
+                >г.Одесса, просп. Шевченко 27</a
               >
             </div>
           </div>
