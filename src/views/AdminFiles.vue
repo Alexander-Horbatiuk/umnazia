@@ -13,7 +13,6 @@
           :options="dropzoneOptions"
           :useCustomSlot="true"
           v-on:vdropzone-success="uploadSuccess"
-          v-on:vdropzone-error="uploadError"
           v-on:vdropzone-removed-file="fileRemoved"
         >
           <div class="dropzone-custom-content">
@@ -62,12 +61,16 @@ export default {
     }
   },
   async mounted() {
-    const ids = await axios({
-      method: "get",
-      url: process.env.VUE_APP_API + "/files"
-    });
+    const ids = (
+      await axios({
+        method: "get",
+        url: process.env.VUE_APP_API + "/files"
+      })
+    ).data;
 
-    ids.data.forEach(async id => {
+    for (let i = 0; i < ids.length; i++) {
+      const id = ids[i];
+      console.log(id);
       let rawMock = (
         await axios({
           method: "get",
@@ -86,7 +89,7 @@ export default {
 
       this.$refs.myDropzone.manuallyAddFile(mockFile, imageUrl);
       this.$refs.myDropzone.dropzone.options.addRemoveLinks = true;
-    });
+    }
   }
 };
 </script>
