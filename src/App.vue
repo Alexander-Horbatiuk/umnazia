@@ -468,4 +468,10 @@ export default {
     margin: 0;
   }
 }
+
+.selected_page {
+  color: #f26914;
+  padding: 0 0 15px 0;
+  border-bottom: 4px solid #f26914;
+}
 </style>

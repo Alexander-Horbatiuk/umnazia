@@ -126,9 +126,7 @@
               >
             </div>
             <div class="el_menu">
-              <router-link to="/gallery" class="el_menu_link"
-                >Фотогалерея</router-link
-              >
+              <a class="selected_page">Фотогалерея</a>
             </div>
             <div class="el_menu">
               <router-link to="/contacts" class="el_menu_link"
@@ -526,9 +524,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     hideModal() {
       this.isModal = false;

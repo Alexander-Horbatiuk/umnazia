@@ -127,12 +127,15 @@
                 >Наши Услуги</router-link
               >
             </div>
-          </div>
-          <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/timetable" class="el_menu_link"
                 >Расписание</router-link
               >
+            </div>
+          </div>
+          <div class="sub_navigation_list text_700_13">
+            <div class="el_menu">
+              <a class="selected_page">Группы и Стоимость</a>
             </div>
             <div class="el_menu">
               <router-link to="/gallery" class="el_menu_link"
@@ -618,9 +621,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     preSend() {
       this.sendTel({

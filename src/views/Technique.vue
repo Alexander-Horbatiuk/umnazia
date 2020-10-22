@@ -115,6 +115,9 @@
               <router-link to="/about" class="el_menu_link">О нас</router-link>
             </div>
             <div class="el_menu">
+              <a class="selected_page">Методика и формат</a>
+            </div>
+            <div class="el_menu">
               <router-link to="/services" class="el_menu_link"
                 >Наши Услуги</router-link
               >
@@ -571,9 +574,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     preSend() {
       this.sendTel({

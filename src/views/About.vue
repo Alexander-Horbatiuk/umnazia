@@ -115,6 +115,9 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
+              <a class="selected_page">О нас</a>
+            </div>
+            <div class="el_menu">
               <router-link to="/technique" class="el_menu_link"
                 >Методика и формат</router-link
               >
@@ -510,9 +513,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     preSend() {
       this.sendTel({

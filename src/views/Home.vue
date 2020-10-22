@@ -1401,9 +1401,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     isCurrentSlide(number) {
       return this.currentSlideNumber === number;

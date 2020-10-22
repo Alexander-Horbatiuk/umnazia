@@ -1,9 +1,7 @@
 <template>
   <div class="main_wrapper" height="100%">
     <header>
-      <div class="navigation_list_wrapper admin_header">
-        <div class="open_site" @click="toMainPage">перейти на сайт</div>
-      </div>
+      <div class="navigation_list_wrapper admin_header"></div>
     </header>
     <main>
       <div class="main_content">

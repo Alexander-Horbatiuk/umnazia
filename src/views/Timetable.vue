@@ -127,6 +127,9 @@
                 >Наши Услуги</router-link
               >
             </div>
+            <div class="el_menu">
+              <a class="selected_page">Расписание</a>
+            </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
@@ -680,9 +683,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     hideModal() {
       this.isModal = false;

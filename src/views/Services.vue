@@ -124,6 +124,9 @@
               >
             </div>
             <div class="el_menu">
+              <a class="selected_page">Наши Услуги</a>
+            </div>
+            <div class="el_menu">
               <router-link to="/timetable" class="el_menu_link"
                 >Расписание</router-link
               >
@@ -533,9 +536,12 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
+      window.scrollTo(0, 0);
+      document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     preSend() {
       this.sendTel({
