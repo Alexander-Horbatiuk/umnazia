@@ -149,6 +149,11 @@
           </div>
         </div>
       </div>
+      <div
+        @click="showMobileMenu"
+        v-if="!mobileMenuOpen"
+        class="mobile_menu_button"
+      ></div>
     </header>
 
     <main class="main_content_wrapper">
@@ -403,6 +408,77 @@
         </div>
       </form>
     </div>
+
+    <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
+      <div @click="hideMobileMenu" class="close_mobile_menu"></div>
+      <div class="mobile_menu">
+        <router-link to="/about" class="el_menu_modal">О нас</router-link>
+        <router-link to="/technique" class="el_menu_modal"
+          >Методика и формат</router-link
+        >
+        <router-link to="/services" class="el_menu_modal"
+          >Наши Услуги
+        </router-link>
+        <router-link to="/timetable" class="el_menu_modal"
+          >Расписание
+        </router-link>
+        <router-link to="/groups" class="el_menu_modal"
+          >Группы и Стоимость</router-link
+        >
+        <router-link to="/" class="el_menu_modal">Фотогалерея</router-link>
+        <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
+        <div class="social_wrapper">
+          <div class="head_social_wrapper">
+            <div class="social_text text_400_12">
+              Наши соц сети
+            </div>
+            <div class="social_icons_links">
+              <div class="social_icon_item">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
+                  class="icon_item_link"
+                >
+                  <img
+                    src="../assets/img/img_png/instagram.png"
+                    alt="instagram"
+                  />
+                </a>
+              </div>
+              <div class="social_icon_item">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.facebook.com/profile.php?id=100054250201674"
+                  class="icon_item_link"
+                >
+                  <img
+                    src="../assets/img/img_png/facebook.png"
+                    alt="facebook"
+                  />
+                </a>
+              </div>
+              <div class="social_icon_item">
+                <a
+                  target="_blank"
+                  style="cursor: pointer"
+                  href="https://www.youtube.com"
+                  class="icon_item_link"
+                >
+                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="btn_lang_wrapper">
+            <a href="#" class="btn_lang text_700_12">
+              ru
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -413,6 +489,7 @@ export default {
   data() {
     return {
       isModal: false,
+      mobileMenuOpen: false,
       name: "",
       tel: "",
       presentationName: "",
@@ -428,6 +505,12 @@ export default {
     },
     hideModal() {
       this.isModal = false;
+    },
+    showMobileMenu() {
+      this.mobileMenuOpen = true;
+    },
+    hideMobileMenu() {
+      this.mobileMenuOpen = false;
     },
     preSend() {
       this.sendTel({
@@ -456,3 +539,153 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/about_style.css" lang="css"></style>
+<style scoped>
+@media screen and (max-width: 1210px) {
+  .mobile_menu_button {
+    content: " ";
+    background-image: url(../assets/img/logo/menu_tablet.png);
+    width: 80px;
+    height: 67px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 9px;
+    right: 0px;
+    cursor: pointer;
+  }
+
+  .close_mobile_menu {
+    content: " ";
+    background: url(../assets/img//img_png/bt_for_mobile_menu.png) no-repeat;
+    background-size: 100%;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+}
+
+.mobile_menu {
+  padding: 40px 20px 40px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 80px;
+  right: 0;
+  width: 341px;
+  height: 517px;
+  position: fixed;
+  background: #ffffff;
+  border-radius: 10px 0px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.mobile_menu::after {
+  content: " ";
+  width: 128px;
+  height: 240px;
+  background: url(../assets/img/img_png/teacher_mobile_menu.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 138px;
+  left: 24px;
+}
+
+.mobile_menu::before {
+  content: " ";
+  width: 99px;
+  height: 109px;
+  background: url(../assets/img/img_png/bg_element_mobile_menu.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 38px;
+  left: 24px;
+}
+
+.el_menu_modal {
+  color: #142142;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "EuropeC_700", sans-serif;
+}
+
+.wrap_mobile_menu {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(20, 33, 66, 0.5);
+}
+
+@media screen and (max-width: 750px) {
+  .mobile_menu {
+    width: 300px;
+  }
+
+  .el_menu_modal {
+    font-size: 15px;
+  }
+}
+
+.social_wrapper::before {
+  content: " ";
+  width: 90px;
+  height: 100px;
+  background: url(../assets/img/img_png/bg_element_mobile_menu.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: -68px;
+  left: 110px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.social_wrapper {
+  max-width: 300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 750px) {
+  .head_social_wrapper {
+    display: block;
+  }
+
+  .social_wrapper {
+    max-width: 250px;
+  }
+}
+</style>
