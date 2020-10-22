@@ -528,7 +528,7 @@
     min-height: 583px;
     position: relative;
     /* margin: 0 0 58px 0; */
-    background: url(../img//background/background_visor.png) no-repeat;
+    background: url(../img/background/background_visor.png) no-repeat;
     background-size: 100%;
     background-position: top;
     display: -webkit-box;
@@ -545,7 +545,7 @@
     max-width: 580px;
     width: 100%;
     min-height: 439px;
-    background: url(../img//background/school_building.png) no-repeat;
+    background: url(../img/background/school_building.png) no-repeat;
     background-size: 100%;
     position: absolute;
     top: 10%;
@@ -749,7 +749,7 @@
 /* _________________________768_____________ */
 @media screen and (max-width: 1024px) {
     .backgraund_visor {
-        background: url(../img//background/background_visor_tablet.png) no-repeat;
+        background: url(../img/background/background_visor_tablet.png) no-repeat;
         background-size: 100%;
     }
     .frame_on_visor {
@@ -774,7 +774,7 @@
 @media screen and (max-width: 700px) {
     .backgraund_visor {
         max-width: 700px;
-        background: url(../img//background/background_visor_phone.png) no-repeat top center;
+        background: url(../img/background/background_visor_phone.png) no-repeat top center;
         background-size: 110%;
         padding: 0;
         min-height: 654px;
@@ -1276,7 +1276,7 @@
 
 .btn_read_text::after {
     content: " ";
-    background: url(../img//img_svg/arrow_to_down.svg);
+    background: url(../img/img_svg/arrow_to_down.svg);
     width: 9px;
     height: 9px;
     top: 1px;
@@ -1580,7 +1580,7 @@
     padding: 100px 0 0 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//background/bg_center_circle.png);
+    background: url(../img/background/bg_center_circle.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1671,7 +1671,7 @@
 }
 .central_circle::before {
     content: " ";
-    background: url(../img//img_svg/arrows_center.svg);
+    background: url(../img/img_svg/arrows_center.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1683,7 +1683,7 @@
 }
 .central_circle::after {
     content: " ";
-    background: url(../img//circle_content/central_circle_content_one.svg);
+    background: url(../img/circle_content/central_circle_content_one.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1722,7 +1722,7 @@
 }
 .cllass_for_children::after {
     content: " ";
-    background: url(../img//circle_content/bg_elems_inside_circle.png);
+    background: url(../img/circle_content/bg_elems_inside_circle.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1763,7 +1763,7 @@
 
 .central_circle_content_one::before {
     content: " ";
-    background: url(../img//circle_content/sub_one_circles.svg);
+    background: url(../img/circle_content/sub_one_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1860,7 +1860,7 @@
 
 .central_circle_content_two::before {
     content: " ";
-    background: url(../img//circle_content/sub_two_circles.svg);
+    background: url(../img/circle_content/sub_two_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1874,7 +1874,7 @@
 /* _________________3__круг__________________ */
 .central_circle_content_three::before {
     content: " ";
-    background: url(../img//circle_content/sub_three_circles.svg);
+    background: url(../img/circle_content/sub_three_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1895,7 +1895,7 @@
 }
 .central_circle_content_four::before {
     content: " ";
-    background: url(../img//circle_content/sub_four_circles.svg);
+    background: url(../img/circle_content/sub_four_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1915,7 +1915,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_five_circles.svg);
+    background: url(../img/circle_content/sub_five_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -1937,7 +1937,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_six_circles.svg);
+    background: url(../img/circle_content/sub_six_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -1956,7 +1956,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_seven_circles.svg);
+    background: url(../img/circle_content/sub_seven_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -1974,7 +1974,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_eight_circles.svg);
+    background: url(../img/circle_content/sub_eight_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1994,7 +1994,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_nine_circles.svg);
+    background: url(../img/circle_content/sub_nine_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -2011,7 +2011,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_ten_circles.svg);
+    background: url(../img/circle_content/sub_ten_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -2031,7 +2031,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_eleven_circles.svg);
+    background: url(../img/circle_content/sub_eleven_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -2047,7 +2047,7 @@
     content: " ";
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url(../img//circle_content/sub_twelve_circles.svg);
+    background: url(../img/circle_content/sub_twelve_circles.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -2063,21 +2063,6 @@
 
 .central_circle_content_twelve {
     padding: 300px 0 0 0;
-}
-
-/* .central_circle_content_one, */
-.central_circle_content_two,
-.central_circle_content_three,
-.central_circle_content_four,
-.central_circle_content_five,
-.central_circle_content_six,
-.central_circle_content_seven,
-.central_circle_content_eight,
-.central_circle_content_nine,
-.central_circle_content_ten,
-.central_circle_content_eleven,
-.central_circle_content_twelve {
-    display: none;
 }
 
 .center_circle_header {
@@ -3199,7 +3184,7 @@
 
     min-height: 1030px;
     background: #E8F6F7;
-    background-image: url(../img//background/bg_vectot_pattern.png);
+    background-image: url(../img/background/bg_vectot_pattern.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -3230,7 +3215,7 @@
     max-width: 210px;
     width: 100%;
     height: 200px;
-    background-image: url(../img//background/bg_elem_books.png);
+    background-image: url(../img/background/bg_elem_books.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -3339,7 +3324,7 @@
     content: " ";
     width: 450px;
     min-height: 209px;
-    background: url(../img//background/school_building.png) no-repeat;
+    background: url(../img/background/school_building.png) no-repeat;
     background-size: cover;
     position: absolute;
     bottom: 0px;

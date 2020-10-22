@@ -471,7 +471,10 @@
             <div class="sub_wrap_central_circle">
               <!-- ___________________________CIRCLE_____________ -->
               <div class="central_circle">
-                <div class="central_circle_content_one   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(1)"
+                  class="central_circle_content_one   cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">
                     Изба -читальня на трёх языках
                   </p>
@@ -494,7 +497,10 @@
                   </span>
                 </div>
 
-                <div class="central_circle_content_two   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(2)"
+                  class="central_circle_content_two cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Подготовка к школе</p>
                   <p class="center_cercle_text text_two_circ">
                     Курс включает в себя различные виды деятельности, которые
@@ -525,7 +531,10 @@
                   </div>
                 </div>
 
-                <div class="central_circle_content_three   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(3)"
+                  class="central_circle_content_three cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Досуг первоклассника</p>
                   <span class="center_cercle_text center_cercle_text_three">
                     Занятия проводятся на трёх языках в игровой форме. Основой
@@ -538,7 +547,10 @@
                     грамотности и навыкам формирования семейного бюджета.
                   </span>
                 </div>
-                <div class="central_circle_content_four   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(4)"
+                  class="central_circle_content_four cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Обучение в игре</p>
                   <span class="center_cercle_text center_cercle_text_four">
                     Игра-основной формат обучения дошкольников. Через игру
@@ -552,14 +564,20 @@
                     только в школе,но и в жизни.
                   </span>
                 </div>
-                <div class="central_circle_content_five   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(5)"
+                  class="central_circle_content_five cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">
                     Реджио педагогика
                   </p>
                   <span class="center_cercle_text"></span>
                 </div>
 
-                <div class="central_circle_content_six   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(6)"
+                  class="central_circle_content_six cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">
                     Видеонаблюдение
                   </p>
@@ -574,7 +592,10 @@
                     языках .
                   </span>
                 </div>
-                <div class="central_circle_content_seven   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(7)"
+                  class="central_circle_content_seven cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Триз</p>
                   <span class="center_cercle_text">
                     Теория решения изобретательных задач-в процессе обучениЯ
@@ -591,7 +612,10 @@
                   >
                 </div>
 
-                <div class="central_circle_content_eight   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(8)"
+                  class="central_circle_content_eight cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Финансовая грамотность</p>
                   <span class="center_cercle_text">
                     Успешность взрослого зависит от того ,насколько грамотно он
@@ -611,7 +635,10 @@
                   </span>
                 </div>
 
-                <div class="central_circle_content_nine   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(9)"
+                  class="central_circle_content_nine cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">
                     Современная методика обучения
                   </p>
@@ -623,7 +650,10 @@
                   </span>
                 </div>
 
-                <div class="central_circle_content_ten   cllass_for_children">
+                <div
+                  v-if="isCurrentSlide(10)"
+                  class="central_circle_content_ten cllass_for_children"
+                >
                   <p class="center_circ_bg_heading">Языки</p>
                   <span class="center_cercle_text">
                     Обучение методом погружения на трёх языках 36 часов
@@ -632,7 +662,8 @@
                   </span>
                 </div>
                 <div
-                  class="central_circle_content_eleven   cllass_for_children"
+                  v-if="isCurrentSlide(11)"
+                  class="central_circle_content_eleven cllass_for_children"
                 >
                   <p class="center_circ_bg_heading">
                     Творчество
@@ -653,7 +684,8 @@
                   </span>
                 </div>
                 <div
-                  class="central_circle_content_twelve   cllass_for_children"
+                  v-if="isCurrentSlide(12)"
+                  class="central_circle_content_twelve cllass_for_children"
                 >
                   <p class="center_circ_bg_heading">
                     Малокомплектные группы до 8 человек
@@ -673,7 +705,10 @@
 
               <!-- ______________SMALL___CIRCLE_____________ -->
               <div class="small_circ_phome">
-                <div class="external_small_circles one_circles">
+                <div
+                  @click="setCurrentSlide(1)"
+                  class="external_small_circles one_circles"
+                >
                   <div class="content_small_circle sub_one_circles">
                     <img
                       src="../assets/img/circle_content/sub_one_circles.svg"
@@ -686,7 +721,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles two_circles">
+                <div
+                  @click="setCurrentSlide(2)"
+                  class="external_small_circles two_circles"
+                >
                   <div class="content_small_circle sub_two_circles">
                     <img
                       src="../assets/img/circle_content/sub_two_circles.svg"
@@ -701,7 +739,10 @@
               </div>
 
               <div class="small_circ_phome">
-                <div class="external_small_circles three_circles">
+                <div
+                  @click="setCurrentSlide(3)"
+                  class="external_small_circles three_circles"
+                >
                   <div class="content_small_circle sub_three_circles">
                     <img
                       src="../assets/img/circle_content/sub_three_circles.svg"
@@ -714,7 +755,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles four_circles">
+                <div
+                  @click="setCurrentSlide(4)"
+                  class="external_small_circles four_circles"
+                >
                   <div class="content_small_circle sub_four_circles">
                     <img
                       src="../assets/img/circle_content/sub_four_circles.svg"
@@ -729,7 +773,10 @@
               </div>
 
               <div class="small_circ_phome">
-                <div class="external_small_circles five_circles">
+                <div
+                  @click="setCurrentSlide(5)"
+                  class="external_small_circles five_circles"
+                >
                   <div class="content_small_circle sub_five_circles">
                     <img
                       src="../assets/img/circle_content/sub_five_circles.svg"
@@ -742,7 +789,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles six_circles">
+                <div
+                  @click="setCurrentSlide(6)"
+                  class="external_small_circles six_circles"
+                >
                   <div class="content_small_circle sub_six_circles">
                     <img
                       src="../assets/img/circle_content/sub_six_circles.svg"
@@ -757,7 +807,10 @@
               </div>
 
               <div class="small_circ_phome">
-                <div class="external_small_circles seven_circles">
+                <div
+                  @click="setCurrentSlide(7)"
+                  class="external_small_circles seven_circles"
+                >
                   <div class="content_small_circle sub_seven_circles">
                     <img
                       src="../assets/img/circle_content/sub_seven_circles.svg"
@@ -770,7 +823,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles eight_circles">
+                <div
+                  @click="setCurrentSlide(8)"
+                  class="external_small_circles eight_circles"
+                >
                   <div class="content_small_circle sub_eight_circles">
                     <img
                       src="../assets/img/circle_content/sub_eight_circles.svg"
@@ -785,7 +841,10 @@
               </div>
 
               <div class="small_circ_phome">
-                <div class="external_small_circles nine_circles">
+                <div
+                  @click="setCurrentSlide(9)"
+                  class="external_small_circles nine_circles"
+                >
                   <div class="content_small_circle sub_nine_circles">
                     <img
                       src="../assets/img/circle_content/sub_nine_circles.svg"
@@ -798,7 +857,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles ten_circles">
+                <div
+                  @click="setCurrentSlide(10)"
+                  class="external_small_circles ten_circles"
+                >
                   <div class="content_small_circle sub_ten_circles">
                     <img
                       src="../assets/img/circle_content/sub_ten_circles.svg"
@@ -811,7 +873,10 @@
               </div>
 
               <div class="small_circ_phome">
-                <div class="external_small_circles eleven_circles">
+                <div
+                  @click="setCurrentSlide(11)"
+                  class="external_small_circles eleven_circles"
+                >
                   <div class="content_small_circle sub_eleven_circles">
                     <img
                       src="../assets/img/circle_content/sub_eleven_circles.svg"
@@ -824,7 +889,10 @@
                   </div>
                 </div>
 
-                <div class="external_small_circles twelve_circles">
+                <div
+                  @click="setCurrentSlide(12)"
+                  class="external_small_circles twelve_circles"
+                >
                   <div class="content_small_circle sub_twelve_circles">
                     <img
                       src="../assets/img/circle_content/sub_twelve_circles.svg"
@@ -1213,6 +1281,7 @@ export default {
   name: "Home",
   data() {
     return {
+      currentSlideNumber: 1,
       isModal: false,
       name: "",
       tel: "",
@@ -1260,6 +1329,12 @@ export default {
     hideMobileMenu() {
       this.mobileMenuOpen = false;
     },
+    isCurrentSlide(number) {
+      return this.currentSlideNumber === number;
+    },
+    setCurrentSlide(number) {
+      this.currentSlideNumber = number;
+    },
     preSend() {
       this.sendTel({
         name: this.name,
@@ -1285,153 +1360,3 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/style.css" lang="css"></style>
-<style scoped>
-@media screen and (max-width: 1210px) {
-  .mobile_menu_button {
-    content: " ";
-    background-image: url(../assets/img/logo/menu_tablet.png);
-    width: 80px;
-    height: 67px;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 9px;
-    right: 0px;
-    cursor: pointer;
-  }
-
-  .close_mobile_menu {
-    content: " ";
-    background: url(../assets/img/img_png/bt_for_mobile_menu.png) no-repeat;
-    background-size: 100%;
-    width: 75px;
-    height: 75px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-  }
-}
-
-.mobile_menu {
-  padding: 40px 20px 40px 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  top: 80px;
-  right: 0;
-  width: 341px;
-  height: 517px;
-  position: fixed;
-  background: #ffffff;
-  border-radius: 10px 0px 0px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-}
-
-.mobile_menu::after {
-  content: " ";
-  width: 128px;
-  height: 240px;
-  background: url(../assets/img/img_png/teacher_mobile_menu.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
-  top: 138px;
-  left: 24px;
-}
-
-.mobile_menu::before {
-  content: " ";
-  width: 99px;
-  height: 109px;
-  background: url(../assets/img/img_png/bg_element_mobile_menu.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
-  top: 38px;
-  left: 24px;
-}
-
-.el_menu_modal {
-  color: #142142;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: "EuropeC_700", sans-serif;
-}
-
-.wrap_mobile_menu {
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(20, 33, 66, 0.5);
-}
-
-@media screen and (max-width: 750px) {
-  .mobile_menu {
-    width: 300px;
-  }
-
-  .el_menu_modal {
-    font-size: 15px;
-  }
-}
-
-.social_wrapper::before {
-  content: " ";
-  width: 90px;
-  height: 100px;
-  background: url(../assets/img/img_png/bg_element_mobile_menu.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
-  top: -68px;
-  left: 110px;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.social_wrapper {
-  max-width: 300px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-}
-
-@media screen and (max-width: 750px) {
-  .head_social_wrapper {
-    display: block;
-  }
-
-  .social_wrapper {
-    max-width: 250px;
-  }
-}
-</style>
