@@ -256,4 +256,216 @@ export default {
     max-width: 250px;
   }
 }
+
+.wrap_gallery {
+  box-sizing: border-box;
+  max-width: 1920px;
+  min-height: 1030px;
+  width: 100%;
+  background-image: url(./assets/img/background/bg_vectot_pattern.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 347px 0 100px 0;
+}
+
+.bg_wrap_gallery {
+  display: none;
+}
+
+.sub_wrap_gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub_wrap_gallery::after {
+  content: " ";
+  max-width: 210px;
+  width: 100%;
+  height: 200px;
+  background-image: url(./assets/img/background/bg_elem_books.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -180px;
+  left: 0;
+}
+
+.gallery_box {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1110px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* __________________________BTN__GALLERY__SLIDE__________ */
+.box_for_click {
+  position: relative;
+}
+
+.gallery_arrow_left {
+  position: absolute;
+  left: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  fill: #fff;
+}
+
+.gallery_arrow_right {
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: rotate(-60deg);
+  cursor: pointer;
+  fill: #fff;
+}
+
+.gallery_arrow_left:hover,
+.gallery_arrow_right:hover {
+  fill: #1ba6b2;
+}
+
+.gallery_content_small {
+  margin: 0 0 30px 0;
+}
+.gallery_content_small:last-child {
+  margin: 0;
+}
+/* ____________________________размеры картинок_________ */
+.gallery_content_small {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 255px;
+  height: 250px;
+  overflow: hidden;
+}
+.gallery_content_long {
+  width: 255px;
+  height: 530px;
+}
+
+/* ___________________________________________________________________ */
+@media all and (min-width: 800px) and (max-width: 1500px) {
+  .center_circle_header_gallery::after {
+    display: none;
+  }
+
+  .gallery_arrow_left,
+  .gallery_arrow_right {
+    display: none;
+  }
+
+  .wrap_gallery {
+    padding: 447px 0 0 0;
+    bottom: -900px;
+    background-size: cover;
+  }
+
+  .sub_wrap_gallery::after {
+    max-width: 100px;
+    width: 100%;
+    height: 100px;
+    background-size: 100%;
+    top: -100px;
+  }
+}
+
+/* ___________________________________________________________________ */
+@media screen and (max-width: 1050px) {
+  .center_circle_header_gallery::after {
+    display: none;
+  }
+  .gallery_arrow_left,
+  .gallery_arrow_right {
+    display: none;
+  }
+  .sub_wrap_gallery::after {
+    display: none;
+  }
+
+  .wrap_gallery {
+    position: relative;
+    background-image: url(./assets/img/background/bg_vectot_pattern_tablet.png);
+    background-size: cover;
+  }
+
+  .wrap_gallery {
+    position: static;
+    padding: 147px 0 0 0;
+    justify-content: center;
+    background-size: cover;
+  }
+
+  .gallery_box {
+    display: flex;
+    align-items: center;
+    max-width: 740px;
+    justify-content: space-around;
+  }
+
+  .gallery_sub_box {
+    margin: 0 0 20px 0;
+  }
+
+  .gallery_content_small {
+    margin: 0 0 30px 0;
+  }
+
+  .gallery_img_small {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+/* ___________________________________________________________________ */
+@media screen and (max-width: 600px) {
+  .center_circle_header_gallery::after {
+    margin: 0;
+    display: none;
+  }
+  .sub_wrap_gallery::after {
+    display: none;
+  }
+  .center_circle_gallery {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  .wrap_gallery {
+    min-height: 651px;
+    background-size: cover;
+    padding: 30px 0 0 0;
+    background-position: inherit;
+    margin: 0;
+  }
+  .gallery_sub_box {
+    margin: 0 0px 10px 0;
+  }
+  .gallery_box {
+    max-width: 310px;
+    border-radius: 0;
+  }
+  .gallery_content_small {
+    max-width: 150px;
+    height: 109px;
+    width: 100%;
+    margin: 0 10px 10px 0;
+  }
+
+  .gallery_content_long {
+    max-width: 150px;
+    height: 228px;
+    width: 100%;
+    margin: 0;
+  }
+}
 </style>

@@ -3182,7 +3182,6 @@
     max-width: 1920px;
     width: 100%;
 
-    min-height: 1030px;
     background: #E8F6F7;
     background-image: url(../img/background/bg_vectot_pattern.png);
     background-size: cover;
@@ -3265,7 +3264,6 @@
     .wrap_gallery {      
         background-position: top ;
         background-repeat: repeat;
-        min-height: 1395px;
         padding: 147px 0 0 0;
         -webkit-box-pack: center;
             -ms-flex-pack: center;

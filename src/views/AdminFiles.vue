@@ -41,7 +41,8 @@ export default {
     return {
       dropzoneOptions: {
         url: process.env.VUE_APP_API + "/files",
-        addRemoveLinks: true
+        addRemoveLinks: true,
+        duplicateCheck: true
       },
       fileName: "porosa.mp4"
     };
