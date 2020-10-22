@@ -352,6 +352,7 @@ export default {
 .gallery_content_long {
   width: 255px;
   height: 530px;
+  overflow: hidden;
 }
 
 /* ___________________________________________________________________ */
@@ -459,9 +460,11 @@ export default {
     height: 109px;
     width: 100%;
     margin: 0 10px 10px 0;
+    overflow: hidden;
   }
 
   .gallery_content_long {
+    overflow: hidden;
     max-width: 150px;
     height: 228px;
     width: 100%;
@@ -473,5 +476,11 @@ export default {
   color: #f26914;
   padding: 0 0 15px 0;
   border-bottom: 4px solid #f26914;
+}
+
+.centrify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

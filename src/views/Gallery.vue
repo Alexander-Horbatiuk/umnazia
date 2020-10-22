@@ -166,21 +166,27 @@
           <div class="gallery_box">
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div class="gallery_content_small">
+              <div
+                width="255"
+                height="250"
+                class="gallery_content_small centrify"
+              >
                 <img
+                  height="250"
                   :src="first_file"
-                  width="255"
-                  height="250"
                   alt=""
                   class="gallery_img_small"
                 />
               </div>
               <!-- ________ -->
-              <div class="gallery_content_small">
+              <div
+                width="255"
+                height="250"
+                class="gallery_content_small centrify"
+              >
                 <img
+                  height="250"
                   :src="second_file"
-                  width="255"
-                  height="250"
                   alt=""
                   class="gallery_img_small"
                 />
@@ -188,11 +194,14 @@
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div class="gallery_content_long">
+              <div
+                width="255"
+                height="530"
+                class="gallery_content_long centrify"
+              >
                 <img
-                  :src="third_file"
-                  width="255"
                   height="530"
+                  :src="third_file"
                   alt="children"
                   class="gallery_img_small"
                 />
@@ -200,21 +209,27 @@
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div class="gallery_content_small">
+              <div
+                width="255"
+                height="250"
+                class="gallery_content_small centrify"
+              >
                 <img
-                  :src="fourth_file"
-                  width="255"
                   height="250"
+                  :src="fourth_file"
                   alt="children"
                   class="gallery_img_small"
                 />
               </div>
               <!-- ________ -->
-              <div class="gallery_content_small">
+              <div
+                width="255"
+                height="250"
+                class="gallery_content_small centrify"
+              >
                 <img
-                  :src="fifth_file"
-                  width="255"
                   height="250"
+                  :src="fifth_file"
                   alt=""
                   class="gallery_img_small"
                 />
@@ -222,11 +237,14 @@
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div class="gallery_content_long">
+              <div
+                width="255"
+                height="530"
+                class="gallery_content_long centrify"
+              >
                 <img
-                  :src="sixth_file"
-                  width="255"
                   height="530"
+                  :src="sixth_file"
                   alt="children"
                   class="gallery_img_small"
                 />
