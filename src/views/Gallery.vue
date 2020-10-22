@@ -1,27 +1,26 @@
 <template>
   <div class="main_wrapper">
+    <!--header-->
     <header>
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <router-link to="/"
-              ><img
-                src="../assets/img/logo/logo_tablet.png"
-                alt="logo"
-                class="logo_tablet"
-            /></router-link>
-            <router-link to="/"
-              ><img
-                src="../assets/img/logo/logo_phone.png"
-                alt="logo"
-                class="logo_phone"
-            /></router-link>
+            <img
+              src="../assets/img/logo/logo_tablet.png"
+              alt="logo"
+              class="logo_tablet"
+            />
+            <img
+              src="../assets/img/logo/logo_phone.png"
+              alt="logo"
+              class="logo_phone"
+            />
           </div>
 
           <div class="btn_lang_wrapper">
-            <router-link to="/technique" class="btn_lang text_700_12">
+            <a href="#" class="btn_lang text_700_12">
               ru
-            </router-link>
+            </a>
           </div>
         </div>
         <div class="second_block">
@@ -56,8 +55,8 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <router-link to="/technique" class="header_text_map_link "
-                >г.Одессф, просп. Шевченко 27</router-link
+              <a href="#" class="header_text_map_link "
+                >г.Одессa, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -69,8 +68,6 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
-                  target="_blank"
-                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
@@ -81,12 +78,7 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.facebook.com/profile.php?id=100054250201674"
-                  class="icon_item_link"
-                >
+                <a href="" class="icon_item_link">
                   <img
                     src="../assets/img/img_png/facebook.png"
                     alt="facebook"
@@ -94,12 +86,7 @@
                 </a>
               </div>
               <div class="social_icon_item">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.youtube.com/"
-                  class="icon_item_link"
-                >
+                <a href="" class="icon_item_link">
                   <img src="../assets/img/img_png/youtube.png" alt="youtube" />
                 </a>
               </div>
@@ -113,6 +100,11 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/about" class="el_menu_link">О нас</router-link>
+            </div>
+            <div class="el_menu">
+              <router-link to="/technique" class="el_menu_link"
+                >Методика и формат</router-link
+              >
             </div>
             <div class="el_menu">
               <router-link to="/services" class="el_menu_link"
@@ -150,154 +142,23 @@
         class="mobile_menu_button"
       ></div>
     </header>
-
+    <!--Main-->
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="tech_wrapper">
-          <div class="box_line_heading text_Bold">
-            <!--box-line-->
-            <div class="heading_text">
-              <h3>Методика</h3>
-            </div>
-          </div>
-
-          <div class="main_content_header_sub_text text_400_12">
-            <p>
-              Каждый день
-              <span class="sub_text_bold text_700_12">новая</span> языковая
-              среда
-            </p>
-          </div>
-
-          <div
-            class="main_content_header_sub_text text_400_12 main_content_header_sub_psevdo"
-          >
-            <p>
-              Обучение на
-              <span class="sub_text_bold text_700_12">трех</span> языках
-            </p>
-          </div>
-
-          <div class="lessons_wrapper">
-            <div class="building_lessons_text_wrapper text_Bold">
-              <p>
-                Наши занятия строятся по принципу погружения в языковое
-                пространство, что создаёт условия для комфортного и быстрого
-                изучения языка и развития речи малышей.
-              </p>
-            </div>
-
-            <div class="building_lessons_text_wrapper_768px text_400_12">
-              <p>
-                Занятия проходят по эксклюзивной методике языкового погружения
-                на трех языках - русском, украинском и английском и разделены на
-                блоки- дискусионный, гуманитарный, математический и научный.
-                Каждый блок включает в себя развитие творческих способностей
-                ребенка - лепка, рисование, развитие мелкой и крупной моторики,
-                сюжетно-ролевые игры, игры на развитие воображения.
-              </p>
-            </div>
-
-            <div class="books_wrapper">
-              <div>
-                <img
-                  src="../assets/img/technique/english_book.png"
-                  alt="english book"
-                />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/ukraine_book.png"
-                  alt="ukraine book"
-                />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/russian_book.png"
-                  alt="russian book"
-                />
-              </div>
-            </div>
-
-            <div class="small_books_wrapper">
-              <div>
-                <img
-                  src="../assets/img/technique/small_english_book.png"
-                  alt="english book"
-                />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/small_ukraine_book.png"
-                  alt="ukraine book"
-                />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/small_russian_book.png"
-                  alt="russian book"
-                />
-              </div>
-            </div>
-
-            <div class="languages_text_wrapper text_400_12">
-              <p>
-                Принцип «одна ситуация-один язык» позволяет разделить языки по
-                месту их применения.<br />
-                В группе языкового погружения, дети, переступая порог нашей
-                Академии знаний, попадают в среду иного языка,как правило, даже
-                с подителями педагоги и администратор, говорят на изучаемом в
-                этот день языке. Атмосфера в группе языкового погружения
-                максимально насыщена играми, чтением,развитием речи, письма и
-                счета на «языке дня»
-              </p>
-            </div>
+        <div class="box_line_heading text_bold">
+          <!--box-line-->
+          <div class="heading_text">
+            <h3>Фотогалерея</h3>
           </div>
         </div>
 
-        <div class="training_format_wrapper">
-          <div class="training_format_header_text text_Bold">
-            <p>Формат занятий</p>
-          </div>
-
-          <div class="training_format_header_subtext text_Bold">
-            <p>
-              Работаем <span class="text_Bold">6 дней</span> в неделю (формат -
-              полудневки)
-            </p>
-          </div>
-
-          <div class="clocks_wrapper">
-            <div class="class_hours class_hours_9am">
-              <div class="time_text_9am text_Bold">
-                <p>С 9:00 до 13:00</p>
-              </div>
-
-              <div @click="showModal" class="text_Bold">
-                <button class="training_format_submit_btn ">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-
-            <div class="class_hours class_hours_14pm">
-              <div class="time_text_14pm text_Bold">
-                <p>С 14:00 до 18:00</p>
-              </div>
-
-              <div @click="showModal" class="text_Bold">
-                <button class="training_format_submit_orange_btn ">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="btn_all_gallery">
+          Посмотреть ещё
         </div>
       </div>
     </main>
 
+    <!--footer-->
     <footer class="footer_main_wrapper">
       <div class="footer_form_wrapper">
         <div class="pseudo_img_block">
@@ -358,8 +219,7 @@
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
-        >
-        </iframe>
+        ></iframe>
 
         <div class="modal_window">
           <div class="modal_logo_wrapper">
@@ -400,6 +260,7 @@
                 target="_blank"
                 style="cursor: pointer"
                 href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
+                class="icon_item_link"
               >
                 <img
                   src="../assets/img/img_png/instagram.png"
@@ -412,6 +273,7 @@
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.facebook.com/profile.php?id=100054250201674"
+                class="icon_item_link"
               >
                 <img src="../assets/img/img_png/facebook.png" alt="facebook " />
               </a>
@@ -421,6 +283,7 @@
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.youtube.com/"
+                class="icon_item_link"
               >
                 <img src="../assets/img/img_png/youtube.png" alt="youtube " />
               </a>
@@ -438,11 +301,7 @@
 
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <button
-            class="btn_anchor"
-            @click="scrollToTop"
-            style="cursor: pointer"
-          ></button>
+          <a class="btn_anchor " href="#anchorHeader"></a>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -548,14 +407,14 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  name: "Technique",
+  name: "Gallery",
   data() {
     return {
       isModal: false,
       name: "",
       tel: "",
-      mobileMenuOpen: false,
       presentationName: "",
+      mobileMenuOpen: false,
       presentationTel: ""
     };
   },
@@ -566,14 +425,14 @@ export default {
     showModal() {
       this.isModal = true;
     },
-    hideModal() {
-      this.isModal = false;
-    },
     showMobileMenu() {
       this.mobileMenuOpen = true;
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
+    },
+    hideModal() {
+      this.isModal = false;
     },
     preSend() {
       this.sendTel({
@@ -601,7 +460,7 @@ export default {
 };
 </script>
 
-<style scoped src="../assets/styles/technique_style.css" lang="css"></style>
+<style scoped src="../assets/styles/gallery.css" lang="css"></style>
 <style scoped>
 @media screen and (max-width: 1210px) {
   .mobile_menu_button {

@@ -150,7 +150,9 @@
               >
             </div>
             <div class="el_menu">
-              <router-link to="/" class="el_menu_link">Фотогалерея</router-link>
+              <router-link to="/gallery" class="el_menu_link"
+                >Фотогалерея</router-link
+              >
             </div>
             <div class="el_menu">
               <router-link to="/contacts" class="el_menu_link"
@@ -1140,7 +1142,9 @@
           <router-link to="/groups" class="el_menu_modal"
             >Группы и Стоимость</router-link
           >
-          <router-link to="/" class="el_menu_modal">Фотогалерея</router-link>
+          <router-link to="/gallery" class="el_menu_modal"
+            >Фотогалерея</router-link
+          >
           <router-link to="contacts" class="el_menu_modal"
             >Контакты</router-link
           >
@@ -1297,7 +1301,7 @@ export default {
 
   .close_mobile_menu {
     content: " ";
-    background: url(../assets/img//img_png/bt_for_mobile_menu.png) no-repeat;
+    background: url(../assets/img/img_png/bt_for_mobile_menu.png) no-repeat;
     background-size: 100%;
     width: 75px;
     height: 75px;

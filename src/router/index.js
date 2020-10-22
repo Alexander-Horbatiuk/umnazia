@@ -53,10 +53,24 @@ const routes = [
     }
   },
   {
+    path: "/gallery",
+    name: "Gallery",
+    component: function() {
+      return import("../views/Gallery.vue");
+    }
+  },
+  {
     path: "/admin",
     name: "Admin",
     component: function() {
       return import("../views/Admin.vue");
+    }
+  },
+  {
+    path: "/admin/files",
+    name: "AdminFiles",
+    component: function() {
+      return import("../views/AdminFiles.vue");
     }
   }
 ];

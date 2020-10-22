@@ -574,7 +574,7 @@
     content: " ";
     width: 73px;
     height: 97px;
-    background: url(../img//img_png/bg_notebook_left.png) no-repeat;
+    background: url(../img/img_png/bg_notebook_left.png) no-repeat;
     background-size: 100%;
     position: absolute;
     top: 120px;
@@ -589,7 +589,7 @@
     content: " ";
     width: 95px;
     height: 104px;
-    background: url(../img//img_png/bg_notebook_right.png) no-repeat;
+    background: url(../img/img_png/bg_notebook_right.png) no-repeat;
     background-size: 100%;
     position: absolute;
     top: 190px;
@@ -639,7 +639,7 @@
     content: " ";
     width: 119px;
     height: 100px;
-    background: url(../img//img_png/elem_under_btn_tabl.png) no-repeat;
+    background: url(../img/img_png/elem_under_btn_tabl.png) no-repeat;
     background-size: 100%;
     position: absolute;
     bottom: -60px;
@@ -870,7 +870,7 @@
 }
 .wrapper_contant::after {
     content: " ";
-    background: url(../img//img_png/bg_geometric_figures.png);
+    background: url(../img/img_png/bg_geometric_figures.png);
     background-size: 100%;
     background-repeat: no-repeat;
     max-width: 157px;
@@ -1429,7 +1429,7 @@
 
 .class_hours_9am {
     background: rgba(98, 229, 219, 0.2);
-    background-image: url(../img//img_png/bg_clocks_9.png);
+    background-image: url(../img/img_png/bg_clocks_9.png);
     background-repeat: no-repeat;
     border-radius: 20px;
     -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -1438,7 +1438,7 @@
 
 .class_hours_14pm {
     background: rgba(98, 229, 219, 0.2);
-    background-image: url(../img//img_png/bg_clocks_14.png);
+    background-image: url(../img/img_png/bg_clocks_14.png);
     background-repeat: no-repeat;
     border-radius: 20px;
     -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -1463,7 +1463,7 @@
 
 .time_text_9am::after {
     content: " ";
-    background-image: url(../img//img_png/clock_9.png);
+    background-image: url(../img/img_png/clock_9.png);
     width: 255px;
     height: 255px;
     background-repeat: no-repeat;
@@ -1475,7 +1475,7 @@
 
 .time_text_14pm::after {
     content: " ";
-    background-image: url(../img//img_png/clock_14.png);
+    background-image: url(../img/img_png/clock_14.png);
     width: 255px;
     height: 255px;
     background-repeat: no-repeat;
@@ -1489,7 +1489,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 5px 0 0 0;
-    background: url(../img//img_png/btn_yellow.png) no-repeat top right;
+    background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
     width: 227px;
     height: 70.17px;
@@ -1507,7 +1507,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 5px 0 0 0;
-    background: url(../img//img_png/btn_yellow.png) no-repeat top right;
+    background: url(../img/img_png/btn_yellow.png) no-repeat top right;
     background-size: 100%;
     width: 227px;
     height: 70.17px;
@@ -1604,7 +1604,7 @@
     content: " ";
     width: 200px;
     height: 280px;
-    background: url(../img//img_png/ruler_background.png);
+    background: url(../img/img_png/ruler_background.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -1615,7 +1615,7 @@
 
 .wrap_center_circle::before {
     content: " ";
-    background: url(../img//img_png/bg_clip_elen.png);
+    background: url(../img/img_png/bg_clip_elen.png);
     background-size: 100%;
     background-repeat: no-repeat;
     max-width: 157px;
@@ -2898,7 +2898,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url(../img//img_png/card_group_one.png);
+    background-image: url(../img/img_png/card_group_one.png);
     background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
@@ -2913,20 +2913,20 @@
     display: flex;
 }
 .num_card_two {
-    background-image: url(../img//img_png/card_group_two.png);
+    background-image: url(../img/img_png/card_group_two.png);
 }
 .num_card_three {
-    background-image: url(../img//img_png/card_group_three.png);
+    background-image: url(../img/img_png/card_group_three.png);
     background-size: 60%;
 }
 .num_card_four {
-    background-image: url(../img//img_png/card_group_four.png);
+    background-image: url(../img/img_png/card_group_four.png);
 }
 .num_card_five {
-    background-image: url(../img//img_png/card_group_five.png);
+    background-image: url(../img/img_png/card_group_five.png);
 }
 .num_card_six {
-    background-image: url(../img//img_png/card_group_six.png);
+    background-image: url(../img/img_png/card_group_six.png);
 }
 
 .head_card::after {
@@ -3351,7 +3351,7 @@
     max-width: 1527px;
     width: 100%;
     min-height: 300px;
-    background: url(../img//img_png/bg_elems_footer.png) no-repeat;
+    background: url(../img/img_png/bg_elems_footer.png) no-repeat;
     background-size: 100%;
     position: absolute;
     top: 0px;
@@ -3370,7 +3370,7 @@
     max-width: 227px;
     width: 100%;
     min-height: 366px;
-    background: url(../img//img_png/bg_teacher.png) no-repeat;
+    background: url(../img/img_png/bg_teacher.png) no-repeat;
     background-size: cover;
     position: absolute;
     bottom: 0px;
@@ -3382,7 +3382,7 @@
     max-width: 90px;
     width: 100%;
     min-height: 147px;
-    background: url(../img//img_png/bg_lamp.png) no-repeat;
+    background: url(../img/img_png/bg_lamp.png) no-repeat;
     background-size: 100%;
     position: absolute;
     top: 30px;
@@ -3423,7 +3423,7 @@
     content: " ";
     width: 70px;
     height: 55px;
-    background: url(../img//img_png/bottom_quotes.png) no-repeat center;
+    background: url(../img/img_png/bottom_quotes.png) no-repeat center;
     background-size: 100%;
     position: absolute;
     bottom: -20px;
@@ -3437,7 +3437,7 @@
             transform: rotate(180deg);
     width: 70px;
     height: 55px;
-    background: url(../img//img_png/bottom_quotes.png) no-repeat center;
+    background: url(../img/img_png/bottom_quotes.png) no-repeat center;
     background-size: 100%;
     position: absolute;
     top: -20px;
