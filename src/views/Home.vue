@@ -38,7 +38,7 @@
                 >+ 38 (097) 011 55 88</a
               >
             </div>
-            
+
             <div>
               <a href="tel:+380931936267" class="num_link_header "
                 >+ 38 (093) 193 62 67</a
@@ -62,8 +62,9 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <a href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                target="_blank" 
+              <a
+                href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank"
                 class="header_text_map_link"
                 >г.Одесса, просп. Шевченко 27</a
               >
