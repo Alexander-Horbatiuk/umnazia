@@ -1,13 +1,20 @@
 <template>
   <div class="main_wrapper" height="100%">
     <header>
-      <div class="navigation_list_wrapper admin_header"></div>
+      <div class="navigation_list_wrapper admin_header">
+        <div class="open_site" @click="toMainPage">перейти на сайт</div>
+
+        <div class="open_site" @click="toFieldsPage">изменить текст</div>
+
+        <router-link to="/logout" class="logout">закончить сеанс</router-link>
+      </div>
     </header>
     <main>
       <div class="main_content">
         <vue-dropzone
           ref="myDropzone"
           id="dropzone"
+          :destroyDropzone="false"
           :options="dropzoneOptions"
           :useCustomSlot="true"
           v-on:vdropzone-success="uploadSuccess"
@@ -40,7 +47,8 @@ export default {
       dropzoneOptions: {
         url: process.env.VUE_APP_API + "/files",
         addRemoveLinks: true,
-        duplicateCheck: true
+        duplicateCheck: true,
+        destroyDropzone: false
       },
       fileName: "porosa.mp4"
     };
@@ -57,6 +65,9 @@ export default {
         method: "get",
         url: process.env.VUE_APP_API + `/files/delete/${file.id}`
       });
+    },
+    toFieldsPage() {
+      this.$router.push({ name: "Admin" });
     }
   },
   async mounted() {
