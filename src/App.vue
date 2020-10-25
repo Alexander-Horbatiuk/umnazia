@@ -7,29 +7,33 @@
 <script>
 export default {
   name: "App",
-  beforeDestroy() {
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_two", false);
-    localStorage.setItem("b_three", false);
-    localStorage.setItem("b_four", false);
-    localStorage.setItem("b_five", false);
-    localStorage.setItem("b_six", false);
-    localStorage.setItem("b_seven", false);
-    localStorage.setItem("b_eight", false);
-    localStorage.setItem("b_nine", false);
-    localStorage.setItem("b_ten", false);
-    localStorage.setItem("b_eleven", false);
-    localStorage.setItem("b_tvelwe", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
-    localStorage.setItem("b_one", false);
+  created() {
+    window.addEventListener("beforeunload", () => {
+      localStorage.removeItem("b_one");
+      localStorage.removeItem("b_two");
+      localStorage.removeItem("b_three");
+      localStorage.removeItem("b_four");
+      localStorage.removeItem("b_five");
+      localStorage.removeItem("b_six");
+      localStorage.removeItem("b_seven");
+      localStorage.removeItem("b_eight");
+      localStorage.removeItem("b_nine");
+      localStorage.removeItem("b_ten");
+      localStorage.removeItem("b_eleven");
+      localStorage.removeItem("b_twelve");
+      localStorage.removeItem("b_thirteen");
+      localStorage.removeItem("b_fourteen");
+      localStorage.removeItem("b_fifteen");
+      localStorage.removeItem("b_sixteen");
+      localStorage.removeItem("b_seventeen");
+      localStorage.removeItem("b_eighteen");
+      localStorage.removeItem("b_nineteen");
+      localStorage.removeItem("b_twenty");
+      localStorage.removeItem("b_twenty_one");
+      localStorage.removeItem("b_twenty_two");
+      localStorage.removeItem("b_twenty_three");
+      localStorage.removeItem("b_twenty_four");
+    });
   }
 };
 </script>
@@ -39,6 +43,23 @@ export default {
 .sub_age_one,
 .sub_age_two {
   color: #efe134;
+}
+
+.training_format_submit_orange_btn {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px 0 0 0;
+  background: url(./assets/img/img_png/btn_orange.png) no-repeat top right;
+  background-size: 100%;
+  width: 227px;
+  height: 70.17px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .wraper_modal_form {

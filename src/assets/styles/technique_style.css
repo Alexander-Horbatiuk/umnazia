@@ -710,23 +710,6 @@ cursor: pointer;
     cursor: pointer;
 }
 
-.training_format_submit_orange_btn {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 5px 0 0 0;
-    background: url(../img/img_png/btn_yellow.png) no-repeat top right;
-    background-size: 100%;
-    width: 227px;
-    height: 70.17px;
-    border: none;
-    text-align: center;
-    font-size: 16px;
-    color: #142142;
-    font-style: normal;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 /*footer*/
 .footer_main_wrapper {
     max-width: 1920px;

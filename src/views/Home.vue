@@ -209,7 +209,10 @@
                   class="btn_orange"
                 />
 
-                <p class="btn_text">Записаться в группу</p>
+                <p v-if="!b_one" class="btn_text">Записаться в группу</p>
+                <p v-else class="btn_text" style="color: white">
+                  Записаться в группу
+                </p>
               </div>
             </div>
           </div>
@@ -437,8 +440,18 @@
                   <p>{{ timetable_clock_morning }}</p>
                 </div>
 
-                <div @click="showModal" class="text_700_35">
-                  <button class="training_format_submit_btn btn_rtans">
+                <div @click="showModal('b_two')" class="text_700_35">
+                  <button
+                    v-if="!b_two"
+                    class="training_format_submit_btn btn_rtans"
+                  >
+                    Записаться в<br />
+                    группу
+                  </button>
+                  <button
+                    v-else
+                    class="training_format_submit_orange_btn btn_rtans"
+                  >
                     Записаться в<br />
                     группу
                   </button>
@@ -450,8 +463,18 @@
                   <p>{{ timetable_clock_evening }}</p>
                 </div>
 
-                <div @click="showModal" class="text_Bold">
-                  <button class="training_format_submit_orange_btn btn_rtans">
+                <div @click="showModal('b_three')" class="text_700_35">
+                  <button
+                    v-if="!b_three"
+                    class="training_format_submit_btn btn_rtans"
+                  >
+                    Записаться в<br />
+                    группу
+                  </button>
+                  <button
+                    v-else
+                    class="training_format_submit_orange_btn btn_rtans"
+                  >
                     Записаться в<br />
                     группу
                   </button>
@@ -1247,8 +1270,18 @@
               </div>
             </div>
 
-            <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-              <button class="modal_submit_btn btn_rtans">
+            <div @click="showModal('b_four')" class="text_700_35">
+              <button
+                v-if="!b_four"
+                class="training_format_submit_btn btn_rtans"
+              >
+                Записаться в<br />
+                группу
+              </button>
+              <button
+                v-else
+                class="training_format_submit_orange_btn btn_rtans"
+              >
                 Записаться в<br />
                 группу
               </button>
