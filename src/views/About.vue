@@ -498,7 +498,9 @@ export default {
       name: "",
       tel: "",
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "",
+      b_five: localStorage.getItem("b_five"),
+      b_six: localStorage.getItem("b_six")
     };
   },
   methods: {

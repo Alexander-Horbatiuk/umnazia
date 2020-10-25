@@ -671,7 +671,11 @@ export default {
       mobileMenuOpen: false,
       presentationTel: "",
       timetable_clock_morning: "",
-      timetable_clock_evening: ""
+      timetable_clock_evening: "",
+      b_fifteen: localStorage.getItem("b_fifteen"),
+      b_sixteen: localStorage.getItem("b_sixteen"),
+      b_seventeen: localStorage.getItem("b_seventeen"),
+      b_eighteen: localStorage.getItem("b_eighteen")
     };
   },
   methods: {

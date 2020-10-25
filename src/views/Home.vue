@@ -193,17 +193,17 @@
                 v-html="home_header_text"
               ></div>
               <div
-                @click="showModal"
+                @click="showModal('b_one')"
                 class="content_box_age_btn text_700_16 btn_rtans"
               >
                 <img
+                  v-if="!b_one"
                   src="../assets/img/img_png/btn_yellow.png"
                   alt="button"
                   class="btn_yellow"
                 />
-
-                <!-- есть display: none;  -->
                 <img
+                  v-else
                   src="../assets/img/img_png/btn_orange.png"
                   alt="button"
                   class="btn_orange"
@@ -1416,14 +1416,20 @@ export default {
       third_file: "",
       fourth_file: "",
       fifth_file: "",
-      sixth_file: ""
+      sixth_file: "",
+      b_one: localStorage.getItem("b_one"),
+      b_two: localStorage.getItem("b_two"),
+      b_three: localStorage.getItem("b_three"),
+      b_four: localStorage.getItem("b_four"),
+      currentButton: ""
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
+      this.currentButton = button;
       this.isModal = true;
     },
     hideModal() {
@@ -1452,6 +1458,8 @@ export default {
       this.name = "";
       this.tel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     ...mapActions(["sendTel", "getFields"])
   },

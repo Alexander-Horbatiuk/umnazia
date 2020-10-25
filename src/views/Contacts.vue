@@ -431,7 +431,9 @@ export default {
       tel: "",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: ""
+      presentationTel: "",
+      b_twenty_three: localStorage.getItem("b_twenty_three"),
+      b_twenty_four: localStorage.getItem("b_twenty_four")
     };
   },
   methods: {

@@ -559,7 +559,11 @@ export default {
       tel: "",
       mobileMenuOpen: false,
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "",
+      b_seven: localStorage.getItem("b_seven"),
+      b_eight: localStorage.getItem("b_eight"),
+      b_nine: localStorage.getItem("b_nine"),
+      b_ten: localStorage.getItem("b_ten")
     };
   },
   methods: {

@@ -48,9 +48,10 @@ export default {
         url: process.env.VUE_APP_API + "/files",
         addRemoveLinks: true,
         duplicateCheck: true,
-        destroyDropzone: false
+        destroyDropzone: false,
+        maxFilesize: 2
       },
-      fileName: "porosa.mp4"
+      fileName: ""
     };
   },
   methods: {

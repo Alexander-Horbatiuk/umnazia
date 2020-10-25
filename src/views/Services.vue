@@ -521,7 +521,11 @@ export default {
       tel: "",
       mobileMenuOpen: false,
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "",
+      b_eleven: localStorage.getItem("b_eleven"),
+      b_twelve: localStorage.getItem("b_twelve"),
+      b_thirteen: localStorage.getItem("b_thirteen"),
+      b_fourteen: localStorage.getItem("b_fourteen")
     };
   },
   methods: {

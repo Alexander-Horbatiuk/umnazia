@@ -663,12 +663,6 @@
 .sub_background {
     z-index: -2;
 }
-/* _______________BTN____ORANGE______________ */
-/* _______________BTN____ORANGE______________ */
-/* _______________BTN____ORANGE______________ */
-.btn_orange {
-    display: none;
-}
 
 @media screen and (max-width: 1700px) {
     .backgraund_visor::after {

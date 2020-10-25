@@ -407,7 +407,11 @@
 
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <a class="btn_anchor " href="#anchorHeader"></a>
+          <button
+            class="btn_anchor"
+            style="cursor:pointer"
+            @click="scrollToTop"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -528,7 +532,9 @@ export default {
       third_file: "",
       fourth_file: "",
       fifth_file: "",
-      sixth_file: ""
+      sixth_file: "",
+      b_twenty_one: localStorage.getItem("b_twenty_one"),
+      b_twenty_two: localStorage.getItem("b_twenty_two")
     };
   },
   methods: {
@@ -596,3 +602,18 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/gallery.css" lang="css"></style>
+<style scoped>
+@media screen and (max-width: 1620px) {
+  .main_content_wrapper::after {
+    display: none;
+  }
+
+  .main_content_wrapper::before {
+    display: none;
+  }
+  .modal_window {
+    top: 40px;
+    right: 20px;
+  }
+}
+</style>

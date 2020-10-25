@@ -606,7 +606,9 @@ export default {
       groups_description_first_block_24_price: "",
       groups_description_second_block_24_price: "",
       groups_description_third_block_24_price: "",
-      groups_description_fourth_block_24_price: ""
+      groups_description_fourth_block_24_price: "",
+      b_nineteen: localStorage.getItem("b_nineteen"),
+      b_twenty: localStorage.getItem("b_twenty")
     };
   },
   methods: {
@@ -666,3 +668,18 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/groups_style.css" lang="css"></style>
+<style scoped>
+@media screen and (max-width: 1620px) {
+  .main_content_wrapper::after {
+    display: none;
+  }
+
+  .main_content_wrapper::before {
+    display: none;
+  }
+  .modal_window {
+    top: 40px;
+    right: 20px;
+  }
+}
+</style>

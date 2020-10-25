@@ -6,7 +6,31 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  beforeDestroy() {
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_two", false);
+    localStorage.setItem("b_three", false);
+    localStorage.setItem("b_four", false);
+    localStorage.setItem("b_five", false);
+    localStorage.setItem("b_six", false);
+    localStorage.setItem("b_seven", false);
+    localStorage.setItem("b_eight", false);
+    localStorage.setItem("b_nine", false);
+    localStorage.setItem("b_ten", false);
+    localStorage.setItem("b_eleven", false);
+    localStorage.setItem("b_tvelwe", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+    localStorage.setItem("b_one", false);
+  }
 };
 </script>
 
