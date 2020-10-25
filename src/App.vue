@@ -138,10 +138,11 @@ export default {
     width: 80px;
     height: 67px;
     background-repeat: no-repeat;
-    position: absolute;
+    position: fixed;
     top: 9px;
     right: 0px;
     cursor: pointer;
+    z-index: 200;
   }
 
   .close_mobile_menu {
@@ -380,13 +381,8 @@ export default {
 }
 
 /* ___________________________________________________________________ */
-@media all and (min-width: 800px) and (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
   .center_circle_header_gallery::after {
-    display: none;
-  }
-
-  .gallery_arrow_left,
-  .gallery_arrow_right {
     display: none;
   }
 
@@ -405,8 +401,16 @@ export default {
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .gallery_arrow_left {
+    left: -40px;
+  }
+  .gallery_arrow_right {
+    right: -40px;
+  }
+}
 /* ___________________________________________________________________ */
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1200px) {
   .center_circle_header_gallery::after {
     display: none;
   }
