@@ -446,10 +446,10 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: "",
+      presentationTel: "+380",
       b_twenty_three: localStorage.getItem("b_twenty_three"),
       b_twenty_four: localStorage.getItem("b_twenty_four"),
       currentButton: ""

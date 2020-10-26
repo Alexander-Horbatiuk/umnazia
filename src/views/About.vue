@@ -510,9 +510,9 @@ export default {
       isModal: false,
       mobileMenuOpen: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
-      presentationTel: "",
+      presentationTel: "+380",
       b_five: localStorage.getItem("b_five"),
       b_six: localStorage.getItem("b_six"),
       currentButton: ""

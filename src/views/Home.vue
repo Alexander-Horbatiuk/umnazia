@@ -1669,7 +1669,7 @@ export default {
       currentSlideNumber: 1,
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       mobileMenuOpen: false,
       home_header_title_first_part: "",
       home_header_title_second_part: "",

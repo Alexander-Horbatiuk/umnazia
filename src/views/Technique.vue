@@ -579,10 +579,10 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       mobileMenuOpen: false,
       presentationName: "",
-      presentationTel: "",
+      presentationTel: "+380",
       b_seven: localStorage.getItem("b_seven"),
       b_eight: localStorage.getItem("b_eight"),
       b_nine: localStorage.getItem("b_nine"),

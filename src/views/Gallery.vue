@@ -152,17 +152,6 @@
           </div>
         </div>
         <div class="box_for_click">
-          <svg
-            width="40"
-            height="39"
-            viewBox="0 0 40 39"
-            class="gallery_arrow_left"
-          >
-            <path
-              d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-              stroke="#1BA6B2"
-            />
-          </svg>
           <div class="gallery_box">
             <!-- _____________ -->
             <div class="gallery_sub_box">
@@ -251,17 +240,6 @@
               </div>
             </div>
           </div>
-          <svg
-            width="40"
-            height="39"
-            viewBox="0 0 40 39"
-            class="gallery_arrow_right"
-          >
-            <path
-              d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-              stroke="#1BA6B2"
-            />
-          </svg>
         </div>
       </div>
     </main>
@@ -541,10 +519,10 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: "",
+      presentationTel: "+380",
       first_file: "",
       second_file: "",
       third_file: "",

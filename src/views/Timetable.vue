@@ -692,10 +692,10 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: "",
+      presentationTel: "+380",
       timetable_clock_morning: "",
       timetable_clock_evening: "",
       b_fifteen: localStorage.getItem("b_fifteen"),
