@@ -335,7 +335,14 @@
               </div>
             </div>
 
-            <div class="box_age_groups">
+            <div
+              class="box_age_groups"
+              :class="{
+                readMorer:
+                  groups_description_first_block_content_show ||
+                  groups_description_second_block_content_show
+              }"
+            >
               <div class="age_groups  z_index_four">
                 <div class="circle_age_groups">
                   <img
@@ -349,14 +356,39 @@
                     {{ groups_description_first_block_title }}
                   </p>
                   <span class="text_group">
-                    {{ groups_description_first_block_content }}
+                    {{ groups_description_first_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_first_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_first_block_content_show')
+                    "
+                    v-if="!groups_description_first_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_first_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
 
-              <div class="age_groups        z_index_three">
+              <div class="age_groups z_index_three">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_two.svg"
@@ -369,16 +401,48 @@
                     {{ groups_description_second_block_title }}
                   </p>
                   <span class="text_group"
-                    >{{ groups_description_second_block_content }}
+                    >{{ groups_description_second_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_second_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_second_block_content_show')
+                    "
+                    v-if="!groups_description_second_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_second_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="box_age_groups">
-              <div class="age_groups         z_index_two">
+            <div
+              class="box_age_groups"
+              :class="{
+                readMorer:
+                  groups_description_third_block_content_show ||
+                  groups_description_fourth_block_content_show
+              }"
+            >
+              <div class="age_groups z_index_two">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_three.svg"
@@ -391,13 +455,38 @@
                     {{ groups_description_third_block_title }}
                   </p>
                   <span class="text_group"
-                    >{{ groups_description_third_block_content }}
+                    >{{ groups_description_third_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_third_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_third_block_content_show')
+                    "
+                    v-if="!groups_description_third_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_third_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
-              <div class="age_groups         z_index_one">
+              <div class="age_groups z_index_one">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_four.svg"
@@ -410,11 +499,36 @@
                     {{ groups_description_fourth_block_title }}
                   </p>
                   <span class="text_group">{{
-                    groups_description_fourth_block_content
+                    groups_description_fourth_block_content_show_text
                   }}</span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_fourth_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_fourth_block_content_show')
+                    "
+                    v-if="!groups_description_fourth_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_fourth_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -961,11 +1075,34 @@
                   <p class="head_card_text">
                     {{ first_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ first_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !first_home_techniques_content_show
+                    }"
+                  >
+                    {{ first_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="first_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('first_home_techniques_content_show')"
+                      v-if="!first_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('first_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -976,11 +1113,34 @@
                   <p class="head_card_text">
                     {{ second_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ second_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !second_home_techniques_content_show
+                    }"
+                  >
+                    {{ second_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="second_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('second_home_techniques_content_show')"
+                      v-if="!second_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('second_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -991,11 +1151,34 @@
                   <p class="head_card_text">
                     {{ third_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ third_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !third_home_techniques_content_show
+                    }"
+                  >
+                    {{ third_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="third_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('third_home_techniques_content_show')"
+                      v-if="!third_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('third_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1006,11 +1189,34 @@
                   <p class="head_card_text">
                     {{ fourth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ fourth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !fourth_home_techniques_content_show
+                    }"
+                  >
+                    {{ fourth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="fourth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('fourth_home_techniques_content_show')"
+                      v-if="!fourth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('fourth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1021,11 +1227,34 @@
                   <p class="head_card_text">
                     {{ fifth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ fifth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !fifth_home_techniques_content_show
+                    }"
+                  >
+                    {{ fifth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="fifth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('fifth_home_techniques_content_show')"
+                      v-if="!fifth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('fifth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1036,11 +1265,34 @@
                   <p class="head_card_text">
                     {{ sixth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ sixth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !sixth_home_techniques_content_show
+                    }"
+                  >
+                    {{ sixth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="sixth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('sixth_home_techniques_content_show')"
+                      v-if="!sixth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('sixth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1454,7 +1706,17 @@ export default {
       b_two: localStorage.getItem("b_two"),
       b_three: localStorage.getItem("b_three"),
       b_four: localStorage.getItem("b_four"),
-      currentButton: ""
+      currentButton: "",
+      groups_description_first_block_content_show: false,
+      groups_description_second_block_content_show: false,
+      groups_description_third_block_content_show: false,
+      groups_description_fourth_block_content_show: false,
+      first_home_techniques_content_show: false,
+      second_home_techniques_content_show: false,
+      third_home_techniques_content_show: false,
+      fourth_home_techniques_content_show: false,
+      fifth_home_techniques_content_show: false,
+      sixth_home_techniques_content_show: false
     };
   },
   methods: {
@@ -1467,6 +1729,12 @@ export default {
     },
     hideModal() {
       this.isModal = false;
+    },
+    readMore(trigger) {
+      this[trigger] = true;
+    },
+    hideReadMore(trigger) {
+      this[trigger] = false;
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
@@ -1497,7 +1765,137 @@ export default {
     ...mapActions(["sendTel", "getFields"])
   },
   computed: mapState({
-    fields: state => state.fields
+    fields: state => state.fields,
+    groups_description_first_block_content_show_text() {
+      if (this.groups_description_first_block_content_show) {
+        return this.groups_description_first_block_content;
+      } else {
+        if (this.groups_description_first_block_content.length <= 220) {
+          return this.groups_description_first_block_content;
+        } else {
+          return this.groups_description_first_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_second_block_content_show_text() {
+      if (this.groups_description_second_block_content_show) {
+        return this.groups_description_second_block_content;
+      } else {
+        if (this.groups_description_second_block_content.length <= 220) {
+          return this.groups_description_second_block_content;
+        } else {
+          return this.groups_description_second_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_third_block_content_show_text() {
+      if (this.groups_description_third_block_content_show) {
+        return this.groups_description_third_block_content;
+      } else {
+        if (this.groups_description_third_block_content.length <= 220) {
+          return this.groups_description_third_block_content;
+        } else {
+          return this.groups_description_third_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_fourth_block_content_show_text() {
+      if (this.groups_description_fourth_block_content_show) {
+        return this.groups_description_fourth_block_content;
+      } else {
+        if (this.groups_description_fourth_block_content.length <= 220) {
+          return this.groups_description_fourth_block_content;
+        } else {
+          return this.groups_description_fourth_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    first_home_techniques_content_show_text() {
+      if (this.first_home_techniques_content_show) {
+        return this.first_home_techniques_content;
+      } else {
+        if (this.first_home_techniques_content.length <= 180) {
+          return this.first_home_techniques_content;
+        } else {
+          return this.first_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    second_home_techniques_content_show_text() {
+      if (this.second_home_techniques_content_show) {
+        return this.second_home_techniques_content;
+      } else {
+        if (this.second_home_techniques_content.length <= 180) {
+          return this.second_home_techniques_content;
+        } else {
+          return this.second_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    third_home_techniques_content_show_text() {
+      if (this.third_home_techniques_content_show) {
+        return this.third_home_techniques_content;
+      } else {
+        if (this.third_home_techniques_content.length <= 180) {
+          return this.third_home_techniques_content;
+        } else {
+          return this.third_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    fourth_home_techniques_content_show_text() {
+      if (this.fourth_home_techniques_content_show) {
+        return this.fourth_home_techniques_content;
+      } else {
+        if (this.fourth_home_techniques_content.length <= 180) {
+          return this.fourth_home_techniques_content;
+        } else {
+          return this.fourth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    fifth_home_techniques_content_show_text() {
+      if (this.fifth_home_techniques_content_show) {
+        return this.fifth_home_techniques_content;
+      } else {
+        if (this.fifth_home_techniques_content.length <= 180) {
+          return this.fifth_home_techniques_content;
+        } else {
+          return this.fifth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    sixth_home_techniques_content_show_text() {
+      if (this.sixth_home_techniques_content_show) {
+        return this.sixth_home_techniques_content;
+      } else {
+        if (this.sixth_home_techniques_content.length <= 180) {
+          return this.sixth_home_techniques_content;
+        } else {
+          return this.sixth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    }
   }),
   async created() {
     document.body.style.overflowY = "scroll";
@@ -1528,5 +1926,14 @@ export default {
 <style scoped>
 .selected_small_circle {
   background: #62e5db;
+}
+
+@media all and (min-width: 740px) {
+  .readMorer {
+    align-items: flex-start;
+  }
+  .readMorerTwo {
+    height: 140px;
+  }
 }
 </style>
