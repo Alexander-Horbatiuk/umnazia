@@ -152,94 +152,90 @@
           </div>
         </div>
         <div class="box_for_click">
-          <div class="gallery_box">
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
+          <div class="box_for_click">
+            <div v-for="(chunk, index) in files.slice(0, number)" :key="index">
               <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
+                class="gallery_box"
+                style="padding-bottom: 1.25%; padding-top: 1.25%"
               >
-                <img
-                  height="250"
-                  :src="first_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-              <!-- ________ -->
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="second_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="530"
-                class="gallery_content_long centrify"
-              >
-                <img
-                  height="530"
-                  :src="third_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="fourth_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
-              </div>
-              <!-- ________ -->
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="fifth_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="530"
-                class="gallery_content_long centrify"
-              >
-                <img
-                  height="530"
-                  :src="sixth_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    width="255"
+                    height="250"
+                    class="gallery_content_small centrify"
+                  >
+                    <img :src="chunk[0]" alt="" class="gallery_img_small" />
+                  </div>
+                  <!-- ________ -->
+                  <div
+                    width="255"
+                    height="250"
+                    class="gallery_content_small centrify"
+                  >
+                    <img :src="chunk[1]" alt="" class="gallery_img_small" />
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    width="255"
+                    height="530"
+                    class="gallery_content_long centrify"
+                  >
+                    <img
+                      :src="chunk[2]"
+                      alt="children"
+                      class="gallery_img_long"
+                    />
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    width="255"
+                    height="250"
+                    class="gallery_content_small centrify"
+                  >
+                    <img
+                      :src="chunk[3]"
+                      alt="children"
+                      class="gallery_img_small"
+                    />
+                  </div>
+                  <!-- ________ -->
+                  <div
+                    width="255"
+                    height="250"
+                    class="gallery_content_small centrify"
+                  >
+                    <img :src="chunk[4]" alt="" class="gallery_img_small" />
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    width="255"
+                    height="530"
+                    class="gallery_content_long centrify"
+                  >
+                    <img
+                      :src="chunk[5]"
+                      alt="children"
+                      class="gallery_img_long"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+        <div
+          v-if="number < files.length"
+          @click="number++"
+          class="btn_all_gallery"
+        >
+          Посмотреть ещё
         </div>
       </div>
     </main>
@@ -523,14 +519,10 @@ export default {
       presentationName: "",
       mobileMenuOpen: false,
       presentationTel: "+380",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: "",
       b_twenty_one: localStorage.getItem("b_twenty_one"),
-      b_twenty_two: localStorage.getItem("b_twenty_two")
+      b_twenty_two: localStorage.getItem("b_twenty_two"),
+      files: [],
+      number: 2
     };
   },
   methods: {
@@ -590,14 +582,17 @@ export default {
       })
     ).data;
 
-    console;
-
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
   }
 };
 </script>

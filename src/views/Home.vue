@@ -1713,8 +1713,7 @@ export default {
       fourth_home_techniques_content_show: false,
       fifth_home_techniques_content_show: false,
       sixth_home_techniques_content_show: false,
-      files: [],
-      current: 1
+      files: []
     };
   },
   components: {
