@@ -49,6 +49,7 @@ export default {
         addRemoveLinks: true,
         duplicateCheck: true,
         destroyDropzone: false,
+        acceptedFiles: ".jpg, .jpeg, .png",
         maxFilesize: 2
       },
       fileName: ""
