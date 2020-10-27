@@ -40,6 +40,14 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
+.gallery_img_small {
+  min-height: 250px;
+}
+
+.gallery_img_long {
+  min-height: 530px;
+}
+
 .sub_age_one,
 .sub_age_two {
   color: #efe134;
@@ -359,8 +367,7 @@ export default {
 .gallery_arrow_left {
   position: absolute;
   left: -70px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 48.9%;
   cursor: pointer;
   fill: #fff;
 }
@@ -369,8 +376,7 @@ export default {
   position: absolute;
   right: -70px;
   top: 50%;
-  transform: translateY(-50%);
-  transform: rotate(-60deg);
+  transform: rotate(-180deg);
   cursor: pointer;
   fill: #fff;
 }
