@@ -709,15 +709,15 @@
                     Реджио педагогика
                   </p>
                   <span class="center_cercle_text">
-                    Главные принципы Реджио-педагогики:сотрудничество 
-                    педагогов с детьми, максимальная 
-                    свобода Творчества и самовыражения, 
-                    умение педагога быть на одном уровне с ребёнком и относиться к ребёнку 
-                    как к маленькой личности, уважать и выслушивать его мнение, развивать воображение. 
-                    Педагог в нашей Академии-это друг, наставник и помощник. Тот человек,  
-                    которого интересуют мнение и мысли ребёнка, который поможет ребёнку 
-                    самому найти ответы на всевозможные «Почему?» и «Зачем?» и реализовать 
-                    их через творчество.
+                    Главные принципы Реджио-педагогики:сотрудничество педагогов
+                    с детьми, максимальная свобода Творчества и самовыражения,
+                    умение педагога быть на одном уровне с ребёнком и относиться
+                    к ребёнку как к маленькой личности, уважать и выслушивать
+                    его мнение, развивать воображение. Педагог в нашей
+                    Академии-это друг, наставник и помощник. Тот человек,
+                    которого интересуют мнение и мысли ребёнка, который поможет
+                    ребёнку самому найти ответы на всевозможные «Почему?» и
+                    «Зачем?» и реализовать их через творчество.
                   </span>
                 </div>
 
@@ -1080,7 +1080,7 @@
             <div class="wrapper_cards_our_rules">
               <div class="wrap_card_our_rules">
                 <div class="head_card num_card_one"></div>
-                
+
                 <div class="wrap_footer_card">
                   <div class="footer_card">
                     <p class="head_card_text">
@@ -1095,7 +1095,9 @@
                       {{ first_home_techniques_content_show_text }}
                     </span>
                     <div
-                      v-if="first_home_techniques_content_show_text.length > 180"
+                      v-if="
+                        first_home_techniques_content_show_text.length > 180
+                      "
                     >
                       <div
                         @click="readMore('first_home_techniques_content_show')"
@@ -1116,7 +1118,6 @@
                     </div>
                   </div>
                 </div>
-                
               </div>
 
               <div class="wrap_card_our_rules">
@@ -1339,9 +1340,7 @@
                     <div class="gallery_box">
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
-                        <div
-                          class="gallery_content_small centrify"
-                        >
+                        <div class="gallery_content_small centrify">
                           <img
                             v-if="
                               chunk[0].type.replace(/\/.+$/, '') === 'image'
@@ -1358,9 +1357,7 @@
                           ></vue-player>
                         </div>
                         <!-- ________ -->
-                        <div
-                          class="gallery_content_small centrify"
-                        >
+                        <div class="gallery_content_small centrify">
                           <img
                             v-if="
                               chunk[1].type.replace(/\/.+$/, '') === 'image'
@@ -1379,9 +1376,7 @@
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
-                        <div
-                          class="gallery_content_long centrify"
-                        >
+                        <div class="gallery_content_long centrify">
                           <img
                             v-if="
                               chunk[2].type.replace(/\/.+$/, '') === 'image'
@@ -1400,9 +1395,7 @@
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
-                        <div
-                          class="gallery_content_small centrify"
-                        >
+                        <div class="gallery_content_small centrify">
                           <img
                             v-if="
                               chunk[3].type.replace(/\/.+$/, '') === 'image'
@@ -1419,10 +1412,7 @@
                           ></vue-player>
                         </div>
                         <!-- ________ -->
-                        <div
-
-                          class="gallery_content_small centrify"
-                        >
+                        <div class="gallery_content_small centrify">
                           <img
                             v-if="
                               chunk[4].type.replace(/\/.+$/, '') === 'image'
@@ -1441,10 +1431,7 @@
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
-                        <div
-
-                          class="gallery_content_long centrify"
-                        >
+                        <div class="gallery_content_long centrify">
                           <img
                             v-if="
                               chunk[5].type.replace(/\/.+$/, '') === 'image'

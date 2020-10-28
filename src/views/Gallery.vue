@@ -146,126 +146,116 @@
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
         <div class="box_line_heading text_bold">
-          
           <!--box-line-->
           <div class="heading_text">
             <h3>Фотогалерея</h3>
           </div>
         </div>
         <div class="box__click">
-
           <div class="box_for_click">
-            <div v-for="(chunk, index) in files.slice(0, number)" :key="index"  class="gallery_box">
-                <!-- _____________ -->
-                <div class="gallery_sub_box">
-                  <div
-                    class="gallery_content_small centrify"
-                  >
-                    <img
-                      v-if="chunk[0].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[0].url"
-                      alt=""
-                      class="gallery_img_small"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[0].url"
-                      :poster="poster"
-                      class="gallery_img_small"
-                    ></vue-player>
-                  </div>
-                  <!-- ________ -->
-                  <div
-                    class="gallery_content_small centrify"
-                  >
-                    <img
-                      v-if="chunk[1].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[1].url"
-                      alt=""
-                      class="gallery_img_small"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[1].url"
-                      :poster="poster"
-                      class="gallery_img_small"
-                    ></vue-player>
-                  </div>
+            <div
+              v-for="(chunk, index) in files.slice(0, number)"
+              :key="index"
+              class="gallery_box"
+            >
+              <!-- _____________ -->
+              <div class="gallery_sub_box">
+                <div class="gallery_content_small centrify">
+                  <img
+                    v-if="chunk[0].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[0].url"
+                    alt=""
+                    class="gallery_img_small"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[0].url"
+                    :poster="poster"
+                    class="gallery_img_small"
+                  ></vue-player>
                 </div>
-                <!-- _____________ -->
-                <div class="gallery_sub_box">
-                  <div
-                    class="gallery_content_long centrify"
-                  >
-                    <img
-                      v-if="chunk[2].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[2].url"
-                      alt="children"
-                      class="gallery_img_long"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[2].url"
-                      :poster="poster"
-                      class="gallery_img_long"
-                    ></vue-player>
-                  </div>
+                <!-- ________ -->
+                <div class="gallery_content_small centrify">
+                  <img
+                    v-if="chunk[1].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[1].url"
+                    alt=""
+                    class="gallery_img_small"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[1].url"
+                    :poster="poster"
+                    class="gallery_img_small"
+                  ></vue-player>
                 </div>
-                <!-- _____________ -->
-                <div class="gallery_sub_box">
-                  <div
-                    class="gallery_content_small centrify"
-                  >
-                    <img
-                      v-if="chunk[3].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[3].url"
-                      alt="children"
-                      class="gallery_img_small"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[3].url"
-                      :poster="poster"
-                      class="gallery_img_small"
-                    ></vue-player>
-                  </div>
-                  <!-- ________ -->
-                  <div
-                    class="gallery_content_small centrify"
-                  >
-                    <img
-                      v-if="chunk[4].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[4].url"
-                      alt=""
-                      class="gallery_img_small"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[4].url"
-                      :poster="poster"
-                      class="gallery_img_small"
-                    ></vue-player>
-                  </div>
+              </div>
+              <!-- _____________ -->
+              <div class="gallery_sub_box">
+                <div class="gallery_content_long centrify">
+                  <img
+                    v-if="chunk[2].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[2].url"
+                    alt="children"
+                    class="gallery_img_long"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[2].url"
+                    :poster="poster"
+                    class="gallery_img_long"
+                  ></vue-player>
                 </div>
-                <!-- _____________ -->
-                <div class="gallery_sub_box">
-                  <div
-                    class="gallery_content_long centrify"
-                  >
-                    <img
-                      v-if="chunk[5].type.replace(/\/.+$/, '') === 'image'"
-                      :src="chunk[5].url"
-                      alt="children"
-                      class="gallery_img_long"
-                    />
-                    <vue-player
-                      v-else
-                      :src="chunk[5].url"
-                      :poster="poster"
-                      class="gallery_img_long"
-                    ></vue-player>
-                  </div>
+              </div>
+              <!-- _____________ -->
+              <div class="gallery_sub_box">
+                <div class="gallery_content_small centrify">
+                  <img
+                    v-if="chunk[3].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[3].url"
+                    alt="children"
+                    class="gallery_img_small"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[3].url"
+                    :poster="poster"
+                    class="gallery_img_small"
+                  ></vue-player>
                 </div>
+                <!-- ________ -->
+                <div class="gallery_content_small centrify">
+                  <img
+                    v-if="chunk[4].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[4].url"
+                    alt=""
+                    class="gallery_img_small"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[4].url"
+                    :poster="poster"
+                    class="gallery_img_small"
+                  ></vue-player>
+                </div>
+              </div>
+              <!-- _____________ -->
+              <div class="gallery_sub_box">
+                <div class="gallery_content_long centrify">
+                  <img
+                    v-if="chunk[5].type.replace(/\/.+$/, '') === 'image'"
+                    :src="chunk[5].url"
+                    alt="children"
+                    class="gallery_img_long"
+                  />
+                  <vue-player
+                    v-else
+                    :src="chunk[5].url"
+                    :poster="poster"
+                    class="gallery_img_long"
+                  ></vue-player>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -650,6 +640,4 @@ export default {
 
 <style scoped src="../assets/styles/gallery.css" lang="css"></style>
 
-<style scoped>
-
-</style>
+<style scoped></style>
