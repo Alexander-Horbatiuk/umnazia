@@ -1048,97 +1048,38 @@
                 <div class="gallery_box">
                   <!-- _____________ -->
                   <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        height="250"
-                        :src="first_file"
-                        alt=""
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_small centrify">
+                      <img :src="first_file" alt="" class="gallery_img_small"/>
                     </div>
                     <!-- ________ -->
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        height="250"
-                        :src="second_file"
-                        alt=""
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_small centrify">
+                      <img :src="second_file" alt="" class="gallery_img_small"/>
                     </div>
                   </div>
                   <!-- _____________ -->
                   <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="530"
-                      class="gallery_content_long centrify"
-                    >
-                      <img
-                        height="530"
-                        :src="third_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_long centrify">
+                      <img :src="third_file" alt="children" class="gallery_img_small"/>
                     </div>
                   </div>
                   <!-- _____________ -->
                   <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        height="250"
-                        :src="fourth_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_small centrify">
+                      <img :src="fourth_file" alt="children" class="gallery_img_small"/>
                     </div>
                     <!-- ________ -->
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        height="250"
-                        :src="fifth_file"
-                        alt=""
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_small centrify">
+                      <img :src="fifth_file" alt="" class="gallery_img_small"/>
                     </div>
                   </div>
                   <!-- _____________ -->
                   <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="530"
-                      class="gallery_content_long centrify"
-                    >
-                      <img
-                        height="530"
-                        :src="sixth_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
+                    <div class="gallery_content_long centrify">
+                      <img :src="sixth_file" alt="children" class="gallery_img_small"/>
                     </div>
                   </div>
                 </div>
-                <svg
-                  width="40"
-                  height="39"
-                  viewBox="0 0 40 39"
-                  class="gallery_arrow_right"
-                >
+                <svg width="40" height="39" viewBox="0 0 40 39" class="gallery_arrow_right" >
                   <path
                     d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
                     stroke="#1BA6B2"

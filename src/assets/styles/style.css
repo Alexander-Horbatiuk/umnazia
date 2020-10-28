@@ -363,8 +363,9 @@ cursor: pointer;
     border-bottom: 4px solid #142142;
     position: absolute;
     border-radius: 10px;  
-    bottom: -19px;
+    
     left: 0;
+    bottom: -19px;
     -webkit-transition: 0.6s;
     -o-transition: 0.6s;
     transition: 0.6s;
@@ -376,8 +377,9 @@ cursor: pointer;
 .el_menu_link:hover{
     color: #f26914;
 }
-/* _______________________________________768_____________ */
 
+
+/* _______________________________________768_____________ */
 @media screen and (max-width: 1024px) {
     .contacts_wrapper {
         -webkit-box-orient: horizontal;
@@ -3270,6 +3272,23 @@ cursor: pointer;
     left: 0;
 }
 
+.gallery_content_small {
+    max-width: 255px;
+    width: 100%; 
+    min-height: 250px;
+}
+
+.gallery_img_small {
+    width: 100%; 
+    height: 100%;
+}
+
+.gallery_content_long {
+    max-width: 255px;
+    width: 100%;
+    height: 530px;
+    overflow: hidden;
+  }
 
 /* ___________________________________________________________________ */
 @media screen and (max-width: 1500px) {
@@ -3292,22 +3311,44 @@ cursor: pointer;
 
 /* ___________________________________________________________________ */
 @media screen and (max-width: 1200px)  {
-    .center_circle_header_gallery::after {
-        display: none;
-    }
-
     .sub_wrap_gallery::after {
         display: none;
     }
 
-    .wrap_gallery {      
+    .gallery_arrow_left,
+    .gallery_arrow_right {
+        display: none;
+    }
+
+    .wrap_gallery { 
+        position: static;     
         background-position: top ;
         background-repeat: repeat;
         padding: 147px 0 0 0;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+                background-size: cover;
+    }
+
+
+    .gallery_box {
+        display: flex;
+        align-items: center;
+        max-width: 740px;
+        justify-content: space-around;
+    }
     
+    .gallery_sub_box {
+        margin: 0 0 20px 0;
+    }
+    
+    .gallery_content_small {
+        max-width: 355px;
+        min-height: 250px;
+    }
+    .gallery_content_long {
+        max-width: 355px;
     }
 }
 /* ___________________________________________________________________ */
@@ -3327,6 +3368,18 @@ cursor: pointer;
         padding: 70px 0 0 0;
         margin: 0;
     }
+
+    .gallery_content_small {
+        max-width: 155px;
+        min-height: 110px;
+    }
+    .gallery_content_long {
+        max-width: 155px;
+    }
+    .gallery_box {
+        max-width: 310px;
+        border-radius: 0;
+      }
 }
 
 @media screen and (max-width: 375px) {

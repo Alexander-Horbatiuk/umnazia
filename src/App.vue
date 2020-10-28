@@ -350,11 +350,11 @@ export default {
   height: 250px;
   overflow: hidden;
 }
-.gallery_content_long {
+/* .gallery_content_long {
   width: 255px;
   height: 530px;
   overflow: hidden;
-}
+} */
 
 /* ___________________________________________________________________ */
 @media screen and (max-width: 1500px) {
@@ -387,56 +387,14 @@ export default {
 }
 /* ___________________________________________________________________ */
 @media screen and (max-width: 1200px) {
-  .center_circle_header_gallery::after {
-    display: none;
-  }
-  .gallery_arrow_left,
-  .gallery_arrow_right {
-    display: none;
-  }
-  .sub_wrap_gallery::after {
-    display: none;
-  }
-
-  .wrap_gallery {
-    position: relative;
-    background-image: url(./assets/img/background/bg_vectot_pattern_tablet.png);
-    background-size: cover;
-  }
-
-  .wrap_gallery {
-    position: static;
-    padding: 147px 0 0 0;
-    justify-content: center;
-    background-size: cover;
-  }
-
-  .gallery_box {
-    display: flex;
-    align-items: center;
-    max-width: 740px;
-    justify-content: space-around;
-  }
-
-  .gallery_sub_box {
-    margin: 0 0 20px 0;
-  }
-
-  .gallery_content_small {
-    margin: 0 0 30px 0;
-  }
-
-  .gallery_img_small {
-    max-height: 100%;
-    max-width: 100%;
-  }
+  
 }
 /* ___________________________________________________________________ */
 @media screen and (max-width: 600px) {
-  .center_circle_header_gallery::after {
+  /* .center_circle_header_gallery::after {
     margin: 0;
     display: none;
-  }
+  } */
   .sub_wrap_gallery::after {
     display: none;
   }
@@ -455,10 +413,10 @@ export default {
   .gallery_sub_box {
     margin: 0 0px 10px 0;
   }
-  .gallery_box {
+  /* .gallery_box {
     max-width: 310px;
     border-radius: 0;
-  }
+  } */
   .gallery_content_small {
     max-width: 150px;
     height: 109px;
