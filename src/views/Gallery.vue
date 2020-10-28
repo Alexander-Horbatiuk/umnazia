@@ -165,7 +165,18 @@
                     height="250"
                     class="gallery_content_small centrify"
                   >
-                    <img :src="chunk[0]" alt="" class="gallery_img_small" />
+                    <img
+                      v-if="chunk[0].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[0].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[0].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
                   </div>
                   <!-- ________ -->
                   <div
@@ -173,7 +184,18 @@
                     height="250"
                     class="gallery_content_small centrify"
                   >
-                    <img :src="chunk[1]" alt="" class="gallery_img_small" />
+                    <img
+                      v-if="chunk[1].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[1].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[1].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
                   </div>
                 </div>
                 <!-- _____________ -->
@@ -184,10 +206,17 @@
                     class="gallery_content_long centrify"
                   >
                     <img
-                      :src="chunk[2]"
+                      v-if="chunk[2].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[2].url"
                       alt="children"
                       class="gallery_img_long"
                     />
+                    <vue-player
+                      v-else
+                      :src="chunk[2].url"
+                      :poster="poster"
+                      class="gallery_img_long"
+                    ></vue-player>
                   </div>
                 </div>
                 <!-- _____________ -->
@@ -198,10 +227,17 @@
                     class="gallery_content_small centrify"
                   >
                     <img
-                      :src="chunk[3]"
+                      v-if="chunk[3].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[3].url"
                       alt="children"
                       class="gallery_img_small"
                     />
+                    <vue-player
+                      v-else
+                      :src="chunk[3].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
                   </div>
                   <!-- ________ -->
                   <div
@@ -209,7 +245,18 @@
                     height="250"
                     class="gallery_content_small centrify"
                   >
-                    <img :src="chunk[4]" alt="" class="gallery_img_small" />
+                    <img
+                      v-if="chunk[4].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[4].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[4].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
                   </div>
                 </div>
                 <!-- _____________ -->
@@ -220,10 +267,17 @@
                     class="gallery_content_long centrify"
                   >
                     <img
-                      :src="chunk[5]"
+                      v-if="chunk[5].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[5].url"
                       alt="children"
                       class="gallery_img_long"
                     />
+                    <vue-player
+                      v-else
+                      :src="chunk[5].url"
+                      :poster="poster"
+                      class="gallery_img_long"
+                    ></vue-player>
                   </div>
                 </div>
               </div>
@@ -508,6 +562,7 @@
 
 <script>
 import axios from "axios";
+import vuePlayer from "@algoz098/vue-player";
 import { mapActions } from "vuex";
 export default {
   name: "Gallery",
@@ -524,6 +579,11 @@ export default {
       files: [],
       number: 2
     };
+  },
+  computed: {
+    poster() {
+      return process.env.VUE_APP_URL + "/Favicon_computer.png";
+    }
   },
   methods: {
     scrollToTop() {
@@ -585,7 +645,10 @@ export default {
     let chunk = [];
     let i = 6;
     ids.forEach(id => {
-      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      chunk.push({
+        url: process.env.VUE_APP_API + `/files/${id.id}/x.jpg`,
+        type: id.type
+      });
       i--;
       if (i === 0) {
         this.files.push(chunk);
@@ -593,6 +656,9 @@ export default {
         i = 6;
       }
     });
+  },
+  components: {
+    vuePlayer
   }
 };
 </script>

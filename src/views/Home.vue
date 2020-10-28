@@ -1332,10 +1332,19 @@
                           class="gallery_content_small centrify"
                         >
                           <img
-                            :src="chunk[0]"
+                            v-if="
+                              chunk[0].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[0].url"
                             alt=""
                             class="gallery_img_small"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[0].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
                         </div>
                         <!-- ________ -->
                         <div
@@ -1344,10 +1353,19 @@
                           class="gallery_content_small centrify"
                         >
                           <img
-                            :src="chunk[1]"
+                            v-if="
+                              chunk[1].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[1].url"
                             alt=""
                             class="gallery_img_small"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[1].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
@@ -1358,10 +1376,19 @@
                           class="gallery_content_long centrify"
                         >
                           <img
-                            :src="chunk[2]"
-                            alt="children"
+                            v-if="
+                              chunk[2].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[2].url"
+                            alt=""
                             class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[2].url"
+                            :poster="poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
@@ -1372,10 +1399,19 @@
                           class="gallery_content_small centrify"
                         >
                           <img
-                            :src="chunk[3]"
-                            alt="children"
+                            v-if="
+                              chunk[3].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[3].url"
+                            alt=""
                             class="gallery_img_small"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[3].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
                         </div>
                         <!-- ________ -->
                         <div
@@ -1384,10 +1420,19 @@
                           class="gallery_content_small centrify"
                         >
                           <img
-                            :src="chunk[4]"
+                            v-if="
+                              chunk[4].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[4].url"
                             alt=""
                             class="gallery_img_small"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[4].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
@@ -1398,10 +1443,19 @@
                           class="gallery_content_long centrify"
                         >
                           <img
-                            :src="chunk[5]"
-                            alt="children"
+                            v-if="
+                              chunk[5].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[5].url"
+                            alt=""
                             class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[5].url"
+                            :poster="poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                     </div>
@@ -1662,6 +1716,7 @@
 <script>
 import axios from "axios";
 import "vue-snap/dist/vue-snap.css";
+import vuePlayer from "@algoz098/vue-player";
 import { Carousel, Slide } from "vue-snap";
 import { mapActions, mapState } from "vuex";
 export default {
@@ -1718,7 +1773,8 @@ export default {
   },
   components: {
     Carousel,
-    Slide
+    Slide,
+    vuePlayer
   },
   methods: {
     scrollToTop() {
@@ -1782,6 +1838,9 @@ export default {
   },
   computed: mapState({
     fields: state => state.fields,
+    poster() {
+      return process.env.VUE_APP_URL + "/Favicon_computer.png";
+    },
     groups_description_first_block_content_show_text() {
       if (this.groups_description_first_block_content_show) {
         return this.groups_description_first_block_content;
@@ -1931,7 +1990,10 @@ export default {
     let chunk = [];
     let i = 6;
     ids.forEach(id => {
-      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      chunk.push({
+        url: process.env.VUE_APP_API + `/files/${id.id}/x.jpg`,
+        type: id.type
+      });
       i--;
       if (i === 0) {
         this.files.push(chunk);

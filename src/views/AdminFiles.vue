@@ -49,8 +49,8 @@ export default {
         addRemoveLinks: true,
         duplicateCheck: true,
         destroyDropzone: false,
-        acceptedFiles: ".jpg, .jpeg, .png",
-        maxFilesize: 2
+        acceptedFiles: "image/*, video/*",
+        maxFilesize: 10
       },
       fileName: ""
     };
@@ -81,8 +81,7 @@ export default {
     ).data;
 
     for (let i = 0; i < ids.length; i++) {
-      const id = ids[i];
-      console.log(id);
+      const id = ids[i].id;
       let rawMock = (
         await axios({
           method: "get",
