@@ -193,23 +193,26 @@
                 v-html="home_header_text"
               ></div>
               <div
-                @click="showModal"
+                @click="showModal('b_one')"
                 class="content_box_age_btn text_700_16 btn_rtans"
               >
                 <img
+                  v-if="!b_one"
                   src="../assets/img/img_png/btn_yellow.png"
                   alt="button"
                   class="btn_yellow"
                 />
-
-                <!-- есть display: none;  -->
                 <img
+                  v-else
                   src="../assets/img/img_png/btn_orange.png"
                   alt="button"
                   class="btn_orange"
                 />
 
-                <p class="btn_text">Записаться в группу</p>
+                <p v-if="!b_one" class="btn_text">Записаться в группу</p>
+                <p v-else class="btn_text" style="color: white">
+                  Записаться в группу
+                </p>
               </div>
             </div>
           </div>
@@ -332,7 +335,14 @@
               </div>
             </div>
 
-            <div class="box_age_groups">
+            <div
+              class="box_age_groups"
+              :class="{
+                readMorer:
+                  groups_description_first_block_content_show ||
+                  groups_description_second_block_content_show
+              }"
+            >
               <div class="age_groups  z_index_four">
                 <div class="circle_age_groups">
                   <img
@@ -346,14 +356,39 @@
                     {{ groups_description_first_block_title }}
                   </p>
                   <span class="text_group">
-                    {{ groups_description_first_block_content }}
+                    {{ groups_description_first_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_first_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_first_block_content_show')
+                    "
+                    v-if="!groups_description_first_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_first_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
 
-              <div class="age_groups        z_index_three">
+              <div class="age_groups z_index_three">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_two.svg"
@@ -366,16 +401,48 @@
                     {{ groups_description_second_block_title }}
                   </p>
                   <span class="text_group"
-                    >{{ groups_description_second_block_content }}
+                    >{{ groups_description_second_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_second_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_second_block_content_show')
+                    "
+                    v-if="!groups_description_second_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_second_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="box_age_groups">
-              <div class="age_groups         z_index_two">
+            <div
+              class="box_age_groups"
+              :class="{
+                readMorer:
+                  groups_description_third_block_content_show ||
+                  groups_description_fourth_block_content_show
+              }"
+            >
+              <div class="age_groups z_index_two">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_three.svg"
@@ -388,13 +455,38 @@
                     {{ groups_description_third_block_title }}
                   </p>
                   <span class="text_group"
-                    >{{ groups_description_third_block_content }}
+                    >{{ groups_description_third_block_content_show_text }}
                   </span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_third_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_third_block_content_show')
+                    "
+                    v-if="!groups_description_third_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_third_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
-              <div class="age_groups         z_index_one">
+              <div class="age_groups z_index_one">
                 <div class="circle_age_groups">
                   <img
                     src="../assets/img/img_svg/img_group_four.svg"
@@ -407,11 +499,36 @@
                     {{ groups_description_fourth_block_title }}
                   </p>
                   <span class="text_group">{{
-                    groups_description_fourth_block_content
+                    groups_description_fourth_block_content_show_text
                   }}</span>
                 </div>
-                <!--кнопка дла развертыванья-->
-                <div class="btn_read_text">читать полностью</div>
+                <div
+                  v-if="
+                    groups_description_fourth_block_content_show_text.length >
+                      220
+                  "
+                >
+                  <div
+                    @click="
+                      readMore('groups_description_fourth_block_content_show')
+                    "
+                    v-if="!groups_description_fourth_block_content_show"
+                    class="btn_read_text"
+                  >
+                    читать полностью
+                  </div>
+                  <div
+                    @click="
+                      hideReadMore(
+                        'groups_description_fourth_block_content_show'
+                      )
+                    "
+                    v-else
+                    class="btn_hide_text"
+                  >
+                    скрыть
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -437,8 +554,18 @@
                   <p>{{ timetable_clock_morning }}</p>
                 </div>
 
-                <div @click="showModal" class="text_700_35">
-                  <button class="training_format_submit_btn btn_rtans">
+                <div @click="showModal('b_two')" class="text_700_35">
+                  <button
+                    v-if="!b_two"
+                    class="training_format_submit_btn btn_rtans"
+                  >
+                    Записаться в<br />
+                    группу
+                  </button>
+                  <button
+                    v-else
+                    class="training_format_submit_orange_btn btn_rtans"
+                  >
                     Записаться в<br />
                     группу
                   </button>
@@ -450,8 +577,18 @@
                   <p>{{ timetable_clock_evening }}</p>
                 </div>
 
-                <div @click="showModal" class="text_Bold">
-                  <button class="training_format_submit_orange_btn btn_rtans">
+                <div @click="showModal('b_three')" class="text_700_35">
+                  <button
+                    v-if="!b_three"
+                    class="training_format_submit_btn btn_rtans"
+                  >
+                    Записаться в<br />
+                    группу
+                  </button>
+                  <button
+                    v-else
+                    class="training_format_submit_orange_btn btn_rtans"
+                  >
                     Записаться в<br />
                     группу
                   </button>
@@ -571,7 +708,17 @@
                   <p class="center_circ_bg_heading">
                     Реджио педагогика
                   </p>
-                  <span class="center_cercle_text"></span>
+                  <span class="center_cercle_text">
+                    Главные принципы Реджио-педагогики:сотрудничество 
+                    педагогов с детьми, максимальная 
+                    свобода Творчества и самовыражения, 
+                    умение педагога быть на одном уровне с ребёнком и относиться к ребёнку 
+                    как к маленькой личности, уважать и выслушивать его мнение, развивать воображение. 
+                    Педагог в нашей Академии-это друг, наставник и помощник. Тот человек,  
+                    которого интересуют мнение и мысли ребёнка, который поможет ребёнку 
+                    самому найти ответы на всевозможные «Почему?» и «Зачем?» и реализовать 
+                    их через творчество.
+                  </span>
                 </div>
 
                 <div
@@ -933,17 +1080,43 @@
             <div class="wrapper_cards_our_rules">
               <div class="wrap_card_our_rules">
                 <div class="head_card num_card_one"></div>
-
-                <div class="footer_card">
-                  <p class="head_card_text">
-                    {{ first_home_techniques_title }}
-                  </p>
-                  <span class="text_card">
-                    {{ first_home_techniques_content }}
-                  </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                
+                <div class="wrap_footer_card">
+                  <div class="footer_card">
+                    <p class="head_card_text">
+                      {{ first_home_techniques_title }}
+                    </p>
+                    <span
+                      class="text_card"
+                      :class="{
+                        readMorerTwo: !first_home_techniques_content_show
+                      }"
+                    >
+                      {{ first_home_techniques_content_show_text }}
+                    </span>
+                    <div
+                      v-if="first_home_techniques_content_show_text.length > 180"
+                    >
+                      <div
+                        @click="readMore('first_home_techniques_content_show')"
+                        v-if="!first_home_techniques_content_show"
+                        class="btn_read_text"
+                      >
+                        читать полностью
+                      </div>
+                      <div
+                        @click="
+                          hideReadMore('first_home_techniques_content_show')
+                        "
+                        v-else
+                        class="btn_hide_text"
+                      >
+                        скрыть
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
               </div>
 
               <div class="wrap_card_our_rules">
@@ -953,11 +1126,34 @@
                   <p class="head_card_text">
                     {{ second_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ second_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !second_home_techniques_content_show
+                    }"
+                  >
+                    {{ second_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="second_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('second_home_techniques_content_show')"
+                      v-if="!second_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('second_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -968,11 +1164,34 @@
                   <p class="head_card_text">
                     {{ third_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ third_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !third_home_techniques_content_show
+                    }"
+                  >
+                    {{ third_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="third_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('third_home_techniques_content_show')"
+                      v-if="!third_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('third_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -983,11 +1202,34 @@
                   <p class="head_card_text">
                     {{ fourth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ fourth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !fourth_home_techniques_content_show
+                    }"
+                  >
+                    {{ fourth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="fourth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('fourth_home_techniques_content_show')"
+                      v-if="!fourth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('fourth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -998,11 +1240,34 @@
                   <p class="head_card_text">
                     {{ fifth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ fifth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !fifth_home_techniques_content_show
+                    }"
+                  >
+                    {{ fifth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="fifth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('fifth_home_techniques_content_show')"
+                      v-if="!fifth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('fifth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1013,11 +1278,34 @@
                   <p class="head_card_text">
                     {{ sixth_home_techniques_title }}
                   </p>
-                  <span class="text_card">
-                    {{ sixth_home_techniques_content }}
+                  <span
+                    class="text_card"
+                    :class="{
+                      readMorerTwo: !sixth_home_techniques_content_show
+                    }"
+                  >
+                    {{ sixth_home_techniques_content_show_text }}
                   </span>
-                  <!--кнопка дла развертыванья-->
-                  <div class="btn_read_text">читать полностью</div>
+                  <div
+                    v-if="sixth_home_techniques_content_show_text.length > 180"
+                  >
+                    <div
+                      @click="readMore('sixth_home_techniques_content_show')"
+                      v-if="!sixth_home_techniques_content_show"
+                      class="btn_read_text"
+                    >
+                      читать полностью
+                    </div>
+                    <div
+                      @click="
+                        hideReadMore('sixth_home_techniques_content_show')
+                      "
+                      v-else
+                      class="btn_hide_text"
+                    >
+                      скрыть
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1026,15 +1314,16 @@
 
           <!-- _________________________________GALLERY_______________ -->
 
-          <div class="wrap_gallery">
+          <div v-if="files.length" class="wrap_gallery">
             <div class="sub_wrap_gallery">
               <div class="box_line_heading center_circle_gallery">
                 <div class="heading_text center_circle_header_gallery">
                   <h3>фото и видео нашего садика</h3>
                 </div>
               </div>
-              <div class="box_for_click">
+              <div class="box__click">
                 <svg
+                  @click="prevSlide"
                   width="40"
                   height="39"
                   viewBox="0 0 40 39"
@@ -1045,41 +1334,143 @@
                     stroke="#1BA6B2"
                   />
                 </svg>
-                <div class="gallery_box">
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small centrify">
-                      <img :src="first_file" alt="" class="gallery_img_small"/>
+                <carousel class="box_for_click">
+                  <slide v-for="(chunk, index) in files" :key="index">
+                    <div class="gallery_box">
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div
+                          class="gallery_content_small centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[0].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[0].url"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[0].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
+                        </div>
+                        <!-- ________ -->
+                        <div
+                          class="gallery_content_small centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[1].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[1].url"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[1].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div
+                          class="gallery_content_long centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[2].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[2].url"
+                            alt=""
+                            class="gallery_img_long"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[2].url"
+                            :poster="poster"
+                            class="gallery_img_long"
+                          ></vue-player>
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div
+                          class="gallery_content_small centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[3].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[3].url"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[3].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
+                        </div>
+                        <!-- ________ -->
+                        <div
+
+                          class="gallery_content_small centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[4].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[4].url"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[4].url"
+                            :poster="poster"
+                            class="gallery_img_small"
+                          ></vue-player>
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div
+
+                          class="gallery_content_long centrify"
+                        >
+                          <img
+                            v-if="
+                              chunk[5].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[5].url"
+                            alt=""
+                            class="gallery_img_long"
+                          />
+                          <vue-player
+                            v-else
+                            :src="chunk[5].url"
+                            :poster="poster"
+                            class="gallery_img_long"
+                          ></vue-player>
+                        </div>
+                      </div>
                     </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small centrify">
-                      <img :src="second_file" alt="" class="gallery_img_small"/>
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long centrify">
-                      <img :src="third_file" alt="children" class="gallery_img_small"/>
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_small centrify">
-                      <img :src="fourth_file" alt="children" class="gallery_img_small"/>
-                    </div>
-                    <!-- ________ -->
-                    <div class="gallery_content_small centrify">
-                      <img :src="fifth_file" alt="" class="gallery_img_small"/>
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div class="gallery_content_long centrify">
-                      <img :src="sixth_file" alt="children" class="gallery_img_small"/>
-                    </div>
-                  </div>
-                </div>
-                <svg width="40" height="39" viewBox="0 0 40 39" class="gallery_arrow_right" >
+                  </slide>
+                </carousel>
+                <svg
+                  @click="nextSlide"
+                  width="40"
+                  height="39"
+                  viewBox="0 0 40 39"
+                  class="gallery_arrow_right"
+                >
                   <path
                     d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
                     stroke="#1BA6B2"
@@ -1188,8 +1579,18 @@
               </div>
             </div>
 
-            <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-              <button class="modal_submit_btn btn_rtans">
+            <div @click="showModal('b_four')" class="text_700_35">
+              <button
+                v-if="!b_four"
+                class="training_format_submit_btn btn_rtans"
+              >
+                Записаться в<br />
+                группу
+              </button>
+              <button
+                v-else
+                class="training_format_submit_orange_btn btn_rtans"
+              >
                 Записаться в<br />
                 группу
               </button>
@@ -1317,6 +1718,9 @@
 
 <script>
 import axios from "axios";
+import "vue-snap/dist/vue-snap.css";
+import vuePlayer from "@algoz098/vue-player";
+import { Carousel, Slide } from "vue-snap";
 import { mapActions, mapState } from "vuex";
 export default {
   name: "Home",
@@ -1325,7 +1729,7 @@ export default {
       currentSlideNumber: 1,
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       mobileMenuOpen: false,
       home_header_title_first_part: "",
       home_header_title_second_part: "",
@@ -1352,23 +1756,60 @@ export default {
       fourth_home_techniques_content: "",
       fifth_home_techniques_content: "",
       sixth_home_techniques_content: "",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: ""
+      b_one: localStorage.getItem("b_one"),
+      b_two: localStorage.getItem("b_two"),
+      b_three: localStorage.getItem("b_three"),
+      b_four: localStorage.getItem("b_four"),
+      currentButton: "",
+      groups_description_first_block_content_show: false,
+      groups_description_second_block_content_show: false,
+      groups_description_third_block_content_show: false,
+      groups_description_fourth_block_content_show: false,
+      first_home_techniques_content_show: false,
+      second_home_techniques_content_show: false,
+      third_home_techniques_content_show: false,
+      fourth_home_techniques_content_show: false,
+      fifth_home_techniques_content_show: false,
+      sixth_home_techniques_content_show: false,
+      files: []
     };
+  },
+  components: {
+    Carousel,
+    Slide,
+    vuePlayer
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    pageDataUpdate({ current, previous }) {
+      (this.current = current), (this.previous = previous);
+    },
+    nextSlide() {
+      const el = document.getElementsByClassName(
+        "vs-carousel__arrows--right"
+      )[0];
+      el.click();
+    },
+    prevSlide() {
+      const el = document.getElementsByClassName(
+        "vs-carousel__arrows--left"
+      )[0];
+      el.click();
+    },
+    showModal(button) {
+      this.currentButton = button;
       this.isModal = true;
     },
     hideModal() {
       this.isModal = false;
+    },
+    readMore(trigger) {
+      this[trigger] = true;
+    },
+    hideReadMore(trigger) {
+      this[trigger] = false;
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
@@ -1393,11 +1834,146 @@ export default {
       this.name = "";
       this.tel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     ...mapActions(["sendTel", "getFields"])
   },
   computed: mapState({
-    fields: state => state.fields
+    fields: state => state.fields,
+    poster() {
+      return process.env.VUE_APP_URL + "/Favicon_computer.png";
+    },
+    groups_description_first_block_content_show_text() {
+      if (this.groups_description_first_block_content_show) {
+        return this.groups_description_first_block_content;
+      } else {
+        if (this.groups_description_first_block_content.length <= 220) {
+          return this.groups_description_first_block_content;
+        } else {
+          return this.groups_description_first_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_second_block_content_show_text() {
+      if (this.groups_description_second_block_content_show) {
+        return this.groups_description_second_block_content;
+      } else {
+        if (this.groups_description_second_block_content.length <= 220) {
+          return this.groups_description_second_block_content;
+        } else {
+          return this.groups_description_second_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_third_block_content_show_text() {
+      if (this.groups_description_third_block_content_show) {
+        return this.groups_description_third_block_content;
+      } else {
+        if (this.groups_description_third_block_content.length <= 220) {
+          return this.groups_description_third_block_content;
+        } else {
+          return this.groups_description_third_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    groups_description_fourth_block_content_show_text() {
+      if (this.groups_description_fourth_block_content_show) {
+        return this.groups_description_fourth_block_content;
+      } else {
+        if (this.groups_description_fourth_block_content.length <= 220) {
+          return this.groups_description_fourth_block_content;
+        } else {
+          return this.groups_description_fourth_block_content
+            .match(/^.{220}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    first_home_techniques_content_show_text() {
+      if (this.first_home_techniques_content_show) {
+        return this.first_home_techniques_content;
+      } else {
+        if (this.first_home_techniques_content.length <= 180) {
+          return this.first_home_techniques_content;
+        } else {
+          return this.first_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    second_home_techniques_content_show_text() {
+      if (this.second_home_techniques_content_show) {
+        return this.second_home_techniques_content;
+      } else {
+        if (this.second_home_techniques_content.length <= 180) {
+          return this.second_home_techniques_content;
+        } else {
+          return this.second_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    third_home_techniques_content_show_text() {
+      if (this.third_home_techniques_content_show) {
+        return this.third_home_techniques_content;
+      } else {
+        if (this.third_home_techniques_content.length <= 180) {
+          return this.third_home_techniques_content;
+        } else {
+          return this.third_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    fourth_home_techniques_content_show_text() {
+      if (this.fourth_home_techniques_content_show) {
+        return this.fourth_home_techniques_content;
+      } else {
+        if (this.fourth_home_techniques_content.length <= 180) {
+          return this.fourth_home_techniques_content;
+        } else {
+          return this.fourth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    fifth_home_techniques_content_show_text() {
+      if (this.fifth_home_techniques_content_show) {
+        return this.fifth_home_techniques_content;
+      } else {
+        if (this.fifth_home_techniques_content.length <= 180) {
+          return this.fifth_home_techniques_content;
+        } else {
+          return this.fifth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    },
+    sixth_home_techniques_content_show_text() {
+      if (this.sixth_home_techniques_content_show) {
+        return this.sixth_home_techniques_content;
+      } else {
+        if (this.sixth_home_techniques_content.length <= 180) {
+          return this.sixth_home_techniques_content;
+        } else {
+          return this.sixth_home_techniques_content
+            .match(/^.{180}\S*\s/)[0]
+            .replace(/\s$/, "...");
+        }
+      }
+    }
   }),
   async created() {
     document.body.style.overflowY = "scroll";
@@ -1414,12 +1990,41 @@ export default {
       })
     ).data;
 
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      chunk.push({
+        url: process.env.VUE_APP_API + `/files/${id.id}/x.jpg`,
+        type: id.type
+      });
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
+  },
+  mounted() {
+    const rightInterval = setInterval(() => {
+      const el = document.getElementsByClassName(
+        "vs-carousel__arrows--right"
+      )[0];
+      if (el) {
+        el.style.visibility = "hidden";
+        clearInterval(rightInterval);
+      }
+    }, 500);
+
+    const leftInterval = setInterval(() => {
+      const el = document.getElementsByClassName(
+        "vs-carousel__arrows--left"
+      )[0];
+      if (el) {
+        el.style.visibility = "hidden";
+        clearInterval(leftInterval);
+      }
+    }, 500);
   }
 };
 </script>
@@ -1428,5 +2033,14 @@ export default {
 <style scoped>
 .selected_small_circle {
   background: #62e5db;
+}
+
+@media all and (min-width: 740px) {
+  .readMorer {
+    align-items: flex-start;
+  }
+  .readMorerTwo {
+    height: 140px;
+  }
 }
 </style>

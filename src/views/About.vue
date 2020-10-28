@@ -284,7 +284,18 @@
           </div>
 
           <div class="submit_form_btn_wrapper">
-            <button class="submit_form_btn text_700_12" type="submit">
+            <button
+              v-if="!b_five"
+              class="submit_form_btn text_700_12"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <button
+              v-else
+              class="training_format_submit_orange_btn"
+              type="submit"
+            >
               Отправить
             </button>
           </div>
@@ -368,9 +379,12 @@
               </a>
             </div>
           </div>
-
-          <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-            <button class="modal_submit_btn ">
+          <div @click="showModal('b_six')" class="modal_btn_wrapper text_Bold ">
+            <button v-if="!b_six" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
               Записаться в<br />
               группу
             </button>
@@ -496,16 +510,20 @@ export default {
       isModal: false,
       mobileMenuOpen: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "+380",
+      b_five: localStorage.getItem("b_five"),
+      b_six: localStorage.getItem("b_six"),
+      currentButton: ""
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
+      this.currentButton = button;
       this.isModal = true;
     },
     hideModal() {
@@ -530,6 +548,8 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     prePresentationSend() {
       this.sendTel({
@@ -540,6 +560,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
+      localStorage.setItem("b_five", true);
+      this.b_five = true;
     },
     ...mapActions(["sendTel"])
   },

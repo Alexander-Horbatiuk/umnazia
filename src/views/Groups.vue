@@ -376,7 +376,18 @@
           </div>
 
           <div class="submit_form_btn_wrapper">
-            <button class="submit_form_btn text_700_12" type="submit">
+            <button
+              v-if="!b_nineteen"
+              class="submit_form_btn text_700_12"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <button
+              v-else
+              class="training_format_submit_orange_btn"
+              type="submit"
+            >
               Отправить
             </button>
           </div>
@@ -461,8 +472,15 @@
             </div>
           </div>
 
-          <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-            <button class="modal_submit_btn ">
+          <div
+            @click="showModal('b_twenty')"
+            class="modal_btn_wrapper text_Bold "
+          >
+            <button v-if="!b_twenty" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
               Записаться в<br />
               группу
             </button>
@@ -588,9 +606,9 @@ export default {
       isModal: false,
       name: "",
       mobileMenuOpen: false,
-      tel: "",
+      tel: "+380",
       presentationName: "",
-      presentationTel: "",
+      presentationTel: "+380",
       groups_description_first_block_title: "",
       groups_description_second_block_title: "",
       groups_description_third_block_title: "",
@@ -606,15 +624,19 @@ export default {
       groups_description_first_block_24_price: "",
       groups_description_second_block_24_price: "",
       groups_description_third_block_24_price: "",
-      groups_description_fourth_block_24_price: ""
+      groups_description_fourth_block_24_price: "",
+      b_nineteen: localStorage.getItem("b_nineteen"),
+      b_twenty: localStorage.getItem("b_twenty"),
+      currentButton: ""
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
       this.isModal = true;
+      this.currentButton = button;
     },
     hideModal() {
       this.isModal = false;
@@ -638,6 +660,8 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     prePresentationSend() {
       this.sendTel({
@@ -648,6 +672,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
+      localStorage.setItem("b_nineteen", true);
+      this.b_nineteen = true;
     },
     ...mapActions(["sendTel", "getFields"])
   },
@@ -666,3 +692,18 @@ export default {
 </script>
 
 <style scoped src="../assets/styles/groups_style.css" lang="css"></style>
+<style scoped>
+@media screen and (max-width: 1620px) {
+  .main_content_wrapper::after {
+    display: none;
+  }
+
+  .main_content_wrapper::before {
+    display: none;
+  }
+  .modal_window {
+    top: 40px;
+    right: 20px;
+  }
+}
+</style>

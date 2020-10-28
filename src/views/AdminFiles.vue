@@ -48,9 +48,11 @@ export default {
         url: process.env.VUE_APP_API + "/files",
         addRemoveLinks: true,
         duplicateCheck: true,
-        destroyDropzone: false
+        destroyDropzone: false,
+        acceptedFiles: "image/*, video/*",
+        maxFilesize: 10
       },
-      fileName: "porosa.mp4"
+      fileName: ""
     };
   },
   methods: {
@@ -79,8 +81,7 @@ export default {
     ).data;
 
     for (let i = 0; i < ids.length; i++) {
-      const id = ids[i];
-      console.log(id);
+      const id = ids[i].id;
       let rawMock = (
         await axios({
           method: "get",

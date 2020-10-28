@@ -389,8 +389,12 @@
                 <p>{{ timetable_clock_morning }}</p>
               </div>
 
-              <div @click="showModal" class="text_bold">
-                <button class="training_format_submit_btn ">
+              <div @click="showModal('b_fifteen')" class="text_bold">
+                <button v-if="!b_fifteen" class="training_format_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -402,8 +406,12 @@
                 <p>{{ timetable_clock_evening }}</p>
               </div>
 
-              <div @click="showModal" class="text_bold">
-                <button class="training_format_submit_orange_btn ">
+              <div @click="showModal('b_sixteen')" class="text_bold">
+                <button v-if="!b_sixteen" class="training_format_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -459,7 +467,18 @@
           </div>
 
           <div class="submit_form_btn_wrapper">
-            <button class="submit_form_btn text_700_12" type="submit">
+            <button
+              v-if="!b_seventeen"
+              class="submit_form_btn text_700_12"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <button
+              v-else
+              class="training_format_submit_orange_btn"
+              type="submit"
+            >
               Отправить
             </button>
           </div>
@@ -544,8 +563,15 @@
             </div>
           </div>
 
-          <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-            <button class="modal_submit_btn ">
+          <div
+            @click="showModal('b_eighteen')"
+            class="modal_btn_wrapper text_Bold "
+          >
+            <button v-if="!b_eighteen" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
               Записаться в<br />
               группу
             </button>
@@ -666,20 +692,26 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: "",
+      presentationTel: "+380",
       timetable_clock_morning: "",
-      timetable_clock_evening: ""
+      timetable_clock_evening: "",
+      b_fifteen: localStorage.getItem("b_fifteen"),
+      b_sixteen: localStorage.getItem("b_sixteen"),
+      b_seventeen: localStorage.getItem("b_seventeen"),
+      b_eighteen: localStorage.getItem("b_eighteen"),
+      currentButton: ""
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
       this.isModal = true;
+      this.currentButton = button;
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
@@ -703,6 +735,8 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     prePresentationSend() {
       this.sendTel({
@@ -713,6 +747,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
+      localStorage.setItem("b_seventeen", true);
+      this.b_seventeen = true;
     },
     ...mapActions(["sendTel", "getFields"])
   },

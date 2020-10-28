@@ -146,122 +146,135 @@
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
         <div class="box_line_heading text_bold">
+          
           <!--box-line-->
           <div class="heading_text">
             <h3>Фотогалерея</h3>
           </div>
         </div>
-        <div class="box_for_click">
-          <svg
-            width="40"
-            height="39"
-            viewBox="0 0 40 39"
-            class="gallery_arrow_left"
-          >
-            <path
-              d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-              stroke="#1BA6B2"
-            />
-          </svg>
-          <div class="gallery_box">
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="first_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-              <!-- ________ -->
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="second_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="530"
-                class="gallery_content_long centrify"
-              >
-                <img
-                  height="530"
-                  :src="third_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="fourth_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
-              </div>
-              <!-- ________ -->
-              <div
-                width="255"
-                height="250"
-                class="gallery_content_small centrify"
-              >
-                <img
-                  height="250"
-                  :src="fifth_file"
-                  alt=""
-                  class="gallery_img_small"
-                />
-              </div>
-            </div>
-            <!-- _____________ -->
-            <div class="gallery_sub_box">
-              <div
-                width="255"
-                height="530"
-                class="gallery_content_long centrify"
-              >
-                <img
-                  height="530"
-                  :src="sixth_file"
-                  alt="children"
-                  class="gallery_img_small"
-                />
-              </div>
+        <div class="box__click">
+
+          <div class="box_for_click">
+            <div v-for="(chunk, index) in files.slice(0, number)" :key="index"  class="gallery_box">
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    class="gallery_content_small centrify"
+                  >
+                    <img
+                      v-if="chunk[0].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[0].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[0].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
+                  </div>
+                  <!-- ________ -->
+                  <div
+                    class="gallery_content_small centrify"
+                  >
+                    <img
+                      v-if="chunk[1].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[1].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[1].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    class="gallery_content_long centrify"
+                  >
+                    <img
+                      v-if="chunk[2].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[2].url"
+                      alt="children"
+                      class="gallery_img_long"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[2].url"
+                      :poster="poster"
+                      class="gallery_img_long"
+                    ></vue-player>
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    class="gallery_content_small centrify"
+                  >
+                    <img
+                      v-if="chunk[3].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[3].url"
+                      alt="children"
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[3].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
+                  </div>
+                  <!-- ________ -->
+                  <div
+                    class="gallery_content_small centrify"
+                  >
+                    <img
+                      v-if="chunk[4].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[4].url"
+                      alt=""
+                      class="gallery_img_small"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[4].url"
+                      :poster="poster"
+                      class="gallery_img_small"
+                    ></vue-player>
+                  </div>
+                </div>
+                <!-- _____________ -->
+                <div class="gallery_sub_box">
+                  <div
+                    class="gallery_content_long centrify"
+                  >
+                    <img
+                      v-if="chunk[5].type.replace(/\/.+$/, '') === 'image'"
+                      :src="chunk[5].url"
+                      alt="children"
+                      class="gallery_img_long"
+                    />
+                    <vue-player
+                      v-else
+                      :src="chunk[5].url"
+                      :poster="poster"
+                      class="gallery_img_long"
+                    ></vue-player>
+                  </div>
+                </div>
             </div>
           </div>
-          <svg
-            width="40"
-            height="39"
-            viewBox="0 0 40 39"
-            class="gallery_arrow_right"
-          >
-            <path
-              d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
-              stroke="#1BA6B2"
-            />
-          </svg>
+        </div>
+        <div
+          v-if="number < files.length"
+          @click="number++"
+          class="btn_all_gallery"
+        >
+          Посмотреть ещё
         </div>
       </div>
     </main>
@@ -311,7 +324,18 @@
           </div>
 
           <div class="submit_form_btn_wrapper">
-            <button class="submit_form_btn text_700_12" type="submit">
+            <button
+              v-if="!b_twenty_one"
+              class="submit_form_btn text_700_12"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <button
+              v-else
+              class="training_format_submit_orange_btn"
+              type="submit"
+            >
               Отправить
             </button>
           </div>
@@ -396,8 +420,15 @@
             </div>
           </div>
 
-          <div @click="showModal" class="modal_btn_wrapper text_Bold ">
-            <button class="modal_submit_btn ">
+          <div
+            @click="showModal('b_twenty_two')"
+            class="modal_btn_wrapper text_Bold "
+          >
+            <button v-if="!b_twenty_two" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
               Записаться в<br />
               группу
             </button>
@@ -407,7 +438,11 @@
 
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <a class="btn_anchor " href="#anchorHeader"></a>
+          <button
+            class="btn_anchor"
+            style="cursor:pointer"
+            @click="scrollToTop"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -512,6 +547,7 @@
 
 <script>
 import axios from "axios";
+import vuePlayer from "@algoz098/vue-player";
 import { mapActions } from "vuex";
 export default {
   name: "Gallery",
@@ -519,24 +555,28 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       presentationName: "",
       mobileMenuOpen: false,
-      presentationTel: "",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: ""
+      presentationTel: "+380",
+      b_twenty_one: localStorage.getItem("b_twenty_one"),
+      b_twenty_two: localStorage.getItem("b_twenty_two"),
+      files: [],
+      number: 2
     };
+  },
+  computed: {
+    poster() {
+      return process.env.VUE_APP_URL + "/Favicon_computer.png";
+    }
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
       this.isModal = true;
+      this.currentButton = button;
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
@@ -560,6 +600,8 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     prePresentationSend() {
       this.sendTel({
@@ -570,6 +612,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
+      localStorage.setItem("b_twenty_one", true);
+      this.b_twenty_one = true;
     },
     ...mapActions(["sendTel"])
   },
@@ -583,16 +627,29 @@ export default {
       })
     ).data;
 
-    console;
-
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      chunk.push({
+        url: process.env.VUE_APP_API + `/files/${id.id}/x.jpg`,
+        type: id.type
+      });
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
+  },
+  components: {
+    vuePlayer
   }
 };
 </script>
 
 <style scoped src="../assets/styles/gallery.css" lang="css"></style>
+
+<style scoped>
+
+</style>

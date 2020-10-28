@@ -211,8 +211,15 @@
                 </p>
               </div>
 
-              <div @click="showModal" class="services_btn_wrapper text_bold">
-                <button class="services_submit_btn ">
+              <div
+                @click="showModal('b_eleven')"
+                class="services_btn_wrapper text_bold"
+              >
+                <button v-if="!b_eleven" class="services_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -251,8 +258,15 @@
                 книг,творчеством и настольными играми. 100 грн/час
               </div>
 
-              <div @click="showModal" class="services_btn_wrapper text_700_12">
-                <button class="services_submit_btn ">
+              <div
+                @click="showModal('b_twelve')"
+                class="services_btn_wrapper text_700_12"
+              >
+                <button v-if="!b_twelve" class="services_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -307,7 +321,18 @@
           </div>
 
           <div class="submit_form_btn_wrapper">
-            <button class="submit_form_btn text_700_12" type="submit">
+            <button
+              v-if="!b_thirteen"
+              class="submit_form_btn text_700_12"
+              type="submit"
+            >
+              Отправить
+            </button>
+            <button
+              v-else
+              class="training_format_submit_orange_btn"
+              type="submit"
+            >
               Отправить
             </button>
           </div>
@@ -391,9 +416,15 @@
               </a>
             </div>
           </div>
-
-          <div @click="showModal" class="modal_btn_wrapper text_Bold">
-            <button class="modal_submit_btn">
+          <div
+            @click="showModal('b_fourteen')"
+            class="modal_btn_wrapper text_Bold"
+          >
+            <button v-if="!b_fourteen" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
               Записаться в<br />
               группу
             </button>
@@ -518,17 +549,22 @@ export default {
     return {
       isModal: false,
       name: "",
-      tel: "",
+      tel: "+380",
       mobileMenuOpen: false,
       presentationName: "",
-      presentationTel: ""
+      presentationTel: "+380",
+      b_eleven: localStorage.getItem("b_eleven"),
+      b_twelve: localStorage.getItem("b_twelve"),
+      b_thirteen: localStorage.getItem("b_thirteen"),
+      b_fourteen: localStorage.getItem("b_fourteen")
     };
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    showModal() {
+    showModal(button) {
+      this.currentButton = button;
       this.isModal = true;
     },
     hideModal() {
@@ -553,6 +589,8 @@ export default {
       this.presentationName = "";
       this.presentationTel = "";
       this.isModal = false;
+      localStorage.setItem(this.currentButton, true);
+      this[this.currentButton] = true;
     },
     prePresentationSend() {
       this.sendTel({
@@ -563,6 +601,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
+      localStorage.setItem("b_thirteen", true);
+      this.b_thirteen = true;
     },
     ...mapActions(["sendTel"])
   },
