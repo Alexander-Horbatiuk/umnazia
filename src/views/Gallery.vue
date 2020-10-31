@@ -160,70 +160,34 @@
           >
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div
-                class="gallery_content_small centrify"
-              >
-                <img
-                  :src="chunk[0]"
-                  alt="children"
-                  class="gallery_img_small"
-                />
+              <div class="gallery_content_small centrify">
+                <img :src="chunk[0]" alt="children" class="gallery_img_small" />
               </div>
               <!-- ________ -->
-              <div
-                class="gallery_content_small centrify"
-              >
-                <img
-                  :src="chunk[1]"
-                  alt="children"
-                  class="gallery_img_small"
-                />
+              <div class="gallery_content_small centrify">
+                <img :src="chunk[1]" alt="children" class="gallery_img_small" />
               </div>
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div
-                class="gallery_content_long centrify"
-              >
-                <img
-                  :src="chunk[2]"
-                  alt="children"
-                  class="gallery_img_long"
-                />
+              <div class="gallery_content_long centrify">
+                <img :src="chunk[2]" alt="children" class="gallery_img_long" />
               </div>
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div
-                class="gallery_content_small centrify"
-              >
-                <img
-                  :src="chunk[3]"
-                  alt="children"
-                  class="gallery_img_small"
-                />
+              <div class="gallery_content_small centrify">
+                <img :src="chunk[3]" alt="children" class="gallery_img_small" />
               </div>
               <!-- ________ -->
-              <div
-                class="gallery_content_small centrify"
-              >
-                <img
-                  :src="chunk[4]"
-                  alt="children"
-                  class="gallery_img_small"
-                />
+              <div class="gallery_content_small centrify">
+                <img :src="chunk[4]" alt="children" class="gallery_img_small" />
               </div>
             </div>
             <!-- _____________ -->
             <div class="gallery_sub_box">
-              <div
-                class="gallery_content_long centrify"
-              >
-                <img
-                  :src="chunk[5]"
-                  alt="children"
-                  class="gallery_img_long"
-                />
+              <div class="gallery_content_long centrify">
+                <img :src="chunk[5]" alt="children" class="gallery_img_long" />
               </div>
             </div>
           </div>
