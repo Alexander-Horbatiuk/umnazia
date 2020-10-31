@@ -45,15 +45,10 @@ export default {
   color: #efe134;
 }
 
-.gallery_img_small {
-  object-fit: cover;
-  min-width: 255px;
-  min-height: 250px;
-}
-
+.gallery_img_small,
 .gallery_img_long {
-  min-width: 255px;
-  min-height: 530px;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
 
@@ -519,6 +514,10 @@ export default {
   .gallery_sub_box {
     margin: 0 0px 10px 0;
     min-width: 150px;
+  }
+  .gallery_img_long {
+    min-width: 150px !important;
+    height: 228px !important;
   }
   .gallery_box {
     max-width: 310px;

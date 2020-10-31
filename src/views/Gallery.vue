@@ -161,8 +161,6 @@
             <!-- _____________ -->
             <div class="gallery_sub_box">
               <div
-                width="255"
-                height="250"
                 class="gallery_content_small centrify"
               >
                 <img
@@ -173,8 +171,6 @@
               </div>
               <!-- ________ -->
               <div
-                width="255"
-                height="250"
                 class="gallery_content_small centrify"
               >
                 <img
@@ -187,8 +183,6 @@
             <!-- _____________ -->
             <div class="gallery_sub_box">
               <div
-                width="255"
-                height="530"
                 class="gallery_content_long centrify"
               >
                 <img
@@ -201,8 +195,6 @@
             <!-- _____________ -->
             <div class="gallery_sub_box">
               <div
-                width="255"
-                height="250"
                 class="gallery_content_small centrify"
               >
                 <img
@@ -213,8 +205,6 @@
               </div>
               <!-- ________ -->
               <div
-                width="255"
-                height="250"
                 class="gallery_content_small centrify"
               >
                 <img
@@ -227,8 +217,6 @@
             <!-- _____________ -->
             <div class="gallery_sub_box">
               <div
-                width="255"
-                height="530"
                 class="gallery_content_long centrify"
               >
                 <img
