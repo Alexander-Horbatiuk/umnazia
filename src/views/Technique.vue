@@ -602,7 +602,6 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
-      window.scrollTo(0, 0);
       document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {

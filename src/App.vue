@@ -62,6 +62,12 @@ export default {
   cursor: pointer;
 }
 
+.opened-card {
+  height: 100%;
+  border-radius: 20px !important;
+  padding-top: 15% !important;
+}
+
 .wraper_modal_form {
   width: 100%;
   height: 100%;
@@ -236,7 +242,7 @@ export default {
 
 .wrap_mobile_menu {
   width: 100%;
-  height: 100%;
+  height: 15000%;
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -523,7 +529,16 @@ export default {
 
 .selected_page {
   color: #f26914;
-  padding: 0 0 15px 0;
+  position: relative;
+}
+
+.selected_page::after {
+  content: " ";
+  width: 100%;
+  border-radius: 10px;
+  left: 0;
+  bottom: -19px;
+  position: absolute;
   border-bottom: 4px solid #f26914;
 }
 

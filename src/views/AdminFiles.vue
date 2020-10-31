@@ -49,7 +49,8 @@ export default {
         addRemoveLinks: true,
         duplicateCheck: true,
         destroyDropzone: false,
-        maxFilesize: 2
+        acceptedFiles: "image/*",
+        maxFilesize: 10
       },
       fileName: ""
     };
@@ -77,11 +78,10 @@ export default {
         method: "get",
         url: process.env.VUE_APP_API + "/files"
       })
-    ).data;
+    ).data.map(id => id.id);
 
     for (let i = 0; i < ids.length; i++) {
       const id = ids[i];
-      console.log(id);
       let rawMock = (
         await axios({
           method: "get",

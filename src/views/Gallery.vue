@@ -152,7 +152,12 @@
           </div>
         </div>
         <div class="box_for_click">
-          <div class="gallery_box">
+          <div
+            class="gallery_box"
+            style="padding-bottom: 1.25%; padding-top: 1.25%"
+            v-for="(chunk, index) in files.slice(0, number)"
+            :key="index"
+          >
             <!-- _____________ -->
             <div class="gallery_sub_box">
               <div
@@ -162,7 +167,7 @@
               >
                 <img
                   height="250"
-                  :src="first_file"
+                  :src="chunk[0]"
                   alt=""
                   class="gallery_img_small"
                 />
@@ -175,7 +180,7 @@
               >
                 <img
                   height="250"
-                  :src="second_file"
+                  :src="chunk[1]"
                   alt=""
                   class="gallery_img_small"
                 />
@@ -190,9 +195,9 @@
               >
                 <img
                   height="530"
-                  :src="third_file"
+                  :src="chunk[2]"
                   alt="children"
-                  class="gallery_img_small"
+                  class="gallery_img_long"
                 />
               </div>
             </div>
@@ -205,7 +210,7 @@
               >
                 <img
                   height="250"
-                  :src="fourth_file"
+                  :src="chunk[3]"
                   alt="children"
                   class="gallery_img_small"
                 />
@@ -218,7 +223,7 @@
               >
                 <img
                   height="250"
-                  :src="fifth_file"
+                  :src="chunk[4]"
                   alt=""
                   class="gallery_img_small"
                 />
@@ -233,13 +238,20 @@
               >
                 <img
                   height="530"
-                  :src="sixth_file"
+                  :src="chunk[5]"
                   alt="children"
-                  class="gallery_img_small"
+                  class="gallery_img_long"
                 />
               </div>
             </div>
           </div>
+        </div>
+        <div
+          v-if="number < files.length"
+          @click="number++"
+          class="btn_all_gallery"
+        >
+          Посмотреть ещё
         </div>
       </div>
     </main>
@@ -523,14 +535,10 @@ export default {
       presentationName: "",
       mobileMenuOpen: false,
       presentationTel: "+380",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: "",
       b_twenty_one: localStorage.getItem("b_twenty_one"),
-      b_twenty_two: localStorage.getItem("b_twenty_two")
+      b_twenty_two: localStorage.getItem("b_twenty_two"),
+      files: [],
+      number: 2
     };
   },
   methods: {
@@ -543,7 +551,6 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
-      window.scrollTo(0, 0);
       document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
@@ -588,16 +595,19 @@ export default {
         method: "get",
         url: process.env.VUE_APP_API + "/files"
       })
-    ).data;
+    ).data.map(id => id.id);
 
-    console;
-
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
   }
 };
 </script>

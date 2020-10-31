@@ -708,7 +708,17 @@
                   <p class="center_circ_bg_heading">
                     Реджио педагогика
                   </p>
-                  <span class="center_cercle_text"></span>
+                  <span class="center_cercle_text"
+                    >Главные принципы Реджио-педагогики:сотрудничество педагогов
+                    с детьми, максимальная свобода Творчества и самовыражения,
+                    умение педагога быть на одном уровне с ребёнком и относиться
+                    к ребёнку как к маленькой личности, уважать и выслушивать
+                    его мнение, развивать воображение. Педагог в нашей
+                    Академии-это друг, наставник и помощник. Тот человек,
+                    которого интересуют мнение и мысли ребёнка, который поможет
+                    ребёнку самому найти ответы на всевозможные «Почему?» и
+                    «Зачем?» и реализовать их через творчество.</span
+                  >
                 </div>
 
                 <div
@@ -1069,9 +1079,15 @@
 
             <div class="wrapper_cards_our_rules">
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_one"></div>
+                <div
+                  v-if="!first_home_techniques_content_show"
+                  class="head_card num_card_one"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{ 'opened-card': first_home_techniques_content_show }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ first_home_techniques_title }}
                   </p>
@@ -1107,9 +1123,17 @@
               </div>
 
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_two"></div>
+                <div
+                  v-if="!second_home_techniques_content_show"
+                  class="head_card num_card_two"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{
+                    'opened-card': second_home_techniques_content_show
+                  }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ second_home_techniques_title }}
                   </p>
@@ -1145,9 +1169,17 @@
               </div>
 
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_three"></div>
+                <div
+                  v-if="!third_home_techniques_content_show"
+                  class="head_card num_card_three"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{
+                    'opened-card': third_home_techniques_content_show
+                  }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ third_home_techniques_title }}
                   </p>
@@ -1183,9 +1215,17 @@
               </div>
 
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_four"></div>
+                <div
+                  v-if="!fourth_home_techniques_content_show"
+                  class="head_card num_card_four"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{
+                    'opened-card': fourth_home_techniques_content_show
+                  }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ fourth_home_techniques_title }}
                   </p>
@@ -1221,9 +1261,17 @@
               </div>
 
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_five"></div>
+                <div
+                  v-if="!fifth_home_techniques_content_show"
+                  class="head_card num_card_five"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{
+                    'opened-card': fifth_home_techniques_content_show
+                  }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ fifth_home_techniques_title }}
                   </p>
@@ -1259,9 +1307,17 @@
               </div>
 
               <div class="wrap_card_our_rules">
-                <div class="head_card num_card_six"></div>
+                <div
+                  v-if="!sixth_home_techniques_content_show"
+                  class="head_card num_card_six"
+                ></div>
 
-                <div class="footer_card">
+                <div
+                  :class="{
+                    'opened-card': sixth_home_techniques_content_show
+                  }"
+                  class="footer_card"
+                >
                   <p class="head_card_text">
                     {{ sixth_home_techniques_title }}
                   </p>
@@ -1360,7 +1416,7 @@
                         height="530"
                         :src="third_file"
                         alt="children"
-                        class="gallery_img_small"
+                        class="gallery_img_long"
                       />
                     </div>
                   </div>
@@ -1403,7 +1459,7 @@
                         height="530"
                         :src="sixth_file"
                         alt="children"
-                        class="gallery_img_small"
+                        class="gallery_img_long"
                       />
                     </div>
                   </div>
@@ -1738,7 +1794,6 @@ export default {
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
-      window.scrollTo(0, 0);
       document.body.style.overflowY = "hidden";
     },
     hideMobileMenu() {
@@ -1910,7 +1965,7 @@ export default {
         method: "get",
         url: process.env.VUE_APP_API + "/files"
       })
-    ).data;
+    ).data.map(id => id.id);
 
     this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
     this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;

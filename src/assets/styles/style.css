@@ -2909,6 +2909,7 @@
     width: 100%;
     min-height: 100px;
     margin: 0 0 65px 0;
+    min-height: 470px;
 }
 
 .head_card {
@@ -3125,9 +3126,10 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        align-self: stretch;
         margin: 0 10px 20px 0;
     }
 }
