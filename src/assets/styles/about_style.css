@@ -377,7 +377,7 @@ cursor: pointer;
     box-sizing: border-box;
     padding: 0 0 48px 0;
     background-image: url(../img/background/main_bg_white.jpg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 .main_content_wrapper::after {

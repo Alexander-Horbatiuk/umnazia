@@ -45,10 +45,17 @@ export default {
   color: #efe134;
 }
 
-.gallery_img_small,
+.gallery_img_small {
+  width: 255px;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .gallery_img_long {
-  min-width: 100%;
-  min-height: 100%;
+  width: 255px;
+  height: 530px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -515,9 +522,18 @@ export default {
     margin: 0 0px 10px 0;
     min-width: 150px;
   }
+  .gallery_img_small {
+    width: 150px;
+    height: 109px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   .gallery_img_long {
-    min-width: 150px !important;
-    height: 228px !important;
+    width: 150px;
+    height: 228px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
   .gallery_box {
     max-width: 310px;
