@@ -1385,9 +1385,8 @@
                       class="gallery_content_small centrify"
                     >
                       <img
-                        height="250"
                         :src="first_file"
-                        alt=""
+                        alt="children"
                         class="gallery_img_small"
                       />
                     </div>
@@ -1398,9 +1397,8 @@
                       class="gallery_content_small centrify"
                     >
                       <img
-                        height="250"
                         :src="second_file"
-                        alt=""
+                        alt="children"
                         class="gallery_img_small"
                       />
                     </div>
@@ -1413,7 +1411,6 @@
                       class="gallery_content_long centrify"
                     >
                       <img
-                        height="530"
                         :src="third_file"
                         alt="children"
                         class="gallery_img_long"
@@ -1428,7 +1425,6 @@
                       class="gallery_content_small centrify"
                     >
                       <img
-                        height="250"
                         :src="fourth_file"
                         alt="children"
                         class="gallery_img_small"
@@ -1441,9 +1437,8 @@
                       class="gallery_content_small centrify"
                     >
                       <img
-                        height="250"
                         :src="fifth_file"
-                        alt=""
+                        alt="children"
                         class="gallery_img_small"
                       />
                     </div>
@@ -1456,7 +1451,6 @@
                       class="gallery_content_long centrify"
                     >
                       <img
-                        height="530"
                         :src="sixth_file"
                         alt="children"
                         class="gallery_img_long"

@@ -166,9 +166,8 @@
                 class="gallery_content_small centrify"
               >
                 <img
-                  height="250"
                   :src="chunk[0]"
-                  alt=""
+                  alt="children"
                   class="gallery_img_small"
                 />
               </div>
@@ -179,9 +178,8 @@
                 class="gallery_content_small centrify"
               >
                 <img
-                  height="250"
                   :src="chunk[1]"
-                  alt=""
+                  alt="children"
                   class="gallery_img_small"
                 />
               </div>
@@ -194,7 +192,6 @@
                 class="gallery_content_long centrify"
               >
                 <img
-                  height="530"
                   :src="chunk[2]"
                   alt="children"
                   class="gallery_img_long"
@@ -209,7 +206,6 @@
                 class="gallery_content_small centrify"
               >
                 <img
-                  height="250"
                   :src="chunk[3]"
                   alt="children"
                   class="gallery_img_small"
@@ -222,9 +218,8 @@
                 class="gallery_content_small centrify"
               >
                 <img
-                  height="250"
                   :src="chunk[4]"
-                  alt=""
+                  alt="children"
                   class="gallery_img_small"
                 />
               </div>
@@ -237,7 +232,6 @@
                 class="gallery_content_long centrify"
               >
                 <img
-                  height="530"
                   :src="chunk[5]"
                   alt="children"
                   class="gallery_img_long"

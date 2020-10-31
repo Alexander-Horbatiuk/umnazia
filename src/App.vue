@@ -45,6 +45,18 @@ export default {
   color: #efe134;
 }
 
+.gallery_img_small {
+  object-fit: cover;
+  min-width: 255px;
+  min-height: 250px;
+}
+
+.gallery_img_long {
+  min-width: 255px;
+  min-height: 530px;
+  object-fit: cover;
+}
+
 .training_format_submit_orange_btn {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -471,6 +483,7 @@ export default {
 
   .gallery_sub_box {
     margin: 0 0 20px 0;
+    min-width: 255px;
   }
 
   .gallery_content_small {
@@ -505,6 +518,7 @@ export default {
   }
   .gallery_sub_box {
     margin: 0 0px 10px 0;
+    min-width: 150px;
   }
   .gallery_box {
     max-width: 310px;
