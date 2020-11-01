@@ -388,9 +388,10 @@ export default {
 .gallery_arrow_right {
   position: absolute;
   right: -70px;
-  top: 50%;
+  top: 47.5%;
+  margin-bottom: 10%;
   transform: translateY(-50%);
-  transform: rotate(-60deg);
+  transform: rotate(-180deg);
   cursor: pointer;
   fill: #fff;
 }

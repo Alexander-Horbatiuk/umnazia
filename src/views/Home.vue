@@ -1370,99 +1370,85 @@
                   height="39"
                   viewBox="0 0 40 39"
                   class="gallery_arrow_left"
+                  @click="prevSlide"
                 >
                   <path
                     d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
                     stroke="#1BA6B2"
                   />
                 </svg>
-                <div class="gallery_box">
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        :src="first_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
+                <swiper ref="gallerySwiper" class="swiper gallery_box">
+                  <swiper-slide
+                    class="gallery_box"
+                    v-for="(chunk, index) in files"
+                    :key="index"
+                  >
+                    <div class="gallery_box">
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div class="gallery_content_small centrify">
+                          <img
+                            :src="chunk[0]"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                        </div>
+                        <!-- ________ -->
+                        <div class="gallery_content_small centrify">
+                          <img
+                            :src="chunk[1]"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div class="gallery_content_long centrify">
+                          <img
+                            :src="chunk[2]"
+                            alt=""
+                            class="gallery_img_long"
+                          />
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div class="gallery_content_small centrify">
+                          <img
+                            :src="chunk[3]"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                        </div>
+                        <!-- ________ -->
+                        <div class="gallery_content_small centrify">
+                          <img
+                            :src="chunk[4]"
+                            alt=""
+                            class="gallery_img_small"
+                          />
+                        </div>
+                      </div>
+                      <!-- _____________ -->
+                      <div class="gallery_sub_box">
+                        <div class="gallery_content_long centrify">
+                          <img
+                            :src="chunk[5]"
+                            alt=""
+                            class="gallery_img_long"
+                          />
+                        </div>
+                      </div>
                     </div>
-                    <!-- ________ -->
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        :src="second_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="530"
-                      class="gallery_content_long centrify"
-                    >
-                      <img
-                        :src="third_file"
-                        alt="children"
-                        class="gallery_img_long"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        :src="fourth_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                    <!-- ________ -->
-                    <div
-                      width="255"
-                      height="250"
-                      class="gallery_content_small centrify"
-                    >
-                      <img
-                        :src="fifth_file"
-                        alt="children"
-                        class="gallery_img_small"
-                      />
-                    </div>
-                  </div>
-                  <!-- _____________ -->
-                  <div class="gallery_sub_box">
-                    <div
-                      width="255"
-                      height="530"
-                      class="gallery_content_long centrify"
-                    >
-                      <img
-                        :src="sixth_file"
-                        alt="children"
-                        class="gallery_img_long"
-                      />
-                    </div>
-                  </div>
-                </div>
+                  </swiper-slide>
+                </swiper>
                 <svg
                   width="40"
                   height="39"
                   viewBox="0 0 40 39"
                   class="gallery_arrow_right"
+                  @click="nextSlide"
                 >
                   <path
                     d="M26.6837 9.89132C26.6837 8.73661 25.4337 8.01493 24.4337 8.59228L2.15184 21.4567C1.15184 22.034 1.15184 23.4774 2.15184 24.0548L24.4337 36.9192C25.4337 37.4966 26.6837 36.7749 26.6837 35.6202L26.6837 9.89132Z"
@@ -1711,6 +1697,8 @@
 
 <script>
 import axios from "axios";
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
 import { mapActions, mapState } from "vuex";
 export default {
   name: "Home",
@@ -1746,12 +1734,6 @@ export default {
       fourth_home_techniques_content: "",
       fifth_home_techniques_content: "",
       sixth_home_techniques_content: "",
-      first_file: "",
-      second_file: "",
-      third_file: "",
-      fourth_file: "",
-      fifth_file: "",
-      sixth_file: "",
       b_one: localStorage.getItem("b_one"),
       b_two: localStorage.getItem("b_two"),
       b_three: localStorage.getItem("b_three"),
@@ -1766,8 +1748,16 @@ export default {
       third_home_techniques_content_show: false,
       fourth_home_techniques_content_show: false,
       fifth_home_techniques_content_show: false,
-      sixth_home_techniques_content_show: false
+      sixth_home_techniques_content_show: false,
+      files: []
     };
+  },
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  directives: {
+    swiper: directive
   },
   methods: {
     scrollToTop() {
@@ -1782,6 +1772,12 @@ export default {
     },
     readMore(trigger) {
       this[trigger] = true;
+    },
+    nextSlide() {
+      this.$refs.gallerySwiper.$swiper.slideNext();
+    },
+    prevSlide() {
+      this.$refs.gallerySwiper.$swiper.slidePrev();
     },
     hideReadMore(trigger) {
       this[trigger] = false;
@@ -1961,12 +1957,17 @@ export default {
       })
     ).data.map(id => id.id);
 
-    this.first_file = process.env.VUE_APP_API + `/files/${ids[0]}/x.jpg`;
-    this.second_file = process.env.VUE_APP_API + `/files/${ids[1]}/x.jpg`;
-    this.third_file = process.env.VUE_APP_API + `/files/${ids[2]}/x.jpg`;
-    this.fourth_file = process.env.VUE_APP_API + `/files/${ids[3]}/x.jpg`;
-    this.fifth_file = process.env.VUE_APP_API + `/files/${ids[4]}/x.jpg`;
-    this.sixth_file = process.env.VUE_APP_API + `/files/${ids[5]}/x.jpg`;
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
   }
 };
 </script>
