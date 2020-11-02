@@ -18,10 +18,10 @@
             /></router-link>
           </div>
 
-          <div class="btn_lang_wrapper">
-            <router-link to="/technique" class="btn_lang text_700_12">
-              ru
-            </router-link>
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
+            </a>
           </div>
         </div>
         <div class="second_block">
@@ -560,9 +560,9 @@
               </div>
             </div>
           </div>
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -586,7 +586,8 @@ export default {
       b_seven: localStorage.getItem("b_seven"),
       b_eight: localStorage.getItem("b_eight"),
       b_nine: localStorage.getItem("b_nine"),
-      b_ten: localStorage.getItem("b_ten")
+      b_ten: localStorage.getItem("b_ten"),
+      lang: "ru"
     };
   },
   methods: {
@@ -596,6 +597,13 @@ export default {
     showModal(button) {
       this.currentButton = button;
       this.isModal = true;
+    },
+    toggleLang() {
+      if (this.lang === "ru") {
+        this.lang = "ua";
+      } else {
+        this.lang = "ru";
+      }
     },
     hideModal() {
       this.isModal = false;

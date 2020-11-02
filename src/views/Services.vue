@@ -19,9 +19,9 @@
             /></router-link>
           </div>
 
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -530,9 +530,9 @@
               </div>
             </div>
           </div>
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -556,7 +556,8 @@ export default {
       b_eleven: localStorage.getItem("b_eleven"),
       b_twelve: localStorage.getItem("b_twelve"),
       b_thirteen: localStorage.getItem("b_thirteen"),
-      b_fourteen: localStorage.getItem("b_fourteen")
+      b_fourteen: localStorage.getItem("b_fourteen"),
+      lang: "ru"
     };
   },
   methods: {
@@ -573,6 +574,13 @@ export default {
     showMobileMenu() {
       this.mobileMenuOpen = true;
       document.body.style.overflowY = "hidden";
+    },
+    toggleLang() {
+      if (this.lang === "ru") {
+        this.lang = "ua";
+      } else {
+        this.lang = "ru";
+      }
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;

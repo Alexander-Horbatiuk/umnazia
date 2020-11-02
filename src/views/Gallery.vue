@@ -19,9 +19,9 @@
             /></router-link>
           </div>
 
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -457,9 +457,9 @@
               </div>
             </div>
           </div>
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -484,7 +484,8 @@ export default {
       b_twenty_one: localStorage.getItem("b_twenty_one"),
       b_twenty_two: localStorage.getItem("b_twenty_two"),
       files: [],
-      number: 2
+      number: 2,
+      lang: "ru"
     };
   },
   methods: {
@@ -494,6 +495,13 @@ export default {
     showModal(button) {
       this.isModal = true;
       this.currentButton = button;
+    },
+    toggleLang() {
+      if (this.lang === "ru") {
+        this.lang = "ua";
+      } else {
+        this.lang = "ru";
+      }
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;

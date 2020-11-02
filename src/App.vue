@@ -45,6 +45,10 @@ export default {
   color: #efe134;
 }
 
+.btn_lang_wrapper {
+  cursor: pointer;
+}
+
 .gallery_img_small {
   width: 255px;
   height: 250px;

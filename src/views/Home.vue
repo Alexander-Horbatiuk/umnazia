@@ -21,10 +21,10 @@
           </div>
 
           <!-- ____________________btn_________________________ -->
-          <div class="btn_lang_wrapper">
-            <router-link to="/" class="btn_lang text_700_12">
-              ru
-            </router-link>
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
+            </a>
           </div>
         </div>
         <!-- ________________________________________________________second_block________________________ -->
@@ -1683,9 +1683,9 @@
                 </div>
               </div>
             </div>
-            <div class="btn_lang_wrapper">
-              <a href="#" class="btn_lang text_700_12">
-                ru
+            <div @click="toggleLang" class="btn_lang_wrapper">
+              <a class="btn_lang text_700_12">
+                {{ lang }}
               </a>
             </div>
           </div>
@@ -1749,7 +1749,8 @@ export default {
       fourth_home_techniques_content_show: false,
       fifth_home_techniques_content_show: false,
       sixth_home_techniques_content_show: false,
-      files: []
+      files: [],
+      lang: "ru"
     };
   },
   components: {
@@ -1772,6 +1773,13 @@ export default {
     },
     readMore(trigger) {
       this[trigger] = true;
+    },
+    toggleLang() {
+      if (this.lang === "ru") {
+        this.lang = "ua";
+      } else {
+        this.lang = "ru";
+      }
     },
     nextSlide() {
       this.$refs.gallerySwiper.$swiper.slideNext();

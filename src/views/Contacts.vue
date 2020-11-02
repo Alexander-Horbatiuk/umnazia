@@ -18,9 +18,9 @@
             /></router-link>
           </div>
 
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -427,9 +427,9 @@
               </div>
             </div>
           </div>
-          <div class="btn_lang_wrapper">
-            <a href="#" class="btn_lang text_700_12">
-              ru
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
             </a>
           </div>
         </div>
@@ -452,7 +452,8 @@ export default {
       presentationTel: "+380",
       b_twenty_three: localStorage.getItem("b_twenty_three"),
       b_twenty_four: localStorage.getItem("b_twenty_four"),
-      currentButton: ""
+      currentButton: "",
+      lang: "ru"
     };
   },
   methods: {
@@ -473,6 +474,13 @@ export default {
     hideMobileMenu() {
       this.mobileMenuOpen = false;
       document.body.style.overflowY = "scroll";
+    },
+    toggleLang() {
+      if (this.lang === "ru") {
+        this.lang = "ua";
+      } else {
+        this.lang = "ru";
+      }
     },
     preSend() {
       this.sendTel({
