@@ -21,11 +21,19 @@
           </div>
 
           <!-- ____________________btn_________________________ -->
-          <div @click="toggleLang" class="btn_lang_wrapper">
+          <!-- <div @click="toggleLang" class="btn_lang_wrapper">
             <a class="btn_lang text_700_12">
               {{ lang }}
             </a>
-          </div>
+          </div> -->
+           <div @click="toggleLang" class="btn_lang_wrapper">
+              <a class="btn_lang text_700_12">
+                {{ lang }}
+                <a class="btn_lang_ua_open">
+                  ua
+                </a>
+              </a>
+            </div>
         </div>
         <!-- ________________________________________________________second_block________________________ -->
 
@@ -1687,6 +1695,7 @@
               <a class="btn_lang text_700_12">
                 {{ lang }}
               </a>
+              
             </div>
           </div>
         </div>
