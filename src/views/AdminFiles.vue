@@ -49,8 +49,8 @@ export default {
         addRemoveLinks: true,
         duplicateCheck: true,
         destroyDropzone: false,
-        acceptedFiles: "image/*",
-        maxFilesize: 10
+        acceptedFiles: "image/*, video/*",
+        maxFilesize: 15
       },
       fileName: ""
     };
@@ -78,28 +78,34 @@ export default {
         method: "get",
         url: process.env.VUE_APP_API + "/files"
       })
-    ).data.map(id => id.id);
+    ).data;
 
     for (let i = 0; i < ids.length; i++) {
       const id = ids[i];
       let rawMock = (
         await axios({
           method: "get",
-          url: process.env.VUE_APP_API + `/files/info/${id}`
+          url: process.env.VUE_APP_API + `/files/info/${id.id}`
         })
       ).data.file;
 
       let mockFile = {
-        id,
+        id: id.id,
         name: rawMock.filename,
         size: rawMock.length,
         type: rawMock.contentType
       };
 
-      let imageUrl = process.env.VUE_APP_API + `/files/${id}/x.jpg`;
-
-      this.$refs.myDropzone.manuallyAddFile(mockFile, imageUrl);
-      this.$refs.myDropzone.dropzone.options.addRemoveLinks = true;
+      if (id.type.replace(/\/.+$/, "") === "image") {
+        let imageUrl1 = process.env.VUE_APP_API + `/files/${id.id}/file.jpg`;
+        this.$refs.myDropzone.manuallyAddFile(mockFile, imageUrl1);
+        this.$refs.myDropzone.dropzone.options.addRemoveLinks = true;
+      } else if (id.type.replace(/\/.+$/, "") === "video") {
+        let imageUrl2 =
+          process.env.VUE_APP_API + `/files/${id.id}/screenshot.jpg`;
+        this.$refs.myDropzone.manuallyAddFile(mockFile, imageUrl2);
+        this.$refs.myDropzone.dropzone.options.addRemoveLinks = true;
+      }
     }
   }
 };

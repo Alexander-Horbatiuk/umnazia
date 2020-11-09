@@ -40,6 +40,29 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
+.start-button {
+  display: none;
+}
+
+/* .vue-video-center::before {
+  content: "";
+  width: 66px;
+  height: 65px;
+  background: url(./assets/img/img_png/play_button.png) no-repeat;
+  cursor: pointer;
+}
+
+.vue-video-center:hover:before {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+} */
+
+.placeholder {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .sub_age_one,
 .sub_age_two {
   color: #efe134;
@@ -51,13 +74,13 @@ export default {
 
 .gallery_img_small {
   width: 255px;
-  height: 250px;
+  min-height: 250px;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
 .gallery_img_long {
-  width: 255px;
+  min-width: auto;
   height: 530px;
   -o-object-fit: cover;
   object-fit: cover;
@@ -496,11 +519,6 @@ export default {
   .gallery_content_small {
     margin: 0 0 30px 0;
   }
-
-  .gallery_img_small {
-    max-height: 100%;
-    max-width: 100%;
-  }
 }
 /* ___________________________________________________________________ */
 @media screen and (max-width: 600px) {
@@ -529,13 +547,13 @@ export default {
   }
   .gallery_img_small {
     width: 150px;
-    height: 109px;
+    min-height: 109px;
     -o-object-fit: cover;
     object-fit: cover;
   }
 
   .gallery_img_long {
-    width: 150px;
+    min-width: auto;
     height: 228px;
     -o-object-fit: cover;
     object-fit: cover;

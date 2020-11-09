@@ -1388,56 +1388,104 @@
                       <div class="gallery_sub_box">
                         <div class="gallery_content_small centrify">
                           <img
-                            :src="chunk[0]"
-                            alt=""
-                            class="gallery_img_small"
+                            v-if="
+                              chunk[0].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[0].url"
+                            class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[0].url"
+                            :poster="chunk[0].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                         <!-- ________ -->
                         <div class="gallery_content_small centrify">
                           <img
-                            :src="chunk[1]"
-                            alt=""
-                            class="gallery_img_small"
+                            v-if="
+                              chunk[1].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[1].url"
+                            class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[1].url"
+                            :poster="chunk[1].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
                         <div class="gallery_content_long centrify">
                           <img
-                            :src="chunk[2]"
-                            alt=""
+                            v-if="
+                              chunk[2].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[2].url"
                             class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[2].url"
+                            :poster="chunk[2].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
                         <div class="gallery_content_small centrify">
                           <img
-                            :src="chunk[3]"
-                            alt=""
-                            class="gallery_img_small"
+                            v-if="
+                              chunk[3].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[3].url"
+                            class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[3].url"
+                            :poster="chunk[3].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                         <!-- ________ -->
                         <div class="gallery_content_small centrify">
                           <img
-                            :src="chunk[4]"
-                            alt=""
-                            class="gallery_img_small"
+                            v-if="
+                              chunk[4].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[4].url"
+                            class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[4].url"
+                            :poster="chunk[4].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                       <!-- _____________ -->
                       <div class="gallery_sub_box">
                         <div class="gallery_content_long centrify">
                           <img
-                            :src="chunk[5]"
-                            alt=""
+                            v-if="
+                              chunk[5].type.replace(/\/.+$/, '') === 'image'
+                            "
+                            :src="chunk[5].url"
                             class="gallery_img_long"
                           />
+                          <vue-player
+                            v-else
+                            :src="chunk[5].url"
+                            :poster="chunk[5].poster"
+                            class="gallery_img_long"
+                          ></vue-player>
                         </div>
                       </div>
                     </div>
@@ -1697,6 +1745,7 @@
 
 <script>
 import axios from "axios";
+import vuePlayer from "@algoz098/vue-player";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/swiper-bundle.css";
 import { mapActions, mapState } from "vuex";
@@ -1755,7 +1804,8 @@ export default {
   },
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    vuePlayer
   },
   directives: {
     swiper: directive
@@ -1961,14 +2011,25 @@ export default {
     const ids = (
       await axios({
         method: "get",
-        url: process.env.VUE_APP_API + "/files"
+        url: process.env.VUE_APP_API + "/files/reverse"
       })
-    ).data.map(id => id.id);
+    ).data;
 
     let chunk = [];
     let i = 6;
     ids.forEach(id => {
-      chunk.push(process.env.VUE_APP_API + `/files/${id}/x.jpg`);
+      if (id.type.replace(/\/.+$/, "") === "image") {
+        chunk.push({
+          url: process.env.VUE_APP_API + `/files/${id.id}/file.jpg`,
+          type: id.type
+        });
+      } else if (id.type.replace(/\/.+$/, "") === "video") {
+        chunk.push({
+          url: process.env.VUE_APP_API + `/files/${id.id}/file.jpg`,
+          poster: process.env.VUE_APP_API + `/files/${id.id}/screenshot.jpg`,
+          type: id.type
+        });
+      }
       i--;
       if (i === 0) {
         this.files.push(chunk);
@@ -1976,6 +2037,20 @@ export default {
         i = 6;
       }
     });
+  },
+  mounted() {
+    const interval = setInterval(() => {
+      const elements = document.getElementsByClassName("vue-video-center");
+      if (elements.length) {
+        console.log(elements);
+        // elements.forEach(element => {
+        //   const image = document.createElement("div");
+        //   image.innerHTML = "<img src='../assets/img/img_png/play_button.png'>";
+        //   element.appendChild(image);
+        // });
+        interval.clearInterval();
+      }
+    }, 500);
   }
 };
 </script>
