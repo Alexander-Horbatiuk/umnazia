@@ -20,13 +20,13 @@
           </div>
 
           <div @click="toggleLang" class="btn_lang_wrapper">
-              <a class="btn_lang text_700_12">
-                {{ lang }}
-                <a class="btn_lang_ua_open">
-                  ua
-                </a>
+            <a class="btn_lang text_700_12">
+              {{ lang }}
+              <a class="btn_lang_ua_open">
+                ua
               </a>
-            </div>
+            </a>
+          </div>
         </div>
         <div class="second_block">
           <div class="phones text_700_12">

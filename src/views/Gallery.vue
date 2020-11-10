@@ -20,12 +20,12 @@
           </div>
 
           <div @click="toggleLang" class="btn_lang_wrapper">
-              <a class="btn_lang text_700_12">
-                {{ lang }}
-                <a class="btn_lang_ua_open">
-                  ua
-                </a>
+            <a class="btn_lang text_700_12">
+              {{ lang }}
+              <a class="btn_lang_ua_open">
+                ua
               </a>
+            </a>
           </div>
         </div>
         <div class="second_block">
@@ -173,6 +173,7 @@
                   v-else
                   :src="chunk[0].url"
                   :poster="chunk[0].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_small"
                 ></vue-player>
               </div>
@@ -187,6 +188,7 @@
                   v-else
                   :src="chunk[1].url"
                   :poster="chunk[1].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_small"
                 ></vue-player>
               </div>
@@ -203,6 +205,7 @@
                   v-else
                   :src="chunk[2].url"
                   :poster="chunk[2].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_long"
                 ></vue-player>
               </div>
@@ -219,6 +222,7 @@
                   v-else
                   :src="chunk[3].url"
                   :poster="chunk[3].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_small"
                 ></vue-player>
               </div>
@@ -233,6 +237,7 @@
                   v-else
                   :src="chunk[4].url"
                   :poster="chunk[4].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_small"
                 ></vue-player>
               </div>
@@ -249,6 +254,7 @@
                   v-else
                   :src="chunk[5].url"
                   :poster="chunk[5].poster"
+                  controls-class="disble-controls"
                   class="gallery_img_long"
                 ></vue-player>
               </div>

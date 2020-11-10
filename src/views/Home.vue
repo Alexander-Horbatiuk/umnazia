@@ -26,14 +26,14 @@
               {{ lang }}
             </a>
           </div> -->
-           <div @click="toggleLang" class="btn_lang_wrapper">
-              <a class="btn_lang text_700_12">
-                {{ lang }}
-                <a class="btn_lang_ua_open">
-                  ua
-                </a>
+          <div @click="toggleLang" class="btn_lang_wrapper">
+            <a class="btn_lang text_700_12">
+              {{ lang }}
+              <a class="btn_lang_ua_open">
+                ua
               </a>
-            </div>
+            </a>
+          </div>
         </div>
         <!-- ________________________________________________________second_block________________________ -->
 
@@ -1400,13 +1400,14 @@
                               chunk[0].type.replace(/\/.+$/, '') === 'image'
                             "
                             :src="chunk[0].url"
-                            class="gallery_img_long"
+                            class="gallery_img_small"
                           />
                           <vue-player
                             v-else
                             :src="chunk[0].url"
                             :poster="chunk[0].poster"
-                            class="gallery_img_long"
+                            controls-class="disble-controls"
+                            class="gallery_img_small"
                           ></vue-player>
                         </div>
                         <!-- ________ -->
@@ -1416,13 +1417,14 @@
                               chunk[1].type.replace(/\/.+$/, '') === 'image'
                             "
                             :src="chunk[1].url"
-                            class="gallery_img_long"
+                            class="gallery_img_small"
                           />
                           <vue-player
                             v-else
                             :src="chunk[1].url"
                             :poster="chunk[1].poster"
-                            class="gallery_img_long"
+                            controls-class="disble-controls"
+                            class="gallery_img_small"
                           ></vue-player>
                         </div>
                       </div>
@@ -1440,6 +1442,7 @@
                             v-else
                             :src="chunk[2].url"
                             :poster="chunk[2].poster"
+                            controls-class="disble-controls"
                             class="gallery_img_long"
                           ></vue-player>
                         </div>
@@ -1452,13 +1455,14 @@
                               chunk[3].type.replace(/\/.+$/, '') === 'image'
                             "
                             :src="chunk[3].url"
-                            class="gallery_img_long"
+                            class="gallery_img_small"
                           />
                           <vue-player
                             v-else
                             :src="chunk[3].url"
                             :poster="chunk[3].poster"
-                            class="gallery_img_long"
+                            controls-class="disble-controls"
+                            class="gallery_img_small"
                           ></vue-player>
                         </div>
                         <!-- ________ -->
@@ -1468,13 +1472,14 @@
                               chunk[4].type.replace(/\/.+$/, '') === 'image'
                             "
                             :src="chunk[4].url"
-                            class="gallery_img_long"
+                            class="gallery_img_small"
                           />
                           <vue-player
                             v-else
                             :src="chunk[4].url"
                             :poster="chunk[4].poster"
-                            class="gallery_img_long"
+                            controls-class="disble-controls"
+                            class="gallery_img_small"
                           ></vue-player>
                         </div>
                       </div>
@@ -1492,6 +1497,7 @@
                             v-else
                             :src="chunk[5].url"
                             :poster="chunk[5].poster"
+                            controls-class="disble-controls"
                             class="gallery_img_long"
                           ></vue-player>
                         </div>
@@ -1743,7 +1749,6 @@
               <a class="btn_lang text_700_12">
                 {{ lang }}
               </a>
-              
             </div>
           </div>
         </div>
@@ -2047,20 +2052,6 @@ export default {
       }
     });
   },
-  mounted() {
-    const interval = setInterval(() => {
-      const elements = document.getElementsByClassName("vue-video-center");
-      if (elements.length) {
-        console.log(elements);
-        // elements.forEach(element => {
-        //   const image = document.createElement("div");
-        //   image.innerHTML = "<img src='../assets/img/img_png/play_button.png'>";
-        //   element.appendChild(image);
-        // });
-        interval.clearInterval();
-      }
-    }, 500);
-  }
 };
 </script>
 

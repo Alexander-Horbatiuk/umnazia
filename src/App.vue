@@ -40,23 +40,17 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
-.start-button {
+.disble-controls {
   display: none;
 }
 
-/* .vue-video-center::before {
-  content: "";
-  width: 66px;
-  height: 65px;
-  background: url(./assets/img/img_png/play_button.png) no-repeat;
-  cursor: pointer;
+.start-button {
+  border: 0 !important;
 }
 
-.vue-video-center:hover:before {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-} */
+.button {
+  color: #efe134 !important;
+}
 
 .placeholder {
   -o-object-fit: cover;
@@ -84,6 +78,12 @@ export default {
   height: 530px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.gallery_img_long video {
+  height: 100% !important;
+  width: auto !important;
+  min-width: 250px;
 }
 
 .training_format_submit_orange_btn {
