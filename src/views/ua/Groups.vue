@@ -27,10 +27,13 @@
               }"
             >
               <div class="text_700_12 main_lang_button" @click="toggleLang">
-                ru
+                ua
               </div>
-              <router-link v-if="headLangOpen" class="btn_lang_ua_open" to="/ua"
-                >ua</router-link
+              <router-link
+                v-if="headLangOpen"
+                class="btn_lang_ua_open"
+                to="/groups"
+                >ru</router-link
               >
             </div>
           </div>
@@ -617,13 +620,13 @@
                 class="text_700_12 main_lang_button"
                 @click="toggleLangMobile"
               >
-                ru
+                ua
               </div>
               <router-link
                 v-if="mobileLangOpen"
                 class="btn_lang_ua_open"
-                to="/ua"
-                >ua</router-link
+                to="/groups"
+                >ru</router-link
               >
             </div>
           </div>

@@ -1741,15 +1741,18 @@
               <div
                 class="text_700_12"
                 :class="{
-                  btn_lang_open: headLangOpen,
-                  btn_lang: !headLangOpen
+                  btn_lang_open: mobileLangOpen,
+                  btn_lang: !mobileLangOpen
                 }"
               >
-                <div class="text_700_12 main_lang_button" @click="toggleLang">
+                <div
+                  class="text_700_12 main_lang_button"
+                  @click="toggleLangMobile"
+                >
                   ru
                 </div>
                 <router-link
-                  v-if="headLangOpen"
+                  v-if="mobileLangOpen"
                   class="btn_lang_ua_open"
                   to="/ua"
                   >ua</router-link
