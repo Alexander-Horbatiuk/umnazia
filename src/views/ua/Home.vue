@@ -191,15 +191,15 @@
             <div class="sub_content_box_age">
               <div
                 class="box_age_one text_700_24"
-                v-html="home_header_title_first_part"
+                v-html="home_header_title_first_part_ua"
               ></div>
               <div
                 class="box_age_two text_700_24"
-                v-html="home_header_title_second_part"
+                v-html="home_header_title_second_part_ua"
               ></div>
               <div
                 class="content_box_age_text text_400_18"
-                v-html="home_header_text"
+                v-html="home_header_text_ua"
               ></div>
               <div
                 @click="showModal('b_one')"
@@ -362,7 +362,7 @@
                 </div>
                 <div class="content_header_text">
                   <p class="header_groups">
-                    {{ groups_description_first_block_title }}
+                    {{ groups_description_first_block_title_ua }}
                   </p>
                   <span class="text_group">
                     {{ groups_description_first_block_content_show_text }}
@@ -407,7 +407,7 @@
                 </div>
                 <div class="content_header_text">
                   <p class="header_groups">
-                    {{ groups_description_second_block_title }}
+                    {{ groups_description_second_block_title_ua }}
                   </p>
                   <span class="text_group"
                     >{{ groups_description_second_block_content_show_text }}
@@ -461,7 +461,7 @@
                 </div>
                 <div class="content_header_text">
                   <p class="header_groups">
-                    {{ groups_description_third_block_title }}
+                    {{ groups_description_third_block_title_ua }}
                   </p>
                   <span class="text_group"
                     >{{ groups_description_third_block_content_show_text }}
@@ -505,7 +505,7 @@
                 </div>
                 <div class="content_header_text">
                   <p class="header_groups">
-                    {{ groups_description_fourth_block_title }}
+                    {{ groups_description_fourth_block_title_ua }}
                   </p>
                   <span class="text_group">{{
                     groups_description_fourth_block_content_show_text
@@ -560,7 +560,7 @@
             <div class="clocks_wrapper">
               <div class="class_hours class_hours_9am">
                 <div class="time_text_9am text_700_35">
-                  <p>{{ timetable_clock_morning }}</p>
+                  <p>{{ timetable_clock_morning_ua }}</p>
                 </div>
 
                 <div @click="showModal('b_two')" class="text_700_35">
@@ -583,7 +583,7 @@
 
               <div class="class_hours class_hours_14pm">
                 <div class="time_text_14pm text_700_35">
-                  <p>{{ timetable_clock_evening }}</p>
+                  <p>{{ timetable_clock_evening_ua }}</p>
                 </div>
 
                 <div @click="showModal('b_three')" class="text_700_35">
@@ -1090,7 +1090,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ first_home_techniques_title }}
+                    {{ first_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1136,7 +1136,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ second_home_techniques_title }}
+                    {{ second_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1182,7 +1182,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ third_home_techniques_title }}
+                    {{ third_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1228,7 +1228,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ fourth_home_techniques_title }}
+                    {{ fourth_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1274,7 +1274,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ fifth_home_techniques_title }}
+                    {{ fifth_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1320,7 +1320,7 @@
                   class="footer_card"
                 >
                   <p class="head_card_text">
-                    {{ sixth_home_techniques_title }}
+                    {{ sixth_home_techniques_title_ua }}
                   </p>
                   <span
                     class="text_card"
@@ -1783,31 +1783,31 @@ export default {
       name: "",
       tel: "+380",
       mobileMenuOpen: false,
-      home_header_title_first_part: "",
-      home_header_title_second_part: "",
-      home_header_text: "",
-      groups_description_first_block_title: "",
-      groups_description_second_block_title: "",
-      groups_description_third_block_title: "",
-      groups_description_fourth_block_title: "",
-      groups_description_first_block_content: "",
-      groups_description_second_block_content: "",
-      groups_description_third_block_content: "",
-      groups_description_fourth_block_content: "",
-      timetable_clock_morning: "",
-      timetable_clock_evening: "",
-      first_home_techniques_title: "",
-      second_home_techniques_title: "",
-      third_home_techniques_title: "",
-      fourth_home_techniques_title: "",
-      fifth_home_techniques_title: "",
-      sixth_home_techniques_title: "",
-      first_home_techniques_content: "",
-      second_home_techniques_content: "",
-      third_home_techniques_content: "",
-      fourth_home_techniques_content: "",
-      fifth_home_techniques_content: "",
-      sixth_home_techniques_content: "",
+      home_header_title_first_part_ua: "",
+      home_header_title_second_part_ua: "",
+      home_header_text_ua: "",
+      groups_description_first_block_title_ua: "",
+      groups_description_second_block_title_ua: "",
+      groups_description_third_block_title_ua: "",
+      groups_description_fourth_block_title_ua: "",
+      groups_description_first_block_content_ua: "",
+      groups_description_second_block_content_ua: "",
+      groups_description_third_block_content_ua: "",
+      groups_description_fourth_block_content_ua: "",
+      timetable_clock_morning_ua: "",
+      timetable_clock_evening_ua: "",
+      first_home_techniques_title_ua: "",
+      second_home_techniques_title_ua: "",
+      third_home_techniques_title_ua: "",
+      fourth_home_techniques_title_ua: "",
+      fifth_home_techniques_title_ua: "",
+      sixth_home_techniques_title_ua: "",
+      first_home_techniques_content_ua: "",
+      second_home_techniques_content_ua: "",
+      third_home_techniques_content_ua: "",
+      fourth_home_techniques_content_ua: "",
+      fifth_home_techniques_content_ua: "",
+      sixth_home_techniques_content_ua: "",
       b_one: localStorage.getItem("b_one"),
       b_two: localStorage.getItem("b_two"),
       b_three: localStorage.getItem("b_three"),
@@ -1896,12 +1896,12 @@ export default {
     fields: state => state.fields,
     groups_description_first_block_content_show_text() {
       if (this.groups_description_first_block_content_show) {
-        return this.groups_description_first_block_content;
+        return this.groups_description_first_block_content_ua;
       } else {
-        if (this.groups_description_first_block_content.length <= 220) {
-          return this.groups_description_first_block_content;
+        if (this.groups_description_first_block_content_ua.length <= 220) {
+          return this.groups_description_first_block_content_ua;
         } else {
-          return this.groups_description_first_block_content
+          return this.groups_description_first_block_content_ua
             .match(/^.{220}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1909,12 +1909,12 @@ export default {
     },
     groups_description_second_block_content_show_text() {
       if (this.groups_description_second_block_content_show) {
-        return this.groups_description_second_block_content;
+        return this.groups_description_second_block_content_ua;
       } else {
-        if (this.groups_description_second_block_content.length <= 220) {
-          return this.groups_description_second_block_content;
+        if (this.groups_description_second_block_content_ua.length <= 220) {
+          return this.groups_description_second_block_content_ua;
         } else {
-          return this.groups_description_second_block_content
+          return this.groups_description_second_block_content_ua
             .match(/^.{220}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1922,12 +1922,12 @@ export default {
     },
     groups_description_third_block_content_show_text() {
       if (this.groups_description_third_block_content_show) {
-        return this.groups_description_third_block_content;
+        return this.groups_description_third_block_content_ua;
       } else {
-        if (this.groups_description_third_block_content.length <= 220) {
-          return this.groups_description_third_block_content;
+        if (this.groups_description_third_block_content_ua.length <= 220) {
+          return this.groups_description_third_block_content_ua;
         } else {
-          return this.groups_description_third_block_content
+          return this.groups_description_third_block_content_ua
             .match(/^.{220}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1935,12 +1935,12 @@ export default {
     },
     groups_description_fourth_block_content_show_text() {
       if (this.groups_description_fourth_block_content_show) {
-        return this.groups_description_fourth_block_content;
+        return this.groups_description_fourth_block_content_ua;
       } else {
-        if (this.groups_description_fourth_block_content.length <= 220) {
-          return this.groups_description_fourth_block_content;
+        if (this.groups_description_fourth_block_content_ua.length <= 220) {
+          return this.groups_description_fourth_block_content_ua;
         } else {
-          return this.groups_description_fourth_block_content
+          return this.groups_description_fourth_block_content_ua
             .match(/^.{220}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1948,12 +1948,12 @@ export default {
     },
     first_home_techniques_content_show_text() {
       if (this.first_home_techniques_content_show) {
-        return this.first_home_techniques_content;
+        return this.first_home_techniques_content_ua;
       } else {
-        if (this.first_home_techniques_content.length <= 180) {
-          return this.first_home_techniques_content;
+        if (this.first_home_techniques_content_ua.length <= 180) {
+          return this.first_home_techniques_content_ua;
         } else {
-          return this.first_home_techniques_content
+          return this.first_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1961,12 +1961,12 @@ export default {
     },
     second_home_techniques_content_show_text() {
       if (this.second_home_techniques_content_show) {
-        return this.second_home_techniques_content;
+        return this.second_home_techniques_content_ua;
       } else {
-        if (this.second_home_techniques_content.length <= 180) {
-          return this.second_home_techniques_content;
+        if (this.second_home_techniques_content_ua.length <= 180) {
+          return this.second_home_techniques_content_ua;
         } else {
-          return this.second_home_techniques_content
+          return this.second_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1974,12 +1974,12 @@ export default {
     },
     third_home_techniques_content_show_text() {
       if (this.third_home_techniques_content_show) {
-        return this.third_home_techniques_content;
+        return this.third_home_techniques_content_ua;
       } else {
-        if (this.third_home_techniques_content.length <= 180) {
-          return this.third_home_techniques_content;
+        if (this.third_home_techniques_content_ua.length <= 180) {
+          return this.third_home_techniques_content_ua;
         } else {
-          return this.third_home_techniques_content
+          return this.third_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -1987,12 +1987,12 @@ export default {
     },
     fourth_home_techniques_content_show_text() {
       if (this.fourth_home_techniques_content_show) {
-        return this.fourth_home_techniques_content;
+        return this.fourth_home_techniques_content_ua;
       } else {
-        if (this.fourth_home_techniques_content.length <= 180) {
-          return this.fourth_home_techniques_content;
+        if (this.fourth_home_techniques_content_ua.length <= 180) {
+          return this.fourth_home_techniques_content_ua;
         } else {
-          return this.fourth_home_techniques_content
+          return this.fourth_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -2000,12 +2000,12 @@ export default {
     },
     fifth_home_techniques_content_show_text() {
       if (this.fifth_home_techniques_content_show) {
-        return this.fifth_home_techniques_content;
+        return this.fifth_home_techniques_content_ua;
       } else {
-        if (this.fifth_home_techniques_content.length <= 180) {
-          return this.fifth_home_techniques_content;
+        if (this.fifth_home_techniques_content_ua.length <= 180) {
+          return this.fifth_home_techniques_content_ua;
         } else {
-          return this.fifth_home_techniques_content
+          return this.fifth_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }
@@ -2013,12 +2013,12 @@ export default {
     },
     sixth_home_techniques_content_show_text() {
       if (this.sixth_home_techniques_content_show) {
-        return this.sixth_home_techniques_content;
+        return this.sixth_home_techniques_content_ua;
       } else {
-        if (this.sixth_home_techniques_content.length <= 180) {
-          return this.sixth_home_techniques_content;
+        if (this.sixth_home_techniques_content_ua.length <= 180) {
+          return this.sixth_home_techniques_content_ua;
         } else {
-          return this.sixth_home_techniques_content
+          return this.sixth_home_techniques_content_ua
             .match(/^.{180}\S*\s/)[0]
             .replace(/\s$/, "...");
         }

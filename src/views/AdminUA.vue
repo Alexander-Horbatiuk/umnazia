@@ -6,7 +6,7 @@
 
         <div class="open_site" v-if="isAdmin" @click="toManager">менеджер</div>
 
-        <div class="open_site" @click="toUAFieldsPage">изменить укр текст</div>
+        <div class="open_site" @click="toFieldsPage">изменить текст</div>
 
         <div class="open_site" @click="toFilesPage">добавить фото</div>
 
@@ -36,7 +36,7 @@
               </div>
               <input
                 required
-                v-model="home_header_title_first_part"
+                v-model="home_header_title_first_part_ua"
                 placeholder="Введите текст"
                 class="admin_input"
                 type="text"
@@ -60,7 +60,7 @@
               </div>
               <input
                 required
-                v-model="home_header_title_second_part"
+                v-model="home_header_title_second_part_ua"
                 placeholder="Введите текст"
                 class="admin_input"
                 type="text"
@@ -83,7 +83,7 @@
               </div>
               <input
                 required
-                v-model="home_header_text"
+                v-model="home_header_text_ua"
                 placeholder="Введите текст"
                 class="admin_input"
                 type="text"
@@ -111,7 +111,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_first_block_title"
+                  v-model="groups_description_first_block_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -123,13 +123,11 @@
                     class="screenshot sub_screenshot"
                     src="../assets/img/admin/screenshots/groups_description_first_block_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 1
-                  </div>
+                  <div class="admin_text">Текст карточки 1</div>
                 </div>
                 <input
                   required
-                  v-model="groups_description_first_block_content"
+                  v-model="groups_description_first_block_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -152,7 +150,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_second_block_title"
+                  v-model="groups_description_second_block_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -164,13 +162,11 @@
                     class="screenshot sub_screenshot"
                     src="../assets/img/admin/screenshots/groups_description_second_block_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 2
-                  </div>
+                  <div class="admin_text">Текст карточки 2</div>
                 </div>
                 <input
                   required
-                  v-model="groups_description_second_block_content"
+                  v-model="groups_description_second_block_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -195,7 +191,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_third_block_title"
+                  v-model="groups_description_third_block_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -207,13 +203,11 @@
                     class="screenshot sub_screenshot"
                     src="../assets/img/admin/screenshots/groups_description_third_block_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 3
-                  </div>
+                  <div class="admin_text">Текст карточки 3</div>
                 </div>
                 <input
                   required
-                  v-model="groups_description_third_block_content"
+                  v-model="groups_description_third_block_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -238,7 +232,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_fourth_block_title"
+                  v-model="groups_description_fourth_block_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -250,13 +244,11 @@
                     class="screenshot sub_screenshot"
                     src="../assets/img/admin/screenshots/groups_description_fourth_block_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 4
-                  </div>
+                  <div class="admin_text">Текст карточки 4</div>
                 </div>
                 <input
                   required
-                  v-model="groups_description_fourth_block_content"
+                  v-model="groups_description_fourth_block_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -268,7 +260,7 @@
           <!-- _________________________price_block___________ -->
           <div class="price_block">
             <div class="sub_price_block">
-              <div class="input_wrapper ">
+              <div class="input_wrapper">
                 <div class="admin_description">
                   <img
                     class="screenshot"
@@ -283,7 +275,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_first_block_12_price"
+                  v-model="groups_description_first_block_12_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -305,7 +297,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_first_block_24_price"
+                  v-model="groups_description_first_block_24_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -329,7 +321,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_second_block_12_price"
+                  v-model="groups_description_second_block_12_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -351,7 +343,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_second_block_24_price"
+                  v-model="groups_description_second_block_24_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -375,7 +367,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_third_block_12_price"
+                  v-model="groups_description_third_block_12_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -396,7 +388,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_third_block_24_price"
+                  v-model="groups_description_third_block_24_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -420,7 +412,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_fourth_block_12_price"
+                  v-model="groups_description_fourth_block_12_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -441,7 +433,7 @@
                 </div>
                 <input
                   required
-                  v-model="groups_description_fourth_block_24_price"
+                  v-model="groups_description_fourth_block_24_price_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -466,7 +458,7 @@
               </div>
               <input
                 required
-                v-model="timetable_clock_morning"
+                v-model="timetable_clock_morning_ua"
                 placeholder="Введите текст"
                 class="admin_input"
                 type="text"
@@ -485,7 +477,7 @@
               </div>
               <input
                 required
-                v-model="timetable_clock_evening"
+                v-model="timetable_clock_evening_ua"
                 placeholder="Введите текст"
                 class="admin_input"
                 type="text"
@@ -515,7 +507,7 @@
                 </div>
                 <input
                   required
-                  v-model="first_home_techniques_title"
+                  v-model="first_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -527,13 +519,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/first_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 1
-                  </div>
+                  <div class="admin_text">Текст карточки 1</div>
                 </div>
                 <input
                   required
-                  v-model="first_home_techniques_content"
+                  v-model="first_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -557,7 +547,7 @@
                 </div>
                 <input
                   required
-                  v-model="second_home_techniques_title"
+                  v-model="second_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -569,13 +559,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/second_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 2
-                  </div>
+                  <div class="admin_text">Текст карточки 2</div>
                 </div>
                 <input
                   required
-                  v-model="second_home_techniques_content"
+                  v-model="second_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -599,7 +587,7 @@
                 </div>
                 <input
                   required
-                  v-model="third_home_techniques_title"
+                  v-model="third_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -611,13 +599,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/third_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 3
-                  </div>
+                  <div class="admin_text">Текст карточки 3</div>
                 </div>
                 <input
                   required
-                  v-model="third_home_techniques_content"
+                  v-model="third_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -643,7 +629,7 @@
                 </div>
                 <input
                   required
-                  v-model="fourth_home_techniques_title"
+                  v-model="fourth_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -655,13 +641,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/fourth_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 4
-                  </div>
+                  <div class="admin_text">Текст карточки 4</div>
                 </div>
                 <input
                   required
-                  v-model="fourth_home_techniques_content"
+                  v-model="fourth_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -685,7 +669,7 @@
                 </div>
                 <input
                   required
-                  v-model="fifth_home_techniques_title"
+                  v-model="fifth_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -697,13 +681,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/fifth_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 5
-                  </div>
+                  <div class="admin_text">Текст карточки 5</div>
                 </div>
                 <input
                   required
-                  v-model="fifth_home_techniques_content"
+                  v-model="fifth_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -727,7 +709,7 @@
                 </div>
                 <input
                   required
-                  v-model="sixth_home_techniques_title"
+                  v-model="sixth_home_techniques_title_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -739,13 +721,11 @@
                     class="screenshot"
                     src="../assets/img/admin/screenshots/sixth_home_techniques_content.png"
                   />
-                  <div class="admin_text">
-                    Текст карточки 6
-                  </div>
+                  <div class="admin_text">Текст карточки 6</div>
                 </div>
                 <input
                   required
-                  v-model="sixth_home_techniques_content"
+                  v-model="sixth_home_techniques_content_ua"
                   placeholder="Введите текст"
                   class="admin_input"
                   type="text"
@@ -772,39 +752,39 @@ export default {
   name: "Admin",
   data() {
     return {
-      home_header_title_first_part: "",
-      home_header_title_second_part: "",
-      home_header_text: "",
-      groups_description_first_block_title: "",
-      groups_description_second_block_title: "",
-      groups_description_third_block_title: "",
-      groups_description_fourth_block_title: "",
-      groups_description_first_block_content: "",
-      groups_description_second_block_content: "",
-      groups_description_third_block_content: "",
-      groups_description_fourth_block_content: "",
-      groups_description_first_block_12_price: "",
-      groups_description_second_block_12_price: "",
-      groups_description_third_block_12_price: "",
-      groups_description_fourth_block_12_price: "",
-      groups_description_first_block_24_price: "",
-      groups_description_second_block_24_price: "",
-      groups_description_third_block_24_price: "",
-      groups_description_fourth_block_24_price: "",
-      timetable_clock_morning: "",
-      timetable_clock_evening: "",
-      first_home_techniques_title: "",
-      second_home_techniques_title: "",
-      third_home_techniques_title: "",
-      fourth_home_techniques_title: "",
-      fifth_home_techniques_title: "",
-      sixth_home_techniques_title: "",
-      first_home_techniques_content: "",
-      second_home_techniques_content: "",
-      third_home_techniques_content: "",
-      fourth_home_techniques_content: "",
-      fifth_home_techniques_content: "",
-      sixth_home_techniques_content: "",
+      home_header_title_first_part_ua: "",
+      home_header_title_second_part_ua: "",
+      home_header_text_ua: "",
+      groups_description_first_block_title_ua: "",
+      groups_description_second_block_title_ua: "",
+      groups_description_third_block_title_ua: "",
+      groups_description_fourth_block_title_ua: "",
+      groups_description_first_block_content_ua: "",
+      groups_description_second_block_content_ua: "",
+      groups_description_third_block_content_ua: "",
+      groups_description_fourth_block_content_ua: "",
+      groups_description_first_block_12_price_ua: "",
+      groups_description_second_block_12_price_ua: "",
+      groups_description_third_block_12_price_ua: "",
+      groups_description_fourth_block_12_price_ua: "",
+      groups_description_first_block_24_price_ua: "",
+      groups_description_second_block_24_price_ua: "",
+      groups_description_third_block_24_price_ua: "",
+      groups_description_fourth_block_24_price_ua: "",
+      timetable_clock_morning_ua: "",
+      timetable_clock_evening_ua: "",
+      first_home_techniques_title_ua: "",
+      second_home_techniques_title_ua: "",
+      third_home_techniques_title_ua: "",
+      fourth_home_techniques_title_ua: "",
+      fifth_home_techniques_title_ua: "",
+      sixth_home_techniques_title_ua: "",
+      first_home_techniques_content_ua: "",
+      second_home_techniques_content_ua: "",
+      third_home_techniques_content_ua: "",
+      fourth_home_techniques_content_ua: "",
+      fifth_home_techniques_content_ua: "",
+      sixth_home_techniques_content_ua: "",
       isAdmin: false
     };
   },
@@ -819,145 +799,145 @@ export default {
     toMainPage() {
       this.$router.push({ name: "Home" });
     },
-    toUAFieldsPage() {
-      this.$router.push({ name: "AdminUA" });
-    },
     toFilesPage() {
       this.$router.push({ name: "AdminFiles" });
+    },
+    toFieldsPage() {
+      this.$router.push({ name: "Admin" });
     },
     fieldsSetter() {
       this.setFields([
         {
-          fieldName: "home_header_title_first_part",
-          fieldText: this.home_header_title_first_part
+          fieldName: "home_header_title_first_part_ua",
+          fieldText: this.home_header_title_first_part_ua
         },
         {
-          fieldName: "home_header_title_second_part",
-          fieldText: this.home_header_title_second_part
+          fieldName: "home_header_title_second_part_ua",
+          fieldText: this.home_header_title_second_part_ua
         },
         {
-          fieldName: "home_header_text",
-          fieldText: this.home_header_text
+          fieldName: "home_header_text_ua",
+          fieldText: this.home_header_text_ua
         },
         {
-          fieldName: "timetable_clock_morning",
-          fieldText: this.timetable_clock_morning
+          fieldName: "timetable_clock_morning_ua",
+          fieldText: this.timetable_clock_morning_ua
         },
         {
-          fieldName: "timetable_clock_evening",
-          fieldText: this.timetable_clock_evening
+          fieldName: "timetable_clock_evening_ua",
+          fieldText: this.timetable_clock_evening_ua
         },
         {
-          fieldName: "first_home_techniques_title",
-          fieldText: this.first_home_techniques_title
+          fieldName: "first_home_techniques_title_ua",
+          fieldText: this.first_home_techniques_title_ua
         },
         {
-          fieldName: "second_home_techniques_title",
-          fieldText: this.second_home_techniques_title
+          fieldName: "second_home_techniques_title_ua",
+          fieldText: this.second_home_techniques_title_ua
         },
         {
-          fieldName: "third_home_techniques_title",
-          fieldText: this.third_home_techniques_title
+          fieldName: "third_home_techniques_title_ua",
+          fieldText: this.third_home_techniques_title_ua
         },
         {
-          fieldName: "fourth_home_techniques_title",
-          fieldText: this.fourth_home_techniques_title
+          fieldName: "fourth_home_techniques_title_ua",
+          fieldText: this.fourth_home_techniques_title_ua
         },
         {
-          fieldName: "fifth_home_techniques_title",
-          fieldText: this.fifth_home_techniques_title
+          fieldName: "fifth_home_techniques_title_ua",
+          fieldText: this.fifth_home_techniques_title_ua
         },
         {
-          fieldName: "sixth_home_techniques_title",
-          fieldText: this.sixth_home_techniques_title
+          fieldName: "sixth_home_techniques_title_ua",
+          fieldText: this.sixth_home_techniques_title_ua
         },
         {
-          fieldName: "first_home_techniques_content",
-          fieldText: this.first_home_techniques_content
+          fieldName: "first_home_techniques_content_ua",
+          fieldText: this.first_home_techniques_content_ua
         },
         {
-          fieldName: "second_home_techniques_content",
-          fieldText: this.second_home_techniques_content
+          fieldName: "second_home_techniques_content_ua",
+          fieldText: this.second_home_techniques_content_ua
         },
         {
-          fieldName: "third_home_techniques_content",
-          fieldText: this.third_home_techniques_content
+          fieldName: "third_home_techniques_content_ua",
+          fieldText: this.third_home_techniques_content_ua
         },
         {
-          fieldName: "fourth_home_techniques_content",
-          fieldText: this.fourth_home_techniques_content
+          fieldName: "fourth_home_techniques_content_ua",
+          fieldText: this.fourth_home_techniques_content_ua
         },
         {
-          fieldName: "fifth_home_techniques_content",
-          fieldText: this.fifth_home_techniques_content
+          fieldName: "fifth_home_techniques_content_ua",
+          fieldText: this.fifth_home_techniques_content_ua
         },
         {
-          fieldName: "sixth_home_techniques_content",
-          fieldText: this.sixth_home_techniques_content
+          fieldName: "sixth_home_techniques_content_ua",
+          fieldText: this.sixth_home_techniques_content_ua
         },
         {
-          fieldName: "groups_description_first_block_title",
-          fieldText: this.groups_description_first_block_title
+          fieldName: "groups_description_first_block_title_ua",
+          fieldText: this.groups_description_first_block_title_ua
         },
         {
-          fieldName: "groups_description_second_block_title",
-          fieldText: this.groups_description_second_block_title
+          fieldName: "groups_description_second_block_title_ua",
+          fieldText: this.groups_description_second_block_title_ua
         },
         {
-          fieldName: "groups_description_third_block_title",
-          fieldText: this.groups_description_third_block_title
+          fieldName: "groups_description_third_block_title_ua",
+          fieldText: this.groups_description_third_block_title_ua
         },
         {
-          fieldName: "groups_description_fourth_block_title",
-          fieldText: this.groups_description_fourth_block_title
+          fieldName: "groups_description_fourth_block_title_ua",
+          fieldText: this.groups_description_fourth_block_title_ua
         },
         {
-          fieldName: "groups_description_first_block_content",
-          fieldText: this.groups_description_first_block_content
+          fieldName: "groups_description_first_block_content_ua",
+          fieldText: this.groups_description_first_block_content_ua
         },
         {
-          fieldName: "groups_description_second_block_content",
-          fieldText: this.groups_description_second_block_content
+          fieldName: "groups_description_second_block_content_ua",
+          fieldText: this.groups_description_second_block_content_ua
         },
         {
-          fieldName: "groups_description_third_block_content",
-          fieldText: this.groups_description_third_block_content
+          fieldName: "groups_description_third_block_content_ua",
+          fieldText: this.groups_description_third_block_content_ua
         },
         {
-          fieldName: "groups_description_fourth_block_content",
-          fieldText: this.groups_description_fourth_block_content
+          fieldName: "groups_description_fourth_block_content_ua",
+          fieldText: this.groups_description_fourth_block_content_ua
         },
         {
-          fieldName: "groups_description_first_block_12_price",
-          fieldText: this.groups_description_first_block_12_price
+          fieldName: "groups_description_first_block_12_price_ua",
+          fieldText: this.groups_description_first_block_12_price_ua
         },
         {
-          fieldName: "groups_description_second_block_12_price",
-          fieldText: this.groups_description_second_block_12_price
+          fieldName: "groups_description_second_block_12_price_ua",
+          fieldText: this.groups_description_second_block_12_price_ua
         },
         {
-          fieldName: "groups_description_third_block_12_price",
-          fieldText: this.groups_description_third_block_12_price
+          fieldName: "groups_description_third_block_12_price_ua",
+          fieldText: this.groups_description_third_block_12_price_ua
         },
         {
-          fieldName: "groups_description_fourth_block_12_price",
-          fieldText: this.groups_description_fourth_block_12_price
+          fieldName: "groups_description_fourth_block_12_price_ua",
+          fieldText: this.groups_description_fourth_block_12_price_ua
         },
         {
-          fieldName: "groups_description_first_block_24_price",
-          fieldText: this.groups_description_first_block_24_price
+          fieldName: "groups_description_first_block_24_price_ua",
+          fieldText: this.groups_description_first_block_24_price_ua
         },
         {
-          fieldName: "groups_description_second_block_24_price",
-          fieldText: this.groups_description_second_block_24_price
+          fieldName: "groups_description_second_block_24_price_ua",
+          fieldText: this.groups_description_second_block_24_price_ua
         },
         {
-          fieldName: "groups_description_third_block_24_price",
-          fieldText: this.groups_description_third_block_24_price
+          fieldName: "groups_description_third_block_24_price_ua",
+          fieldText: this.groups_description_third_block_24_price_ua
         },
         {
-          fieldName: "groups_description_fourth_block_24_price",
-          fieldText: this.groups_description_fourth_block_24_price
+          fieldName: "groups_description_fourth_block_24_price_ua",
+          fieldText: this.groups_description_fourth_block_24_price_ua
         }
       ]);
     },

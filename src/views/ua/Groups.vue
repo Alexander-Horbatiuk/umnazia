@@ -188,12 +188,12 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>{{ groups_description_first_block_title }}</p>
+                  <p>{{ groups_description_first_block_title_ua }}</p>
                 </div>
 
                 <div class="groups_sub_info_3_4 text_400_12">
                   <p>
-                    {{ groups_description_first_block_content }}
+                    {{ groups_description_first_block_content_ua }}
                   </p>
                 </div>
 
@@ -203,7 +203,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_first_block_12_price
+                        groups_description_first_block_12_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -213,7 +213,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_first_block_24_price
+                        groups_description_first_block_24_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -225,12 +225,12 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>{{ groups_description_second_block_title }}</p>
+                  <p>{{ groups_description_second_block_title_ua }}</p>
                 </div>
 
                 <div class="groups_sub_info_4_5 text_400_12">
                   <p>
-                    {{ groups_description_second_block_content }}
+                    {{ groups_description_second_block_content_ua }}
                     <br />
                     <br />
                   </p>
@@ -242,7 +242,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_second_block_12_price
+                        groups_description_second_block_12_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -252,7 +252,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_second_block_24_price
+                        groups_description_second_block_24_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -266,12 +266,12 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>{{ groups_description_third_block_title }}</p>
+                  <p>{{ groups_description_third_block_title_ua }}</p>
                 </div>
 
                 <div class="groups_sub_info_5_6 text_400_12">
                   <p>
-                    {{ groups_description_third_block_content }}
+                    {{ groups_description_third_block_content_ua }}
                     <br />
                     <br />
                   </p>
@@ -283,7 +283,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_third_block_12_price
+                        groups_description_third_block_12_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -293,7 +293,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_third_block_24_price
+                        groups_description_third_block_24_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -305,12 +305,12 @@
                 <div class="groups_opacity_round"></div>
 
                 <div class="groups_header_info text_bold">
-                  <p>{{ groups_description_fourth_block_title }}</p>
+                  <p>{{ groups_description_fourth_block_title_ua }}</p>
                 </div>
 
                 <div class="groups_sub_info_6_7 text_400_12">
                   <p>
-                    {{ groups_description_fourth_block_content }}
+                    {{ groups_description_fourth_block_content_ua }}
                     <br />
                     <br />
                     <br />
@@ -324,7 +324,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">12</span> занятий -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_fourth_block_12_price
+                        groups_description_fourth_block_12_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -334,7 +334,7 @@
                       Абонемент
                       <span class="sub_bold_text text_bold">24</span> занятия -
                       <span class="sub_orange_text text_bold">{{
-                        groups_description_fourth_block_24_price
+                        groups_description_fourth_block_24_price_ua
                       }}</span>
                       грн.
                     </p>
@@ -648,22 +648,22 @@ export default {
       tel: "+380",
       presentationName: "",
       presentationTel: "+380",
-      groups_description_first_block_title: "",
-      groups_description_second_block_title: "",
-      groups_description_third_block_title: "",
-      groups_description_fourth_block_title: "",
-      groups_description_first_block_content: "",
-      groups_description_second_block_content: "",
-      groups_description_third_block_content: "",
-      groups_description_fourth_block_content: "",
-      groups_description_first_block_12_price: "",
-      groups_description_second_block_12_price: "",
-      groups_description_third_block_12_price: "",
-      groups_description_fourth_block_12_price: "",
-      groups_description_first_block_24_price: "",
-      groups_description_second_block_24_price: "",
-      groups_description_third_block_24_price: "",
-      groups_description_fourth_block_24_price: "",
+      groups_description_first_block_title_ua: "",
+      groups_description_second_block_title_ua: "",
+      groups_description_third_block_title_ua: "",
+      groups_description_fourth_block_title_ua: "",
+      groups_description_first_block_content_ua: "",
+      groups_description_second_block_content_ua: "",
+      groups_description_third_block_content_ua: "",
+      groups_description_fourth_block_content_ua: "",
+      groups_description_first_block_12_price_ua: "",
+      groups_description_second_block_12_price_ua: "",
+      groups_description_third_block_12_price_ua: "",
+      groups_description_fourth_block_12_price_ua: "",
+      groups_description_first_block_24_price_ua: "",
+      groups_description_second_block_24_price_ua: "",
+      groups_description_third_block_24_price_ua: "",
+      groups_description_fourth_block_24_price_ua: "",
       b_nineteen: localStorage.getItem("b_nineteen"),
       b_twenty: localStorage.getItem("b_twenty"),
       currentButton: "",

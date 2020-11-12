@@ -6,6 +6,8 @@
 
         <div class="open_site" @click="toFieldsPage">изменить текст</div>
 
+        <div class="open_site" @click="toUAFieldsPage">изменить укр текст</div>
+
         <div class="open_site" @click="toFilesPage">добавить фото</div>
 
         <div class="open_site" @click="logout">закончить сеанс</div>
@@ -59,6 +61,9 @@ export default {
     },
     toFieldsPage() {
       this.$router.push({ name: "Admin" });
+    },
+    toUAFieldsPage() {
+      this.$router.push({ name: "AdminUA" });
     },
     async setPassword() {
       await this.setManagerPassword({ password: this.managerPassword });
