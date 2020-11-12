@@ -63,19 +63,23 @@
           </div>
 
           <div class="adress">
-            <div class="header_adress_text text_400_12">Мы находимся:</div>
-            <div class="text_700_12">
+            <div class="header_adress_text text_400_12">
+              Ми знаходимось:
+            </div>
+            <div class=" text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 class="header_text_map_link"
                 target="_blank"
-                >г.Одесса, просп. Шевченко 27</a
+                >м.Одеса, просп. Шевченко 27</a
               >
             </div>
           </div>
 
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">Наши соц сети</div>
+            <div class="social_text text_400_12">
+              Наші соц мережі
+            </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -126,27 +130,27 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/about/ua" class="el_menu_link"
-                >О нас</router-link
+                >Про нас</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/technique/ua" class="el_menu_link"
-                >Методика и формат</router-link
+                >Методика та формат</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/services/ua" class="el_menu_link"
-                >Наши Услуги</router-link
+                >Наші Послуги</router-link
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Расписание</a>
+              <a class="selected_page">Розклад</a>
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Группы и Стоимость</router-link
+                >Групи та вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -156,7 +160,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/contacts/ua" class="el_menu_link"
-                >Контакты</router-link
+                >Контакти</router-link
               >
             </div>
           </div>
@@ -175,21 +179,21 @@
           <div class="box_line_heading text_bold">
             <!--box-line-->
             <div class="heading_text">
-              <h3>Расписание</h3>
+              <h3>розклад</h3>
             </div>
           </div>
 
           <div class="main_content_header_sub_text text_400_12">
             <p>
-              Работаем <span class="sub_text_bold text_700_12"> 6 дней</span> в
-              неделю в формате полудневки
+              Працюємо <span class="sub_text_bold text_700_12"> 6 днів</span> в
+              тиждень в форматі Полуднівка
             </p>
           </div>
 
           <div class="main_content_header_sub_text text_400_12">
             <p>
-              <span class="sub_text_bold text_700_12">4 часа</span> разделены
-              на<span class="sub_text_bold text_700_12"> 4 блока</span>
+              <span class="sub_text_bold text_700_12">4 години</span> розділені
+              на<span class="sub_text_bold text_700_12"> 4 блоки</span>
             </p>
           </div>
         </div>
@@ -202,17 +206,17 @@
               </div>
 
               <div class="info_random_header text_bold">
-                <p>Дискусионный блок</p>
+                <p>Дискусійні блок</p>
               </div>
 
               <div class="info_random_sub_text text_400_12">
                 <p>
-                  Чтение художественной литературы, обсуждение прочитанного,
-                  игры на развитие воображения с применением методики ТРИЗ.
+                  Читання художньої літератури, обговорення прочитаного, ігри на
+                  розвиток уяви із застосуванням методики ТРВЗ.
                   <br />
-                  Цель-научить ребёнка грамотно высказывать свои мысли и мнение,
-                  научиться слушать собеседника, учитывать мнение другого
-                  собеседника, развитие фонематического слуха.
+                  Мета-навчити дитину грамотно висловлювати свої думки і думку,
+                  навчитися слухати співрозмовника, враховувати думку іншого
+                  співрозмовника, розвиток фонематичного слуху.
                 </p>
               </div>
             </div>
@@ -223,18 +227,21 @@
               </div>
 
               <div class="info_random_header text_bold">
-                <p>Гуманитарный блок</p>
+                <p>Гуманітарний блок</p>
               </div>
 
               <div class="info_random_sub_text text_400_12">
                 <p>
-                  -Знакомство с буквами и чтением с использованием карточек
-                  Домана, кубиков Чаплыгина и авторского методического пособия
+                  -Знайомство з буквами і читанням з використанням карток
+                  Домана, кубиків Чаплигіна і авторського методичного посібника
                   <br />
-                  -развитие моторики в системной связке с изучаемым
-                  грамматическим материалом<br />
-                  -формирование навыков письма и каллиграфии<br />
-                  -упражнения на развитие фонематического слуха<br />
+                  -розвиток моторики в системній зв'язці з досліджуваним
+                  граматичним матеріалом
+                  <br />
+                  -формування навичок письма і каліграфії
+                  <br />
+                  -вправи на розвиток фонематичного слуху
+                  <br />
                 </p>
               </div>
             </div>
@@ -247,15 +254,15 @@
               </div>
 
               <div class="info_random_header info_random_math text_bold">
-                <p>Математический блок</p>
+                <p>Математичний блок</p>
               </div>
 
               <div class="info_random_sub_text text_400_12">
                 <p>
-                  -Знакомство с цифрами и числами <br />
-                  -формирование навыков простого счёта <br />
-                  -Обучение финансовой грамотности <br />
-                  -тренировка памяти и логического мышления <br />
+                  -Знайомство з цифрами і числами <br />
+                  -формування навичок простого рахунку <br />
+                  -Навчання фінансової грамотності <br />
+                  -тренування пам'яті і логічного мислення <br />
                 </p>
               </div>
             </div>
@@ -266,15 +273,16 @@
               </div>
 
               <div class="info_random_header text_bold">
-                <p>Научный блок</p>
+                <p>Науковий блок</p>
               </div>
 
               <div class="info_random_sub_text text_400_12">
                 <p>
-                  -знакомство с законами природы и влиянии человека на
-                  окружающий мир <br />
-                  -изучение истории, географии, физики, Химии и астрономии в
-                  соответствии с возрастными особенностями ребёнка
+                  -знайомство з законами природи і вплив людини на навколишній
+                  світ
+                  <br />
+                  -вивчення історії, географії, фізики, хімії та астрономії
+                  відповідно до вікових особливостей дитини
                 </p>
               </div>
             </div>
@@ -361,21 +369,21 @@
             <div class="russian_day_wrapper">
               <div class="russian_day_text text_400_12">
                 <div class="green_calendar_mark_russian"></div>
-                <p>Понедельник, Четверг - Русский день</p>
+                <p>Понеділок, Четвер - Російський день</p>
               </div>
             </div>
 
             <div class="ukrainian_day_wrapper">
               <div class="ukrainian_day_text text_400_12">
                 <div class="orange_calendar_mark_ukraine"></div>
-                <p>Вторник, Пятница - Украинский день</p>
+                <p>Вівторок, П'ятниця - Український день</p>
               </div>
             </div>
 
             <div class="english_day_wrapper">
               <div class="english_day_text text_400_12">
                 <div class="dark_blue_calendar_mark_engl"></div>
-                <p>Среда, Суббота - English day</p>
+                <p>Понеділок, Субота - English day</p>
               </div>
             </div>
           </div>
@@ -385,13 +393,13 @@
           <!--Clock-block-->
 
           <div class="training_format_header_text text_bold">
-            <p>Формат занятий</p>
+            <p>Формат занять</p>
           </div>
 
           <div class="training_format_header_subtext text_bold">
             <p>
-              Работаем <span class="text_bold">6 дней</span> в неделю (формат -
-              полудневки)
+              Працюємо <span class="text_bold">6 днів</span> в тиждень (формат -
+              Полуднівка)
             </p>
           </div>
 
@@ -403,12 +411,12 @@
 
               <div @click="showModal('b_fifteen')" class="text_bold">
                 <button v-if="!b_fifteen" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -420,12 +428,12 @@
 
               <div @click="showModal('b_sixteen')" class="text_bold">
                 <button v-if="!b_sixteen" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -445,12 +453,12 @@
 
         <div class="footer_header_text text_700_12">
           <p>
-            Предлагаем посетить наши
-            <span class="footer_header_text_upper">уроки-презентации !</span>
+            Пропонуємо відвідати наші
+            <span class="footer_header_text_upper">уроки-презентації !</span>
           </p>
         </div>
         <div class="footer_form_text text_400_12">
-          <p>Записаться на презентацию можно просто заполнив форму ниже!</p>
+          <p>Записатися на презентацію можна просто заповнивши форму нижче!</p>
         </div>
 
         <form
@@ -484,14 +492,14 @@
               class="submit_form_btn text_700_12"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
             <button
               v-else
               class="training_format_submit_orange_btn"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
           </div>
         </form>
@@ -522,7 +530,7 @@
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
-                >г. Одесса, просп. Шевченко 27</a
+                >м. Одеса, просп. Шевченко 27</a
               >
             </div>
             <div class="modal_phone modal_phone_icon">
@@ -586,12 +594,12 @@
             class="modal_btn_wrapper text_Bold"
           >
             <button v-if="!b_eighteen" class="modal_submit_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
           </div>
         </div>
@@ -605,7 +613,7 @@
             @click="scrollToTop"
           ></button>
         </div>
-        <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
+        <p>Академія знань “Умназія” 2020 © Усі права захищені</p>
       </div>
     </footer>
 
@@ -613,7 +621,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записаться в группу</p>
+          <p class="head_form">Записатися до групи</p>
           <input
             v-model="name"
             type="text"
@@ -626,7 +634,7 @@
             placeholder="Ваше номер телефона"
             class="number_form"
           />
-          <button class="bt_modal_form">Отправить</button>
+          <button class="bt_modal_form">Надіслати</button>
         </div>
       </form>
     </div>
@@ -634,26 +642,28 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/about/ua" class="el_menu_modal">Про нас</router-link>
         <router-link to="/technique/ua" class="el_menu_modal"
-          >Методика и формат</router-link
+          >Методика та формат</router-link
         >
         <router-link to="/services/ua" class="el_menu_modal"
-          >Наши Услуги
+          >Наші послуги
         </router-link>
         <router-link to="/timetable/ua" class="el_menu_modal"
-          >Расписание
+          >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Группы и Стоимость</router-link
+          >Групи та вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
-        <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
+        <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
-            <div class="social_text text_400_12">Наши соц сети</div>
+            <div class="social_text text_400_12">
+              Наші соц мережі
+            </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a

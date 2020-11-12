@@ -66,20 +66,20 @@
 
           <!--_____________________adress________________________ -->
           <div class="adress">
-            <div class="header_adress_text text_400_12">Мы находимся:</div>
+            <div class="header_adress_text text_400_12">Ми знаходимось:</div>
             <div class="text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
                 class="header_text_map_link"
-                >г.Одесса, просп. Шевченко 27</a
+                >м.Одеса, просп. Шевченко 27</a
               >
             </div>
           </div>
 
           <!--_____________________social_wrapper________________ -->
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">Наши соц сети</div>
+            <div class="social_text text_400_12">Наші соц мережі</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -133,29 +133,29 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/about/ua" class="el_menu_link"
-                >О нас</router-link
+                >Про нас</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/technique/ua" class="el_menu_link"
-                >Методика и формат</router-link
+                >Методика та формат</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/services/ua" class="el_menu_link"
-                >Наши Услуги</router-link
+                >Наші Послуги</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/timetable/ua" class="el_menu_link"
-                >Расписание</router-link
+                >Розклад</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Группы и Стоимость</router-link
+                >Группы та Вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -165,7 +165,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/contacts/ua" class="el_menu_link"
-                >Контакты</router-link
+                >Контакти</router-link
               >
             </div>
           </div>
@@ -1523,7 +1523,7 @@
           <div class="bg_teacher"></div>
 
           <div class="sticker_footer">
-            <p class="sticker_footer_header">Родитель - не учитель!</p>
+            <p class="sticker_footer_header">Батьки - не вчитель!</p>
             <p class="sticker_footer_text">
               Приходите к нам и мы с удовольстием поделимся своими знаниями с
               вашими детьми!
@@ -1557,7 +1557,7 @@
                   class="modal_adress_link"
                   href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                   target="_blank"
-                  >г. Одесса, просп. Шевченко 27</a
+                  >м. Одеса, просп. Шевченко 27</a
                 >
               </div>
               <div class="modal_phone modal_phone_icon">
@@ -1621,15 +1621,15 @@
                 v-if="!b_four"
                 class="training_format_submit_btn btn_rtans"
               >
-                Записаться в<br />
-                группу
+                Записатися до<br />
+                групи
               </button>
               <button
                 v-else
                 class="training_format_submit_orange_btn btn_rtans"
               >
-                Записаться в<br />
-                группу
+                Записатися до<br />
+                групи
               </button>
             </div>
           </div>
@@ -1643,7 +1643,7 @@
         </div>
 
         <p class="administration_slogan">
-          Академия знаний “Умназія” 2020 © Все права защищены
+          Академія знань “Умназія” 2020 © Усі права захищені
         </p>
       </footer>
 
@@ -1651,7 +1651,7 @@
         <form @submit.prevent="preSend">
           <div class="wrap_form">
             <div @click="hideModal" class="bt_close">+</div>
-            <p class="head_form">Записаться в группу</p>
+            <p class="head_form">Записатися до групи</p>
             <input
               v-model="name"
               type="text"
@@ -1667,7 +1667,7 @@
               required
               minlength="9"
             />
-            <button class="bt_modal_form">Отправить</button>
+            <button class="bt_modal_form">Надіслати</button>
           </div>
         </form>
       </div>
@@ -1675,28 +1675,30 @@
       <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
         <div @click="hideMobileMenu" class="close_mobile_menu"></div>
         <div class="mobile_menu">
-          <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+          <router-link to="/about/ua" class="el_menu_modal"
+            >Про нас</router-link
+          >
           <router-link to="/technique/ua" class="el_menu_modal"
-            >Методика и формат</router-link
+            >Методика та формат</router-link
           >
           <router-link to="/services/ua" class="el_menu_modal"
-            >Наши Услуги
+            >Наші послуги
           </router-link>
           <router-link to="/timetable/ua" class="el_menu_modal"
-            >Расписание
+            >Розклад
           </router-link>
           <router-link to="/groups/ua" class="el_menu_modal"
-            >Группы и Стоимость</router-link
+            >Групи та вартість</router-link
           >
           <router-link to="/gallery/ua" class="el_menu_modal"
             >Фотогалерея</router-link
           >
           <router-link to="contacts" class="el_menu_modal"
-            >Контакты</router-link
+            >Контакти</router-link
           >
           <div class="social_wrapper">
             <div class="head_social_wrapper">
-              <div class="social_text text_400_12">Наши соц сети</div>
+              <div class="social_text text_400_12">Наші соц мережі</div>
               <div class="social_icons_links">
                 <div class="social_icon_item">
                   <a

@@ -63,19 +63,23 @@
           </div>
 
           <div class="adress">
-            <div class="header_adress_text text_400_12">Мы находимся:</div>
-            <div class="text_700_12">
+            <div class="header_adress_text text_400_12">
+              Ми знаходимось:
+            </div>
+            <div class=" text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
-                class="header_text_map_link"
-                >г.Одесса, просп. Шевченко 27</a
+                class="header_text_map_link "
+                >м.Одеса, просп. Шевченко 27</a
               >
             </div>
           </div>
 
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">Наши соц сети</div>
+            <div class="social_text text_400_12">
+              Наші соц мережі
+            </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -125,28 +129,28 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <a class="selected_page">О нас</a>
+              <a class="selected_page">Про нас</a>
             </div>
             <div class="el_menu">
               <router-link to="/technique/ua" class="el_menu_link"
-                >Методика и формат</router-link
+                >Методика та формат</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/services/ua" class="el_menu_link"
-                >Наши Услуги</router-link
+                >Наші Послуги</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/timetable/ua" class="el_menu_link"
-                >Расписание</router-link
+                >Розклад</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Группы и Стоимость</router-link
+                >Групи та вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -156,7 +160,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/contacts/ua" class="el_menu_link"
-                >Контакты</router-link
+                >Контакти</router-link
               >
             </div>
           </div>
@@ -174,7 +178,7 @@
         <div class="box_line_heading text_Bold">
           <!--box-line-->
           <div class="heading_text">
-            <h3>о нас</h3>
+            <h3>Про нас</h3>
           </div>
         </div>
 
@@ -187,18 +191,17 @@
             <div class="about_content_text_wrapper text_400_12">
               <p class="about_content_info_text_school">
                 <span class="about_content_text_decoration text_Bold"
-                  >Добро пожаловать, уважаемые родители любознательных и
-                  активных детей!</span
+                  >Ласкаво просимо, шановні батьки допитливих і активних
+                  дітей!</span
                 >
-                Мы очень рады, что Вы попали на наш сайт, потому что Вас ждет
-                много интересных минут и творческих открытий.
+                Ми дуже раді, що Ви потрапили на наш сайт, тому що Вас чекає
+                багато цікавих хвилин і творчих відкриттів.
               </p>
 
               <p>
-                Вы хотите, чтобы ваш малыш рос крепким, веселым, общительным и
-                талантливым? Тогда вам стоит приготовиться к тому, что его
-                воспитание потребует от вас много сил, профессиональных знаний и
-                времени.
+                Ви хочете, щоб ваш малюк ріс міцним, веселим, товариським і
+                талановитим? Тоді вам варто приготуватися до того, що його
+                виховання зажадає від вас багато сил, професійних знань і часу.
               </p>
             </div>
           </div>
@@ -212,37 +215,37 @@
               class="about_content_text_wrapper text_400_12 down_content_text"
             >
               <p class="about_content_info_text_children">
-                Ведь воспитание малыша — это сложный процесс с массой тонких
-                нюансов, которые зачастую известны только настоящим мастерам.
-                Все родители знают, что самое главное — любить своего малыша и
-                заботиться о нем. Однако далеко не все мамы и папы знают, как
-                правильно воспитывать ребенка, чтобы он сумел максимально
-                развить свой творческий потенциал.
+                Адже виховання малюка - це складний процес з масою тонких
+                нюансів, які часто відомі лише справжнім майстрам. Всі батьки
+                знають, що найголовніше - любити свого малюка і дбати про нього.
+                Однак далеко не всі мами і тата знають, як правильно виховувати
+                дитину, щоб він зумів максимально розвинути свій творчий
+                потенціал.
               </p>
             </div>
           </div>
 
           <div class="about_head_footer_text_wrapper">
             <div class="about_head_footer_text text_Bold">
-              <p>Наши цели</p>
+              <p>Наші цілі</p>
             </div>
             <div class="about_footer_text text_400_12">
               <p>
-                Создавать такую среду вокруг ребенка, где он сможет проявлять и
-                выражать себя, раскрывать свой потенциал.
+                Створювати таку середу навколо дитини, де він зможе виявляти і
+                виражати себе, розкривати свій потенціал.
               </p>
             </div>
             <div class="about_footer_text text_400_12">
               <p>
-                Побуждать и стимулировать самостоятельность, ответственность и
-                умение проявлять свои индивидуальные особенности и таланты, быть
-                активным.
+                Спонукати і стимулювати самостійність, відповідальність і вміння
+                виявляти свої індивідуальні особливості і таланти, бути
+                активним.
               </p>
             </div>
             <div class="about_footer_text text_400_12">
               <p>
-                Формировать положительное отношение к себе и окружающему миру, а
-                также умение взаимодействовать с другими людьми.
+                Формувати позитивне ставлення до себе і навколишнього світу, а
+                також вміння взаємодіяти з іншими людьми.
               </p>
             </div>
           </div>
@@ -260,12 +263,12 @@
 
         <div class="footer_header_text text_700_12">
           <p>
-            Предлагаем посетить наши
-            <span class="footer_header_text_upper">уроки-презентации !</span>
+            Пропонуємо відвідати наші
+            <span class="footer_header_text_upper">уроки-презентації !</span>
           </p>
         </div>
         <div class="footer_form_text text_400_12">
-          <p>Записаться на презентацию можно просто заполнив форму ниже!</p>
+          <p>Записатися на презентацію можна просто заповнивши форму нижче!</p>
         </div>
 
         <form
@@ -299,14 +302,14 @@
               class="submit_form_btn text_700_12"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
             <button
               v-else
               class="training_format_submit_orange_btn"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
           </div>
         </form>
@@ -337,7 +340,7 @@
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
-                >г. Одесса, просп. Шевченко 27</a
+                >м. Одеса, просп. Шевченко 27</a
               >
             </div>
             <div class="modal_phone modal_phone_icon">
@@ -397,12 +400,12 @@
           </div>
           <div @click="showModal('b_six')" class="modal_btn_wrapper text_Bold">
             <button v-if="!b_six" class="modal_submit_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
           </div>
         </div>
@@ -416,7 +419,7 @@
             style="cursor: pointer"
           ></button>
         </div>
-        <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
+        <p>Академія знань “Умназія” 2020 © Усі права захищені</p>
       </div>
     </footer>
 
@@ -424,7 +427,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записаться в группу</p>
+          <p class="head_form">Записатися до групи</p>
           <input
             v-model="name"
             type="text"
@@ -437,7 +440,7 @@
             placeholder="Ваше номер телефона"
             class="number_form"
           />
-          <button class="bt_modal_form">Отправить</button>
+          <button class="bt_modal_form">Надіслати</button>
         </div>
       </form>
     </div>
@@ -445,26 +448,28 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/about/ua" class="el_menu_modal">Про нас</router-link>
         <router-link to="/technique/ua" class="el_menu_modal"
-          >Методика и формат</router-link
+          >Методика та формат</router-link
         >
         <router-link to="/services/ua" class="el_menu_modal"
-          >Наши Услуги
+          >Наші послуги
         </router-link>
         <router-link to="/timetable/ua" class="el_menu_modal"
-          >Расписание
+          >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Группы и Стоимость</router-link
+          >Групи та вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
-        <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
+        <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
-            <div class="social_text text_400_12">Наши соц сети</div>
+            <div class="social_text text_400_12">
+              Наші соц мережі
+            </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
