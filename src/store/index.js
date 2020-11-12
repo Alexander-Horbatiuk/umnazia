@@ -35,10 +35,43 @@ export default new Vuex.Store({
       await axios({
         method: "post",
         url: process.env.VUE_APP_API + "/fields",
-        headers: { "content-type": "application/json" },
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`
+        },
         data
       });
       dispatch("getFields");
+    },
+    async login(context, data) {
+      return axios({
+        method: "post",
+        url: process.env.VUE_APP_API + "/auth/login",
+        headers: { "content-type": "application/json" },
+        data
+      });
+    },
+    async checkIsAdmin() {
+      return axios({
+        method: "get",
+        url: process.env.VUE_APP_API + "/auth/isAdmin",
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
+      });
+    },
+    async getManagerPassword() {
+      return axios({
+        method: "get",
+        url: process.env.VUE_APP_API + "/auth/manager",
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
+      });
+    },
+    async setManagerPassword(context, data) {
+      return axios({
+        method: "post",
+        url: process.env.VUE_APP_API + "/auth/manager",
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
+        data
+      });
     }
   },
   modules: {}

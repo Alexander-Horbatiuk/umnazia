@@ -6,13 +6,13 @@
           <div class="logo">
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_tablet.png"
+                src="../../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
             /></router-link>
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_phone.png"
+                src="../../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
             /></router-link>
@@ -46,7 +46,7 @@
           <div class="big_logo">
             <router-link to="/" class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -61,8 +61,8 @@
             <div class=" text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                class="header_text_map_link"
                 target="_blank"
+                class="header_text_map_link "
                 >г.Одесса, просп. Шевченко 27</a
               >
             </div>
@@ -81,7 +81,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -94,7 +94,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -106,7 +106,10 @@
                   href="https://www.youtube.com/"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png//youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png//youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -118,7 +121,7 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/about" class="el_menu_link">О нас</router-link>
+              <a class="selected_page">О нас</a>
             </div>
             <div class="el_menu">
               <router-link to="/technique" class="el_menu_link"
@@ -131,7 +134,9 @@
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Расписание</a>
+              <router-link to="/timetable" class="el_menu_link"
+                >Расписание</router-link
+              >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
@@ -159,270 +164,85 @@
         class="mobile_menu_button"
       ></div>
     </header>
-    <!--main-->
+
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="timetable_header_info_wrapper">
-          <div class="box_line_heading text_bold">
-            <!--box-line-->
-            <div class="heading_text">
-              <h3>Расписание</h3>
-            </div>
-          </div>
-
-          <div class="main_content_header_sub_text text_400_12">
-            <p>
-              Работаем <span class="sub_text_bold text_700_12"> 6 дней</span> в
-              неделю в формате полудневки
-            </p>
-          </div>
-
-          <div class="main_content_header_sub_text text_400_12">
-            <p>
-              <span class="sub_text_bold text_700_12">4 часа</span> разделены
-              на<span class="sub_text_bold text_700_12"> 4 блока</span>
-            </p>
+        <div class="box_line_heading text_Bold">
+          <!--box-line-->
+          <div class="heading_text">
+            <h3>о нас</h3>
           </div>
         </div>
 
-        <div class="timetable_content_info_wrapper">
-          <div class="timetable_content_info_sub_wrapper">
-            <div class="timetable_info_random_blocks">
-              <div class="discussion_wrapper">
-                <div class="timetable_discussion_round"></div>
-              </div>
+        <div class="upper_content_info_main_wrapper">
+          <div class="upper_content_info_wrapper">
+            <div
+              class="about_content_image_wrapper about_img_content_school"
+            ></div>
 
-              <div class="info_random_header text_bold">
-                <p>Дискусионный блок</p>
-              </div>
+            <div class="about_content_text_wrapper text_400_12">
+              <p class="about_content_info_text_school">
+                <span class="about_content_text_decoration text_Bold"
+                  >Добро пожаловать, уважаемые родители любознательных и
+                  активных детей!</span
+                >
+                Мы очень рады, что Вы попали на наш сайт, потому что Вас ждет
+                много интересных минут и творческих открытий.
+              </p>
 
-              <div class="info_random_sub_text text_400_12">
-                <p>
-                  Чтение художественной литературы, обсуждение прочитанного,
-                  игры на развитие воображения с применением методики ТРИЗ.
-                  <br />
-                  Цель-научить ребёнка грамотно высказывать свои мысли и мнение,
-                  научиться слушать собеседника, учитывать мнение другого
-                  собеседника, развитие фонематического слуха.
-                </p>
-              </div>
-            </div>
-
-            <div class="timetable_info_random_blocks">
-              <div class="humanitarian_wrapper">
-                <div class="timetable_discussion_round"></div>
-              </div>
-
-              <div class="info_random_header text_bold">
-                <p>Гуманитарный блок</p>
-              </div>
-
-              <div class="info_random_sub_text text_400_12">
-                <p>
-                  -Знакомство с буквами и чтением с использованием карточек
-                  Домана, кубиков Чаплыгина и авторского методического пособия
-                  <br />
-                  -развитие моторики в системной связке с изучаемым
-                  грамматическим материалом<br />
-                  -формирование навыков письма и каллиграфии<br />
-                  -упражнения на развитие фонематического слуха<br />
-                </p>
-              </div>
+              <p>
+                Вы хотите, чтобы ваш малыш рос крепким, веселым, общительным и
+                талантливым? Тогда вам стоит приготовиться к тому, что его
+                воспитание потребует от вас много сил, профессиональных знаний и
+                времени.
+              </p>
             </div>
           </div>
 
-          <div class="timetable_content_info_sub_wrapper">
-            <div class="timetable_info_random_blocks">
-              <div class="math_wrapper">
-                <div class="timetable_discussion_round"></div>
-              </div>
+          <div class="down_content_info_wrapper">
+            <div
+              class="about_content_image_wrapper about_img_content_children img_decoration"
+            ></div>
 
-              <div class="info_random_header info_random_math text_bold">
-                <p>Математический блок</p>
-              </div>
-
-              <div class="info_random_sub_text text_400_12">
-                <p>
-                  -Знакомство с цифрами и числами <br />
-                  -формирование навыков простого счёта <br />
-                  -Обучение финансовой грамотности <br />
-                  -тренировка памяти и логического мышления <br />
-                </p>
-              </div>
+            <div
+              class="about_content_text_wrapper text_400_12 down_content_text"
+            >
+              <p class="about_content_info_text_children">
+                Ведь воспитание малыша — это сложный процесс с массой тонких
+                нюансов, которые зачастую известны только настоящим мастерам.
+                Все родители знают, что самое главное — любить своего малыша и
+                заботиться о нем. Однако далеко не все мамы и папы знают, как
+                правильно воспитывать ребенка, чтобы он сумел максимально
+                развить свой творческий потенциал.
+              </p>
             </div>
+          </div>
 
-            <div class="timetable_info_random_blocks">
-              <div class="scientific_wrapper">
-                <div class="timetable_discussion_round"></div>
-              </div>
-
-              <div class="info_random_header text_bold">
-                <p>Научный блок</p>
-              </div>
-
-              <div class="info_random_sub_text text_400_12">
-                <p>
-                  -знакомство с законами природы и влиянии человека на
-                  окружающий мир <br />
-                  -изучение истории, географии, физики, Химии и астрономии в
-                  соответствии с возрастными особенностями ребёнка
-                </p>
-              </div>
+          <div class="about_head_footer_text_wrapper">
+            <div class="about_head_footer_text text_Bold">
+              <p>Наши цели</p>
+            </div>
+            <div class="about_footer_text text_400_12">
+              <p>
+                Создавать такую среду вокруг ребенка, где он сможет проявлять и
+                выражать себя, раскрывать свой потенциал.
+              </p>
+            </div>
+            <div class="about_footer_text text_400_12">
+              <p>
+                Побуждать и стимулировать самостоятельность, ответственность и
+                умение проявлять свои индивидуальные особенности и таланты, быть
+                активным.
+              </p>
+            </div>
+            <div class="about_footer_text text_400_12">
+              <p>
+                Формировать положительное отношение к себе и окружающему миру, а
+                также умение взаимодействовать с другими людьми.
+              </p>
             </div>
           </div>
         </div>
-
-        <div class="timetable_calendar_wrapper">
-          <div class="timetable_calendar_sub_wrapper">
-            <div class="timetable_calendar_monday">
-              <div class="calendar_day text_400_12">
-                <p>Пн</p>
-              </div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_tuesday">
-              <div class="calendar_day text_400_12">
-                <p>Вт</p>
-              </div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_wednesday">
-              <div class="calendar_day text_400_12">
-                <p>Ср</p>
-              </div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_thursday">
-              <div class="calendar_day text_400_12">
-                <p>Чт</p>
-              </div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-              <div class="green_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_friday">
-              <div class="calendar_day text_400_12">
-                <p>Пт</p>
-              </div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-              <div class="orange_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_saturday">
-              <div class="calendar_day text_400_12">
-                <p>Сб</p>
-              </div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-              <div class="dark_blue_calendar_mark"></div>
-            </div>
-
-            <div class="timetable_calendar_sunday">
-              <div class="calendar_day text_400_12">
-                <p>Вс</p>
-              </div>
-              <div class="grey_calendar_mark"></div>
-              <div class="grey_calendar_mark"></div>
-              <div class="grey_calendar_mark"></div>
-              <div class="grey_calendar_mark"></div>
-            </div>
-          </div>
-
-          <div class="learning_days_wrapper">
-            <div class="russian_day_wrapper">
-              <div class="russian_day_text text_400_12">
-                <div class="green_calendar_mark_russian"></div>
-                <p>Понедельник, Четверг - Русский день</p>
-              </div>
-            </div>
-
-            <div class="ukrainian_day_wrapper">
-              <div class="ukrainian_day_text text_400_12">
-                <div class="orange_calendar_mark_ukraine"></div>
-                <p>Вторник, Пятница - Украинский день</p>
-              </div>
-            </div>
-
-            <div class="english_day_wrapper">
-              <div class="english_day_text text_400_12">
-                <div class="dark_blue_calendar_mark_engl"></div>
-                <p>Среда, Суббота - English day</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="training_format_wrapper">
-          <!--Clock-block-->
-
-          <div class="training_format_header_text text_bold">
-            <p>Формат занятий</p>
-          </div>
-
-          <div class="training_format_header_subtext text_bold">
-            <p>
-              Работаем <span class="text_bold">6 дней</span> в неделю (формат -
-              полудневки)
-            </p>
-          </div>
-
-          <div class="clocks_wrapper">
-            <div class="class_hours class_hours_9am">
-              <div class="time_text_9am text_bold">
-                <p>{{ timetable_clock_morning }}</p>
-              </div>
-
-              <div @click="showModal('b_fifteen')" class="text_bold">
-                <button v-if="!b_fifteen" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-                <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-
-            <div class="class_hours class_hours_14pm">
-              <div class="time_text_14pm text_bold">
-                <p>{{ timetable_clock_evening }}</p>
-              </div>
-
-              <div @click="showModal('b_sixteen')" class="text_bold">
-                <button v-if="!b_sixteen" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-                <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Clock-block-end-->
       </div>
     </main>
 
@@ -471,7 +291,7 @@
 
           <div class="submit_form_btn_wrapper">
             <button
-              v-if="!b_seventeen"
+              v-if="!b_five"
               class="submit_form_btn text_700_12"
               type="submit"
             >
@@ -502,7 +322,7 @@
         <div class="modal_window">
           <div class="modal_logo_wrapper">
             <img
-              src="../assets/img/img_png/umnazia_logo_footer.png"
+              src="../../assets/img/img_png/umnazia_logo_footer.png"
               alt="umnaziya logo"
             />
           </div>
@@ -527,7 +347,7 @@
               >
             </div>
             <div class="modal_email ">
-              <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
+              <a class="modal_email_link" href="mailto:umnazia.ua@gmail.com "
                 >umnazia.ua@gmail.com</a
               >
             </div>
@@ -541,18 +361,21 @@
                 href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
               >
                 <img
-                  src="../assets/img/img_png/instagram.png"
+                  src="../../assets/img/img_png/instagram.png"
                   alt="instagram "
                 />
               </a>
             </div>
-            <div class="modal_social_icon_item">
+            <div class="modal_social_icon_item ">
               <a
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.facebook.com/profile.php?id=100054250201674"
               >
-                <img src="../assets/img/img_png/facebook.png" alt="facebook " />
+                <img
+                  src="../../assets/img/img_png/facebook.png"
+                  alt="facebook "
+                />
               </a>
             </div>
             <div class="modal_social_icon_item ">
@@ -561,16 +384,15 @@
                 style="cursor: pointer"
                 href="https://www.youtube.com/"
               >
-                <img src="../assets/img/img_png/youtube.png" alt="youtube " />
+                <img
+                  src="../../assets/img/img_png/youtube.png"
+                  alt="youtube "
+                />
               </a>
             </div>
           </div>
-
-          <div
-            @click="showModal('b_eighteen')"
-            class="modal_btn_wrapper text_Bold "
-          >
-            <button v-if="!b_eighteen" class="modal_submit_btn">
+          <div @click="showModal('b_six')" class="modal_btn_wrapper text_Bold ">
+            <button v-if="!b_six" class="modal_submit_btn">
               Записаться в<br />
               группу
             </button>
@@ -582,9 +404,13 @@
         </div>
       </div>
 
-      <div class="footer_copyright text_400_12">
-        <div class="btn_anchor_wrapper">
-          <button class="btn_anchor" @click="scrollToTop"></button>
+      <div class="footer_copyright text_400_12 ">
+        <div class="btn_anchor_wrapper ">
+          <button
+            class="btn_anchor"
+            @click="scrollToTop"
+            style="cursor: pointer"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -646,7 +472,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -659,7 +485,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -671,7 +497,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -688,23 +517,19 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions } from "vuex";
 export default {
-  name: "Timetable",
+  name: "About",
   data() {
     return {
       isModal: false,
+      mobileMenuOpen: false,
       name: "",
       tel: "+380",
       presentationName: "",
-      mobileMenuOpen: false,
       presentationTel: "+380",
-      timetable_clock_morning: "",
-      timetable_clock_evening: "",
-      b_fifteen: localStorage.getItem("b_fifteen"),
-      b_sixteen: localStorage.getItem("b_sixteen"),
-      b_seventeen: localStorage.getItem("b_seventeen"),
-      b_eighteen: localStorage.getItem("b_eighteen"),
+      b_five: localStorage.getItem("b_five"),
+      b_six: localStorage.getItem("b_six"),
       currentButton: "",
       lang: "ru"
     };
@@ -714,12 +539,8 @@ export default {
       window.scrollTo(0, 0);
     },
     showModal(button) {
-      this.isModal = true;
       this.currentButton = button;
-    },
-    showMobileMenu() {
-      this.mobileMenuOpen = true;
-      document.body.style.overflowY = "hidden";
+      this.isModal = true;
     },
     toggleLang() {
       if (this.lang === "ru") {
@@ -728,12 +549,16 @@ export default {
         this.lang = "ru";
       }
     },
+    hideModal() {
+      this.isModal = false;
+    },
+    showMobileMenu() {
+      this.mobileMenuOpen = true;
+      document.body.style.overflowY = "hidden";
+    },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
       document.body.style.overflowY = "scroll";
-    },
-    hideModal() {
-      this.isModal = false;
     },
     preSend() {
       this.sendTel({
@@ -757,23 +582,15 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
-      localStorage.setItem("b_seventeen", true);
-      this.b_seventeen = true;
+      localStorage.setItem("b_five", true);
+      this.b_five = true;
     },
-    ...mapActions(["sendTel", "getFields"])
+    ...mapActions(["sendTel"])
   },
-  computed: mapState({
-    fields: state => state.fields
-  }),
-  async created() {
+  created() {
     document.body.style.overflowY = "scroll";
-    await this.getFields();
-    const keys = Object.keys(this.fields);
-    keys.forEach(key => {
-      this[key] = this.fields[key];
-    });
   }
 };
 </script>
 
-<style scoped src="../assets/styles/timetable_style.css" lang="css"></style>
+<style scoped src="../../assets/styles/about_style.css" lang="css"></style>

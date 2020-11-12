@@ -40,6 +40,63 @@ export default {
 
 <style src="./assets/styles/reset.css" lang="css"></style>
 <style>
+@media screen and (max-width: 750px) {
+  .btn_lang_open {
+    width: 45px !important;
+    height: 33px !important;
+  }
+
+  .btn_lang_open::after {
+    top: 9.5px !important;
+    right: 5px !important;
+  }
+}
+
+.main_lang_button {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.btn_lang_open {
+  box-sizing: border-box;
+  width: 65px;
+  height: 39px;
+  border-radius: 10px;
+  background: #f26914;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  transition: 0.7s;
+}
+
+.btn_lang_open::after {
+  content: " ";
+  background-image: url(./assets/img/img_png/arrow_button.png);
+  width: 9px;
+  height: 9px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 12.5px;
+  right: 15px;
+  transform: rotate(180deg);
+}
+
 .disble-controls {
   display: none;
 }

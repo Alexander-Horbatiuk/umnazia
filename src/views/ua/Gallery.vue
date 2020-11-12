@@ -5,15 +5,15 @@
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <router-link to="/"
+            <router-link to="/ua"
               ><img
-                src="../assets/img/logo/logo_tablet.png"
+                src="../../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
             /></router-link>
-            <router-link to="/"
+            <router-link to="/ua"
               ><img
-                src="../assets/img/logo/logo_phone.png"
+                src="../../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
             /></router-link>
@@ -45,9 +45,9 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link to="/" class="link_logo">
+            <router-link to="/ua" class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -77,7 +77,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -85,14 +85,17 @@
               <div class="social_icon_item">
                 <a href="" class="icon_item_link">
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
               </div>
               <div class="social_icon_item">
                 <a href="" class="icon_item_link">
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -104,27 +107,29 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/about" class="el_menu_link">О нас</router-link>
+              <router-link to="/about/ua" class="el_menu_link"
+                >О нас</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
+              <router-link to="/technique/ua" class="el_menu_link"
                 >Методика и формат</router-link
               >
             </div>
             <div class="el_menu">
-              <router-link to="/services" class="el_menu_link"
+              <router-link to="/services/ua" class="el_menu_link"
                 >Наши Услуги</router-link
               >
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link"
+              <router-link to="/timetable/ua" class="el_menu_link"
                 >Расписание</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/groups" class="el_menu_link"
+              <router-link to="/groups/ua" class="el_menu_link"
                 >Группы и Стоимость</router-link
               >
             </div>
@@ -132,7 +137,7 @@
               <a class="selected_page">Фотогалерея</a>
             </div>
             <div class="el_menu">
-              <router-link to="/contacts" class="el_menu_link"
+              <router-link to="/contacts/ua" class="el_menu_link"
                 >Контакты</router-link
               >
             </div>
@@ -348,7 +353,7 @@
         <div class="modal_window">
           <div class="modal_logo_wrapper">
             <img
-              src="../assets/img/img_png/umnazia_logo_footer.png"
+              src="../../assets/img/img_png/umnazia_logo_footer.png"
               alt="umnaziya logo"
             />
           </div>
@@ -387,7 +392,7 @@
                 href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
               >
                 <img
-                  src="../assets/img/img_png/instagram.png"
+                  src="../../assets/img/img_png/instagram.png"
                   alt="instagram "
                 />
               </a>
@@ -398,7 +403,10 @@
                 style="cursor: pointer"
                 href="https://www.facebook.com/profile.php?id=100054250201674"
               >
-                <img src="../assets/img/img_png/facebook.png" alt="facebook " />
+                <img
+                  src="../../assets/img/img_png/facebook.png"
+                  alt="facebook "
+                />
               </a>
             </div>
             <div class="modal_social_icon_item ">
@@ -407,7 +415,10 @@
                 style="cursor: pointer"
                 href="https://www.youtube.com/"
               >
-                <img src="../assets/img/img_png/youtube.png" alt="youtube " />
+                <img
+                  src="../../assets/img/img_png/youtube.png"
+                  alt="youtube "
+                />
               </a>
             </div>
           </div>
@@ -465,20 +476,20 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about" class="el_menu_modal">О нас</router-link>
-        <router-link to="/technique" class="el_menu_modal"
+        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/technique/ua" class="el_menu_modal"
           >Методика и формат</router-link
         >
-        <router-link to="/services" class="el_menu_modal"
+        <router-link to="/services/ua" class="el_menu_modal"
           >Наши Услуги
         </router-link>
-        <router-link to="/timetable" class="el_menu_modal"
+        <router-link to="/timetable/ua" class="el_menu_modal"
           >Расписание
         </router-link>
-        <router-link to="/groups" class="el_menu_modal"
+        <router-link to="/groups/ua" class="el_menu_modal"
           >Группы и Стоимость</router-link
         >
-        <router-link to="/gallery" class="el_menu_modal"
+        <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
         <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
@@ -496,7 +507,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -509,7 +520,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -521,7 +532,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -650,7 +664,7 @@ export default {
 };
 </script>
 
-<style scoped src="../assets/styles/gallery.css" lang="css"></style>
+<style scoped src="../../assets/styles/gallery.css" lang="css"></style>
 <style scoped>
 @media screen and (max-width: 1620px) {
   .main_content_wrapper::after {

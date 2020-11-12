@@ -1,18 +1,19 @@
 <template>
   <div class="main_wrapper">
+    <!--header-->
     <header>
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_tablet.png"
+                src="../../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
             /></router-link>
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_phone.png"
+                src="../../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
             /></router-link>
@@ -46,7 +47,7 @@
           <div class="big_logo">
             <router-link to="/" class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -59,8 +60,8 @@
               Мы находимся:
             </div>
             <div class=" text_700_12">
-              <router-link to="/technique" class="header_text_map_link "
-                >г.Одесса, просп. Шевченко 27</router-link
+              <a href="#" class="header_text_map_link "
+                >г.Одессa, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -72,38 +73,29 @@
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
-                  target="_blank"
-                  style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
               </div>
               <div class="social_icon_item">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.facebook.com/profile.php?id=100054250201674"
-                  class="icon_item_link"
-                >
+                <a href="" class="icon_item_link">
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
               </div>
               <div class="social_icon_item">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.youtube.com/"
-                  class="icon_item_link"
-                >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                <a href="" class="icon_item_link">
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -118,7 +110,9 @@
               <router-link to="/about" class="el_menu_link">О нас</router-link>
             </div>
             <div class="el_menu">
-              <a class="selected_page">Методика и формат</a>
+              <router-link to="/technique" class="el_menu_link"
+                >Методика и формат</router-link
+              >
             </div>
             <div class="el_menu">
               <router-link to="/services" class="el_menu_link"
@@ -138,9 +132,7 @@
               >
             </div>
             <div class="el_menu">
-              <router-link to="/gallery" class="el_menu_link"
-                >Фотогалерея</router-link
-              >
+              <a class="selected_page">Фотогалерея</a>
             </div>
             <div class="el_menu">
               <router-link to="/contacts" class="el_menu_link"
@@ -156,162 +148,133 @@
         class="mobile_menu_button"
       ></div>
     </header>
-
+    <!--Main-->
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="tech_wrapper">
-          <div class="box_line_heading text_Bold">
-            <!--box-line-->
-            <div class="heading_text">
-              <h3>Методика</h3>
-            </div>
+        <div class="box_line_heading text_bold">
+          <!--box-line-->
+          <div class="heading_text">
+            <h3>Фотогалерея</h3>
           </div>
-
-          <div class="main_content_header_sub_text text_400_12">
-            <p>
-              Каждый день
-              <span class="sub_text_bold text_700_12">новая</span> языковая
-              среда
-            </p>
-          </div>
-
+        </div>
+        <div class="box_for_click">
           <div
-            class="main_content_header_sub_text text_400_12 main_content_header_sub_psevdo"
+            class="gallery_box"
+            style="padding-bottom: 1.25%; padding-top: 1.25%"
+            v-for="(chunk, index) in files.slice(0, number)"
+            :key="index"
           >
-            <p>
-              Обучение на
-              <span class="sub_text_bold text_700_12">трех</span> языках
-            </p>
-          </div>
-
-          <div class="lessons_wrapper">
-            <div class="building_lessons_text_wrapper text_Bold">
-              <p>
-                Наши занятия строятся по принципу погружения в языковое
-                пространство, что создаёт условия для комфортного и быстрого
-                изучения языка и развития речи малышей.
-              </p>
-            </div>
-
-            <div class="building_lessons_text_wrapper_768px text_400_12">
-              <p>
-                Занятия проходят по эксклюзивной методике языкового погружения
-                на трех языках - русском, украинском и английском и разделены на
-                блоки- дискусионный, гуманитарный, математический и научный.
-                Каждый блок включает в себя развитие творческих способностей
-                ребенка - лепка, рисование, развитие мелкой и крупной моторики,
-                сюжетно-ролевые игры, игры на развитие воображения.
-              </p>
-            </div>
-
-            <div class="books_wrapper">
-              <div>
+            <!-- _____________ -->
+            <div class="gallery_sub_box">
+              <div class="gallery_content_small centrify">
                 <img
-                  src="../assets/img/technique/english_book.png"
-                  alt="english book"
+                  v-if="chunk[0].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[0].url"
+                  class="gallery_img_small"
                 />
+                <vue-player
+                  v-else
+                  :src="chunk[0].url"
+                  :poster="chunk[0].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_small"
+                ></vue-player>
               </div>
-              <div>
+              <!-- ________ -->
+              <div class="gallery_content_small centrify">
                 <img
-                  src="../assets/img/technique/ukraine_book.png"
-                  alt="ukraine book"
+                  v-if="chunk[1].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[1].url"
+                  class="gallery_img_small"
                 />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/russian_book.png"
-                  alt="russian book"
-                />
+                <vue-player
+                  v-else
+                  :src="chunk[1].url"
+                  :poster="chunk[1].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_small"
+                ></vue-player>
               </div>
             </div>
-
-            <div class="small_books_wrapper">
-              <div>
+            <!-- _____________ -->
+            <div class="gallery_sub_box">
+              <div class="gallery_content_long centrify">
                 <img
-                  src="../assets/img/technique/small_english_book.png"
-                  alt="english book"
+                  v-if="chunk[2].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[2].url"
+                  class="gallery_img_long"
                 />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/small_ukraine_book.png"
-                  alt="ukraine book"
-                />
-              </div>
-              <div>
-                <img
-                  src="../assets/img/technique/small_russian_book.png"
-                  alt="russian book"
-                />
+                <vue-player
+                  v-else
+                  :src="chunk[2].url"
+                  :poster="chunk[2].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_long"
+                ></vue-player>
               </div>
             </div>
-
-            <div class="languages_text_wrapper text_400_12">
-              <p>
-                Принцип «одна ситуация-один язык» позволяет разделить языки по
-                месту их применения.<br />
-                В группе языкового погружения, дети, переступая порог нашей
-                Академии знаний, попадают в среду иного языка,как правило, даже
-                с подителями педагоги и администратор, говорят на изучаемом в
-                этот день языке. Атмосфера в группе языкового погружения
-                максимально насыщена играми, чтением,развитием речи, письма и
-                счета на «языке дня»
-              </p>
+            <!-- _____________ -->
+            <div class="gallery_sub_box">
+              <div class="gallery_content_small centrify">
+                <img
+                  v-if="chunk[3].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[3].url"
+                  class="gallery_img_small"
+                />
+                <vue-player
+                  v-else
+                  :src="chunk[3].url"
+                  :poster="chunk[3].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_small"
+                ></vue-player>
+              </div>
+              <!-- ________ -->
+              <div class="gallery_content_small centrify">
+                <img
+                  v-if="chunk[4].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[4].url"
+                  class="gallery_img_small"
+                />
+                <vue-player
+                  v-else
+                  :src="chunk[4].url"
+                  :poster="chunk[4].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_small"
+                ></vue-player>
+              </div>
+            </div>
+            <!-- _____________ -->
+            <div class="gallery_sub_box">
+              <div class="gallery_content_long centrify">
+                <img
+                  v-if="chunk[5].type.replace(/\/.+$/, '') === 'image'"
+                  :src="chunk[5].url"
+                  class="gallery_img_long"
+                />
+                <vue-player
+                  v-else
+                  :src="chunk[5].url"
+                  :poster="chunk[5].poster"
+                  controls-class="disble-controls"
+                  class="gallery_img_long"
+                ></vue-player>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="training_format_wrapper">
-          <div class="training_format_header_text text_Bold">
-            <p>Формат занятий</p>
-          </div>
-
-          <div class="training_format_header_subtext text_Bold">
-            <p>
-              Работаем <span class="text_Bold">6 дней</span> в неделю (формат -
-              полудневки)
-            </p>
-          </div>
-
-          <div class="clocks_wrapper">
-            <div class="class_hours class_hours_9am">
-              <div class="time_text_9am text_Bold">
-                <p>С 9:00 до 13:00</p>
-              </div>
-
-              <div @click="showModal('b_seven')" class="text_Bold">
-                <button v-if="!b_seven" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-                <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-
-            <div class="class_hours class_hours_14pm">
-              <div class="time_text_14pm text_Bold">
-                <p>С 14:00 до 18:00</p>
-              </div>
-
-              <div @click="showModal('b_eight')" class="text_Bold">
-                <button v-if="!b_eight" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-                <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
-                </button>
-              </div>
-            </div>
-          </div>
+        <div
+          v-if="number < files.length"
+          @click="number++"
+          class="btn_all_gallery"
+        >
+          Посмотреть ещё
         </div>
       </div>
     </main>
 
+    <!--footer-->
     <footer class="footer_main_wrapper">
       <div class="footer_form_wrapper">
         <div class="pseudo_img_block">
@@ -357,7 +320,7 @@
 
           <div class="submit_form_btn_wrapper">
             <button
-              v-if="!b_nine"
+              v-if="!b_twenty_one"
               class="submit_form_btn text_700_12"
               type="submit"
             >
@@ -383,13 +346,12 @@
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
-        >
-        </iframe>
+        ></iframe>
 
         <div class="modal_window">
           <div class="modal_logo_wrapper">
             <img
-              src="../assets/img/img_png/umnazia_logo_footer.png"
+              src="../../assets/img/img_png/umnazia_logo_footer.png"
               alt="umnaziya logo"
             />
           </div>
@@ -399,6 +361,7 @@
               <a
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank"
                 >г. Одесса, просп. Шевченко 27</a
               >
             </div>
@@ -427,18 +390,21 @@
                 href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
               >
                 <img
-                  src="../assets/img/img_png/instagram.png"
+                  src="../../assets/img/img_png/instagram.png"
                   alt="instagram "
                 />
               </a>
             </div>
-            <div class="modal_social_icon_item ">
+            <div class="modal_social_icon_item">
               <a
                 target="_blank"
                 style="cursor: pointer"
                 href="https://www.facebook.com/profile.php?id=100054250201674"
               >
-                <img src="../assets/img/img_png/facebook.png" alt="facebook " />
+                <img
+                  src="../../assets/img/img_png/facebook.png"
+                  alt="facebook "
+                />
               </a>
             </div>
             <div class="modal_social_icon_item ">
@@ -447,13 +413,19 @@
                 style="cursor: pointer"
                 href="https://www.youtube.com/"
               >
-                <img src="../assets/img/img_png/youtube.png" alt="youtube " />
+                <img
+                  src="../../assets/img/img_png/youtube.png"
+                  alt="youtube "
+                />
               </a>
             </div>
           </div>
 
-          <div @click="showModal('b_ten')" class="modal_btn_wrapper text_Bold ">
-            <button v-if="!b_ten" class="modal_submit_btn">
+          <div
+            @click="showModal('b_twenty_two')"
+            class="modal_btn_wrapper text_Bold "
+          >
+            <button v-if="!b_twenty_two" class="modal_submit_btn">
               Записаться в<br />
               группу
             </button>
@@ -469,8 +441,8 @@
         <div class="btn_anchor_wrapper ">
           <button
             class="btn_anchor"
+            style="cursor:pointer"
             @click="scrollToTop"
-            style="cursor: pointer"
           ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
@@ -533,7 +505,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -546,7 +518,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -558,7 +530,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -575,31 +550,36 @@
 </template>
 
 <script>
+import axios from "axios";
 import { mapActions } from "vuex";
+import vuePlayer from "@algoz098/vue-player";
 export default {
-  name: "Technique",
+  name: "Gallery",
   data() {
     return {
       isModal: false,
       name: "",
       tel: "+380",
-      mobileMenuOpen: false,
       presentationName: "",
+      mobileMenuOpen: false,
       presentationTel: "+380",
-      b_seven: localStorage.getItem("b_seven"),
-      b_eight: localStorage.getItem("b_eight"),
-      b_nine: localStorage.getItem("b_nine"),
-      b_ten: localStorage.getItem("b_ten"),
+      b_twenty_one: localStorage.getItem("b_twenty_one"),
+      b_twenty_two: localStorage.getItem("b_twenty_two"),
+      files: [],
+      number: 2,
       lang: "ru"
     };
+  },
+  components: {
+    vuePlayer
   },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
     showModal(button) {
-      this.currentButton = button;
       this.isModal = true;
+      this.currentButton = button;
     },
     toggleLang() {
       if (this.lang === "ru") {
@@ -608,9 +588,6 @@ export default {
         this.lang = "ru";
       }
     },
-    hideModal() {
-      this.isModal = false;
-    },
     showMobileMenu() {
       this.mobileMenuOpen = true;
       document.body.style.overflowY = "hidden";
@@ -618,6 +595,9 @@ export default {
     hideMobileMenu() {
       this.mobileMenuOpen = false;
       document.body.style.overflowY = "scroll";
+    },
+    hideModal() {
+      this.isModal = false;
     },
     preSend() {
       this.sendTel({
@@ -641,15 +621,60 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
-      localStorage.setItem("b_nine", true);
-      this.b_nine = true;
+      localStorage.setItem("b_twenty_one", true);
+      this.b_twenty_one = true;
     },
     ...mapActions(["sendTel"])
   },
-  created() {
+  async created() {
     document.body.style.overflowY = "scroll";
+
+    const ids = (
+      await axios({
+        method: "get",
+        url: process.env.VUE_APP_API + "/files/reverse"
+      })
+    ).data;
+
+    let chunk = [];
+    let i = 6;
+    ids.forEach(id => {
+      if (id.type.replace(/\/.+$/, "") === "image") {
+        chunk.push({
+          url: process.env.VUE_APP_API + `/files/${id.id}/file.jpg`,
+          type: id.type
+        });
+      } else if (id.type.replace(/\/.+$/, "") === "video") {
+        chunk.push({
+          url: process.env.VUE_APP_API + `/files/${id.id}/file.jpg`,
+          poster: process.env.VUE_APP_API + `/files/${id.id}/screenshot.jpg`,
+          type: id.type
+        });
+      }
+      i--;
+      if (i === 0) {
+        this.files.push(chunk);
+        chunk = [];
+        i = 6;
+      }
+    });
   }
 };
 </script>
 
-<style scoped src="../assets/styles/technique_style.css" lang="css"></style>
+<style scoped src="../../assets/styles/gallery.css" lang="css"></style>
+<style scoped>
+@media screen and (max-width: 1620px) {
+  .main_content_wrapper::after {
+    display: none;
+  }
+
+  .main_content_wrapper::before {
+    display: none;
+  }
+  .modal_window {
+    top: 40px;
+    right: 20px;
+  }
+}
+</style>

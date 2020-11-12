@@ -1,19 +1,18 @@
 <template>
   <div class="main_wrapper">
-    <!--header-->
     <header>
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_tablet.png"
+                src="../../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
             /></router-link>
             <router-link to="/"
               ><img
-                src="../assets/img/logo/logo_phone.png"
+                src="../../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
             /></router-link>
@@ -47,7 +46,7 @@
           <div class="big_logo">
             <router-link to="/" class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -62,9 +61,9 @@
             <div class=" text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                class="header_text_map_link"
                 target="_blank"
-                class="header_text_map_link "
-                >г.Одессa, просп. Шевченко 27</a
+                >г.Одесса, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -82,7 +81,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -95,7 +94,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -107,7 +106,10 @@
                   href="https://www.youtube.com/"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png//youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png//youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -127,12 +129,12 @@
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Наши Услуги</a>
+              <router-link to="/services" class="el_menu_link"
+                >Наши Услуги</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link"
-                >Расписание</router-link
-              >
+              <a class="selected_page">Расписание</a>
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
@@ -160,65 +162,241 @@
         class="mobile_menu_button"
       ></div>
     </header>
-    <!--Main-->
+    <!--main-->
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
-        <div class="box_line_heading text_bold">
-          <!--box-line-->
-          <div class="heading_text">
-            <h3>наши услуги</h3>
+        <div class="timetable_header_info_wrapper">
+          <div class="box_line_heading text_bold">
+            <!--box-line-->
+            <div class="heading_text">
+              <h3>Расписание</h3>
+            </div>
+          </div>
+
+          <div class="main_content_header_sub_text text_400_12">
+            <p>
+              Работаем <span class="sub_text_bold text_700_12"> 6 дней</span> в
+              неделю в формате полудневки
+            </p>
+          </div>
+
+          <div class="main_content_header_sub_text text_400_12">
+            <p>
+              <span class="sub_text_bold text_700_12">4 часа</span> разделены
+              на<span class="sub_text_bold text_700_12"> 4 блока</span>
+            </p>
           </div>
         </div>
 
-        <div class="services_content_wrapper">
-          <div>
-            <!-- class="preparing_school_wrapper"-->
-
-            <div class="preparing_school_img">
-              <div>
-                <img
-                  class="main_content_images"
-                  src="../assets/img/services/boy_on_horse.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <img
-                  class="main_content_images"
-                  src="../assets/img/services/children_with_teacher.png"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="preparing_school_text_wrapper">
-              <div class="preparing_school_text_header text_bold">
-                <p>Подготовка к школе (3-6 лет)</p>
+        <div class="timetable_content_info_wrapper">
+          <div class="timetable_content_info_sub_wrapper">
+            <div class="timetable_info_random_blocks">
+              <div class="discussion_wrapper">
+                <div class="timetable_discussion_round"></div>
               </div>
 
-              <div class="preparing_school_sub_text text_400_12">
+              <div class="info_random_header text_bold">
+                <p>Дискусионный блок</p>
+              </div>
+
+              <div class="info_random_sub_text text_400_12">
                 <p>
-                  Занятия проводятся на трёх языках в игровой форме.
-                  <span class="preparing_school_sub_sub_text_320px"
-                    >Основой являются настольные и подвижные игры,игры на
-                    развитие навыков конкурирования и достижения поставленных
-                    целей. <br />
-                    Путём чтения художественной и научно-познавательной
-                    литературы,происходит работа над формированием
-                    речи,грамотного и последовательного изложения своих
-                    мыслей.</span
-                  >
+                  Чтение художественной литературы, обсуждение прочитанного,
+                  игры на развитие воображения с применением методики ТРИЗ.
                   <br />
-                  Помощь в обучении чтению и счету. Обучение финансовой
-                  грамотности и навыкам формирования семейного бюджета.
+                  Цель-научить ребёнка грамотно высказывать свои мысли и мнение,
+                  научиться слушать собеседника, учитывать мнение другого
+                  собеседника, развитие фонематического слуха.
                 </p>
               </div>
+            </div>
 
-              <div
-                @click="showModal('b_eleven')"
-                class="services_btn_wrapper text_bold"
-              >
-                <button v-if="!b_eleven" class="services_submit_btn">
+            <div class="timetable_info_random_blocks">
+              <div class="humanitarian_wrapper">
+                <div class="timetable_discussion_round"></div>
+              </div>
+
+              <div class="info_random_header text_bold">
+                <p>Гуманитарный блок</p>
+              </div>
+
+              <div class="info_random_sub_text text_400_12">
+                <p>
+                  -Знакомство с буквами и чтением с использованием карточек
+                  Домана, кубиков Чаплыгина и авторского методического пособия
+                  <br />
+                  -развитие моторики в системной связке с изучаемым
+                  грамматическим материалом<br />
+                  -формирование навыков письма и каллиграфии<br />
+                  -упражнения на развитие фонематического слуха<br />
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timetable_content_info_sub_wrapper">
+            <div class="timetable_info_random_blocks">
+              <div class="math_wrapper">
+                <div class="timetable_discussion_round"></div>
+              </div>
+
+              <div class="info_random_header info_random_math text_bold">
+                <p>Математический блок</p>
+              </div>
+
+              <div class="info_random_sub_text text_400_12">
+                <p>
+                  -Знакомство с цифрами и числами <br />
+                  -формирование навыков простого счёта <br />
+                  -Обучение финансовой грамотности <br />
+                  -тренировка памяти и логического мышления <br />
+                </p>
+              </div>
+            </div>
+
+            <div class="timetable_info_random_blocks">
+              <div class="scientific_wrapper">
+                <div class="timetable_discussion_round"></div>
+              </div>
+
+              <div class="info_random_header text_bold">
+                <p>Научный блок</p>
+              </div>
+
+              <div class="info_random_sub_text text_400_12">
+                <p>
+                  -знакомство с законами природы и влиянии человека на
+                  окружающий мир <br />
+                  -изучение истории, географии, физики, Химии и астрономии в
+                  соответствии с возрастными особенностями ребёнка
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timetable_calendar_wrapper">
+          <div class="timetable_calendar_sub_wrapper">
+            <div class="timetable_calendar_monday">
+              <div class="calendar_day text_400_12">
+                <p>Пн</p>
+              </div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_tuesday">
+              <div class="calendar_day text_400_12">
+                <p>Вт</p>
+              </div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_wednesday">
+              <div class="calendar_day text_400_12">
+                <p>Ср</p>
+              </div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_thursday">
+              <div class="calendar_day text_400_12">
+                <p>Чт</p>
+              </div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+              <div class="green_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_friday">
+              <div class="calendar_day text_400_12">
+                <p>Пт</p>
+              </div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+              <div class="orange_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_saturday">
+              <div class="calendar_day text_400_12">
+                <p>Сб</p>
+              </div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+              <div class="dark_blue_calendar_mark"></div>
+            </div>
+
+            <div class="timetable_calendar_sunday">
+              <div class="calendar_day text_400_12">
+                <p>Вс</p>
+              </div>
+              <div class="grey_calendar_mark"></div>
+              <div class="grey_calendar_mark"></div>
+              <div class="grey_calendar_mark"></div>
+              <div class="grey_calendar_mark"></div>
+            </div>
+          </div>
+
+          <div class="learning_days_wrapper">
+            <div class="russian_day_wrapper">
+              <div class="russian_day_text text_400_12">
+                <div class="green_calendar_mark_russian"></div>
+                <p>Понедельник, Четверг - Русский день</p>
+              </div>
+            </div>
+
+            <div class="ukrainian_day_wrapper">
+              <div class="ukrainian_day_text text_400_12">
+                <div class="orange_calendar_mark_ukraine"></div>
+                <p>Вторник, Пятница - Украинский день</p>
+              </div>
+            </div>
+
+            <div class="english_day_wrapper">
+              <div class="english_day_text text_400_12">
+                <div class="dark_blue_calendar_mark_engl"></div>
+                <p>Среда, Суббота - English day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="training_format_wrapper">
+          <!--Clock-block-->
+
+          <div class="training_format_header_text text_bold">
+            <p>Формат занятий</p>
+          </div>
+
+          <div class="training_format_header_subtext text_bold">
+            <p>
+              Работаем <span class="text_bold">6 дней</span> в неделю (формат -
+              полудневки)
+            </p>
+          </div>
+
+          <div class="clocks_wrapper">
+            <div class="class_hours class_hours_9am">
+              <div class="time_text_9am text_bold">
+                <p>{{ timetable_clock_morning }}</p>
+              </div>
+
+              <div @click="showModal('b_fifteen')" class="text_bold">
+                <button v-if="!b_fifteen" class="training_format_submit_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -228,44 +406,14 @@
                 </button>
               </div>
             </div>
-          </div>
 
-          <div>
-            <div class="leisure_img">
-              <div>
-                <img
-                  class="main_content_images"
-                  src="../assets/img/services/children_on_road.png"
-                  alt=""
-                />
-              </div>
-            </div>
-
-            <div class="leisure_text_wrapper">
-              <div class="leisure_text_header text_bold">
-                <p>Досуг первоклассника (7-8лет)</p>
+            <div class="class_hours class_hours_14pm">
+              <div class="time_text_14pm text_bold">
+                <p>{{ timetable_clock_evening }}</p>
               </div>
 
-              <div class="leisure_sub_text text_400_12">
-                -чтение художественной и научно-познавательной литературы,
-                настольные игры, финансовая грамотность, творчество; <br />
-                С 14.00 до 18.00<br /><br />
-                <p class="text_bold">Группы английского языка</p>
-                Пн.- Ср.- Птн.<br />
-                16.00 -17.00<br />
-                Вт.-Чт.<br />
-                16.00-17.00<br /><br />
-                <p class="text_bold">«Няня на час»</p>
-                Вы можете оставить ребёнка у нас и освободить время для
-                себя.Наши педагоги займут ребёнка за чтением интересных
-                книг,творчеством и настольными играми. 100 грн/час
-              </div>
-
-              <div
-                @click="showModal('b_twelve')"
-                class="services_btn_wrapper text_700_12"
-              >
-                <button v-if="!b_twelve" class="services_submit_btn">
+              <div @click="showModal('b_sixteen')" class="text_bold">
+                <button v-if="!b_sixteen" class="training_format_submit_btn">
                   Записаться в<br />
                   группу
                 </button>
@@ -277,9 +425,10 @@
             </div>
           </div>
         </div>
+        <!--Clock-block-end-->
       </div>
     </main>
-    <!--footer-->
+
     <footer class="footer_main_wrapper">
       <div class="footer_form_wrapper">
         <div class="pseudo_img_block">
@@ -325,7 +474,7 @@
 
           <div class="submit_form_btn_wrapper">
             <button
-              v-if="!b_thirteen"
+              v-if="!b_seventeen"
               class="submit_form_btn text_700_12"
               type="submit"
             >
@@ -356,7 +505,7 @@
         <div class="modal_window">
           <div class="modal_logo_wrapper">
             <img
-              src="../assets/img/img_png/umnazia_logo_footer.png"
+              src="../../assets/img/img_png/umnazia_logo_footer.png"
               alt="umnaziya logo"
             />
           </div>
@@ -392,11 +541,23 @@
               <a
                 target="_blank"
                 style="cursor: pointer"
-                href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
+                href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
               >
                 <img
-                  src="../assets/img/img_png/instagram.png"
+                  src="../../assets/img/img_png/instagram.png"
                   alt="instagram "
+                />
+              </a>
+            </div>
+            <div class="modal_social_icon_item">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.facebook.com/profile.php?id=100054250201674"
+              >
+                <img
+                  src="../../assets/img/img_png/facebook.png"
+                  alt="facebook "
                 />
               </a>
             </div>
@@ -404,26 +565,21 @@
               <a
                 target="_blank"
                 style="cursor: pointer"
-                href="https://www.facebook.com/profile.php?id=100054250201674"
-              >
-                <img src="../assets/img/img_png/facebook.png" alt="facebook " />
-              </a>
-            </div>
-            <div class="modal_social_icon_item">
-              <a
-                target="_blank"
-                style="cursor: pointer"
                 href="https://www.youtube.com/"
               >
-                <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                <img
+                  src="../../assets/img/img_png/youtube.png"
+                  alt="youtube "
+                />
               </a>
             </div>
           </div>
+
           <div
-            @click="showModal('b_fourteen')"
-            class="modal_btn_wrapper text_Bold"
+            @click="showModal('b_eighteen')"
+            class="modal_btn_wrapper text_Bold "
           >
-            <button v-if="!b_fourteen" class="modal_submit_btn">
+            <button v-if="!b_eighteen" class="modal_submit_btn">
               Записаться в<br />
               группу
             </button>
@@ -435,13 +591,9 @@
         </div>
       </div>
 
-      <div class="footer_copyright text_400_12 ">
-        <div class="btn_anchor_wrapper ">
-          <button
-            class="btn_anchor"
-            @click="scrollToTop"
-            style="cursor: pointer"
-          ></button>
+      <div class="footer_copyright text_400_12">
+        <div class="btn_anchor_wrapper">
+          <button class="btn_anchor" @click="scrollToTop"></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -503,7 +655,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -516,7 +668,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -528,7 +680,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -545,21 +700,24 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapState } from "vuex";
 export default {
-  name: "Services",
+  name: "Timetable",
   data() {
     return {
       isModal: false,
       name: "",
       tel: "+380",
-      mobileMenuOpen: false,
       presentationName: "",
+      mobileMenuOpen: false,
       presentationTel: "+380",
-      b_eleven: localStorage.getItem("b_eleven"),
-      b_twelve: localStorage.getItem("b_twelve"),
-      b_thirteen: localStorage.getItem("b_thirteen"),
-      b_fourteen: localStorage.getItem("b_fourteen"),
+      timetable_clock_morning: "",
+      timetable_clock_evening: "",
+      b_fifteen: localStorage.getItem("b_fifteen"),
+      b_sixteen: localStorage.getItem("b_sixteen"),
+      b_seventeen: localStorage.getItem("b_seventeen"),
+      b_eighteen: localStorage.getItem("b_eighteen"),
+      currentButton: "",
       lang: "ru"
     };
   },
@@ -568,11 +726,8 @@ export default {
       window.scrollTo(0, 0);
     },
     showModal(button) {
-      this.currentButton = button;
       this.isModal = true;
-    },
-    hideModal() {
-      this.isModal = false;
+      this.currentButton = button;
     },
     showMobileMenu() {
       this.mobileMenuOpen = true;
@@ -588,6 +743,9 @@ export default {
     hideMobileMenu() {
       this.mobileMenuOpen = false;
       document.body.style.overflowY = "scroll";
+    },
+    hideModal() {
+      this.isModal = false;
     },
     preSend() {
       this.sendTel({
@@ -611,15 +769,23 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
-      localStorage.setItem("b_thirteen", true);
-      this.b_thirteen = true;
+      localStorage.setItem("b_seventeen", true);
+      this.b_seventeen = true;
     },
-    ...mapActions(["sendTel"])
+    ...mapActions(["sendTel", "getFields"])
   },
-  created() {
+  computed: mapState({
+    fields: state => state.fields
+  }),
+  async created() {
     document.body.style.overflowY = "scroll";
+    await this.getFields();
+    const keys = Object.keys(this.fields);
+    keys.forEach(key => {
+      this[key] = this.fields[key];
+    });
   }
 };
 </script>
 
-<style scoped src="../assets/styles/services_style.css" lang="css"></style>
+<style scoped src="../../assets/styles/timetable_style.css" lang="css"></style>

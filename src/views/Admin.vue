@@ -4,9 +4,11 @@
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
 
+        <div class="open_site" v-if="isAdmin" @click="toManager">менеджер</div>
+
         <div class="open_site" @click="toFilesPage">добавить фото</div>
 
-        <router-link to="/logout" class="logout">закончить сеанс</router-link>
+        <div class="open_site" @click="logout">закончить сеанс</div>
       </div>
     </header>
     <main>
@@ -800,10 +802,18 @@ export default {
       third_home_techniques_content: "",
       fourth_home_techniques_content: "",
       fifth_home_techniques_content: "",
-      sixth_home_techniques_content: ""
+      sixth_home_techniques_content: "",
+      isAdmin: false
     };
   },
   methods: {
+    logout() {
+      localStorage.removeItem("jwt");
+      this.$router.push({ name: "Home" });
+    },
+    toManager() {
+      this.$router.push({ name: "Manager" });
+    },
     toMainPage() {
       this.$router.push({ name: "Home" });
     },
@@ -946,7 +956,7 @@ export default {
         }
       ]);
     },
-    ...mapActions(["getFields", "setFields"])
+    ...mapActions(["getFields", "setFields", "checkIsAdmin"])
   },
   computed: mapState({
     fields: state => state.fields
@@ -957,6 +967,8 @@ export default {
     keys.forEach(key => {
       this[key] = this.fields[key];
     });
+    const isAdmin = await this.checkIsAdmin();
+    this.isAdmin = isAdmin.data;
   }
 };
 </script>

@@ -1,18 +1,19 @@
 <template>
   <div class="main_wrapper">
+    <!--header-->
     <header>
       <div class="contacts_wrapper">
         <div class="first_block">
           <div class="logo">
-            <router-link to="/"
+            <router-link to="/ua"
               ><img
-                src="../assets/img/logo/logo_tablet.png"
+                src="../../assets/img/logo/logo_tablet.png"
                 alt="logo"
                 class="logo_tablet"
             /></router-link>
-            <router-link to="/"
+            <router-link to="/ua"
               ><img
-                src="../assets/img/logo/logo_phone.png"
+                src="../../assets/img/logo/logo_phone.png"
                 alt="logo"
                 class="logo_phone"
             /></router-link>
@@ -44,9 +45,9 @@
             </div>
           </div>
           <div class="big_logo">
-            <router-link to="/" class="link_logo">
+            <router-link to="/ua" class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -63,7 +64,7 @@
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
                 class="header_text_map_link "
-                >г.Одесса, просп. Шевченко 27</a
+                >г.Одессa, просп. Шевченко 27</a
               >
             </div>
           </div>
@@ -81,7 +82,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -94,7 +95,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -106,7 +107,10 @@
                   href="https://www.youtube.com/"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png//youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png//youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -118,37 +122,39 @@
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/about" class="el_menu_link">О нас</router-link>
+              <router-link to="/about/ua" class="el_menu_link"
+                >О нас</router-link
+              >
             </div>
             <div class="el_menu">
-              <router-link to="/technique" class="el_menu_link"
+              <router-link to="/technique/ua" class="el_menu_link"
                 >Методика и формат</router-link
               >
             </div>
             <div class="el_menu">
-              <router-link to="/services" class="el_menu_link"
-                >Наши Услуги</router-link
-              >
+              <a class="selected_page">Наши Услуги</a>
             </div>
             <div class="el_menu">
-              <router-link to="/timetable" class="el_menu_link"
+              <router-link to="/timetable/ua" class="el_menu_link"
                 >Расписание</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <router-link to="/groups" class="el_menu_link"
+              <router-link to="/groups/ua" class="el_menu_link"
                 >Группы и Стоимость</router-link
               >
             </div>
             <div class="el_menu">
-              <router-link to="/gallery" class="el_menu_link"
+              <router-link to="/gallery/ua" class="el_menu_link"
                 >Фотогалерея</router-link
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Контакты</a>
+              <router-link to="/contacts/ua" class="el_menu_link"
+                >Контакты</router-link
+              >
             </div>
           </div>
         </div>
@@ -159,121 +165,126 @@
         class="mobile_menu_button"
       ></div>
     </header>
-    <!--main-->
+    <!--Main-->
     <main class="main_content_wrapper">
       <div class="sub_content_wrapper">
         <div class="box_line_heading text_bold">
           <!--box-line-->
           <div class="heading_text">
-            <h3>контакты</h3>
+            <h3>наши услуги</h3>
           </div>
         </div>
 
-        <div class="contacts_info_wrapper">
-          <div class="google_map_wrapper">
-            <iframe
-              class="iframe_google_map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.9341857831632!2d30.753829015494134!3d46.4500010751442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633e7b3172e5b%3A0x395f101608febf7e!2z0L_RgNC-0YHQvy4g0KjQtdCy0YfQtdC90LrQviwgMjcsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1600843303113!5m2!1sru!2sua"
-              style="border:0;"
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          </div>
+        <div class="services_content_wrapper">
+          <div>
+            <!-- class="preparing_school_wrapper"-->
 
-          <div class="modal_window">
-            <div class="modal_logo_wrapper">
-              <img
-                src="../assets/img/modal_window/modal_logo.png"
-                alt="umnaziya logo"
-              />
-            </div>
-
-            <div class="modal_text_wrapper text_bold">
-              <div class="modal_adress">
-                <a
-                  class="modal_adress_link"
-                  href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                  target="_blank"
-                  >г. Одесса, просп. Шевченко 27</a
-                >
+            <div class="preparing_school_img">
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../../assets/img/services/boy_on_horse.png"
+                  alt=""
+                />
               </div>
-              <div class="modal_phone modal_phone_icon ">
-                <a class="modal_phone_link " href="tel:+380970115588"
-                  >+ 38 (097) 011 55 88</a
-                >
-              </div>
-              <div class="modal_phone ">
-                <a class="modal_phone_link " href="tel:tel:+380931936267"
-                  >+ 38 (093) 193 62 67</a
-                >
-              </div>
-              <div class="modal_email ">
-                <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com"
-                  >umnazia.ua@gmail.com</a
-                >
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../../assets/img/services/children_with_teacher.png"
+                  alt=""
+                />
               </div>
             </div>
 
-            <div class="modal_social_icons_links ">
-              <div class="modal_social_icon_item ">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
-                >
-                  <img
-                    src="../assets/img/modal_window/instagram.png"
-                    alt="instagram "
-                  />
-                </a>
+            <div class="preparing_school_text_wrapper">
+              <div class="preparing_school_text_header text_bold">
+                <p>Подготовка к школе (3-6 лет)</p>
               </div>
-              <div class="modal_social_icon_item ">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.facebook.com/profile.php?id=100054250201674"
-                >
-                  <img
-                    src="../assets/img/modal_window/facebook.png"
-                    alt="facebook "
-                  />
-                </a>
-              </div>
-              <div class="modal_social_icon_item ">
-                <a
-                  target="_blank"
-                  style="cursor: pointer"
-                  href="https://www.youtube.com/"
-                >
-                  <img
-                    src="../assets/img/modal_window/youtube.png"
-                    alt="youtube "
-                  />
-                </a>
-              </div>
-            </div>
 
-            <div
-              @click="showModal('b_twenty_three')"
-              class="modal_btn_wrapper text_bold "
-            >
-              <button v-if="!b_twenty_three" class="modal_submit_btn">
-                Записаться в<br />
-                группу
-              </button>
-              <button v-else class="training_format_submit_orange_btn">
-                Записаться в<br />
-                группу
-              </button>
+              <div class="preparing_school_sub_text text_400_12">
+                <p>
+                  Занятия проводятся на трёх языках в игровой форме.
+                  <span class="preparing_school_sub_sub_text_320px"
+                    >Основой являются настольные и подвижные игры,игры на
+                    развитие навыков конкурирования и достижения поставленных
+                    целей. <br />
+                    Путём чтения художественной и научно-познавательной
+                    литературы,происходит работа над формированием
+                    речи,грамотного и последовательного изложения своих
+                    мыслей.</span
+                  >
+                  <br />
+                  Помощь в обучении чтению и счету. Обучение финансовой
+                  грамотности и навыкам формирования семейного бюджета.
+                </p>
+              </div>
+
+              <div
+                @click="showModal('b_eleven')"
+                class="services_btn_wrapper text_bold"
+              >
+                <button v-if="!b_eleven" class="services_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
             </div>
           </div>
 
-          <div class="teacher"></div>
+          <div>
+            <div class="leisure_img">
+              <div>
+                <img
+                  class="main_content_images"
+                  src="../../assets/img/services/children_on_road.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div class="leisure_text_wrapper">
+              <div class="leisure_text_header text_bold">
+                <p>Досуг первоклассника (7-8лет)</p>
+              </div>
+
+              <div class="leisure_sub_text text_400_12">
+                -чтение художественной и научно-познавательной литературы,
+                настольные игры, финансовая грамотность, творчество; <br />
+                С 14.00 до 18.00<br /><br />
+                <p class="text_bold">Группы английского языка</p>
+                Пн.- Ср.- Птн.<br />
+                16.00 -17.00<br />
+                Вт.-Чт.<br />
+                16.00-17.00<br /><br />
+                <p class="text_bold">«Няня на час»</p>
+                Вы можете оставить ребёнка у нас и освободить время для
+                себя.Наши педагоги займут ребёнка за чтением интересных
+                книг,творчеством и настольными играми. 100 грн/час
+              </div>
+
+              <div
+                @click="showModal('b_twelve')"
+                class="services_btn_wrapper text_700_12"
+              >
+                <button v-if="!b_twelve" class="services_submit_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+                <button v-else class="training_format_submit_orange_btn">
+                  Записаться в<br />
+                  группу
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-
+    <!--footer-->
     <footer class="footer_main_wrapper">
       <div class="footer_form_wrapper">
         <div class="pseudo_img_block">
@@ -319,7 +330,7 @@
 
           <div class="submit_form_btn_wrapper">
             <button
-              v-if="!b_twenty_four"
+              v-if="!b_thirteen"
               class="submit_form_btn text_700_12"
               type="submit"
             >
@@ -336,9 +347,109 @@
         </form>
       </div>
 
+      <div class="google_map_wrapper">
+        <iframe
+          class="iframe_google_map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.9341857831632!2d30.753829015494134!3d46.4500010751442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633e7b3172e5b%3A0x395f101608febf7e!2z0L_RgNC-0YHQvy4g0KjQtdCy0YfQtdC90LrQviwgMjcsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1600843303113!5m2!1sru!2sua"
+          height="505"
+          style="border:0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+
+        <div class="modal_window">
+          <div class="modal_logo_wrapper">
+            <img
+              src="../../assets/img/img_png/umnazia_logo_footer.png"
+              alt="umnaziya logo"
+            />
+          </div>
+
+          <div class="modal_text_wrapper">
+            <div class="modal_adress">
+              <a
+                class="modal_adress_link"
+                href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
+                target="_blank"
+                >г. Одесса, просп. Шевченко 27</a
+              >
+            </div>
+            <div class="modal_phone modal_phone_icon ">
+              <a class="modal_phone_link " href="tel:+380970115588 "
+                >+ 38 (097) 011 55 88</a
+              >
+            </div>
+            <div class="modal_phone ">
+              <a class="modal_phone_link " href="tel:tel:+380931936267 "
+                >+ 38 (093) 193 62 67</a
+              >
+            </div>
+            <div class="modal_email ">
+              <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
+                >umnazia.ua@gmail.com</a
+              >
+            </div>
+          </div>
+
+          <div class="modal_social_icons_links ">
+            <div class="modal_social_icon_item ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9"
+              >
+                <img
+                  src="../../assets/img/img_png/instagram.png"
+                  alt="instagram "
+                />
+              </a>
+            </div>
+            <div class="modal_social_icon_item ">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.facebook.com/profile.php?id=100054250201674"
+              >
+                <img
+                  src="../../assets/img/img_png/facebook.png"
+                  alt="facebook "
+                />
+              </a>
+            </div>
+            <div class="modal_social_icon_item">
+              <a
+                target="_blank"
+                style="cursor: pointer"
+                href="https://www.youtube.com/"
+              >
+                <img src="../../assets/img/img_png/youtube.png" alt="youtube" />
+              </a>
+            </div>
+          </div>
+          <div
+            @click="showModal('b_fourteen')"
+            class="modal_btn_wrapper text_Bold"
+          >
+            <button v-if="!b_fourteen" class="modal_submit_btn">
+              Записаться в<br />
+              группу
+            </button>
+            <button v-else class="training_format_submit_orange_btn">
+              Записаться в<br />
+              группу
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div class="footer_copyright text_400_12 ">
         <div class="btn_anchor_wrapper ">
-          <button class="btn_anchor " @click="scrollToTop"></button>
+          <button
+            class="btn_anchor"
+            @click="scrollToTop"
+            style="cursor: pointer"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -369,20 +480,20 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about" class="el_menu_modal">О нас</router-link>
-        <router-link to="/technique" class="el_menu_modal"
+        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/technique/ua" class="el_menu_modal"
           >Методика и формат</router-link
         >
-        <router-link to="/services" class="el_menu_modal"
+        <router-link to="/services/ua" class="el_menu_modal"
           >Наши Услуги
         </router-link>
-        <router-link to="/timetable" class="el_menu_modal"
+        <router-link to="/timetable/ua" class="el_menu_modal"
           >Расписание
         </router-link>
-        <router-link to="/groups" class="el_menu_modal"
+        <router-link to="/groups/ua" class="el_menu_modal"
           >Группы и Стоимость</router-link
         >
-        <router-link to="/gallery" class="el_menu_modal"
+        <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
         <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
@@ -400,7 +511,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -413,7 +524,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -425,7 +536,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -444,18 +558,19 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  name: "Contacts",
+  name: "Services",
   data() {
     return {
       isModal: false,
       name: "",
       tel: "+380",
-      presentationName: "",
       mobileMenuOpen: false,
+      presentationName: "",
       presentationTel: "+380",
-      b_twenty_three: localStorage.getItem("b_twenty_three"),
-      b_twenty_four: localStorage.getItem("b_twenty_four"),
-      currentButton: "",
+      b_eleven: localStorage.getItem("b_eleven"),
+      b_twelve: localStorage.getItem("b_twelve"),
+      b_thirteen: localStorage.getItem("b_thirteen"),
+      b_fourteen: localStorage.getItem("b_fourteen"),
       lang: "ru"
     };
   },
@@ -464,8 +579,8 @@ export default {
       window.scrollTo(0, 0);
     },
     showModal(button) {
-      this.isModal = true;
       this.currentButton = button;
+      this.isModal = true;
     },
     hideModal() {
       this.isModal = false;
@@ -474,16 +589,16 @@ export default {
       this.mobileMenuOpen = true;
       document.body.style.overflowY = "hidden";
     },
-    hideMobileMenu() {
-      this.mobileMenuOpen = false;
-      document.body.style.overflowY = "scroll";
-    },
     toggleLang() {
       if (this.lang === "ru") {
         this.lang = "ua";
       } else {
         this.lang = "ru";
       }
+    },
+    hideMobileMenu() {
+      this.mobileMenuOpen = false;
+      document.body.style.overflowY = "scroll";
     },
     preSend() {
       this.sendTel({
@@ -507,8 +622,8 @@ export default {
       this.tel = "";
       this.presentationName = "";
       this.presentationTel = "";
-      localStorage.setItem("b_twenty_four", true);
-      this.b_twenty_four = true;
+      localStorage.setItem("b_thirteen", true);
+      this.b_thirteen = true;
     },
     ...mapActions(["sendTel"])
   },
@@ -518,4 +633,4 @@ export default {
 };
 </script>
 
-<style scoped src="../assets/styles/contacts_style.css" lang="css"></style>
+<style scoped src="../../assets/styles/services_style.css" lang="css"></style>

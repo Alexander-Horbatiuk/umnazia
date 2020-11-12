@@ -7,13 +7,13 @@
           <!-- ____________________btn_________________________ -->
           <div class="logo">
             <img
-              src="../assets/img/logo/logo_tablet.png"
+              src="../../assets/img/logo/logo_tablet.png"
               alt="logo"
               width="160"
               class="logo_tablet"
             />
             <img
-              src="../assets/img/logo/logo_phone.png"
+              src="../../assets/img/logo/logo_phone.png"
               alt="logo"
               width="146"
               class="logo_phone"
@@ -21,18 +21,18 @@
           </div>
 
           <!-- ____________________btn_________________________ -->
-          <!-- <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-            </a>
-          </div> -->
-          <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-              <a class="btn_lang_ua_open">
-                ua
-              </a>
-            </a>
+          <div class="btn_lang_wrapper">
+            <div
+              class="text_700_12"
+              :class="{ btn_lang_open: headLangOpen, btn_lang: !headLangOpen }"
+            >
+              <div class="text_700_12 main_lang_button" @click="toggleLang">
+                ru
+              </div>
+              <router-link v-if="headLangOpen" class="btn_lang_ua_open" to="/ua"
+                >ua</router-link
+              >
+            </div>
           </div>
         </div>
         <!-- ________________________________________________________second_block________________________ -->
@@ -48,7 +48,7 @@
             </div>
 
             <div>
-              <a href="tel:+380931936267" class="num_link_header "
+              <a href="tel:+380931936267" class="num_link_header"
                 >+ 38 (093) 193 62 67</a
               >
             </div>
@@ -56,7 +56,7 @@
           <div class="big_logo">
             <a class="link_logo">
               <img
-                src="../assets/img/logo/logo.png"
+                src="../../assets/img/logo/logo.png"
                 alt="owl logo"
                 width="308"
                 class="main_logo"
@@ -66,10 +66,8 @@
 
           <!--_____________________adress________________________ -->
           <div class="adress">
-            <div class="header_adress_text text_400_12">
-              Мы находимся:
-            </div>
-            <div class=" text_700_12">
+            <div class="header_adress_text text_400_12">Мы находимся:</div>
+            <div class="text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
@@ -81,9 +79,7 @@
 
           <!--_____________________social_wrapper________________ -->
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">
-              Наши соц сети
-            </div>
+            <div class="social_text text_400_12">Наши соц сети</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -93,7 +89,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram"
                   />
                 </a>
@@ -106,7 +102,7 @@
                   class="icon_item_link"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook"
                   />
                 </a>
@@ -118,7 +114,10 @@
                   href="https://www.youtube.com"
                   class="icon_item_link"
                 >
-                  <img src="../assets/img/img_png//youtube.png" alt="youtube" />
+                  <img
+                    src="../../assets/img/img_png//youtube.png"
+                    alt="youtube"
+                  />
                 </a>
               </div>
             </div>
@@ -129,7 +128,7 @@
       </div>
 
       <!-- _____________________________________________menu________________ -->
-      <div class="navigation_list_wrapper ">
+      <div class="navigation_list_wrapper">
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
@@ -183,7 +182,7 @@
           <!-- ______________________________________________________ -->
           <div class="content_box_age">
             <img
-              src="../assets/img/background/frame_on_visor.png"
+              src="../../assets/img/background/frame_on_visor.png"
               alt=""
               class="frame_on_visor"
             />
@@ -206,13 +205,13 @@
               >
                 <img
                   v-if="!b_one"
-                  src="../assets/img/img_png/btn_yellow.png"
+                  src="../../assets/img/img_png/btn_yellow.png"
                   alt="button"
                   class="btn_yellow"
                 />
                 <img
                   v-else
-                  src="../assets/img/img_png/btn_orange.png"
+                  src="../../assets/img/img_png/btn_orange.png"
                   alt="button"
                   class="btn_orange"
                 />
@@ -235,23 +234,23 @@
         <div class="wrapper_contant">
           <!-- _______________________________CLOUDS_________________________________________ -->
           <img
-            src="../assets/img/img_png/cloud_left.png"
+            src="../../assets/img/img_png/cloud_left.png"
             alt="cloud"
             class="cloud_left"
           />
           <img
-            src="../assets/img/img_png/cloud_right.png"
+            src="../../assets/img/img_png/cloud_right.png"
             alt="cloud"
             class="cloud_right"
           />
           <!-- _______________________________CLOUDS_TABLET________________________________________ -->
           <img
-            src="../assets/img/img_png/cloud_right_tablet.png"
+            src="../../assets/img/img_png/cloud_right_tablet.png"
             alt="cloud"
             class="cloud_right_tablet"
           />
           <img
-            src="../assets/img/img_png/cloud_left_tablet.png"
+            src="../../assets/img/img_png/cloud_left_tablet.png"
             alt="cloud"
             class="cloud_left_tablet"
           />
@@ -283,14 +282,14 @@
             <div class="wrap_book">
               <div class="book_">
                 <img
-                  src="../assets/img/img_png/book_ua.png"
+                  src="../../assets/img/img_png/book_ua.png"
                   alt=""
                   width="161"
                   height="206"
                   class="book_img"
                 />
                 <img
-                  src="../assets/img/img_png/favicon_book.png"
+                  src="../../assets/img/img_png/favicon_book.png"
                   alt=""
                   width="43"
                   height="44"
@@ -300,14 +299,14 @@
               </div>
               <div class="book_">
                 <img
-                  src="../assets/img/img_png/book_ua.png"
+                  src="../../assets/img/img_png/book_ua.png"
                   alt=""
                   width="224"
                   height="287"
                   class="book_img_center"
                 />
                 <img
-                  src="../assets/img/img_png/favicon_book.png"
+                  src="../../assets/img/img_png/favicon_book.png"
                   alt=""
                   width="53"
                   height="58"
@@ -317,14 +316,14 @@
               </div>
               <div class="book_">
                 <img
-                  src="../assets/img/img_png/book_ua.png"
+                  src="../../assets/img/img_png/book_ua.png"
                   alt=""
                   width="161"
                   height="206"
                   class="book_img"
                 />
                 <img
-                  src="../assets/img/img_png/favicon_book.png"
+                  src="../../assets/img/img_png/favicon_book.png"
                   alt=""
                   width="43"
                   height="44"
@@ -351,10 +350,10 @@
                   groups_description_second_block_content_show
               }"
             >
-              <div class="age_groups  z_index_four">
+              <div class="age_groups z_index_four">
                 <div class="circle_age_groups">
                   <img
-                    src="../assets/img/img_svg/img_group_one.svg"
+                    src="../../assets/img/img_svg/img_group_one.svg"
                     alt="children"
                     class="img_age_group img_group_one"
                   />
@@ -399,7 +398,7 @@
               <div class="age_groups z_index_three">
                 <div class="circle_age_groups">
                   <img
-                    src="../assets/img/img_svg/img_group_two.svg"
+                    src="../../assets/img/img_svg/img_group_two.svg"
                     alt="children"
                     class="img_age_group img_group_two"
                   />
@@ -453,7 +452,7 @@
               <div class="age_groups z_index_two">
                 <div class="circle_age_groups">
                   <img
-                    src="../assets/img/img_svg/img_group_three.svg"
+                    src="../../assets/img/img_svg/img_group_three.svg"
                     alt="children"
                     class="img_age_group img_group_three"
                   />
@@ -497,7 +496,7 @@
               <div class="age_groups z_index_one">
                 <div class="circle_age_groups">
                   <img
-                    src="../assets/img/img_svg/img_group_four.svg"
+                    src="../../assets/img/img_svg/img_group_four.svg"
                     alt="children"
                     class="img_age_group img_group_four"
                   />
@@ -544,7 +543,7 @@
           <!-- ___________________________________________________________TIME_______ -->
           <div class="training_format_wrapper">
             <div class="box_line_heading">
-              <div class="heading_text ">
+              <div class="heading_text">
                 <h3>формат занятий</h3>
               </div>
             </div>
@@ -618,7 +617,7 @@
               <div class="central_circle">
                 <div
                   v-if="isCurrentSlide(1)"
-                  class="central_circle_content_one   cllass_for_children"
+                  class="central_circle_content_one cllass_for_children"
                 >
                   <p class="center_circ_bg_heading">
                     Изба -читальня на трёх языках
@@ -713,9 +712,7 @@
                   v-if="isCurrentSlide(5)"
                   class="central_circle_content_five cllass_for_children"
                 >
-                  <p class="center_circ_bg_heading">
-                    Реджио педагогика
-                  </p>
+                  <p class="center_circ_bg_heading">Реджио педагогика</p>
                   <span class="center_cercle_text"
                     >Главные принципы Реджио-педагогики:сотрудничество педагогов
                     с детьми, максимальная свобода Творчества и самовыражения,
@@ -733,9 +730,7 @@
                   v-if="isCurrentSlide(6)"
                   class="central_circle_content_six cllass_for_children"
                 >
-                  <p class="center_circ_bg_heading">
-                    Видеонаблюдение
-                  </p>
+                  <p class="center_circ_bg_heading">Видеонаблюдение</p>
                   <span class="center_cercle_text center_cercle_text_six">
                     В нашей Академии знаний ведётся круглосуточное
                     видеонаблюдение. Это даёт возможность родителям в течении
@@ -820,9 +815,7 @@
                   v-if="isCurrentSlide(11)"
                   class="central_circle_content_eleven cllass_for_children"
                 >
-                  <p class="center_circ_bg_heading">
-                    Творчество
-                  </p>
+                  <p class="center_circ_bg_heading">Творчество</p>
                   <span class="center_cercle_text">
                     Творческий процесс является основным процессом ,мотивирующим
                     ребёнка к какому либо действию. Развитие творческого
@@ -867,11 +860,11 @@
                 >
                   <div class="content_small_circle sub_one_circles">
                     <img
-                      src="../assets/img/circle_content/sub_one_circles.svg"
+                      src="../../assets/img/circle_content/sub_one_circles.svg"
                       alt=""
                       class="img_one_circles"
                     />
-                    <p class="header_circles_one    text_near_circles">
+                    <p class="header_circles_one text_near_circles">
                       Изба - читальня на трёх языках
                     </p>
                   </div>
@@ -884,11 +877,11 @@
                 >
                   <div class="content_small_circle sub_two_circles">
                     <img
-                      src="../assets/img/circle_content/sub_two_circles.svg"
+                      src="../../assets/img/circle_content/sub_two_circles.svg"
                       alt=""
                       class="img_two_circles"
                     />
-                    <p class="header_circles_two    text_near_circles">
+                    <p class="header_circles_two text_near_circles">
                       Подготовка к школе
                     </p>
                   </div>
@@ -903,11 +896,11 @@
                 >
                   <div class="content_small_circle sub_three_circles">
                     <img
-                      src="../assets/img/circle_content/sub_three_circles.svg"
+                      src="../../assets/img/circle_content/sub_three_circles.svg"
                       alt=""
                       class="img_three_circles"
                     />
-                    <p class="header_circles_three    text_near_circles">
+                    <p class="header_circles_three text_near_circles">
                       Досуг первоклассника
                     </p>
                   </div>
@@ -920,11 +913,11 @@
                 >
                   <div class="content_small_circle sub_four_circles">
                     <img
-                      src="../assets/img/circle_content/sub_four_circles.svg"
+                      src="../../assets/img/circle_content/sub_four_circles.svg"
                       alt=""
                       class="img_four_circles"
                     />
-                    <p class="header_circles_four    text_near_circles">
+                    <p class="header_circles_four text_near_circles">
                       Обучение в игре
                     </p>
                   </div>
@@ -939,11 +932,11 @@
                 >
                   <div class="content_small_circle sub_five_circles">
                     <img
-                      src="../assets/img/circle_content/sub_five_circles.svg"
+                      src="../../assets/img/circle_content/sub_five_circles.svg"
                       alt=""
                       class="img_five_circles"
                     />
-                    <p class="header_circles_five    text_near_circles">
+                    <p class="header_circles_five text_near_circles">
                       Реджио педагогика
                     </p>
                   </div>
@@ -956,11 +949,11 @@
                 >
                   <div class="content_small_circle sub_six_circles">
                     <img
-                      src="../assets/img/circle_content/sub_six_circles.svg"
+                      src="../../assets/img/circle_content/sub_six_circles.svg"
                       alt=""
                       class="img_six_circles"
                     />
-                    <p class="header_circles_six    text_near_circles">
+                    <p class="header_circles_six text_near_circles">
                       Видеонаблюдение
                     </p>
                   </div>
@@ -975,13 +968,11 @@
                 >
                   <div class="content_small_circle sub_seven_circles">
                     <img
-                      src="../assets/img/circle_content/sub_seven_circles.svg"
+                      src="../../assets/img/circle_content/sub_seven_circles.svg"
                       alt=""
                       class="img_seven_circles"
                     />
-                    <p class="header_circles_seven    text_near_circles">
-                      Триз
-                    </p>
+                    <p class="header_circles_seven text_near_circles">Триз</p>
                   </div>
                 </div>
 
@@ -992,11 +983,11 @@
                 >
                   <div class="content_small_circle sub_eight_circles">
                     <img
-                      src="../assets/img/circle_content/sub_eight_circles.svg"
+                      src="../../assets/img/circle_content/sub_eight_circles.svg"
                       alt=""
                       class="img_eight_circles"
                     />
-                    <p class="header_circles_eight   text_near_circles">
+                    <p class="header_circles_eight text_near_circles">
                       Финансовая грамотность
                     </p>
                   </div>
@@ -1011,11 +1002,11 @@
                 >
                   <div class="content_small_circle sub_nine_circles">
                     <img
-                      src="../assets/img/circle_content/sub_nine_circles.svg"
+                      src="../../assets/img/circle_content/sub_nine_circles.svg"
                       alt=""
                       class="img_nine_circles"
                     />
-                    <p class="header_circles_nine    text_near_circles">
+                    <p class="header_circles_nine text_near_circles">
                       Современная методика обучения
                     </p>
                   </div>
@@ -1028,11 +1019,11 @@
                 >
                   <div class="content_small_circle sub_ten_circles">
                     <img
-                      src="../assets/img/circle_content/sub_ten_circles.svg"
+                      src="../../assets/img/circle_content/sub_ten_circles.svg"
                       alt=""
                       class="img_ten_circles"
                     />
-                    <p class="header_circles_ten    text_near_circles">Языки</p>
+                    <p class="header_circles_ten text_near_circles">Языки</p>
                   </div>
                 </div>
               </div>
@@ -1045,11 +1036,11 @@
                 >
                   <div class="content_small_circle sub_eleven_circles">
                     <img
-                      src="../assets/img/circle_content/sub_eleven_circles.svg"
+                      src="../../assets/img/circle_content/sub_eleven_circles.svg"
                       alt=""
                       class="img_eleven_circles"
                     />
-                    <p class="header_circles_eleven   text_near_circles">
+                    <p class="header_circles_eleven text_near_circles">
                       Творчество
                     </p>
                   </div>
@@ -1062,11 +1053,11 @@
                 >
                   <div class="content_small_circle sub_twelve_circles">
                     <img
-                      src="../assets/img/circle_content/sub_twelve_circles.svg"
+                      src="../../assets/img/circle_content/sub_twelve_circles.svg"
                       alt=""
                       class="img_twelve_circles"
                     />
-                    <p class="header_circles_twelve    text_near_circles">
+                    <p class="header_circles_twelve text_near_circles">
                       Малокомплектные группы до 8 человек
                     </p>
                   </div>
@@ -1543,7 +1534,7 @@
           <iframe
             class="iframe_google_map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.9341857831632!2d30.753829015494134!3d46.4500010751442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633e7b3172e5b%3A0x395f101608febf7e!2z0L_RgNC-0YHQvy4g0KjQtdCy0YfQtdC90LrQviwgMjcsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1600843303113!5m2!1sru!2sua"
-            style="border:0;"
+            style="border: 0"
             allowfullscreen=""
             aria-hidden="false"
             tabindex="0"
@@ -1553,7 +1544,7 @@
           <div class="modal_window">
             <div class="modal_logo_wrapper">
               <img
-                src="../assets/img/img_png/umnazia_logo_footer.png"
+                src="../../assets/img/img_png/umnazia_logo_footer.png"
                 alt="umnaziya logo"
               />
             </div>
@@ -1567,55 +1558,58 @@
                   >г. Одесса, просп. Шевченко 27</a
                 >
               </div>
-              <div class="modal_phone modal_phone_icon ">
-                <a class="modal_phone_link " href="tel:+380970115588 "
+              <div class="modal_phone modal_phone_icon">
+                <a class="modal_phone_link" href="tel:+380970115588 "
                   >+ 38 (097) 011 55 88</a
                 >
               </div>
-              <div class="modal_phone ">
-                <a class="modal_phone_link " href="tel:tel:+380931936267 "
+              <div class="modal_phone">
+                <a class="modal_phone_link" href="tel:tel:+380931936267 "
                   >+ 38 (093) 193 62 67</a
                 >
               </div>
-              <div class="modal_email ">
-                <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
+              <div class="modal_email">
+                <a class="modal_email_link" href="mailto:umnazia.ua@gmail.com "
                   >umnazia.ua@gmail.com</a
                 >
               </div>
             </div>
 
-            <div class="modal_social_icons_links ">
-              <div class="modal_social_icon_item ">
+            <div class="modal_social_icons_links">
+              <div class="modal_social_icon_item">
                 <a
                   target="_blank"
                   style="cursor: pointer"
                   href="https://instagram.com/umnazia.ua?igshid=101pgncdk1sb9 "
                 >
                   <img
-                    src="../assets/img/img_png/instagram.png"
+                    src="../../assets/img/img_png/instagram.png"
                     alt="instagram "
                   />
                 </a>
               </div>
-              <div class="modal_social_icon_item ">
+              <div class="modal_social_icon_item">
                 <a
                   target="_blank"
                   style="cursor: pointer"
                   href="https://www.facebook.com/profile.php?id=100054250201674"
                 >
                   <img
-                    src="../assets/img/img_png/facebook.png"
+                    src="../../assets/img/img_png/facebook.png"
                     alt="facebook "
                   />
                 </a>
               </div>
-              <div class="modal_social_icon_item ">
+              <div class="modal_social_icon_item">
                 <a
                   target="_blank"
                   style="cursor: pointer"
                   href="https://www.youtube.com/"
                 >
-                  <img src="../assets/img/img_png/youtube.png" alt="youtube " />
+                  <img
+                    src="../../assets/img/img_png/youtube.png"
+                    alt="youtube "
+                  />
                 </a>
               </div>
             </div>
@@ -1700,9 +1694,7 @@
           >
           <div class="social_wrapper">
             <div class="head_social_wrapper">
-              <div class="social_text text_400_12">
-                Наши соц сети
-              </div>
+              <div class="social_text text_400_12">Наши соц сети</div>
               <div class="social_icons_links">
                 <div class="social_icon_item">
                   <a
@@ -1712,7 +1704,7 @@
                     class="icon_item_link"
                   >
                     <img
-                      src="../assets/img/img_png/instagram.png"
+                      src="../../assets/img/img_png/instagram.png"
                       alt="instagram"
                     />
                   </a>
@@ -1725,7 +1717,7 @@
                     class="icon_item_link"
                   >
                     <img
-                      src="../assets/img/img_png/facebook.png"
+                      src="../../assets/img/img_png/facebook.png"
                       alt="facebook"
                     />
                   </a>
@@ -1738,17 +1730,31 @@
                     class="icon_item_link"
                   >
                     <img
-                      src="../assets/img/img_png/youtube.png"
+                      src="../../assets/img/img_png/youtube.png"
                       alt="youtube"
                     />
                   </a>
                 </div>
               </div>
             </div>
-            <div @click="toggleLang" class="btn_lang_wrapper">
-              <a class="btn_lang text_700_12">
-                {{ lang }}
-              </a>
+            <div class="btn_lang_wrapper">
+              <div
+                class="text_700_12"
+                :class="{
+                  btn_lang_open: headLangOpen,
+                  btn_lang: !headLangOpen
+                }"
+              >
+                <div class="text_700_12 main_lang_button" @click="toggleLang">
+                  ru
+                </div>
+                <router-link
+                  v-if="headLangOpen"
+                  class="btn_lang_ua_open"
+                  to="/ua"
+                  >ua</router-link
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -1813,7 +1819,8 @@ export default {
       fifth_home_techniques_content_show: false,
       sixth_home_techniques_content_show: false,
       files: [],
-      lang: "ru"
+      headLangOpen: false,
+      mobileLangOpen: false
     };
   },
   components: {
@@ -1825,6 +1832,12 @@ export default {
     swiper: directive
   },
   methods: {
+    toggleLang() {
+      this.headLangOpen = !this.headLangOpen;
+    },
+    toggleLangMobile() {
+      this.mobileLangOpen = !this.mobileLangOpen;
+    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },
@@ -1837,13 +1850,6 @@ export default {
     },
     readMore(trigger) {
       this[trigger] = true;
-    },
-    toggleLang() {
-      if (this.lang === "ru") {
-        this.lang = "ua";
-      } else {
-        this.lang = "ru";
-      }
     },
     nextSlide() {
       this.$refs.gallerySwiper.$swiper.slideNext();
@@ -2051,11 +2057,11 @@ export default {
         i = 6;
       }
     });
-  },
+  }
 };
 </script>
 
-<style scoped src="../assets/styles/style.css" lang="css"></style>
+<style scoped src="../../assets/styles/style.css" lang="css"></style>
 <style scoped>
 .selected_small_circle {
   background: #62e5db;

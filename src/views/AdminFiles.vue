@@ -4,9 +4,11 @@
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
 
+        <div class="open_site" v-if="isAdmin" @click="toManager">менеджер</div>
+
         <div class="open_site" @click="toFieldsPage">изменить текст</div>
 
-        <router-link to="/logout" class="logout">закончить сеанс</router-link>
+        <div class="open_site" @click="logout">закончить сеанс</div>
       </div>
     </header>
     <main>
@@ -38,6 +40,7 @@
 import axios from "axios";
 import vue2Dropzone from "vue2-dropzone";
 import "vue2-dropzone/dist/vue2Dropzone.min.css";
+import { mapActions } from "vuex";
 export default {
   components: {
     vueDropzone: vue2Dropzone
@@ -46,18 +49,27 @@ export default {
     return {
       dropzoneOptions: {
         url: process.env.VUE_APP_API + "/files",
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` },
         addRemoveLinks: true,
         duplicateCheck: true,
         destroyDropzone: false,
         acceptedFiles: "image/*, video/*",
         maxFilesize: 15
       },
-      fileName: ""
+      fileName: "",
+      isAdmin: false
     };
   },
   methods: {
+    logout() {
+      localStorage.removeItem("jwt");
+      this.$router.push({ name: "Home" });
+    },
     toMainPage() {
       this.$router.push({ name: "Home" });
+    },
+    toManager() {
+      this.$router.push({ name: "Manager" });
     },
     uploadSuccess(file, response) {
       this.fileName = response.file;
@@ -65,12 +77,18 @@ export default {
     async fileRemoved(file) {
       await axios({
         method: "get",
-        url: process.env.VUE_APP_API + `/files/delete/${file.id}`
+        url: process.env.VUE_APP_API + `/files/delete/${file.id}`,
+        headers: { Authorization: `Bearer ${localStorage.getItem("jwt")}` }
       });
     },
     toFieldsPage() {
       this.$router.push({ name: "Admin" });
-    }
+    },
+    ...mapActions(["checkIsAdmin"])
+  },
+  async created() {
+    const isAdmin = await this.checkIsAdmin();
+    this.isAdmin = isAdmin.data;
   },
   async mounted() {
     const ids = (
