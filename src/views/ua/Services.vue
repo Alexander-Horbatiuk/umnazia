@@ -57,21 +57,21 @@
 
           <div class="adress">
             <div class="header_adress_text text_400_12">
-              Мы находимся:
+              Ми знаходимось:
             </div>
             <div class=" text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
                 class="header_text_map_link "
-                >г.Одессa, просп. Шевченко 27</a
+                >м.Одесa, просп. Шевченко 27</a
               >
             </div>
           </div>
 
           <div class="header_social_wrapper">
             <div class="social_text text_400_12">
-              Наши соц сети
+              Наші соц мережі
             </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
@@ -123,27 +123,27 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/about/ua" class="el_menu_link"
-                >О нас</router-link
+                >Про нас</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/technique/ua" class="el_menu_link"
-                >Методика и формат</router-link
+                >Методика та формат</router-link
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Наши Услуги</a>
+              <a class="selected_page">Наші Послуги</a>
             </div>
             <div class="el_menu">
               <router-link to="/timetable/ua" class="el_menu_link"
-                >Расписание</router-link
+                >Розклад</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Группы и Стоимость</router-link
+                >Групи та вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -153,7 +153,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/contacts/ua" class="el_menu_link"
-                >Контакты</router-link
+                >Контакти</router-link
               >
             </div>
           </div>
@@ -171,7 +171,7 @@
         <div class="box_line_heading text_bold">
           <!--box-line-->
           <div class="heading_text">
-            <h3>наши услуги</h3>
+            <h3>наші послуги</h3>
           </div>
         </div>
 
@@ -198,24 +198,17 @@
 
             <div class="preparing_school_text_wrapper">
               <div class="preparing_school_text_header text_bold">
-                <p>Подготовка к школе (3-6 лет)</p>
+                <p>Підготовка до школи (3-6 років)</p>
               </div>
 
               <div class="preparing_school_sub_text text_400_12">
                 <p>
-                  Занятия проводятся на трёх языках в игровой форме.
-                  <span class="preparing_school_sub_sub_text_320px"
-                    >Основой являются настольные и подвижные игры,игры на
-                    развитие навыков конкурирования и достижения поставленных
-                    целей. <br />
-                    Путём чтения художественной и научно-познавательной
-                    литературы,происходит работа над формированием
-                    речи,грамотного и последовательного изложения своих
-                    мыслей.</span
-                  >
+                  Заняття проводяться на трьох мовах в ігровій формі
+                  <span class="preparing_school_sub_sub_text_320px">
+                     Основою є настільні та рухливі ігри, ігри на розвиток навичок конкурування і досягнення поставлених цілей.. <br />
+                    Шляхом читання художньої та науково-пізнавальної літератури, відбувається робота над формуванням мови, грамотного і послідовного викладу своїх думок.</span>
                   <br />
-                  Помощь в обучении чтению и счету. Обучение финансовой
-                  грамотности и навыкам формирования семейного бюджета.
+                    Допомога в навчанні читання і рахунку. Навчання фінансової грамотності та навичкам формування сімейного бюджету.
                 </p>
               </div>
 
@@ -224,12 +217,12 @@
                 class="services_btn_wrapper text_bold"
               >
                 <button v-if="!b_eleven" class="services_submit_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -248,22 +241,19 @@
 
             <div class="leisure_text_wrapper">
               <div class="leisure_text_header text_bold">
-                <p>Досуг первоклассника (7-8лет)</p>
+                <p>Дозвілля першокласника (7-8лет)</p>
               </div>
 
               <div class="leisure_sub_text text_400_12">
-                -чтение художественной и научно-познавательной литературы,
-                настольные игры, финансовая грамотность, творчество; <br />
-                С 14.00 до 18.00<br /><br />
-                <p class="text_bold">Группы английского языка</p>
+                -Читання художньої та науково-пізнавальної літератури, настільні ігри, фінансова грамотність, творчість; <br />
+                З 14.00 до 18.00<br /><br />
+                <p class="text_bold">Групи англійської мови</p>
                 Пн.- Ср.- Птн.<br />
                 16.00 -17.00<br />
                 Вт.-Чт.<br />
                 16.00-17.00<br /><br />
-                <p class="text_bold">«Няня на час»</p>
-                Вы можете оставить ребёнка у нас и освободить время для
-                себя.Наши педагоги займут ребёнка за чтением интересных
-                книг,творчеством и настольными играми. 100 грн/час
+                <p class="text_bold">«Няня на годину»</p>
+                Ви можете залишити дитину у нас і звільнити час для себя.Наші педагоги займуть дитини за читанням цікавих книг, творчістю і настільними іграми. 100 грн / год
               </div>
 
               <div
@@ -275,8 +265,8 @@
                   группу
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -295,12 +285,12 @@
 
         <div class="footer_header_text text_700_12">
           <p>
-            Предлагаем посетить наши
-            <span class="footer_header_text_upper">уроки-презентации !</span>
+            Пропонуємо відвідати наші
+            <span class="footer_header_text_upper">уроки-презентації !</span>
           </p>
         </div>
         <div class="footer_form_text text_400_12">
-          <p>Записаться на презентацию можно просто заполнив форму ниже!</p>
+          <p>Записатися на презентацію можна просто заповнивши форму нижче!</p>
         </div>
 
         <form
@@ -334,14 +324,14 @@
               class="submit_form_btn text_700_12"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
             <button
               v-else
               class="training_format_submit_orange_btn"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
           </div>
         </form>
@@ -372,7 +362,7 @@
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 target="_blank"
-                >г. Одесса, просп. Шевченко 27</a
+                >м. Одеса, просп. Шевченко 27</a
               >
             </div>
             <div class="modal_phone modal_phone_icon ">
@@ -432,12 +422,12 @@
             class="modal_btn_wrapper text_Bold"
           >
             <button v-if="!b_fourteen" class="modal_submit_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
           </div>
         </div>
@@ -451,7 +441,7 @@
             style="cursor: pointer"
           ></button>
         </div>
-        <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
+        <p>Академія знань “Умназія” 2020 © Усі права захищені</p>
       </div>
     </footer>
 
@@ -459,7 +449,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записаться в группу</p>
+          <p class="head_form">Записатися до групи</p>
           <input
             v-model="name"
             type="text"
@@ -472,7 +462,7 @@
             placeholder="Ваше номер телефона"
             class="number_form"
           />
-          <button class="bt_modal_form">Отправить</button>
+          <button class="bt_modal_form">Надіслати</button>
         </div>
       </form>
     </div>
@@ -480,27 +470,27 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/about/ua" class="el_menu_modal">Про нас</router-link>
         <router-link to="/technique/ua" class="el_menu_modal"
-          >Методика и формат</router-link
+          >Методика та формат</router-link
         >
         <router-link to="/services/ua" class="el_menu_modal"
-          >Наши Услуги
+          >Наші послуги
         </router-link>
         <router-link to="/timetable/ua" class="el_menu_modal"
-          >Расписание
+          >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Группы и Стоимость</router-link
+          >Групи та вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
-        <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
+        <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
             <div class="social_text text_400_12">
-              Наши соц сети
+              Наші соц мережі
             </div>
             <div class="social_icons_links">
               <div class="social_icon_item">

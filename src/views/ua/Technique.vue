@@ -56,18 +56,18 @@
 
           <div class="adress">
             <div class="header_adress_text text_400_12">
-              Мы находимся:
+              Ми знаходимось:
             </div>
             <div class=" text_700_12">
               <router-link to="/technique/ua" class="header_text_map_link "
-                >г.Одесса, просп. Шевченко 27</router-link
+                >м.Одеса, просп. Шевченко 27</router-link
               >
             </div>
           </div>
 
           <div class="header_social_wrapper">
             <div class="social_text text_400_12">
-              Наши соц сети
+              Наші соц мережі
             </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
@@ -119,27 +119,27 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/about/ua" class="el_menu_link"
-                >О нас</router-link
+                >Про нас</router-link
               >
             </div>
             <div class="el_menu">
-              <a class="selected_page">Методика и формат</a>
+              <a class="selected_page">Методика та формат</a>
             </div>
             <div class="el_menu">
               <router-link to="/services/ua" class="el_menu_link"
-                >Наши Услуги</router-link
+                >Наші Послуги</router-link
               >
             </div>
             <div class="el_menu">
               <router-link to="/timetable/ua" class="el_menu_link"
-                >Расписание</router-link
+                >Розклад</router-link
               >
             </div>
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Группы и Стоимость</router-link
+                >Групи та вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -149,7 +149,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/contacts/ua" class="el_menu_link"
-                >Контакты</router-link
+                >Контакти</router-link
               >
             </div>
           </div>
@@ -174,9 +174,8 @@
 
           <div class="main_content_header_sub_text text_400_12">
             <p>
-              Каждый день
-              <span class="sub_text_bold text_700_12">новая</span> языковая
-              среда
+              Кожен день
+              <span class="sub_text_bold text_700_12">нове</span> мовне середовище
             </p>
           </div>
 
@@ -184,21 +183,19 @@
             class="main_content_header_sub_text text_400_12 main_content_header_sub_psevdo"
           >
             <p>
-              Обучение на
-              <span class="sub_text_bold text_700_12">трех</span> языках
+              Навчання на
+              <span class="sub_text_bold text_700_12">трьох</span> мовах
             </p>
           </div>
 
           <div class="lessons_wrapper">
             <div class="building_lessons_text_wrapper text_Bold">
               <p>
-                Наши занятия строятся по принципу погружения в языковое
-                пространство, что создаёт условия для комфортного и быстрого
-                изучения языка и развития речи малышей.
+                Наші заняття будуються за принципом занурення в мовний простір, що створює умови для комфортного і швидкого вивчення мови і розвитку мовлення малюків.
               </p>
             </div>
 
-            <div class="building_lessons_text_wrapper_768px text_400_12">
+            <!-- <div class="building_lessons_text_wrapper_768px text_400_12">
               <p>
                 Занятия проходят по эксклюзивной методике языкового погружения
                 на трех языках - русском, украинском и английском и разделены на
@@ -207,7 +204,7 @@
                 ребенка - лепка, рисование, развитие мелкой и крупной моторики,
                 сюжетно-ролевые игры, игры на развитие воображения.
               </p>
-            </div>
+            </div> -->
 
             <div class="books_wrapper">
               <div>
@@ -255,12 +252,7 @@
               <p>
                 Принцип «одна ситуация-один язык» позволяет разделить языки по
                 месту их применения.<br />
-                В группе языкового погружения, дети, переступая порог нашей
-                Академии знаний, попадают в среду иного языка,как правило, даже
-                с подителями педагоги и администратор, говорят на изучаемом в
-                этот день языке. Атмосфера в группе языкового погружения
-                максимально насыщена играми, чтением,развитием речи, письма и
-                счета на «языке дня»
+                У групі мовного занурення, діти, переступаючи поріг нашої Академії знань, потрапляють в середу іншої мови, як правило, навіть з батьками і педагоги, і адміністратор, розмовляють на досліджувані в цей день мові. Атмосфера в групі мовного занурення максимально насичена іграми, читанням, розвитком мовлення, письмом і рахунком на «мові дня»
               </p>
             </div>
           </div>
@@ -268,13 +260,13 @@
 
         <div class="training_format_wrapper">
           <div class="training_format_header_text text_Bold">
-            <p>Формат занятий</p>
+            <p>Формат занять</p>
           </div>
 
           <div class="training_format_header_subtext text_Bold">
             <p>
-              Работаем <span class="text_Bold">6 дней</span> в неделю (формат -
-              полудневки)
+              Працюємо <span class="text_Bold">6 днів</span> в тиждень (формат -
+              Полуднівка)
             </p>
           </div>
 
@@ -286,12 +278,12 @@
 
               <div @click="showModal('b_seven')" class="text_Bold">
                 <button v-if="!b_seven" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -303,12 +295,12 @@
 
               <div @click="showModal('b_eight')" class="text_Bold">
                 <button v-if="!b_eight" class="training_format_submit_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записаться в<br />
-                  группу
+                  Записатися до<br />
+                  групи
                 </button>
               </div>
             </div>
@@ -327,12 +319,12 @@
 
         <div class="footer_header_text text_700_12">
           <p>
-            Предлагаем посетить наши
-            <span class="footer_header_text_upper">уроки-презентации !</span>
+            Пропонуємо відвідати наші
+            <span class="footer_header_text_upper">уроки-презентації !</span>
           </p>
         </div>
         <div class="footer_form_text text_400_12">
-          <p>Записаться на презентацию можно просто заполнив форму ниже!</p>
+          <p>Записатися на презентацію можна просто заповнивши форму нижче!</p>
         </div>
 
         <form
@@ -366,14 +358,14 @@
               class="submit_form_btn text_700_12"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
             <button
               v-else
               class="training_format_submit_orange_btn"
               type="submit"
             >
-              Отправить
+              Надіслати
             </button>
           </div>
         </form>
@@ -404,7 +396,7 @@
               <a
                 class="modal_adress_link"
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
-                >г. Одесса, просп. Шевченко 27</a
+                >м. Одеса, просп. Шевченко 27</a
               >
             </div>
             <div class="modal_phone modal_phone_icon ">
@@ -465,12 +457,12 @@
 
           <div @click="showModal('b_ten')" class="modal_btn_wrapper text_Bold ">
             <button v-if="!b_ten" class="modal_submit_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записаться в<br />
-              группу
+              Записатися до<br />
+              групи
             </button>
           </div>
         </div>
@@ -484,7 +476,7 @@
             style="cursor: pointer"
           ></button>
         </div>
-        <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
+        <p>Академія знань “Умназія” 2020 © Усі права захищені</p>
       </div>
     </footer>
 
@@ -492,7 +484,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записаться в группу</p>
+          <p class="head_form">Записатися до групи</p>
           <input
             v-model="name"
             type="text"
@@ -505,7 +497,7 @@
             placeholder="Ваше номер телефона"
             class="number_form"
           />
-          <button class="bt_modal_form">Отправить</button>
+          <button class="bt_modal_form">Надіслати</button>
         </div>
       </form>
     </div>
@@ -513,27 +505,27 @@
     <div v-if="mobileMenuOpen" class="wrap_mobile_menu">
       <div @click="hideMobileMenu" class="close_mobile_menu"></div>
       <div class="mobile_menu">
-        <router-link to="/about/ua" class="el_menu_modal">О нас</router-link>
+        <router-link to="/about/ua" class="el_menu_modal">Про нас</router-link>
         <router-link to="/technique/ua" class="el_menu_modal"
-          >Методика и формат</router-link
+          >Методика та формат</router-link
         >
         <router-link to="/services/ua" class="el_menu_modal"
-          >Наши Услуги
+          >Наші послуги
         </router-link>
         <router-link to="/timetable/ua" class="el_menu_modal"
-          >Расписание
+          >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Группы и Стоимость</router-link
+          >Групи та вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
         >
-        <router-link to="contacts" class="el_menu_modal">Контакты</router-link>
+        <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
             <div class="social_text text_400_12">
-              Наши соц сети
+              Наші соц мережі
             </div>
             <div class="social_icons_links">
               <div class="social_icon_item">
