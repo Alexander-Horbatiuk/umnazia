@@ -19,13 +19,21 @@
             /></router-link>
           </div>
 
-          <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-              <a class="btn_lang_ua_open">
+          <div class="btn_lang_wrapper">
+            <div
+              class="text_700_12"
+              :class="{ btn_lang_open: headLangOpen, btn_lang: !headLangOpen }"
+            >
+              <div class="text_700_12 main_lang_button" @click="toggleLang">
                 ua
-              </a>
-            </a>
+              </div>
+              <router-link
+                v-if="headLangOpen"
+                class="btn_lang_ua_open"
+                to="/services"
+                >ru</router-link
+              >
+            </div>
           </div>
         </div>
         <div class="second_block">
@@ -39,7 +47,7 @@
               >
             </div>
             <div>
-              <a href="tel:+380931936267" class="num_link_header "
+              <a href="tel:+380931936267" class="num_link_header"
                 >+ 38 (093) 193 62 67</a
               >
             </div>
@@ -118,7 +126,7 @@
         </div>
       </div>
 
-      <div class="navigation_list_wrapper ">
+      <div class="navigation_list_wrapper">
         <div class="contacts_wrapper contacts_wrapper_menu">
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
@@ -205,10 +213,15 @@
                 <p>
                   Заняття проводяться на трьох мовах в ігровій формі
                   <span class="preparing_school_sub_sub_text_320px">
-                     Основою є настільні та рухливі ігри, ігри на розвиток навичок конкурування і досягнення поставлених цілей.. <br />
-                    Шляхом читання художньої та науково-пізнавальної літератури, відбувається робота над формуванням мови, грамотного і послідовного викладу своїх думок.</span>
+                    Основою є настільні та рухливі ігри, ігри на розвиток
+                    навичок конкурування і досягнення поставлених цілей.. <br />
+                    Шляхом читання художньої та науково-пізнавальної літератури,
+                    відбувається робота над формуванням мови, грамотного і
+                    послідовного викладу своїх думок.</span
+                  >
                   <br />
-                    Допомога в навчанні читання і рахунку. Навчання фінансової грамотності та навичкам формування сімейного бюджету.
+                  Допомога в навчанні читання і рахунку. Навчання фінансової
+                  грамотності та навичкам формування сімейного бюджету.
                 </p>
               </div>
 
@@ -245,7 +258,8 @@
               </div>
 
               <div class="leisure_sub_text text_400_12">
-                -Читання художньої та науково-пізнавальної літератури, настільні ігри, фінансова грамотність, творчість; <br />
+                -Читання художньої та науково-пізнавальної літератури, настільні
+                ігри, фінансова грамотність, творчість; <br />
                 З 14.00 до 18.00<br /><br />
                 <p class="text_bold">Групи англійської мови</p>
                 Пн.- Ср.- Птн.<br />
@@ -253,7 +267,9 @@
                 Вт.-Чт.<br />
                 16.00-17.00<br /><br />
                 <p class="text_bold">«Няня на годину»</p>
-                Ви можете залишити дитину у нас і звільнити час для себя.Наші педагоги займуть дитини за читанням цікавих книг, творчістю і настільними іграми. 100 грн / год
+                Ви можете залишити дитину у нас і звільнити час для себя.Наші
+                педагоги займуть дитини за читанням цікавих книг, творчістю і
+                настільними іграми. 100 грн / год
               </div>
 
               <div
@@ -342,7 +358,7 @@
           class="iframe_google_map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.9341857831632!2d30.753829015494134!3d46.4500010751442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c633e7b3172e5b%3A0x395f101608febf7e!2z0L_RgNC-0YHQvy4g0KjQtdCy0YfQtdC90LrQviwgMjcsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1600843303113!5m2!1sru!2sua"
           height="505"
-          style="border:0;"
+          style="border: 0"
           allowfullscreen=""
           aria-hidden="false"
           tabindex="0"
@@ -365,25 +381,25 @@
                 >м. Одеса, просп. Шевченко 27</a
               >
             </div>
-            <div class="modal_phone modal_phone_icon ">
-              <a class="modal_phone_link " href="tel:+380970115588 "
+            <div class="modal_phone modal_phone_icon">
+              <a class="modal_phone_link" href="tel:+380970115588 "
                 >+ 38 (097) 011 55 88</a
               >
             </div>
-            <div class="modal_phone ">
-              <a class="modal_phone_link " href="tel:tel:+380931936267 "
+            <div class="modal_phone">
+              <a class="modal_phone_link" href="tel:tel:+380931936267 "
                 >+ 38 (093) 193 62 67</a
               >
             </div>
-            <div class="modal_email ">
-              <a class="modal_email_link " href="mailto:umnazia.ua@gmail.com "
+            <div class="modal_email">
+              <a class="modal_email_link" href="mailto:umnazia.ua@gmail.com "
                 >umnazia.ua@gmail.com</a
               >
             </div>
           </div>
 
-          <div class="modal_social_icons_links ">
-            <div class="modal_social_icon_item ">
+          <div class="modal_social_icons_links">
+            <div class="modal_social_icon_item">
               <a
                 target="_blank"
                 style="cursor: pointer"
@@ -395,7 +411,7 @@
                 />
               </a>
             </div>
-            <div class="modal_social_icon_item ">
+            <div class="modal_social_icon_item">
               <a
                 target="_blank"
                 style="cursor: pointer"
@@ -433,8 +449,8 @@
         </div>
       </div>
 
-      <div class="footer_copyright text_400_12 ">
-        <div class="btn_anchor_wrapper ">
+      <div class="footer_copyright text_400_12">
+        <div class="btn_anchor_wrapper">
           <button
             class="btn_anchor"
             @click="scrollToTop"
@@ -534,10 +550,27 @@
               </div>
             </div>
           </div>
-          <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-            </a>
+          <div class="btn_lang_wrapper">
+            <div
+              class="text_700_12"
+              :class="{
+                btn_lang_open: mobileLangOpen,
+                btn_lang: !mobileLangOpen
+              }"
+            >
+              <div
+                class="text_700_12 main_lang_button"
+                @click="toggleLangMobile"
+              >
+                ua
+              </div>
+              <router-link
+                v-if="mobileLangOpen"
+                class="btn_lang_ua_open"
+                to="/services"
+                >ru</router-link
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -561,8 +594,12 @@ export default {
       b_twelve: localStorage.getItem("b_twelve"),
       b_thirteen: localStorage.getItem("b_thirteen"),
       b_fourteen: localStorage.getItem("b_fourteen"),
-      lang: "ru"
+      headLangOpen: false,
+      mobileLangOpen: false
     };
+  },
+  mounted() {
+    this.scrollToTop();
   },
   methods: {
     scrollToTop() {
@@ -580,11 +617,10 @@ export default {
       document.body.style.overflowY = "hidden";
     },
     toggleLang() {
-      if (this.lang === "ru") {
-        this.lang = "ua";
-      } else {
-        this.lang = "ru";
-      }
+      this.headLangOpen = !this.headLangOpen;
+    },
+    toggleLangMobile() {
+      this.mobileLangOpen = !this.mobileLangOpen;
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;

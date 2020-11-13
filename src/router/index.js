@@ -100,6 +100,16 @@ const routes = [
     }
   },
   {
+    path: "/admin/ua",
+    name: "AdminUA",
+    component: function() {
+      return import("../views/AdminUA.vue");
+    },
+    meta: {
+      middleware: admin
+    }
+  },
+  {
     path: "/ua",
     name: "HomeUA",
     component: function() {

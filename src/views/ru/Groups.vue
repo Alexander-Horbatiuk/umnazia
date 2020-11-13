@@ -26,7 +26,10 @@
               <div class="text_700_12 main_lang_button" @click="toggleLang">
                 ru
               </div>
-              <router-link v-if="headLangOpen" class="btn_lang_ua_open" to="/ua"
+              <router-link
+                v-if="headLangOpen"
+                class="btn_lang_ua_open"
+                to="/groups/ua"
                 >ua</router-link
               >
             </div>
@@ -623,7 +626,7 @@
               <router-link
                 v-if="mobileLangOpen"
                 class="btn_lang_ua_open"
-                to="/ua"
+                to="/groups/ua"
                 >ua</router-link
               >
             </div>
@@ -668,6 +671,9 @@ export default {
       headLangOpen: false,
       mobileLangOpen: false
     };
+  },
+  mounted() {
+    this.scrollToTop();
   },
   methods: {
     scrollToTop() {

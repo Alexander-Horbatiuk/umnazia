@@ -4,7 +4,9 @@
       <div class="navigation_list_wrapper admin_header">
         <div class="open_site" @click="toMainPage">перейти на сайт</div>
 
-        <div class="open_site" @click="toFieldsPage">изменить текст</div>
+        <div class="open_site" @click="toFieldsPage">изменить текст RU</div>
+
+        <div class="open_site" @click="toUAFieldsPage">изменить текст UA</div>
 
         <div class="open_site" @click="toFilesPage">добавить фото</div>
 
@@ -59,6 +61,9 @@ export default {
     },
     toFieldsPage() {
       this.$router.push({ name: "Admin" });
+    },
+    toUAFieldsPage() {
+      this.$router.push({ name: "AdminUA" });
     },
     async setPassword() {
       await this.setManagerPassword({ password: this.managerPassword });

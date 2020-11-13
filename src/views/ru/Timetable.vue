@@ -18,13 +18,21 @@
             /></router-link>
           </div>
 
-          <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-              <a class="btn_lang_ua_open">
-                ua
-              </a>
-            </a>
+          <div class="btn_lang_wrapper">
+            <div
+              class="text_700_12"
+              :class="{ btn_lang_open: headLangOpen, btn_lang: !headLangOpen }"
+            >
+              <div class="text_700_12 main_lang_button" @click="toggleLang">
+                ru
+              </div>
+              <router-link
+                v-if="headLangOpen"
+                class="btn_lang_ua_open"
+                to="/timetable/ua"
+                >ua</router-link
+              >
+            </div>
           </div>
         </div>
         <div class="second_block">
@@ -593,7 +601,11 @@
 
       <div class="footer_copyright text_400_12">
         <div class="btn_anchor_wrapper">
-          <button class="btn_anchor" @click="scrollToTop"></button>
+          <button
+            class="btn_anchor"
+            style="cursor: pointer"
+            @click="scrollToTop"
+          ></button>
         </div>
         <p>Академия знаний “Умназія” 2020 © Все права защищены</p>
       </div>
@@ -688,10 +700,27 @@
               </div>
             </div>
           </div>
-          <div @click="toggleLang" class="btn_lang_wrapper">
-            <a class="btn_lang text_700_12">
-              {{ lang }}
-            </a>
+          <div class="btn_lang_wrapper">
+            <div
+              class="text_700_12"
+              :class="{
+                btn_lang_open: mobileLangOpen,
+                btn_lang: !mobileLangOpen
+              }"
+            >
+              <div
+                class="text_700_12 main_lang_button"
+                @click="toggleLangMobile"
+              >
+                ru
+              </div>
+              <router-link
+                v-if="mobileLangOpen"
+                class="btn_lang_ua_open"
+                to="/timetable/ua"
+                >ua</router-link
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -718,8 +747,12 @@ export default {
       b_seventeen: localStorage.getItem("b_seventeen"),
       b_eighteen: localStorage.getItem("b_eighteen"),
       currentButton: "",
-      lang: "ru"
+      headLangOpen: false,
+      mobileLangOpen: false
     };
+  },
+  mounted() {
+    this.scrollToTop();
   },
   methods: {
     scrollToTop() {
@@ -734,11 +767,10 @@ export default {
       document.body.style.overflowY = "hidden";
     },
     toggleLang() {
-      if (this.lang === "ru") {
-        this.lang = "ua";
-      } else {
-        this.lang = "ru";
-      }
+      this.headLangOpen = !this.headLangOpen;
+    },
+    toggleLangMobile() {
+      this.mobileLangOpen = !this.mobileLangOpen;
     },
     hideMobileMenu() {
       this.mobileMenuOpen = false;
