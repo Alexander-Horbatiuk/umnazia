@@ -1834,6 +1834,9 @@ export default {
   directives: {
     swiper: directive
   },
+  mounted() {
+    this.scrollToTop();
+  },
   methods: {
     toggleLang() {
       this.headLangOpen = !this.headLangOpen;

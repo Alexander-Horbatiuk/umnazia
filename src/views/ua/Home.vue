@@ -1838,6 +1838,9 @@ export default {
   directives: {
     swiper: directive
   },
+  mounted() {
+    this.scrollToTop();
+  },
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);

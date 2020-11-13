@@ -6,7 +6,7 @@
 
         <div class="open_site" v-if="isAdmin" @click="toManager">менеджер</div>
 
-        <div class="open_site" @click="toUAFieldsPage">изменить укр текст</div>
+        <div class="open_site" @click="toUAFieldsPage">изменить текст UA</div>
 
         <div class="open_site" @click="toFilesPage">добавить фото</div>
 

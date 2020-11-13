@@ -63,10 +63,8 @@
           </div>
 
           <div class="adress">
-            <div class="header_adress_text text_400_12">
-              Ми знаходимось:
-            </div>
-            <div class=" text_700_12">
+            <div class="header_adress_text text_400_12">Ми знаходимось:</div>
+            <div class="text_700_12">
               <a
                 href="https://goo.gl/maps/4sFRPgncGGnP5Kch8"
                 class="header_text_map_link"
@@ -77,9 +75,7 @@
           </div>
 
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">
-              Наші соц мережі
-            </div>
+            <div class="social_text text_400_12">Наші соц мережі</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -661,9 +657,7 @@
         <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
-            <div class="social_text text_400_12">
-              Наші соц мережі
-            </div>
+            <div class="social_text text_400_12">Наші соц мережі</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -756,6 +750,9 @@ export default {
       headLangOpen: false,
       mobileLangOpen: false
     };
+  },
+  mounted() {
+    this.scrollToTop();
   },
   methods: {
     scrollToTop() {

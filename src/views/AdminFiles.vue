@@ -6,9 +6,9 @@
 
         <div class="open_site" v-if="isAdmin" @click="toManager">менеджер</div>
 
-        <div class="open_site" @click="toFieldsPage">изменить текст</div>
+        <div class="open_site" @click="toFieldsPage">изменить текст RU</div>
 
-        <div class="open_site" @click="toUAFieldsPage">изменить укр текст</div>
+        <div class="open_site" @click="toUAFieldsPage">изменить текст UA</div>
 
         <div class="open_site" @click="logout">закончить сеанс</div>
       </div>
