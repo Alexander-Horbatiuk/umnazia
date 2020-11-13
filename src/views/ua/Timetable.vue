@@ -178,7 +178,7 @@
           <div class="main_content_header_sub_text text_400_12">
             <p>
               Працюємо <span class="sub_text_bold text_700_12"> 6 днів</span> в
-              тиждень в форматі Полуднівка
+              тиждень у (форматі - Полуднівка)
             </p>
           </div>
 
@@ -396,12 +396,12 @@
 
               <div @click="showModal('b_fifteen')" class="text_bold">
                 <button v-if="!b_fifteen" class="training_format_submit_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
               </div>
             </div>
@@ -413,12 +413,12 @@
 
               <div @click="showModal('b_sixteen')" class="text_bold">
                 <button v-if="!b_sixteen" class="training_format_submit_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
               </div>
             </div>
@@ -579,12 +579,12 @@
             class="modal_btn_wrapper text_Bold "
           >
             <button v-if="!b_eighteen" class="modal_submit_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
           </div>
         </div>
@@ -602,7 +602,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записатися до групи</p>
+          <p class="head_form">Записатися в групу</p>
           <input
             v-model="name"
             type="text"

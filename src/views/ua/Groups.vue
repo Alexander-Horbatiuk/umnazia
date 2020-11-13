@@ -495,12 +495,12 @@
             class="modal_btn_wrapper text_Bold"
           >
             <button v-if="!b_twenty" class="modal_submit_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
           </div>
         </div>
@@ -522,7 +522,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записатися до групи</p>
+          <p class="head_form">Записатися в групу</p>
           <input
             v-model="name"
             type="text"

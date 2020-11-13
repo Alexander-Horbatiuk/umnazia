@@ -250,8 +250,7 @@
 
             <div class="languages_text_wrapper text_400_12">
               <p>
-                Принцип «одна ситуация-один язык» позволяет разделить языки по
-                месту их применения.<br />
+                Принцип «одна ситуація-одна мова» дозволяє розділити мови за місцем їх застосування.<br />
                 У групі мовного занурення, діти, переступаючи поріг нашої Академії знань, потрапляють в середу іншої мови, як правило, навіть з батьками і педагоги, і адміністратор, розмовляють на досліджувані в цей день мові. Атмосфера в групі мовного занурення максимально насичена іграми, читанням, розвитком мовлення, письмом і рахунком на «мові дня»
               </p>
             </div>
@@ -278,12 +277,12 @@
 
               <div @click="showModal('b_seven')" class="text_Bold">
                 <button v-if="!b_seven" class="training_format_submit_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
               </div>
             </div>
@@ -295,12 +294,12 @@
 
               <div @click="showModal('b_eight')" class="text_Bold">
                 <button v-if="!b_eight" class="training_format_submit_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
                 <button v-else class="training_format_submit_orange_btn">
-                  Записатися до<br />
-                  групи
+                  Записатися в<br />
+                  групу
                 </button>
               </div>
             </div>
@@ -457,12 +456,12 @@
 
           <div @click="showModal('b_ten')" class="modal_btn_wrapper text_Bold ">
             <button v-if="!b_ten" class="modal_submit_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
             <button v-else class="training_format_submit_orange_btn">
-              Записатися до<br />
-              групи
+              Записатися в<br />
+              групу
             </button>
           </div>
         </div>
@@ -484,7 +483,7 @@
       <form @submit.prevent="preSend">
         <div class="wrap_form">
           <div @click="hideModal" class="bt_close">+</div>
-          <p class="head_form">Записатися до групи</p>
+          <p class="head_form">Записатися в групу</p>
           <input
             v-model="name"
             type="text"
