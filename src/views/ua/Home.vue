@@ -1399,7 +1399,6 @@
                             v-else
                             :src="chunk[0].url"
                             :poster="chunk[0].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_small"
                           ></vue-player>
                         </div>
@@ -1416,7 +1415,6 @@
                             v-else
                             :src="chunk[1].url"
                             :poster="chunk[1].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_small"
                           ></vue-player>
                         </div>
@@ -1435,7 +1433,6 @@
                             v-else
                             :src="chunk[2].url"
                             :poster="chunk[2].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_long"
                           ></vue-player>
                         </div>
@@ -1454,7 +1451,6 @@
                             v-else
                             :src="chunk[3].url"
                             :poster="chunk[3].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_small"
                           ></vue-player>
                         </div>
@@ -1471,7 +1467,6 @@
                             v-else
                             :src="chunk[4].url"
                             :poster="chunk[4].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_small"
                           ></vue-player>
                         </div>
@@ -1490,7 +1485,6 @@
                             v-else
                             :src="chunk[5].url"
                             :poster="chunk[5].poster"
-                            controls-class="disble-controls"
                             class="gallery_img_long"
                           ></vue-player>
                         </div>
@@ -1840,6 +1834,27 @@ export default {
   },
   mounted() {
     this.scrollToTop();
+    let videoInterval = setInterval(() => {
+      const elements = document.getElementsByClassName("start-button");
+      if (elements.length > 0) {
+        clearInterval(videoInterval);
+        for (let index = 0; index < elements.length; index++) {
+          const element = elements[index];
+          element.addEventListener("click", () => {
+            let parent = element.parentElement.parentElement;
+            let fullscreenInterval = setInterval(() => {
+              let fullscreen = parent.getElementsByClassName(
+                "fullscreen-button-class"
+              )[0];
+              if (fullscreen) {
+                clearInterval(fullscreenInterval);
+                fullscreen.click();
+              }
+            }, 500);
+          });
+        }
+      }
+    }, 500);
   },
   methods: {
     scrollToTop() {

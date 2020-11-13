@@ -97,12 +97,9 @@ export default {
   transform: rotate(180deg);
 }
 
-.disble-controls {
-  display: none;
-}
-
 .start-button {
   border: 0 !important;
+  background-color: transparent !important;
 }
 
 .button {
