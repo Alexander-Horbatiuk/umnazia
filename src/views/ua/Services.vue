@@ -151,7 +151,7 @@
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
               <router-link to="/groups/ua" class="el_menu_link"
-                >Групи та вартість</router-link
+                >Групи та Вартість</router-link
               >
             </div>
             <div class="el_menu">
@@ -497,7 +497,7 @@
           >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Групи та вартість</router-link
+          >Групи та Вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link

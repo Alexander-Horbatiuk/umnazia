@@ -150,7 +150,7 @@
           </div>
           <div class="sub_navigation_list text_700_13">
             <div class="el_menu">
-              <a class="selected_page">Групи та вартість</a>
+              <a class="selected_page">Групи та Вартість</a>
             </div>
             <div class="el_menu">
               <router-link to="/gallery/ua" class="el_menu_link"
@@ -177,7 +177,7 @@
         <div class="box_line_heading text_bold">
           <!--box-line-->
           <div class="heading_text">
-            <h3>Групи і вартість</h3>
+            <h3>Групи та вартість</h3>
           </div>
         </div>
 
@@ -557,7 +557,7 @@
           >Розклад
         </router-link>
         <router-link to="/groups/ua" class="el_menu_modal"
-          >Групи та вартість</router-link
+          >Групи та Вартість</router-link
         >
         <router-link to="/gallery/ua" class="el_menu_modal"
           >Фотогалерея</router-link
