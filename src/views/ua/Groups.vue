@@ -194,6 +194,9 @@
                 <div class="groups_sub_info_3_4 text_400_12">
                   <p>
                     {{ groups_description_first_block_content_ua }}
+                    <br />
+                    <br />
+                    <br />
                   </p>
                 </div>
 
@@ -231,6 +234,7 @@
                 <div class="groups_sub_info_4_5 text_400_12">
                   <p>
                     {{ groups_description_second_block_content_ua }}
+                    <br />
                     <br />
                     <br />
                   </p>
@@ -272,6 +276,7 @@
                 <div class="groups_sub_info_5_6 text_400_12">
                   <p>
                     {{ groups_description_third_block_content_ua }}
+                    <br />
                     <br />
                     <br />
                   </p>
