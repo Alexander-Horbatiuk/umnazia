@@ -2890,7 +2890,6 @@
 /*  _____________________OUR_RULES___________________________ */
 .wrap_our_rules {
     max-width: 1920px;
-    min-height: 180px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2923,7 +2922,7 @@
     top: 150px;
     right: 0;
     width: 126px;
-    min-height: 160px;
+    min-height: 180px;
     background: url(../img/img_png/bg_paints.png) no-repeat bottom;
     background-size: 100%;
 }
