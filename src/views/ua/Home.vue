@@ -392,7 +392,7 @@
                     v-else
                     class="btn_hide_text"
                   >
-                    скрыть
+                    приховати
                   </div>
                 </div>
               </div>
@@ -437,7 +437,7 @@
                     v-else
                     class="btn_hide_text"
                   >
-                    скрыть
+                    приховати
                   </div>
                 </div>
               </div>
@@ -491,7 +491,7 @@
                     v-else
                     class="btn_hide_text"
                   >
-                    скрыть
+                    приховати
                   </div>
                 </div>
               </div>
@@ -535,7 +535,7 @@
                     v-else
                     class="btn_hide_text"
                   >
-                    скрыть
+                    приховати
                   </div>
                 </div>
               </div>
@@ -1111,7 +1111,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1157,7 +1157,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1203,7 +1203,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1249,7 +1249,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1295,7 +1295,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1341,7 +1341,7 @@
                       v-else
                       class="btn_hide_text"
                     >
-                      скрыть
+                      приховати
                     </div>
                   </div>
                 </div>
@@ -1643,7 +1643,7 @@
             <input
               v-model="name"
               type="text"
-              placeholder="Ваше имя"
+              placeholder="Ваше ім'я"
               class="name_form"
               required
             />

@@ -321,7 +321,7 @@
               v-model="presentationName"
               class="input_user_name text_400_12"
               type="text"
-              placeholder="Ваше имя"
+              placeholder="Ваше ім'я"
             />
           </div>
 
@@ -469,7 +469,7 @@
           <input
             v-model="name"
             type="text"
-            placeholder="Ваше имя"
+            placeholder="Ваше ім'я"
             class="name_form"
           />
           <input
