@@ -140,7 +140,7 @@
             </div>
             <div class="el_menu">
               <router-link to="/services/ua" class="el_menu_link"
-                >Наші послуги</router-link
+                >Наші Послуги</router-link
               >
             </div>
             <div class="el_menu">
