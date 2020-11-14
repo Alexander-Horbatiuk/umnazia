@@ -1355,11 +1355,12 @@
     background: url(../img/img_svg/arrow_to_down.svg);
     width: 9px;
     height: 9px;
-    top: 1px;
+    top: 2px;
     right: -14px;
     position: absolute;
     background-repeat: no-repeat;
     background-position: center;
+    transform: rotate(180deg);
 }
 
 .btn_hide_text {
@@ -1377,12 +1378,11 @@
 }
 
 .btn_hide_text::after {
-    transform: scale(-1);
     content: " ";
     background: url(../img/img_svg/arrow_to_down.svg);
     width: 9px;
     height: 9px;
-    top: 1px;
+    top: 2px;
     right: -14px;
     position: absolute;
     background-repeat: no-repeat;
