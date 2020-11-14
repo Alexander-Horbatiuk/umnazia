@@ -63,20 +63,16 @@
           </div>
 
           <div class="adress">
-            <div class="header_adress_text text_400_12">
-              Ми знаходимось:
-            </div>
-            <div class=" text_700_12">
-              <router-link to="/technique/ua" class="header_text_map_link "
+            <div class="header_adress_text text_400_12">Ми знаходимось:</div>
+            <div class="text_700_12">
+              <router-link to="/technique/ua" class="header_text_map_link"
                 >м.Одеса, просп. Шевченко 27</router-link
               >
             </div>
           </div>
 
           <div class="header_social_wrapper">
-            <div class="social_text text_400_12">
-              Наші соц мережі
-            </div>
+            <div class="social_text text_400_12">Наші соц мережі</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
@@ -261,19 +257,14 @@
 
             <div class="languages_text_wrapper text_400_12">
               <p>
-<<<<<<< HEAD
-                Принцип «одна ситуація-одна мова» дозволяє розділити мови за місцем їх застосування.<br />
-                У групі мовного занурення, діти, переступаючи поріг нашої Академії знань, потрапляють в середу іншої мови, як правило, навіть з батьками і педагоги, і адміністратор, розмовляють на досліджувані в цей день мові. Атмосфера в групі мовного занурення максимально насичена іграми, читанням, розвитком мовлення, письмом і рахунком на «мові дня»
-=======
-                Принцип «одна ситуация-один язык» позволяет разделить языки по
-                месту их применения.<br />
+                Принцип «одна ситуація-одна мова» дозволяє розділити мови за
+                місцем їх застосування.<br />
                 У групі мовного занурення, діти, переступаючи поріг нашої
                 Академії знань, потрапляють в середу іншої мови, як правило,
                 навіть з батьками і педагоги, і адміністратор, розмовляють на
                 досліджувані в цей день мові. Атмосфера в групі мовного
                 занурення максимально насичена іграми, читанням, розвитком
                 мовлення, письмом і рахунком на «мові дня»
->>>>>>> 17ebb5301ab6b229bc88e6154be2d33646c08759
               </p>
             </div>
           </div>
@@ -545,9 +536,7 @@
         <router-link to="contacts" class="el_menu_modal">Контакти</router-link>
         <div class="social_wrapper">
           <div class="head_social_wrapper">
-            <div class="social_text text_400_12">
-              Наші соц мережі
-            </div>
+            <div class="social_text text_400_12">Наші соц мережі</div>
             <div class="social_icons_links">
               <div class="social_icon_item">
                 <a
