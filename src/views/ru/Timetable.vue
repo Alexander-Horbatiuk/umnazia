@@ -204,7 +204,7 @@
               </div>
 
               <div class="info_random_header text_bold">
-                <p>Дискусионный блок</p>
+                <p>Дискуссионный блок</p>
               </div>
 
               <div class="info_random_sub_text text_400_12">

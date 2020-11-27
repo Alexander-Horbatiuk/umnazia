@@ -264,7 +264,7 @@
             <div class="sub_header_methodology text_400_18">
               <p>
                 Кожен день
-                <span class="text_b text_700_35">нова</span> мовна середа
+                <span class="text_b text_700_35">нове</span> мовне середовище
               </p>
               <p>
                 Навчання на <span class="text_b text_700_35">трьох</span> мовах
@@ -697,7 +697,7 @@
                   v-if="isCurrentSlide(4)"
                   class="central_circle_content_four cllass_for_children"
                 >
-                  <p class="center_circ_bg_heading">Навчання в грі</p>
+                  <p class="center_circ_bg_heading">Навчання через гру</p>
                   <span class="center_cercle_text center_cercle_text_four">
                     Гра-основний формат навчання дошкільнят. Через гру
                     відбувається соціалізація дітей, формування навичок
@@ -1511,7 +1511,7 @@
           <div class="bg_teacher"></div>
 
           <div class="sticker_footer">
-            <p class="sticker_footer_header">Батьки - не вчитель!</p>
+            <p class="sticker_footer_header">Батьки - не вчителi!</p>
             <p class="sticker_footer_text">
               Приходьте до нас і ми з радістю поділимося своїми знаннями з
               вашими дітьми !
